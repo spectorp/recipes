@@ -52,28 +52,29 @@
 \contentsline {subsection}{\numberline {7.3}Lorraine's Chicken}{54}{subsection.7.3}
 \contentsline {subsection}{\numberline {7.4}Chicken thighs with shallots and cherry tomatoes}{55}{subsection.7.4}
 \contentsline {section}{\numberline {8}Mains}{56}{section.8}
-\contentsline {subsection}{\numberline {8.1}Pressure Cooker Spicy Pork Shoulder}{57}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Mapo Tofu}{59}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Indian-style Vegetable Curry}{60}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Ratatouille and Sausage Potpie With Cornmeal Biscuits}{61}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}Cassoulet a Noelle}{63}{subsection.8.5}
-\contentsline {section}{\numberline {9}Desserts}{64}{section.9}
-\contentsline {subsection}{\numberline {9.1}Mocha Ice Cream}{65}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Easy \& simple chocolate cake}{66}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Rhubarb (or Apple) Crisp}{67}{subsection.9.3}
-\contentsline {subsection}{\numberline {9.4}Chocolate Chunky Oatmeal Cookies}{68}{subsection.9.4}
-\contentsline {subsection}{\numberline {9.5}Gingersnaps}{69}{subsection.9.5}
-\contentsline {section}{\numberline {10}Salads, dressings, dips, salsas, and condiments}{70}{section.10}
-\contentsline {subsection}{\numberline {10.1}Pickled Red Onions}{71}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Simple vinaigrette dressing}{72}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Charlie Bird's Farro Salad}{73}{subsection.10.3}
-\contentsline {subsection}{\numberline {10.4}Big Salad with Grains (template)}{74}{subsection.10.4}
-\contentsline {subsection}{\numberline {10.5}Roasted Cauliflower, Hazelnut and Pomegranate Seed Salad}{75}{subsection.10.5}
-\contentsline {subsection}{\numberline {10.6}Mango Cucumber Salsa}{76}{subsection.10.6}
-\contentsline {subsection}{\numberline {10.7}Grilled corn, tomato, feta, and herbs salad}{77}{subsection.10.7}
-\contentsline {section}{\numberline {11}Miscellaneous}{78}{section.11}
-\contentsline {subsection}{\numberline {11.1}Energy Bars}{79}{subsection.11.1}
-\contentsline {subsection}{\numberline {11.2}Chipotle Shrimp with Corn Cakes}{80}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Spanish Tortilla}{81}{subsection.11.3}
-\contentsline {section}{\numberline {12}Sous Vide}{82}{section.12}
-\contentsline {subsection}{\numberline {12.1}Sous Vide notes}{83}{subsection.12.1}
+\contentsline {subsection}{\numberline {8.1}Beef Stew}{57}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Pressure Cooker Spicy Pork Shoulder}{59}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Mapo Tofu}{61}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Indian-style Vegetable Curry}{62}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Ratatouille and Sausage Potpie With Cornmeal Biscuits}{63}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Cassoulet a Noelle}{65}{subsection.8.6}
+\contentsline {section}{\numberline {9}Desserts}{66}{section.9}
+\contentsline {subsection}{\numberline {9.1}Mocha Ice Cream}{67}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Easy \& simple chocolate cake}{68}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Rhubarb (or Apple) Crisp}{69}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Chocolate Chunky Oatmeal Cookies}{70}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Gingersnaps}{71}{subsection.9.5}
+\contentsline {section}{\numberline {10}Salads, dressings, dips, salsas, and condiments}{72}{section.10}
+\contentsline {subsection}{\numberline {10.1}Pickled Red Onions}{73}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Simple vinaigrette dressing}{74}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Charlie Bird's Farro Salad}{75}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Big Salad with Grains (template)}{76}{subsection.10.4}
+\contentsline {subsection}{\numberline {10.5}Roasted Cauliflower, Hazelnut and Pomegranate Seed Salad}{77}{subsection.10.5}
+\contentsline {subsection}{\numberline {10.6}Mango Cucumber Salsa}{78}{subsection.10.6}
+\contentsline {subsection}{\numberline {10.7}Grilled corn, tomato, feta, and herbs salad}{79}{subsection.10.7}
+\contentsline {section}{\numberline {11}Miscellaneous}{80}{section.11}
+\contentsline {subsection}{\numberline {11.1}Energy Bars}{81}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Chipotle Shrimp with Corn Cakes}{82}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Spanish Tortilla}{83}{subsection.11.3}
+\contentsline {section}{\numberline {12}Sous Vide}{84}{section.12}
+\contentsline {subsection}{\numberline {12.1}Sous Vide notes}{85}{subsection.12.1}
