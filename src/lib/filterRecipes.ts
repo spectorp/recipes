@@ -47,6 +47,10 @@ function norm(s: string): string {
   return s.trim().toLowerCase()
 }
 
+function queryTokens(query: string): string[] {
+  return norm(query).split(/\s+/).filter(Boolean)
+}
+
 function recipeHasCategoryValue(
   recipe: Recipe,
   key: CategoryKey,
@@ -57,22 +61,42 @@ function recipeHasCategoryValue(
   return values.some((v) => norm(v) === target)
 }
 
-function matchesQuery(recipe: Recipe, query: string): boolean {
-  const q = norm(query)
-  if (!q) return true
-
-  const haystack: string[] = [
+/** Fields searched for query tokens (AND across tokens). */
+function recipeSearchFields(recipe: Recipe): string[] {
+  const fields: string[] = [
     recipe.title,
+    recipe.id.replace(/-/g, ' '),
     ...(recipe.tags ?? []),
     recipe.attribution?.name ?? '',
     ...recipe.ingredients.map((i) => i.name),
   ]
 
   for (const key of CATEGORY_KEYS) {
-    haystack.push(...(recipe.categories?.[key] ?? []))
+    fields.push(...(recipe.categories?.[key] ?? []))
   }
 
-  return haystack.some((part) => norm(part).includes(q))
+  return fields
+}
+
+function fieldContainsAllTokens(field: string, tokens: string[]): boolean {
+  const text = norm(field)
+  return tokens.every((token) => text.includes(token))
+}
+
+/** Every token must appear in at least one search field. */
+function matchesQuery(recipe: Recipe, tokens: string[]): boolean {
+  if (tokens.length === 0) return true
+  const fields = recipeSearchFields(recipe).map(norm)
+  return tokens.every((token) => fields.some((field) => field.includes(token)))
+}
+
+/** Prefer recipes whose title (or id slug) covers every token. */
+function titleMatchesQuery(recipe: Recipe, tokens: string[]): boolean {
+  if (tokens.length === 0) return false
+  return (
+    fieldContainsAllTokens(recipe.title, tokens) ||
+    fieldContainsAllTokens(recipe.id.replace(/-/g, ' '), tokens)
+  )
 }
 
 /**
@@ -150,10 +174,12 @@ export function filterAndSortRecipes(
   recipes: Recipe[],
   filters: BrowseFilters,
 ): Recipe[] {
+  const tokens = queryTokens(filters.query)
+
   return recipes
     .filter(
       (recipe) =>
-        matchesQuery(recipe, filters.query) &&
+        matchesQuery(recipe, tokens) &&
         matchesFacetGroups(
           recipe,
           filters.categories,
@@ -163,7 +189,14 @@ export function filterAndSortRecipes(
         matchesRating(recipe, filters.minRating) &&
         matchesAttribution(recipe, filters.attribution),
     )
-    .sort((a, b) => compareRecipes(a, b, filters.sort))
+    .sort((a, b) => {
+      if (tokens.length > 0) {
+        const aTitle = titleMatchesQuery(a, tokens) ? 0 : 1
+        const bTitle = titleMatchesQuery(b, tokens) ? 0 : 1
+        if (aTitle !== bTitle) return aTitle - bTitle
+      }
+      return compareRecipes(a, b, filters.sort)
+    })
 }
 
 export function countActiveFilters(filters: BrowseFilters): number {
