@@ -5,7 +5,7 @@ export function HomePage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-4xl tracking-tight text-ink dark:text-stone-50">
-        Perry&apos;s recipes
+        Recipes
       </h1>
       <p className="mt-3 text-ink-muted dark:text-stone-400">
         {recipes.length === 0

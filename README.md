@@ -1,4 +1,4 @@
-# Perry's recipes
+# Recipes
 
 Read-only recipe site (Vite + React + TypeScript + Tailwind), eventually hosted
 on GitHub Pages at `https://spectorp.github.io/recipes/`.

@@ -46,6 +46,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
 - **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
 - **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
+- **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged.
 
 ---
 
