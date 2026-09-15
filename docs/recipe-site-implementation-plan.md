@@ -34,7 +34,8 @@ two conflict, **this document wins**.
 | 2 Archive LaTeX | Done |
 | 3 Data pipeline | Done |
 | 4 Migrate recipes | Done |
-| 5–11 | Not started |
+| 5 Browse UI | Done |
+| 6–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -46,7 +47,9 @@ Keep this section updated when implementation diverges from the original text.
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
 - **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
 - **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
-- **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged.
+- **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged. Attribution “Lorraine Spector” → “Lorraine”.
+- **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
+- **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Mobile filters use a right-hand sheet. (Phase 5)
 
 ---
 
@@ -365,7 +368,7 @@ a small intentional type + color system over default “AI purple” tropes.
 2. **Archive LaTeX** — ✅ move TeX/PDF/assets/script under `archive/latex/`
 3. **Data pipeline** — ✅ `import.meta.glob` + Zod validation; load categories/tags
 4. **Migrate recipes** — ✅ convert TeX subsections → JSON + seed vocab
-5. **Browse UI** — grid/list, search, facets, tags AND/OR, rating/attribution
+5. **Browse UI** — ✅ grid/list, search, facets, tags AND/OR, rating/attribution
    filters, sort; responsive shell
 6. **Detail + deep links** — `/recipe/:id`, optional-field handling, SPA
    fallback for refresh
@@ -396,4 +399,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 5.
+No further product decisions are required to continue with Phase 6.

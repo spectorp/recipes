@@ -52,8 +52,9 @@ browse page shows a warning if any were skipped.
 - **Phase 2** — LaTeX archived under `archive/latex/`
 - **Phase 3** — catalog loader + Zod validation (vocab + recipes)
 - **Phase 4** — 69 recipes migrated from LaTeX → `data/recipes/*.json`
+- **Phase 5** — browse UI (search, facets, tags, sort, responsive filters)
 
-Next: browse UI (search, filters, responsive grid).
+Next: full recipe detail view (ingredients, steps, chips, deep links polish).
 
 Ingredient amounts/units from the automated migration are best-effort; tidy
 individual JSON files in git when you notice issues (do not re-run
