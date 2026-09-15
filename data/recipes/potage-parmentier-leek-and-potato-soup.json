@@ -5,7 +5,9 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "gluten free"
+    ],
     "meal": [
       "dinner"
     ],
@@ -92,5 +94,5 @@
   },
   "notes": "Variations, or Soupe Du Jour In the beginning, add chopped carrots or tomatoes. OR, half-way through add diced cauliflower, cucumbers, broccoli, zucchini, or lima beans. OR, 5 minutes before the end of cooking add diced, cooked leftover vegetables. OR, can replace part of water with milk, or add powdered milk. OR, make it creamy by adding 1/2 C heavy cream just before serving. Flavoring - add pepper, marjoram, basil, savory and/or bay leaf CHILLED: Add a little more salt and 1/2 C cream before refrigerating, then taste again before serving. OR, add a bunch watercress leaves and stems for last 5 minutes of cooking. Puree.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

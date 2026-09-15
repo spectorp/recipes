@@ -5,7 +5,11 @@
     "method": [
       "wok"
     ],
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "vegan",
+      "dairy free"
+    ],
     "meal": [
       "side dish"
     ],
@@ -109,5 +113,5 @@
   },
   "notes": "Crunchy, salty, and sweet, this quick stir-fry takes advantage of fresh vegetables by treating them simply. A hint of ginger and a splash of soy sauce are all you need. Blanched sugar snap peas: boil for 1 minute, then plunge in ice water immediately.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

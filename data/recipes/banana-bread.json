@@ -5,7 +5,9 @@
     "method": [
       "baking"
     ],
-    "diet": [],
+    "diet": [
+      "vegetarian"
+    ],
     "meal": [
       "breakfast"
     ],
@@ -118,5 +120,5 @@
   ],
   "notes": "Add 1 cup walnuts, add nuts after banana and pulse briefly. CHOCOLATE CHIPS: For a dessert version, increase sugar to 3/4 cup and change nuts to pecans, and stir in 1 cup chocolate chips at the end. BANANA COCONUT: Add 1/2 tsp almond extract and 1 cup toasted, flaked coconut. If banana is ripe before you are ready to cook, freeze the pulp, then defrost to use.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

@@ -2,12 +2,23 @@
   "id": "chicken-cacciatore",
   "title": "Cacciatore Chicken",
   "categories": {
-    "method": ["stovetop", "instant pot"],
-    "diet": [],
-    "meal": ["dinner"],
+    "method": [
+      "stovetop",
+      "instant pot"
+    ],
+    "diet": [
+      "dairy free"
+    ],
+    "meal": [
+      "dinner"
+    ],
     "season": [],
-    "cuisine": ["italian"],
-    "main_ingredient": ["chicken"]
+    "cuisine": [
+      "italian"
+    ],
+    "main_ingredient": [
+      "chicken"
+    ]
   },
   "tags": [],
   "servings": 8,
@@ -171,5 +182,5 @@
     "name": "Joy & Gourmet"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T19:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

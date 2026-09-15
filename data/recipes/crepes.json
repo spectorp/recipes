@@ -5,7 +5,9 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "vegetarian"
+    ],
     "meal": [
       "breakfast"
     ],
@@ -74,5 +76,5 @@
   ],
   "notes": "*If using low-fat milk, replace both whole milk and water with low-fat milk.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

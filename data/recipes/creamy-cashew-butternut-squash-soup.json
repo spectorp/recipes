@@ -2,42 +2,148 @@
   "id": "creamy-cashew-butternut-squash-soup",
   "title": "Creamy Cashew Butternut Squash Soup",
   "categories": {
-    "method": ["stovetop"],
-    "diet": ["vegetarian", "vegan", "gluten free", "dairy free"],
-    "meal": ["dinner"],
-    "season": ["fall", "winter"],
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "vegetarian",
+      "vegan",
+      "gluten free",
+      "dairy free"
+    ],
+    "meal": [
+      "dinner"
+    ],
+    "season": [
+      "fall",
+      "winter"
+    ],
     "cuisine": [],
     "main_ingredient": []
   },
-  "tags": ["soup"],
+  "tags": [
+    "soup"
+  ],
   "servings": 7,
   "cook_time_minutes": 90,
   "ingredients": [
-    {"id": "i1", "name": "olive oil", "amount": 3, "unit": "tbsp", "notes": "or unsalted butter; use olive oil for vegan and dairy-free versions"},
-    {"id": "i2", "name": "large onion", "amount": 1, "unit": null, "notes": "peeled and finely chopped"},
-    {"id": "i3", "name": "raw cashews", "amount": 150, "unit": "g", "notes": "1 cup"},
-    {"id": "i4", "name": "garlic clove", "amount": 1, "unit": null, "notes": "finely chopped"},
-    {"id": "i5", "name": "large butternut squash", "amount": 2, "unit": "lb", "notes": "peeled and cut into 1/2-inch dice"},
-    {"id": "i6", "name": "vegetable stock", "amount": 5, "unit": "cup", "notes": "plus more if needed"},
-    {"id": "i7", "name": "fresh ginger", "amount": 2, "unit": "tbsp", "notes": "minced"},
-    {"id": "i8", "name": "ground cumin", "amount": 2, "unit": "tsp"},
-    {"id": "i9", "name": "ground coriander", "amount": 2, "unit": "tsp"},
-    {"id": "i10", "name": "curry powder", "amount": 1, "unit": "tsp"},
-    {"id": "i11", "name": "ground turmeric", "amount": 1, "unit": "tsp"},
-    {"id": "i12", "name": "kosher salt and freshly ground black pepper", "amount": 1, "unit": "pinch", "notes": "to taste"},
-    {"id": "i13", "name": "coconut milk", "amount": 1, "unit": "cup", "notes": "plus more if needed"},
-    {"id": "i14", "name": "fresh rosemary", "amount": 1, "unit": null, "notes": "sprig"}
+    {
+      "id": "i1",
+      "name": "olive oil",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": "or unsalted butter; use olive oil for vegan and dairy-free versions"
+    },
+    {
+      "id": "i2",
+      "name": "large onion",
+      "amount": 1,
+      "unit": null,
+      "notes": "peeled and finely chopped"
+    },
+    {
+      "id": "i3",
+      "name": "raw cashews",
+      "amount": 150,
+      "unit": "g",
+      "notes": "1 cup"
+    },
+    {
+      "id": "i4",
+      "name": "garlic clove",
+      "amount": 1,
+      "unit": null,
+      "notes": "finely chopped"
+    },
+    {
+      "id": "i5",
+      "name": "large butternut squash",
+      "amount": 2,
+      "unit": "lb",
+      "notes": "peeled and cut into 1/2-inch dice"
+    },
+    {
+      "id": "i6",
+      "name": "vegetable stock",
+      "amount": 5,
+      "unit": "cup",
+      "notes": "plus more if needed"
+    },
+    {
+      "id": "i7",
+      "name": "fresh ginger",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "minced"
+    },
+    {
+      "id": "i8",
+      "name": "ground cumin",
+      "amount": 2,
+      "unit": "tsp"
+    },
+    {
+      "id": "i9",
+      "name": "ground coriander",
+      "amount": 2,
+      "unit": "tsp"
+    },
+    {
+      "id": "i10",
+      "name": "curry powder",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i11",
+      "name": "ground turmeric",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i12",
+      "name": "kosher salt and freshly ground black pepper",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": "to taste"
+    },
+    {
+      "id": "i13",
+      "name": "coconut milk",
+      "amount": 1,
+      "unit": "cup",
+      "notes": "plus more if needed"
+    },
+    {
+      "id": "i14",
+      "name": "fresh rosemary",
+      "amount": 1,
+      "unit": null,
+      "notes": "sprig"
+    }
   ],
   "steps": [
-    {"id": "s1", "text": "Warm oil in a large stockpot over medium-high heat. Cook onion for about 5 minutes. Add cashews and cook until onion is translucent and nuts are lightly browned, about 3 minutes. Add garlic and cook for 30 seconds."},
-    {"id": "s2", "text": "Stir in squash, stock, ginger, cumin, coriander, curry powder and turmeric. Season with salt and pepper and bring to a simmer. Reduce heat, cover and cook until squash is easily pierced, 20 to 25 minutes. Uncover and cool for 15 minutes."},
-    {"id": "s3", "text": "Puree until smooth in small blender batches, starting on low speed, or use an immersion blender."},
-    {"id": "s4", "text": "Return soup to the pot if needed. Add coconut milk and rosemary, cover and cook over low heat until slightly thickened, 15 to 20 minutes. Remove rosemary and serve, thinning with stock or coconut milk if desired."}
+    {
+      "id": "s1",
+      "text": "Warm oil in a large stockpot over medium-high heat. Cook onion for about 5 minutes. Add cashews and cook until onion is translucent and nuts are lightly browned, about 3 minutes. Add garlic and cook for 30 seconds."
+    },
+    {
+      "id": "s2",
+      "text": "Stir in squash, stock, ginger, cumin, coriander, curry powder and turmeric. Season with salt and pepper and bring to a simmer. Reduce heat, cover and cook until squash is easily pierced, 20 to 25 minutes. Uncover and cool for 15 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Puree until smooth in small blender batches, starting on low speed, or use an immersion blender."
+    },
+    {
+      "id": "s4",
+      "text": "Return soup to the pot if needed. Add coconut milk and rosemary, cover and cook over low heat until slightly thickened, 15 to 20 minutes. Remove rosemary and serve, thinning with stock or coconut milk if desired."
+    }
   ],
   "attribution": {
     "name": "Dawn Lerman",
     "url": "https://cooking.nytimes.com/recipes/1014339-creamy-cashew-butternut-squash-soup"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T18:00:00Z"
+  "updated_at": "2026-09-15T19:14:09Z"
 }

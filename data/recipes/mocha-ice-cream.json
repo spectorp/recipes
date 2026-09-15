@@ -5,7 +5,10 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "gluten free"
+    ],
     "meal": [
       "dessert"
     ],
@@ -106,5 +109,5 @@
   ],
   "notes": "For variations, refer to Melissa Clark recipe on NYT cooking. Consider adding 1/2 cup sliced and caramelized almonds at end of churning (med-saucepan, med-heat, cook almonds with 2 tbs sugar and pinch salt until deeply golden, about 10 min).",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

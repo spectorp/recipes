@@ -5,7 +5,9 @@
     "method": [
       "baking"
     ],
-    "diet": [],
+    "diet": [
+      "dairy free"
+    ],
     "meal": [
       "dinner"
     ],
@@ -121,13 +123,6 @@
       "amount": 0.25,
       "unit": "cup",
       "notes": ""
-    },
-    {
-      "id": "i16",
-      "name": "Could serve with: black rice, potatoes, green veggies, green salad, citrus salad",
-      "amount": 1,
-      "unit": null,
-      "notes": ""
     }
   ],
   "steps": [
@@ -148,7 +143,7 @@
       "text": "Bring to a boil, then reduce heat, cover and simmer for 1 hour over low heat."
     }
   ],
-  "notes": "Note: Can put into a 2 quart casserole and freeze. To reheat, bake at 400 for 1.25 hours. Optional additions: 4 oz lardons, 4 garlic cloves, 1/2 tsp allspice, bay leaf, 1/2 C white vermouth VARIATIONS: Omit sausage, replace with 3 medium carrots. Replace rosemary with 1/8 tsp cloves and 1 bay leaf. Use only 3 cans beans. Top with Garlic Crumbs. GARLIC CRUMBS: Heat oven to 350 and set rack in center of oven. In a medium bowl, combine crumbs, olive oil, garlic, salt, and pepper. Spread on a large baking sheet and cook for 12-15 minutes. When cooled, return to bowl and toss with parsley.",
+  "notes": "Could serve with: black rice, potatoes, green veggies, green salad, citrus salad.\n\nNote: Can put into a 2 quart casserole and freeze. To reheat, bake at 400 for 1.25 hours. Optional additions: 4 oz lardons, 4 garlic cloves, 1/2 tsp allspice, bay leaf, 1/2 C white vermouth VARIATIONS: Omit sausage, replace with 3 medium carrots. Replace rosemary with 1/8 tsp cloves and 1 bay leaf. Use only 3 cans beans. Top with Garlic Crumbs. GARLIC CRUMBS: Heat oven to 350 and set rack in center of oven. In a medium bowl, combine crumbs, olive oil, garlic, salt, and pepper. Spread on a large baking sheet and cook for 12-15 minutes. When cooled, return to bowl and toss with parsley.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

@@ -2,43 +2,146 @@
   "id": "picadillo",
   "title": "Picadillo",
   "categories": {
-    "method": ["stovetop"],
-    "diet": ["gluten free"],
-    "meal": ["dinner"],
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "gluten free",
+      "dairy free"
+    ],
+    "meal": [
+      "dinner"
+    ],
     "season": [],
-    "cuisine": ["cuban"],
-    "main_ingredient": ["beef"]
+    "cuisine": [
+      "cuban"
+    ],
+    "main_ingredient": [
+      "beef"
+    ]
   },
   "tags": [],
   "servings": 6,
   "cook_time_minutes": 60,
   "ingredients": [
-    {"id": "i1", "name": "extra-virgin olive oil", "amount": 2, "unit": "tbsp"},
-    {"id": "i2", "name": "medium yellow onions", "amount": 2, "unit": null, "notes": "peeled and chopped"},
-    {"id": "i3", "name": "dried chorizo", "amount": 2, "unit": "oz", "notes": "diced"},
-    {"id": "i4", "name": "garlic cloves", "amount": 4, "unit": null, "notes": "peeled and minced"},
-    {"id": "i5", "name": "ground beef", "amount": 1.5, "unit": "lb"},
-    {"id": "i6", "name": "kosher salt and freshly ground black pepper", "amount": 1, "unit": "pinch", "notes": "to taste"},
-    {"id": "i7", "name": "ripe tomatoes", "amount": 4, "unit": null, "notes": "chopped; or one 28-ounce can whole tomatoes, drained and crushed"},
-    {"id": "i8", "name": "red-wine vinegar", "amount": 2, "unit": "tbsp"},
-    {"id": "i9", "name": "ground cinnamon", "amount": 1, "unit": "tbsp"},
-    {"id": "i10", "name": "ground cumin", "amount": 2, "unit": "tsp"},
-    {"id": "i11", "name": "bay leaves", "amount": 2, "unit": null},
-    {"id": "i12", "name": "ground cloves", "amount": 1, "unit": "pinch"},
-    {"id": "i13", "name": "nutmeg", "amount": 1, "unit": "pinch"},
-    {"id": "i14", "name": "raisins", "amount": 0.6666666667, "unit": "cup"},
-    {"id": "i15", "name": "pitted stuffed olives", "amount": 0.6666666667, "unit": "cup"}
+    {
+      "id": "i1",
+      "name": "extra-virgin olive oil",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i2",
+      "name": "medium yellow onions",
+      "amount": 2,
+      "unit": null,
+      "notes": "peeled and chopped"
+    },
+    {
+      "id": "i3",
+      "name": "dried chorizo",
+      "amount": 2,
+      "unit": "oz",
+      "notes": "diced"
+    },
+    {
+      "id": "i4",
+      "name": "garlic cloves",
+      "amount": 4,
+      "unit": null,
+      "notes": "peeled and minced"
+    },
+    {
+      "id": "i5",
+      "name": "ground beef",
+      "amount": 1.5,
+      "unit": "lb"
+    },
+    {
+      "id": "i6",
+      "name": "kosher salt and freshly ground black pepper",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": "to taste"
+    },
+    {
+      "id": "i7",
+      "name": "ripe tomatoes",
+      "amount": 4,
+      "unit": null,
+      "notes": "chopped; or one 28-ounce can whole tomatoes, drained and crushed"
+    },
+    {
+      "id": "i8",
+      "name": "red-wine vinegar",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i9",
+      "name": "ground cinnamon",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i10",
+      "name": "ground cumin",
+      "amount": 2,
+      "unit": "tsp"
+    },
+    {
+      "id": "i11",
+      "name": "bay leaves",
+      "amount": 2,
+      "unit": null
+    },
+    {
+      "id": "i12",
+      "name": "ground cloves",
+      "amount": 1,
+      "unit": "pinch"
+    },
+    {
+      "id": "i13",
+      "name": "nutmeg",
+      "amount": 1,
+      "unit": "pinch"
+    },
+    {
+      "id": "i14",
+      "name": "raisins",
+      "amount": 0.6666666667,
+      "unit": "cup"
+    },
+    {
+      "id": "i15",
+      "name": "pitted stuffed olives",
+      "amount": 0.6666666667,
+      "unit": "cup"
+    }
   ],
   "steps": [
-    {"id": "s1", "text": "Heat olive oil in a large heavy pan over medium-high heat. Add onions, chorizo and garlic and cook, stirring, until onions begin to soften, about 10 minutes."},
-    {"id": "s2", "text": "Add beef and brown it, crumbling with a fork. Season with salt and pepper."},
-    {"id": "s3", "text": "Stir in tomatoes, vinegar, cinnamon, cumin, bay leaves, cloves and nutmeg. Lower heat, cover and simmer for about 30 minutes."},
-    {"id": "s4", "text": "Uncover, add raisins and olives, and cook for about 15 minutes more. Serve with white rice if desired."}
+    {
+      "id": "s1",
+      "text": "Heat olive oil in a large heavy pan over medium-high heat. Add onions, chorizo and garlic and cook, stirring, until onions begin to soften, about 10 minutes."
+    },
+    {
+      "id": "s2",
+      "text": "Add beef and brown it, crumbling with a fork. Season with salt and pepper."
+    },
+    {
+      "id": "s3",
+      "text": "Stir in tomatoes, vinegar, cinnamon, cumin, bay leaves, cloves and nutmeg. Lower heat, cover and simmer for about 30 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Uncover, add raisins and olives, and cook for about 15 minutes more. Serve with white rice if desired."
+    }
   ],
   "attribution": {
     "name": "Sam Sifton",
     "url": "https://cooking.nytimes.com/recipes/1016814-picadillo"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T18:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

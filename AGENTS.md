@@ -11,6 +11,18 @@ Primary build plan: [`docs/recipe-site-implementation-plan.md`](docs/recipe-site
 
 ---
 
+## Diet tags
+
+When setting `categories.diet`, infer from **ingredients** (not vibes):
+
+- `vegan` — no meat/fish, dairy, eggs, or honey; also include `vegetarian`
+- `vegetarian` — no meat/fish (eggs/dairy/honey OK)
+- `dairy free` / `gluten free` — based on ingredients present
+- Do not invent diet claims that conflict with listed ingredients
+- Re-check after ingredient edits
+
+---
+
 ## Hard rule: do not invent recipe content
 
 When importing or updating recipes from a source (LaTeX, MasterCook, PDF, paste,

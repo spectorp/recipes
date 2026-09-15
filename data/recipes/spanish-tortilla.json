@@ -5,7 +5,11 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "vegetarian",
+      "gluten free",
+      "dairy free"
+    ],
     "meal": [],
     "season": [],
     "cuisine": [
@@ -74,5 +78,5 @@
   ],
   "notes": "Serve with garlic mayo (look up recipe) Add 1/2 cup jarred roasted red peppers (rinsed, patted dry, and cut in 1/2 inch pieces) and 1/2 cup frozen peas (thawed) to egg mixture before returning to pan. Add scallions and chorizo.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

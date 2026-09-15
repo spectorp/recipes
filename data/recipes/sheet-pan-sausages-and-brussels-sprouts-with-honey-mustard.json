@@ -2,37 +2,110 @@
   "id": "sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard",
   "title": "Sheet-Pan Sausages and Brussels Sprouts With Honey Mustard",
   "categories": {
-    "method": ["sheet pan"],
-    "diet": [],
-    "meal": ["dinner"],
+    "method": [
+      "sheet pan"
+    ],
+    "diet": [
+      "gluten free",
+      "dairy free"
+    ],
+    "meal": [
+      "dinner"
+    ],
     "season": [],
     "cuisine": [],
-    "main_ingredient": ["pork"]
+    "main_ingredient": [
+      "pork"
+    ]
   },
   "tags": [],
   "servings": 4,
   "cook_time_minutes": 30,
   "ingredients": [
-    {"id": "i1", "name": "fresh sausage", "amount": 1, "unit": "lb", "notes": "such as sweet or hot Italian sausage or bratwurst"},
-    {"id": "i2", "name": "Brussels sprouts", "amount": 1, "unit": "lb", "notes": "trimmed and halved lengthwise"},
-    {"id": "i3", "name": "small potatoes", "amount": 1, "unit": "lb", "notes": "baby Yukon Gold or red, halved"},
-    {"id": "i4", "name": "extra-virgin olive oil", "amount": 2, "unit": "tbsp", "notes": "plus more as needed"},
-    {"id": "i5", "name": "kosher salt and black pepper", "amount": 1, "unit": "pinch", "notes": "to taste"},
-    {"id": "i6", "name": "honey", "amount": 4, "unit": "tsp"},
-    {"id": "i7", "name": "Dijon mustard", "amount": 1, "unit": "tbsp"},
-    {"id": "i8", "name": "yellow mustard seeds", "amount": 1, "unit": "tbsp", "notes": "optional"},
-    {"id": "i9", "name": "almonds or walnuts", "amount": 0.25, "unit": "cup", "notes": "chopped, optional"}
+    {
+      "id": "i1",
+      "name": "fresh sausage",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "such as sweet or hot Italian sausage or bratwurst"
+    },
+    {
+      "id": "i2",
+      "name": "Brussels sprouts",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "trimmed and halved lengthwise"
+    },
+    {
+      "id": "i3",
+      "name": "small potatoes",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "baby Yukon Gold or red, halved"
+    },
+    {
+      "id": "i4",
+      "name": "extra-virgin olive oil",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "plus more as needed"
+    },
+    {
+      "id": "i5",
+      "name": "kosher salt and black pepper",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": "to taste"
+    },
+    {
+      "id": "i6",
+      "name": "honey",
+      "amount": 4,
+      "unit": "tsp"
+    },
+    {
+      "id": "i7",
+      "name": "Dijon mustard",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i8",
+      "name": "yellow mustard seeds",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "id": "i9",
+      "name": "almonds or walnuts",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "chopped, optional"
+    }
   ],
   "steps": [
-    {"id": "s1", "text": "Heat oven to 450 degrees F with a sheet pan inside. Score sausages in a few places without cutting through. Toss sausages, Brussels sprouts and potatoes with olive oil; season with salt and pepper."},
-    {"id": "s2", "text": "Spread on the hot sheet pan in one layer, vegetables cut-side down. Roast for 15 minutes."},
-    {"id": "s3", "text": "Stir honey, Dijon and mustard seeds, if using, in a small bowl."},
-    {"id": "s4", "text": "Drizzle honey mustard over sausages and vegetables and toss to coat. Flip sausages, sprinkle with nuts if using, and roast about 10 minutes more, until sausages are cooked through and vegetables are golden and tender. Season to taste."}
+    {
+      "id": "s1",
+      "text": "Heat oven to 450 degrees F with a sheet pan inside. Score sausages in a few places without cutting through. Toss sausages, Brussels sprouts and potatoes with olive oil; season with salt and pepper."
+    },
+    {
+      "id": "s2",
+      "text": "Spread on the hot sheet pan in one layer, vegetables cut-side down. Roast for 15 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Stir honey, Dijon and mustard seeds, if using, in a small bowl."
+    },
+    {
+      "id": "s4",
+      "text": "Drizzle honey mustard over sausages and vegetables and toss to coat. Flip sausages, sprinkle with nuts if using, and roast about 10 minutes more, until sausages are cooked through and vegetables are golden and tender. Season to taste."
+    }
   ],
   "attribution": {
     "name": "Ali Slagle",
     "url": "https://cooking.nytimes.com/recipes/1020747-sheet-pan-sausages-and-brussels-sprouts-with-honey-mustard"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T18:00:00Z"
+  "updated_at": "2026-09-15T19:13:10Z"
 }

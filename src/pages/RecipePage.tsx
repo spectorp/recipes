@@ -185,56 +185,60 @@ export function RecipePage() {
           <StarRating rating={recipe.rating} className="text-lg" />
         </div>
 
-        <dl className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-muted dark:text-stone-400">
-          {!showScaler && recipe.servings != null && (
-            <div>
-              <dt className="sr-only">Servings</dt>
-              <dd>{recipe.servings} servings</dd>
-            </div>
-          )}
-          {prep != null && (
-            <div>
-              <dt className="sr-only">Prep time</dt>
-              <dd>{prep} min prep</dd>
-            </div>
-          )}
-          {cook != null && (
-            <div>
-              <dt className="sr-only">Cook time</dt>
-              <dd>{cook} min cook</dd>
-            </div>
-          )}
-          {time && prep != null && cook != null && (
-            <div>
-              <dt className="sr-only">Total time</dt>
-              <dd>{time}</dd>
-            </div>
-          )}
-        </dl>
+        <div className="mt-4 flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
+          <div className="min-w-0 flex-1 space-y-3">
+            <dl className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-muted dark:text-stone-400">
+              {!showScaler && recipe.servings != null && (
+                <div>
+                  <dt className="sr-only">Servings</dt>
+                  <dd>{recipe.servings} servings</dd>
+                </div>
+              )}
+              {prep != null && (
+                <div>
+                  <dt className="sr-only">Prep time</dt>
+                  <dd>{prep} min prep</dd>
+                </div>
+              )}
+              {cook != null && (
+                <div>
+                  <dt className="sr-only">Cook time</dt>
+                  <dd>{cook} min cook</dd>
+                </div>
+              )}
+              {time && prep != null && cook != null && (
+                <div>
+                  <dt className="sr-only">Total time</dt>
+                  <dd>{time}</dd>
+                </div>
+              )}
+            </dl>
 
-        {showScaler && (
-          <>
-            <div className="no-print mt-4">
-              <ServingsScaler
-                baseServings={baseServings}
-                servings={servings}
-                onChange={setServings}
-              />
-            </div>
-            <p className="print-only mt-4 hidden text-sm text-ink">
-              {servings} servings
-              {scale !== 1 ? ` (scaled from ${baseServings})` : ''}
-            </p>
-          </>
-        )}
-
-        {chips.length > 0 && (
-          <div className="no-print mt-4 flex flex-wrap gap-1.5">
-            {chips.map((chip, i) => (
-              <Chip key={`${chip}-${i}`}>{chip}</Chip>
-            ))}
+            {showScaler && (
+              <>
+                <div className="no-print">
+                  <ServingsScaler
+                    baseServings={baseServings}
+                    servings={servings}
+                    onChange={setServings}
+                  />
+                </div>
+                <p className="print-only hidden text-sm text-ink">
+                  {servings} servings
+                  {scale !== 1 ? ` (scaled from ${baseServings})` : ''}
+                </p>
+              </>
+            )}
           </div>
-        )}
+
+          {chips.length > 0 && (
+            <div className="no-print flex max-w-full flex-wrap justify-end gap-1.5 sm:max-w-md">
+              {chips.map((chip, i) => (
+                <Chip key={`${chip}-${i}`}>{chip}</Chip>
+              ))}
+            </div>
+          )}
+        </div>
       </header>
 
       <div className="recipe-body mt-8 grid gap-10 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
