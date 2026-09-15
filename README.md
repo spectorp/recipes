@@ -55,5 +55,6 @@ browse page shows a warning if any were skipped.
 - **Phase 5** — browse UI (search, facets, tags, sort, responsive filters)
 - **Phase 6** — recipe detail pages + SPA deep-link fallback (`404.html`)
 - **Phase 7** — display-only servings scaling on detail view
+- **Phase 8** — print / Save as PDF from recipe detail
 
-Next: print stylesheet.
+Next: theme toggle UI (light / dark / system).

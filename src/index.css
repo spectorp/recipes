@@ -25,3 +25,97 @@
     @apply bg-surface-dark text-stone-100;
   }
 }
+
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+
+  /* Always light / black-on-white regardless of app theme */
+  html,
+  html.dark {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  .dark body {
+    background: #fff !important;
+    color: #111 !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /*
+   * Stack for print (not CSS grid). Grids often won't fragment across pages,
+   * which leaves a long title alone on page 1 for big recipes.
+   */
+  .recipe-page {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .recipe-page > header {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  .recipe-page h1 {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .recipe-page h2 {
+    font-size: 1.05rem !important;
+    margin: 0 0 0.25rem !important;
+  }
+
+  .recipe-page dl,
+  .recipe-page .print-only {
+    margin-top: 0.3rem !important;
+  }
+
+  .recipe-body {
+    display: block !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .recipe-body section {
+    position: static !important;
+    display: block !important;
+    margin: 0 0 0.75rem !important;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .recipe-body ul,
+  .recipe-body ol {
+    margin-top: 0.3rem !important;
+  }
+
+  .recipe-body li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Checked cooking state shouldn't gray out on paper */
+  .recipe-check-text {
+    color: #111 !important;
+    opacity: 1 !important;
+  }
+}

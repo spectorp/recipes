@@ -156,13 +156,22 @@ export function RecipePage() {
   }
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
-      <Link
-        className="text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
-        to="/"
-      >
-        ← All recipes
-      </Link>
+    <main className="recipe-page mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
+      <div className="no-print flex flex-wrap items-center justify-between gap-3">
+        <Link
+          className="text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
+          to="/"
+        >
+          ← All recipes
+        </Link>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+        >
+          Print
+        </button>
+      </div>
 
       <header className="mt-4 border-b border-stone-200 pb-6 dark:border-stone-700">
         <div className="flex flex-wrap items-start justify-between gap-3">
@@ -200,17 +209,23 @@ export function RecipePage() {
         </dl>
 
         {showScaler && (
-          <div className="mt-4">
-            <ServingsScaler
-              baseServings={baseServings}
-              servings={servings}
-              onChange={setServings}
-            />
-          </div>
+          <>
+            <div className="no-print mt-4">
+              <ServingsScaler
+                baseServings={baseServings}
+                servings={servings}
+                onChange={setServings}
+              />
+            </div>
+            <p className="print-only mt-4 hidden text-sm text-ink">
+              {servings} servings
+              {scale !== 1 ? ` (scaled from ${baseServings})` : ''}
+            </p>
+          </>
         )}
 
         {chips.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-1.5">
+          <div className="no-print mt-4 flex flex-wrap gap-1.5">
             {chips.map((chip, i) => (
               <Chip key={`${chip}-${i}`}>{chip}</Chip>
             ))}
@@ -218,13 +233,13 @@ export function RecipePage() {
         )}
       </header>
 
-      <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
+      <div className="recipe-body mt-8 grid gap-10 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
         <section className="lg:sticky lg:top-6">
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Ingredients
           </h2>
           {scale !== 1 && (
-            <p className="mt-1 text-xs text-ink-muted dark:text-stone-500">
+            <p className="no-print mt-1 text-xs text-ink-muted dark:text-stone-500">
               Scaled for {servings} servings (recipe base {baseServings})
             </p>
           )}
@@ -236,7 +251,7 @@ export function RecipePage() {
                   <label className="flex cursor-pointer items-start gap-2.5 text-ink dark:text-stone-200">
                     <input
                       type="checkbox"
-                      className="mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                      className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
                       checked={checked}
                       onChange={() =>
                         setCheckedIngredients((prev) =>
@@ -245,11 +260,11 @@ export function RecipePage() {
                       }
                     />
                     <span
-                      className={
+                      className={`recipe-check-text ${
                         checked
                           ? 'text-ink-muted opacity-60 dark:text-stone-500'
                           : ''
-                      }
+                      }`}
                     >
                       {formatIngredientLine({
                         ...ingredient,
@@ -275,7 +290,7 @@ export function RecipePage() {
                   <label className="flex cursor-pointer items-start gap-2.5 text-ink leading-relaxed dark:text-stone-200">
                     <input
                       type="checkbox"
-                      className="mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                      className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
                       checked={checked}
                       onChange={() =>
                         setCheckedSteps((prev) => toggleId(prev, step.id))
@@ -286,11 +301,11 @@ export function RecipePage() {
                         {index + 1}.
                       </span>
                       <span
-                        className={
+                        className={`recipe-check-text ${
                           checked
                             ? 'text-ink-muted opacity-60 dark:text-stone-500'
                             : ''
-                        }
+                        }`}
                       >
                         {step.text}
                       </span>

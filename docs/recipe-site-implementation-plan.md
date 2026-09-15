@@ -37,7 +37,8 @@ two conflict, **this document wins**.
 | 5 Browse UI | Done |
 | 6 Detail + deep links | Done |
 | 7 Servings scaling | Done |
-| 8–11 | Not started |
+| 8 Print stylesheet | Done |
+| 9–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -56,6 +57,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
 - **Servings scaling** — display-only stepper + decimal presets `0.5× / 1× / 1.5× / 2× / 3×`; “Reset” restores base servings; hidden when recipe has no `servings` (most migrated recipes omit it until filled in). Scaled amounts do not write JSON. (Phase 7)
 - **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
+- **Print** — detail-page Print button → `window.print()`; `@media print` forces light theme, hides nav/scaler/checkboxes/chips, keeps currently scaled amounts; **stacks** ingredients then steps (CSS grid does not fragment well and orphaned long titles on page 1). (Phase 8)
 
 ---
 
@@ -261,11 +263,11 @@ cooking progress (session-only).
 
 ### 4.4 Print / export PDF
 
-- Print action on detail view → `window.print()`
-- `@media print`: hide nav/filters/controls; show scaled amounts currently
-  on screen; force light/black-on-white; include title, servings, times,
-  ingredients, steps; attribution small at bottom; chips optional/omit
-- No multi-recipe cookbook export in v1
+**Done (Phase 8).** Print button on the recipe detail view uses
+`window.print()`. Print CSS hides interactive chrome (back link, scaler
+controls, checkboxes, chips, Print button), forces black-on-white, and
+prints the on-screen scaled ingredient amounts. Save as PDF via the OS print
+dialog. No multi-recipe export.
 
 ### 4.5 Theme
 
@@ -379,7 +381,7 @@ a small intentional type + color system over default “AI purple” tropes.
 6. **Detail + deep links** — ✅ `/recipe/:id` full view, optional-field handling,
    SPA `404.html` fallback for refresh
 7. **Servings scaling** — ✅ display-only
-8. **Print stylesheet** — light print layout, scaled amounts
+8. **Print stylesheet** — ✅ light print layout, scaled amounts
 9. **Theme** — light/dark/system + `localStorage` UI (helpers already exist)
 10. **Deploy** — GitHub Actions → Pages; verify live URL and deep links
 11. **Polish** — empty states, mobile pass, README (edit recipes via JSON,
@@ -405,4 +407,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 8.
+No further product decisions are required to continue with Phase 9.
