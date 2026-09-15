@@ -32,7 +32,8 @@ two conflict, **this document wins**.
 | --- | --- |
 | 1 Scaffold | Done |
 | 2 Archive LaTeX | Done |
-| 3–11 | Not started |
+| 3 Data pipeline | Done |
+| 4–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -42,6 +43,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
 - **`archive/latex/compile_recipes.sh`** — `cd`s to its own directory so it works when invoked from elsewhere; small README in that folder. (Phase 2)
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
+- **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
 
 ---
 
@@ -168,21 +170,14 @@ files that use the old string (agent/human responsibility).
 
 ### 2.4 Loading recipes on a static host
 
-GitHub Pages cannot list directories. Approach:
+GitHub Pages cannot list directories. **Implemented approach (Phase 3):**
 
 1. Keep one file per recipe under `data/recipes/`.
-2. At **Vite build time**, glob `data/recipes/*.json`, validate, and emit a
-   single module or JSON asset (e.g. `src/generated/recipes.ts` or
-   `public/recipes-index.json` built into the bundle).
-3. Also load `categories.json` and `tags.json` the same way (import or
-   copy into the bundle).
+2. `src/lib/catalog.ts` uses Vite `import.meta.glob('../../data/recipes/*.json', { eager: true })` so every recipe JSON is bundled at build/dev time.
+3. Each file is validated with Zod (`src/lib/schema.ts`, kept in sync with `schema.json`). Filename must match `id`; duplicates and invalid files are skipped and collected in `catalogLoadErrors` (console + browse banner).
+4. `data/categories.json` and `data/tags.json` are static imports, also Zod-validated.
 
-Prefer **importing into the JS bundle** for v1 (simplest offline/cache
-behavior, one deploy artifact). A Vite plugin or small `scripts/build-data.mjs`
-run via `prebuild` is fine.
-
-Optional later: commit a generated `data/recipes-index.json` for non-app
-consumers; not required for v1 if the site builds its own index.
+No separate prebuild script or committed generated index for v1.
 
 ---
 
@@ -375,7 +370,7 @@ a small intentional type + color system over default “AI purple” tropes.
 1. **Scaffold** — ✅ Vite React-TS app, Tailwind (dark mode), React Router,
    `base: '/recipes/'`, README stub, empty `data/` layout, `schema.json`
 2. **Archive LaTeX** — ✅ move TeX/PDF/assets/script under `archive/latex/`
-3. **Data pipeline** — build-time glob + Zod validation; load categories/tags
+3. **Data pipeline** — ✅ `import.meta.glob` + Zod validation; load categories/tags
 4. **Migrate recipes** — convert all TeX subsections → JSON + seed vocab
 5. **Browse UI** — grid/list, search, facets, tags AND/OR, rating/attribution
    filters, sort; responsive shell
@@ -408,4 +403,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 3.
+No further product decisions are required to continue with Phase 4.

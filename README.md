@@ -39,9 +39,17 @@ The previous LaTeX cookbook lives under
 [`archive/latex/`](archive/latex/) (source, PDF, compile script). It is
 historical reference only — not what the site serves.
 
+## How the site loads recipes
+
+At build/dev time, Vite bundles every `data/recipes/*.json` file (via
+`import.meta.glob` in `src/lib/catalog.ts`). Each file is validated with Zod
+(`src/lib/schema.ts`, matching `schema.json`). Bad files are skipped; the
+browse page shows a warning if any were skipped.
+
 ## Current status
 
 - **Phase 1** — app shell, routing, Tailwind dark-mode setup, schema, empty data dirs
 - **Phase 2** — LaTeX archived under `archive/latex/`
+- **Phase 3** — catalog loader + Zod validation (vocab + recipes)
 
-Next: data pipeline (build-time load + validation), then migrate recipes from TeX.
+Next: migrate LaTeX recipes into `data/recipes/*.json`.
