@@ -58,7 +58,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Detail header** — category/tag chips sit to the right of servings/times on the recipe page to save vertical space.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
-- **Servings scaling** — display-only stepper + decimal presets `0.5× / 1× / 1.5× / 2× / 3×`; “Reset” restores base servings; hidden when recipe has no `servings` (most migrated recipes omit it until filled in). Scaled amounts do not write JSON. (Phase 7)
+- **Servings scaling** — always shown on the detail page. When `servings` is set: stepper + presets `0.5× / 1× / 1.5× / 2× / 3×` and “Reset”. When omitted: preset multipliers only (written recipe = `1×`). Scaled amounts do not write JSON. (Phase 7+)
 - **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
 - **Print** — detail-page Print button → `window.print()`; `@media print` forces light theme, hides nav/scaler/checkboxes/chips, keeps currently scaled amounts; **stacks** ingredients then steps (CSS grid does not fragment well and orphaned long titles on page 1). (Phase 8)
 
