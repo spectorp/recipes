@@ -52,6 +52,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
 - **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Mobile filters use a right-hand sheet. (Phase 5)
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
+- **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
 
 ---
 

@@ -47,7 +47,7 @@ export function RecipePage() {
   )
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
       <Link
         className="text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
         to="/"
@@ -99,37 +99,39 @@ export function RecipePage() {
         )}
       </header>
 
-      <section className="mt-8">
-        <h2 className="font-display text-2xl text-ink dark:text-stone-50">
-          Ingredients
-        </h2>
-        <ul className="mt-4 space-y-2">
-          {recipe.ingredients.map((ingredient) => (
-            <li
-              key={ingredient.id}
-              className="text-ink dark:text-stone-200"
-            >
-              {formatIngredientLine(ingredient)}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
+        <section className="lg:sticky lg:top-6">
+          <h2 className="font-display text-2xl text-ink dark:text-stone-50">
+            Ingredients
+          </h2>
+          <ul className="mt-4 space-y-2">
+            {recipe.ingredients.map((ingredient) => (
+              <li
+                key={ingredient.id}
+                className="text-ink dark:text-stone-200"
+              >
+                {formatIngredientLine(ingredient)}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="mt-10">
-        <h2 className="font-display text-2xl text-ink dark:text-stone-50">
-          Instructions
-        </h2>
-        <ol className="mt-4 list-decimal space-y-4 pl-5">
-          {recipe.steps.map((step) => (
-            <li
-              key={step.id}
-              className="pl-1 text-ink leading-relaxed dark:text-stone-200"
-            >
-              {step.text}
-            </li>
-          ))}
-        </ol>
-      </section>
+        <section>
+          <h2 className="font-display text-2xl text-ink dark:text-stone-50">
+            Instructions
+          </h2>
+          <ol className="mt-4 list-decimal space-y-4 pl-5">
+            {recipe.steps.map((step) => (
+              <li
+                key={step.id}
+                className="pl-1 text-ink leading-relaxed dark:text-stone-200"
+              >
+                {step.text}
+              </li>
+            ))}
+          </ol>
+        </section>
+      </div>
 
       {notes && (
         <section className="mt-10">
