@@ -6,6 +6,7 @@
       "stovetop"
     ],
     "diet": [
+      "pescatarian",
       "dairy free"
     ],
     "meal": [
@@ -144,5 +145,5 @@
   ],
   "notes": "Currants shouldn't be omitted and are better than raisins, they're not as pronounced nor as sweet. Can replace anchovies with anchovy paste – if so, add when cooking up onions and fennel. White wine could be replaced with chicken stock or white vermouth",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

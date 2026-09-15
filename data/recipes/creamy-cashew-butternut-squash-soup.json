@@ -8,6 +8,7 @@
     "diet": [
       "vegetarian",
       "vegan",
+      "pescatarian",
       "gluten free",
       "dairy free"
     ],
@@ -145,5 +146,5 @@
     "url": "https://cooking.nytimes.com/recipes/1014339-creamy-cashew-butternut-squash-soup"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T19:14:09Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

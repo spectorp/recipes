@@ -2,9 +2,16 @@
   "id": "morning-glory-muffins",
   "title": "Morning Glory Muffins",
   "categories": {
-    "method": ["baking"],
-    "diet": ["vegetarian"],
-    "meal": ["breakfast"],
+    "method": [
+      "baking"
+    ],
+    "diet": [
+      "vegetarian",
+      "pescatarian"
+    ],
+    "meal": [
+      "breakfast"
+    ],
     "season": [],
     "cuisine": [],
     "main_ingredient": []
@@ -14,32 +21,129 @@
   "prep_time_minutes": 40,
   "cook_time_minutes": 20,
   "ingredients": [
-    {"id": "i1", "name": "all-purpose flour", "amount": 120, "unit": "g", "notes": "1 cup"},
-    {"id": "i2", "name": "whole-wheat flour", "amount": 85, "unit": "g", "notes": "3/4 cup"},
-    {"id": "i3", "name": "ground cinnamon", "amount": 1.5, "unit": "tsp"},
-    {"id": "i4", "name": "baking powder", "amount": 1, "unit": "tsp"},
-    {"id": "i5", "name": "baking soda", "amount": 0.5, "unit": "tsp"},
-    {"id": "i6", "name": "kosher salt", "amount": 0.5, "unit": "tsp"},
-    {"id": "i7", "name": "whole milk", "amount": 177, "unit": "ml", "notes": "3/4 cup"},
-    {"id": "i8", "name": "packed dark brown sugar", "amount": 160, "unit": "g", "notes": "3/4 cup"},
-    {"id": "i9", "name": "large eggs", "amount": 2, "unit": null},
-    {"id": "i10", "name": "shredded carrot", "amount": 90, "unit": "g", "notes": "3/4 cup, from 2 medium carrots"},
-    {"id": "i11", "name": "shredded apple", "amount": 77, "unit": "g", "notes": "1/2 cup, from 1 medium apple"},
-    {"id": "i12", "name": "unsweetened shredded coconut", "amount": 57, "unit": "g", "notes": "1/2 cup, toasted"},
-    {"id": "i13", "name": "walnuts", "amount": 90, "unit": "g", "notes": "3/4 cup, finely chopped and toasted"},
-    {"id": "i14", "name": "raisins", "amount": 112, "unit": "g", "notes": "3/4 cup"},
-    {"id": "i15", "name": "coconut oil", "amount": 118, "unit": "ml", "notes": "1/2 cup, melted"}
+    {
+      "id": "i1",
+      "name": "all-purpose flour",
+      "amount": 120,
+      "unit": "g",
+      "notes": "1 cup"
+    },
+    {
+      "id": "i2",
+      "name": "whole-wheat flour",
+      "amount": 85,
+      "unit": "g",
+      "notes": "3/4 cup"
+    },
+    {
+      "id": "i3",
+      "name": "ground cinnamon",
+      "amount": 1.5,
+      "unit": "tsp"
+    },
+    {
+      "id": "i4",
+      "name": "baking powder",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i5",
+      "name": "baking soda",
+      "amount": 0.5,
+      "unit": "tsp"
+    },
+    {
+      "id": "i6",
+      "name": "kosher salt",
+      "amount": 0.5,
+      "unit": "tsp"
+    },
+    {
+      "id": "i7",
+      "name": "whole milk",
+      "amount": 177,
+      "unit": "ml",
+      "notes": "3/4 cup"
+    },
+    {
+      "id": "i8",
+      "name": "packed dark brown sugar",
+      "amount": 160,
+      "unit": "g",
+      "notes": "3/4 cup"
+    },
+    {
+      "id": "i9",
+      "name": "large eggs",
+      "amount": 2,
+      "unit": null
+    },
+    {
+      "id": "i10",
+      "name": "shredded carrot",
+      "amount": 90,
+      "unit": "g",
+      "notes": "3/4 cup, from 2 medium carrots"
+    },
+    {
+      "id": "i11",
+      "name": "shredded apple",
+      "amount": 77,
+      "unit": "g",
+      "notes": "1/2 cup, from 1 medium apple"
+    },
+    {
+      "id": "i12",
+      "name": "unsweetened shredded coconut",
+      "amount": 57,
+      "unit": "g",
+      "notes": "1/2 cup, toasted"
+    },
+    {
+      "id": "i13",
+      "name": "walnuts",
+      "amount": 90,
+      "unit": "g",
+      "notes": "3/4 cup, finely chopped and toasted"
+    },
+    {
+      "id": "i14",
+      "name": "raisins",
+      "amount": 112,
+      "unit": "g",
+      "notes": "3/4 cup"
+    },
+    {
+      "id": "i15",
+      "name": "coconut oil",
+      "amount": 118,
+      "unit": "ml",
+      "notes": "1/2 cup, melted"
+    }
   ],
   "steps": [
-    {"id": "s1", "text": "Heat oven to 350 degrees F. Line a 12-cup standard muffin tin with paper liners."},
-    {"id": "s2", "text": "Whisk both flours, cinnamon, baking powder, baking soda and salt in a medium bowl. In a large bowl, whisk milk, brown sugar and eggs until smooth. Stir in carrot, apple, coconut, 1/2 cup walnuts, 1/2 cup raisins and melted coconut oil."},
-    {"id": "s3", "text": "Fold dry ingredients into wet just until combined. Divide among prepared cups and top with remaining walnuts and raisins."},
-    {"id": "s4", "text": "Bake until puffed and set and a toothpick comes out clean, about 20 minutes. Cool in the tin for 5 minutes, then transfer muffins to a rack to cool completely."}
+    {
+      "id": "s1",
+      "text": "Heat oven to 350 degrees F. Line a 12-cup standard muffin tin with paper liners."
+    },
+    {
+      "id": "s2",
+      "text": "Whisk both flours, cinnamon, baking powder, baking soda and salt in a medium bowl. In a large bowl, whisk milk, brown sugar and eggs until smooth. Stir in carrot, apple, coconut, 1/2 cup walnuts, 1/2 cup raisins and melted coconut oil."
+    },
+    {
+      "id": "s3",
+      "text": "Fold dry ingredients into wet just until combined. Divide among prepared cups and top with remaining walnuts and raisins."
+    },
+    {
+      "id": "s4",
+      "text": "Bake until puffed and set and a toothpick comes out clean, about 20 minutes. Cool in the tin for 5 minutes, then transfer muffins to a rack to cool completely."
+    }
   ],
   "attribution": {
     "name": "Samantha Seneviratne",
     "url": "https://cooking.nytimes.com/recipes/1018519-morning-glory-muffins"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T18:00:00Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

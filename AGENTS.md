@@ -15,9 +15,11 @@ Primary build plan: [`docs/recipe-site-implementation-plan.md`](docs/recipe-site
 
 When setting `categories.diet`, infer from **ingredients** (not vibes):
 
-- `vegan` — no meat/fish, dairy, eggs, or honey; also include `vegetarian`
-- `vegetarian` — no meat/fish (eggs/dairy/honey OK)
-- `dairy free` / `gluten free` — based on ingredients present
+- `vegan` — no meat/fish, dairy, eggs, or honey; also include `vegetarian` and `pescatarian`
+- `vegetarian` — no meat/fish (eggs/dairy/honey OK); also include `pescatarian`
+- `pescatarian` — no land meat (chicken, beef, pork, etc.) or land-meat stocks/bases; fish/seafood OK; include for vegetarian/vegan recipes too
+- `dairy free` / `gluten free` / `nut free` — based on ingredients present
+- `nut free` — no tree nuts or peanuts (coconut OK unless the recipe is clearly nut-focused); optional “or nuts” notes count as containing nuts
 - Do not invent diet claims that conflict with listed ingredients
 - Re-check after ingredient edits
 

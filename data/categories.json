@@ -39,12 +39,20 @@
       "name": "vegan"
     },
     {
+      "id": "d5",
+      "name": "pescatarian"
+    },
+    {
       "id": "d3",
       "name": "gluten free"
     },
     {
       "id": "d4",
       "name": "dairy free"
+    },
+    {
+      "id": "d6",
+      "name": "nut free"
     }
   ],
   "meal": [

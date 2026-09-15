@@ -6,7 +6,9 @@
       "baking"
     ],
     "diet": [
-      "dairy free"
+      "pescatarian",
+      "dairy free",
+      "nut free"
     ],
     "meal": [
       "dinner"
@@ -87,5 +89,5 @@
   ],
   "notes": "Very good with black cod. Probably quite good with other fishies.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

@@ -6,8 +6,10 @@
       "baking"
     ],
     "diet": [
+      "pescatarian",
       "gluten free",
-      "dairy free"
+      "dairy free",
+      "nut free"
     ],
     "meal": [
       "dinner"
@@ -62,5 +64,5 @@
   },
   "notes": "Note: This recipe will work with any skin-on firm-fleshed fish fillets, such as salmon, snapper, grouper, or bass. I prefer salmon rare to medium-rare; white-fleshed fish should be cooked at least to medium.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

@@ -8,8 +8,10 @@
     "diet": [
       "vegetarian",
       "vegan",
+      "pescatarian",
       "gluten free",
-      "dairy free"
+      "dairy free",
+      "nut free"
     ],
     "meal": [
       "side dish"
@@ -83,5 +85,5 @@
   ],
   "notes": "Golden Potatoes: Replace rosemary with 1 1/2 T Dijon mustard and 1 tbs dried parsley flakes. Parmesan potatoes Dice red potatoes, sprinkle with olive oil and mixed herbs. Bake at 450.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

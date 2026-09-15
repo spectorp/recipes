@@ -5,7 +5,9 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "nut free"
+    ],
     "meal": [
       "dinner"
     ],
@@ -141,5 +143,5 @@
   ],
   "notes": "For spice: can add 1 small jalapeno, seeded and minced, 1 minute before serving or dash chili powder. Carrots instead of red peppers Turn it into a fish chowder by adding fresh or frozen cod or similar (if going this route, try substituting a small amount of clam juice for some of the chicken stock).",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

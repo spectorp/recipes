@@ -6,7 +6,8 @@
       "stovetop"
     ],
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "pescatarian"
     ],
     "meal": [
       "side dish"
@@ -130,5 +131,5 @@
     "url": "https://cooking.nytimes.com/recipes/1015843-charlie-birds-farro-salad"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

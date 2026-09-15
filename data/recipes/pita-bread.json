@@ -6,7 +6,9 @@
       "baking"
     ],
     "diet": [
-      "vegetarian"
+      "vegetarian",
+      "pescatarian",
+      "nut free"
     ],
     "meal": [
       "side dish"
@@ -90,5 +92,5 @@
   ],
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

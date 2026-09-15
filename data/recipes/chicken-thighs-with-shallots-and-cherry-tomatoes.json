@@ -5,7 +5,9 @@
     "method": [
       "stovetop"
     ],
-    "diet": [],
+    "diet": [
+      "nut free"
+    ],
     "meal": [
       "dinner"
     ],
@@ -112,5 +114,5 @@
   ],
   "notes": "Goes well just with crusty bread and a simple salad. Can replace some/all shallots with onions Instead of 2 cups wine, can use some combination of wine and stock, plus a bit of brandy, sherry, or cognac if you have it.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T00:00:00Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

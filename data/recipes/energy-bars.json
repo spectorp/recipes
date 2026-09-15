@@ -8,6 +8,7 @@
     "diet": [
       "vegetarian",
       "vegan",
+      "pescatarian",
       "gluten free",
       "dairy free"
     ],
@@ -71,5 +72,5 @@
   ],
   "notes": "Use dates as a binder, but try... Cherry-Almond Apricot-Almond Cranberry-Pecan Apple-Cinnamon-Walnut Add-ins Chia seeds, chocolate chips, lemon/lime zest, sunflower seeds, peanuts, oats (probably toast with nuts)",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

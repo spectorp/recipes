@@ -2,42 +2,147 @@
   "id": "brothy-corn-and-salmon-chowder",
   "title": "Brothy Corn and Salmon Chowder",
   "categories": {
-    "method": ["stovetop"],
-    "diet": ["gluten free"],
-    "meal": ["dinner"],
-    "season": ["summer"],
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "pescatarian",
+      "gluten free",
+      "nut free"
+    ],
+    "meal": [
+      "dinner"
+    ],
+    "season": [
+      "summer"
+    ],
     "cuisine": [],
-    "main_ingredient": ["fish"]
+    "main_ingredient": [
+      "fish"
+    ]
   },
-  "tags": ["soup"],
+  "tags": [
+    "soup"
+  ],
   "servings": 5,
   "cook_time_minutes": 40,
   "ingredients": [
-    {"id": "i1", "name": "skinless salmon fillets", "amount": 1.5, "unit": "lb", "notes": "cut into 1-inch pieces"},
-    {"id": "i2", "name": "fine sea or table salt", "amount": 1.25, "unit": "tsp", "notes": "divided, plus more to taste"},
-    {"id": "i3", "name": "freshly ground black pepper", "amount": 1, "unit": "pinch"},
-    {"id": "i4", "name": "prepared horseradish", "amount": 3, "unit": "tsp", "notes": "divided, plus more to taste"},
-    {"id": "i5", "name": "unsalted butter", "amount": 2, "unit": "tbsp"},
-    {"id": "i6", "name": "shallots", "amount": 2, "unit": null, "notes": "chopped"},
-    {"id": "i7", "name": "small Yukon Gold or red potatoes", "amount": 1, "unit": "lb", "notes": "cut into 1/2-inch cubes"},
-    {"id": "i8", "name": "vegetable broth", "amount": 1, "unit": "l", "notes": "original quantity: 1 quart"},
-    {"id": "i9", "name": "corn kernels", "amount": 3, "unit": "cup", "notes": "from 3 to 4 ears, cobs reserved if available, or frozen"},
-    {"id": "i10", "name": "cherry or plum tomatoes", "amount": 1, "unit": "cup", "notes": "halved or cubed"},
-    {"id": "i11", "name": "basil, dill or chives", "amount": 0.25, "unit": "cup", "notes": "chopped, or a combination"},
-    {"id": "i12", "name": "fresh lemon juice", "amount": 2.5, "unit": "tsp", "notes": "2 to 3 teaspoons, plus more to taste"},
-    {"id": "i13", "name": "heavy cream or plain yogurt", "amount": 1, "unit": null, "notes": "optional, for serving"}
+    {
+      "id": "i1",
+      "name": "skinless salmon fillets",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": "cut into 1-inch pieces"
+    },
+    {
+      "id": "i2",
+      "name": "fine sea or table salt",
+      "amount": 1.25,
+      "unit": "tsp",
+      "notes": "divided, plus more to taste"
+    },
+    {
+      "id": "i3",
+      "name": "freshly ground black pepper",
+      "amount": 1,
+      "unit": "pinch"
+    },
+    {
+      "id": "i4",
+      "name": "prepared horseradish",
+      "amount": 3,
+      "unit": "tsp",
+      "notes": "divided, plus more to taste"
+    },
+    {
+      "id": "i5",
+      "name": "unsalted butter",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i6",
+      "name": "shallots",
+      "amount": 2,
+      "unit": null,
+      "notes": "chopped"
+    },
+    {
+      "id": "i7",
+      "name": "small Yukon Gold or red potatoes",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "cut into 1/2-inch cubes"
+    },
+    {
+      "id": "i8",
+      "name": "vegetable broth",
+      "amount": 1,
+      "unit": "l",
+      "notes": "original quantity: 1 quart"
+    },
+    {
+      "id": "i9",
+      "name": "corn kernels",
+      "amount": 3,
+      "unit": "cup",
+      "notes": "from 3 to 4 ears, cobs reserved if available, or frozen"
+    },
+    {
+      "id": "i10",
+      "name": "cherry or plum tomatoes",
+      "amount": 1,
+      "unit": "cup",
+      "notes": "halved or cubed"
+    },
+    {
+      "id": "i11",
+      "name": "basil, dill or chives",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "chopped, or a combination"
+    },
+    {
+      "id": "i12",
+      "name": "fresh lemon juice",
+      "amount": 2.5,
+      "unit": "tsp",
+      "notes": "2 to 3 teaspoons, plus more to taste"
+    },
+    {
+      "id": "i13",
+      "name": "heavy cream or plain yogurt",
+      "amount": 1,
+      "unit": null,
+      "notes": "optional, for serving"
+    }
   ],
   "steps": [
-    {"id": "s1", "text": "Season salmon with 1/2 teaspoon salt and black pepper, then smear with 2 teaspoons horseradish. Set aside briefly."},
-    {"id": "s2", "text": "Melt butter in a soup pot over medium heat. Add shallots and 3/4 teaspoon salt and cook until golden, about 5 minutes."},
-    {"id": "s3", "text": "Add potatoes, broth and reserved corn cobs, if using. Simmer for 15 minutes, until potatoes are almost tender. Remove cobs; when cool enough, squeeze their liquid back into the pot if desired."},
-    {"id": "s4", "text": "Add salmon, corn kernels and tomatoes. Cook until salmon is just cooked through and potatoes are tender, about 5 minutes."},
-    {"id": "s5", "text": "Stir in remaining horseradish, herbs and lemon juice. Adjust salt, horseradish and lemon. Serve with cream, yogurt or both, if desired."}
+    {
+      "id": "s1",
+      "text": "Season salmon with 1/2 teaspoon salt and black pepper, then smear with 2 teaspoons horseradish. Set aside briefly."
+    },
+    {
+      "id": "s2",
+      "text": "Melt butter in a soup pot over medium heat. Add shallots and 3/4 teaspoon salt and cook until golden, about 5 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Add potatoes, broth and reserved corn cobs, if using. Simmer for 15 minutes, until potatoes are almost tender. Remove cobs; when cool enough, squeeze their liquid back into the pot if desired."
+    },
+    {
+      "id": "s4",
+      "text": "Add salmon, corn kernels and tomatoes. Cook until salmon is just cooked through and potatoes are tender, about 5 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Stir in remaining horseradish, herbs and lemon juice. Adjust salt, horseradish and lemon. Serve with cream, yogurt or both, if desired."
+    }
   ],
   "attribution": {
     "name": "Melissa Clark",
     "url": "https://cooking.nytimes.com/recipes/786728643-brothy-corn-and-salmon-chowder"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T18:00:00Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

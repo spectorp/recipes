@@ -6,7 +6,8 @@
       "grill"
     ],
     "diet": [
-      "dairy free"
+      "dairy free",
+      "nut free"
     ],
     "meal": [
       "dinner"
@@ -89,5 +90,5 @@
   ],
   "notes": "GARNISHES: Scallions thinly sliced on the diagonal; black & /or white sesame seeds TO FREEZE: Brown well on both sides, when just undercooked, remove from oven, cool to room temperature, place in freezer bags (along with drippings from pan). To reheat, defrost in refrigerator, bring to room temperature, reheat in 350 oven for 15 - 20 minutes. HIGH ALTITUDE: First set temperature at 400 for 20 minutes, turn for another 20 minutes, then reduce to very low (about 275^).",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }

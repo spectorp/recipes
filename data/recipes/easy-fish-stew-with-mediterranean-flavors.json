@@ -6,8 +6,10 @@
       "stovetop"
     ],
     "diet": [
+      "pescatarian",
       "gluten free",
-      "dairy free"
+      "dairy free",
+      "nut free"
     ],
     "meal": [
       "dinner"
@@ -132,5 +134,5 @@
   ],
   "notes": "Advance preparation: You can make this through step 2 up to three days ahead. Keep in the refrigerator, bring back to a simmer and proceed with the recipe.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-15T20:22:34Z"
 }
