@@ -26,6 +26,23 @@ two conflict, **this document wins**.
 | Responsive | Mobile, tablet, desktop |
 | Privacy | Public site and public repo content |
 
+### Progress
+
+| Phase | Status |
+| --- | --- |
+| 1 Scaffold | Done |
+| 2 Archive LaTeX | Done |
+| 3–11 | Not started |
+
+### Plan changelog (deviations & clarifications)
+
+Keep this section updated when implementation diverges from the original text.
+
+- **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
+- **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
+- **`archive/latex/compile_recipes.sh`** — `cd`s to its own directory so it works when invoked from elsewhere; small README in that folder. (Phase 2)
+- **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
+
 ---
 
 ## 1. Tech Stack
@@ -188,13 +205,12 @@ consumers; not required for v1 if the site builds its own index.
   index.html
   package.json
   vite.config.ts
-  tailwind.config.*
-  .github/workflows/deploy.yml
+  .github/workflows/deploy.yml   # Phase 10
   README.md
 ```
 
-Move existing LaTeX/PDF/compile artifacts into `archive/latex/` early so the
-repo root is app + data focused.
+LaTeX/PDF/compile artifacts are under `archive/latex/` (Phase 2 done). Tailwind
+v4 is configured in CSS + the Vite plugin (no separate `tailwind.config` file).
 
 ---
 
@@ -281,15 +297,16 @@ Document local preview: `npm run dev` and `npm run build && npm run preview`
 
 ### 6.1 Archive
 
-Move into `archive/latex/`:
+**Done (Phase 2).** Contents of `archive/latex/`:
 
 - `perry_recipes.tex`
-- `compile_recipes.sh`
-- `perry_recipes.pdf` (and aux/out/synctex/log if kept)
-- Related assets (e.g. `sous_vide_plot.jpg`)
+- `compile_recipes.sh` (cds to its own directory)
+- `perry_recipes.pdf` (plus `.out` / `.synctex.gz`)
+- `sous_vide_plot.jpg`
+- `README.md`
 
-Do not delete history; git move is enough. README should note the archive
-is historical source, not the live cookbook.
+Do not delete history; git move was used. Root README notes the archive is
+historical source, not the live cookbook.
 
 ### 6.2 Convert ~70 recipes
 
@@ -355,9 +372,9 @@ a small intentional type + color system over default “AI purple” tropes.
 
 ## 9. Build Phases
 
-1. **Scaffold** — Vite React-TS app, Tailwind (dark mode), React Router,
+1. **Scaffold** — ✅ Vite React-TS app, Tailwind (dark mode), React Router,
    `base: '/recipes/'`, README stub, empty `data/` layout, `schema.json`
-2. **Archive LaTeX** — move TeX/PDF/assets/script under `archive/latex/`
+2. **Archive LaTeX** — ✅ move TeX/PDF/assets/script under `archive/latex/`
 3. **Data pipeline** — build-time glob + Zod validation; load categories/tags
 4. **Migrate recipes** — convert all TeX subsections → JSON + seed vocab
 5. **Browse UI** — grid/list, search, facets, tags AND/OR, rating/attribution
@@ -366,7 +383,7 @@ a small intentional type + color system over default “AI purple” tropes.
    fallback for refresh
 7. **Servings scaling** — display-only
 8. **Print stylesheet** — light print layout, scaled amounts
-9. **Theme** — light/dark/system + `localStorage`
+9. **Theme** — light/dark/system + `localStorage` UI (helpers already exist)
 10. **Deploy** — GitHub Actions → Pages; verify live URL and deep links
 11. **Polish** — empty states, mobile pass, README (edit recipes via JSON,
     vocab files, local dev, deploy)
@@ -391,4 +408,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to start Phase 1.
+No further product decisions are required to continue with Phase 3.

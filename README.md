@@ -16,8 +16,8 @@ npm install
 npm run dev
 ```
 
-Dev server: Vite will print the local URL. The app uses `base: '/recipes/'`,
-so open the path Vite reports (often including `/recipes/`).
+Dev server: Vite prints a local URL. The app uses `base: '/recipes/'`, so open
+that path (often `http://localhost:5173/recipes/`).
 
 ```bash
 npm run build
@@ -33,10 +33,15 @@ npm run preview
 | `data/tags.json` | Canonical free-tag vocab |
 | `schema.json` | JSON Schema for a recipe file |
 
+## Archive
+
+The previous LaTeX cookbook lives under
+[`archive/latex/`](archive/latex/) (source, PDF, compile script). It is
+historical reference only — not what the site serves.
+
 ## Current status
 
-**Phase 1 (scaffold)** — app shell, routing, Tailwind dark-mode setup, empty
-data dirs, schema. No recipe catalog or deploy workflow yet.
+- **Phase 1** — app shell, routing, Tailwind dark-mode setup, schema, empty data dirs
+- **Phase 2** — LaTeX archived under `archive/latex/`
 
-LaTeX sources still live at the repo root for now; Phase 2 moves them to
-`archive/latex/`.
+Next: data pipeline (build-time load + validation), then migrate recipes from TeX.

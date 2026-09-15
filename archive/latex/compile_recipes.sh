@@ -1,4 +1,8 @@
 #!/bin/bash
+set -euo pipefail
+
+# Run from this script's directory so paths work no matter where you invoke it.
+cd "$(dirname "$0")"
 
 echo "Compiling perry_recipes.tex..."
 
@@ -11,4 +15,4 @@ pdflatex perry_recipes.tex
 # Clean up auxiliary files (optional)
 rm -f perry_recipes.aux perry_recipes.log perry_recipes.toc
 
-echo "Done! PDF updated: perry_recipes.pdf" 
+echo "Done! PDF updated: perry_recipes.pdf"
