@@ -1,0 +1,112 @@
+{
+  "id": "big-salad-with-grains-template",
+  "title": "Big Salad with Grains (template)",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "salad"
+  ],
+  "servings": 1,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "sturdy salad greens, such as romaine, iceberg, escarole or kale",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "cooked grains, like quinoa, farro, bulgur wheat or barley",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "roasted vegetables, like potatoes, sweet potatoes or winter squash",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "thinly sliced raw vegetables, like bell peppers, celery, carrots, fennel, mushrooms, onions, radishes, snap or snow peas, summer squash or tomatoes",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "salad dressing, like yogurt, tahini or a vinaigrette, plus more to taste",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "avocado, thinly sliced",
+      "amount": 0.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "hard-boiled egg, peeled and halved",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "chives, plus more to taste",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "sliced or chopped nuts, like almonds, walnuts, pecans or hazelnuts, plus more to taste",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "Whole-grain bread, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Place greens in bottom of serving bowl. Add grains in an even layer over greens. Repeat with the roasted vegetables, then the raw vegetables."
+    },
+    {
+      "id": "s2",
+      "text": "Top with dressing, and toss gently. Fan out avocado on top on one side of bowl."
+    },
+    {
+      "id": "s3",
+      "text": "Place hard-boiled egg pieces on the side opposite the avocado. Top with chives and nuts. Serve with whole-grain bread."
+    }
+  ],
+  "attribution": {
+    "name": "Julia Moskin"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

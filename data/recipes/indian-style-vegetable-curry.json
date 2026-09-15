@@ -1,0 +1,158 @@
+{
+  "id": "indian-style-vegetable-curry",
+  "title": "Indian-style Vegetable Curry",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "indian"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "sweet or mild curry powder",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "garam masala",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "(14.5 oz) can diced tomatoes",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "vegetable oil",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "onions, chopped fine",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "red potatoes, cut into 1/2 inch pieces",
+      "amount": 12,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "garlic cloves, minced",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "grated fresh ginger",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "Serrano chiles, minced",
+      "amount": 1.25,
+      "unit": null,
+      "notes": "original quantity: 1 - 1.5"
+    },
+    {
+      "id": "i10",
+      "name": "tomato paste",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "head cauliflower (1 pound), cored and cut into 1-in florets",
+      "amount": 0.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "(15 oz) can chickpeas, rinsed",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "water",
+      "amount": 1.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "Salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "frozen peas",
+      "amount": 1.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "heavy cream or coconut milk",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Toast curry powder and garam masala in small skillet over medium-high heat, stirring constantly, until spices darken slightly and become fragrant, about 1 minute. Transfer to small bowl and set aside. Pulse tomatoes in food processor until coarsely chopped, 3 to 4 pulses."
+    },
+    {
+      "id": "s2",
+      "text": "Heat 3 tbs oil in large Dutch oven over medium-high heat until shimmering. Add onions and potatoes and cook, stirring occasionally, until onions are caramelized and potatoes are golden brown on edges, about 10 minutes. (Reduce heat to medium if onions darken too quickly.)"
+    },
+    {
+      "id": "s3",
+      "text": "Reduce heat to medium. Clear center of pot and add remaining 1 tbs oil, garlic, ginger, Serrano, and tomato paste and cook, stirring constantly, until fragrant, about 30 seconds. Add reserved toasted spices and cook, stirring constantly, about 1 minute. Add cauliflower and cook, stirring constantly, until spices coat florets, about 2 minutes longer."
+    },
+    {
+      "id": "s4",
+      "text": "Add tomatoes, chickpeas, water, and 1 tsp salt. Increase heat to medium-high and bring mixture to boil, scraping bottom of pot to loosen browned bits. Cover and reduce heat to medium. Simmer briskly, stirring occasionally, until vegetables are tender, 10-15 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Stir in peas and cream and continue to cook until heated through, about 2 minutes. Season with salt to taste and sever immediately."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

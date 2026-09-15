@@ -1,0 +1,91 @@
+{
+  "id": "lorraine-s-chicken",
+  "title": "Lorraine's Chicken",
+  "categories": {
+    "method": [
+      "grill"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "chicken"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "chicken legs, thights, or wings",
+      "amount": 2,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "brown sugar or honey",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "vegetable oil",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "red wine vinegar",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "soy sauce (not lite)",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "fresh ginger, grated",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "clove garlic, mashed",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "To prepare chicken: remove fat (if desired), wash, dry and set aside. Combine marinade ingredients (in a plastic bag). Add chicken and mix well."
+    },
+    {
+      "id": "s2",
+      "text": "Approximate marinade length of time, in refrigerator: Wings - 3 hrs. Legs or thighs - 4 - 8 hrs."
+    },
+    {
+      "id": "s3",
+      "text": "Grill on BBQ first on high heat to sear, then reduce heat to low."
+    },
+    {
+      "id": "s4",
+      "text": "Or bake in oven. Preheat oven to 425°. Spray or grease a cookie sheet. Spread out chicken so it's not crowded. Bake 15 minutes, turn over to other side (if there's a lot of grease on the cookie sheet, carefully pour it off); bake 15 minutes more. Reduce heat to (300° or 350°). Bake until done...Wings, about 10 minutes more; legs & thighs, about 20 minutes."
+    }
+  ],
+  "notes": "GARNISHES: Scallions thinly sliced on the diagonal; black & /or white sesame seeds TO FREEZE: Brown well on both sides, when just undercooked, remove from oven, cool to room temperature, place in freezer bags (along with drippings from pan). To reheat, defrost in refrigerator, bring to room temperature, reheat in 350 oven for 15 - 20 minutes. HIGH ALTITUDE: First set temperature at 400 for 20 minutes, turn for another 20 minutes, then reduce to very low (about 275^).",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

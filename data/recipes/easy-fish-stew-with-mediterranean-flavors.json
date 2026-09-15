@@ -1,0 +1,133 @@
+{
+  "id": "easy-fish-stew-with-mediterranean-flavors",
+  "title": "Easy Fish Stew With Mediterranean Flavors",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "mediterranean"
+    ],
+    "main_ingredient": [
+      "fish"
+    ]
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "large garlic cloves, cut in half, green shoots removed",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "anchovy fillets, soaked in water for 4 minutes, drained and rinsed",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "extra virgin olive oil",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "large onion, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "celery rib, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "medium carrot, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Salt, to taste",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "(28-ounce) can choppedtomatoes, with liquid",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "quart water",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "small new potatoes, scrubbed and quartered or sliced",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "bouquet garni made with a bay leaf",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "Freshly ground pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "firm white-fleshed fish, such as halibut, tilapia, Pacific cod or black cod, cut in 2-inch pieces",
+      "amount": 1.25,
+      "unit": "lb",
+      "notes": "original quantity: 1 to 1.5"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Place the garlic cloves and 1/4 teaspoon salt in a mortar and pestle, and mash to a paste. Add the anchovy fillets and mash with the garlic. Set aside."
+    },
+    {
+      "id": "s2",
+      "text": "Heat the olive oil over medium heat in a large, heavy soup pot or Dutch oven, and add the onion, celery and carrot with 1/2 teaspoon salt. Cook, stirring, until the onion is tender, about five minutes. Add the pureed garlic and anchovy. Cook, stirring, until the mixture is very fragrant, about one minute, and then add the tomatoes. Cook, stirring often, until the tomatoes have cooked down a bit and the mixture smells aromatic, about 10 to 15 minutes. Add the water, potatoes, salt (to taste) and the bouquet garni. Bring to a simmer. Turn the heat to low, cover partially and simmer 30 minutes. Taste, adjust salt and add pepper to taste. Remove the bouquet garni."
+    },
+    {
+      "id": "s3",
+      "text": "Season the fish with salt and pepper, and stir into the soup. The soup should not be boiling. Simmer five to 10 minutes (depending on the thickness of the fillets) or just until it flakes easily when poked. Remove from the heat, stir in the parsley, taste once more, adjust seasonings and serve."
+    }
+  ],
+  "notes": "Advance preparation: You can make this through step 2 up to three days ahead. Keep in the refrigerator, bring back to a simmer and proceed with the recipe.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "roasted-cauliflower-hazelnut-and-pomegranate-seed-salad",
+  "title": "Roasted Cauliflower, Hazelnut and Pomegranate Seed Salad",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "salad"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "head cauliflower, broken into small florets (1 1/2 pounds total)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "olive oil",
+      "amount": 5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "large celery stalk, cut on an angle into 1/4-inch slices (2/3 cup total)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "hazelnuts, with skins",
+      "amount": 5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "small flat-leaf parsley leaves, picked",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "pomegranate seeds (from about 1/2 medium pomegranate)",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Generous 1/4 teaspoon ground cinnamon",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "Generous 1/4 teaspoon ground allspice",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "sherry vinegar",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "maple syrup",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "Salt and freshly ground black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Preheat oven to 425 degrees."
+    },
+    {
+      "id": "s2",
+      "text": "Mix the cauliflower with 3 tablespoons of the olive oil, 1/2 teaspoon salt and some black pepper. Spread out in a roasting pan and roast on the top oven rack for 25 to 35 minutes, until the cauliflower is crisp and parts of it have turned golden brown. Transfer to a large mixing bowl and set aside to cool."
+    },
+    {
+      "id": "s3",
+      "text": "Decrease the oven temperature to 325 degrees. Spread the hazelnuts on a baking sheet and roast for 17 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Allow the nuts to cool a little, then coarsely chop them and add to the cauliflower, along with the remaining oil and the rest of the ingredients. Stir, taste and season with salt and pepper accordingly. Serve at room temperature."
+    }
+  ],
+  "attribution": {
+    "name": "Yotam Ottolenghi"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

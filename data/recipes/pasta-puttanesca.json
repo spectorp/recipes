@@ -1,0 +1,134 @@
+{
+  "id": "pasta-puttanesca",
+  "title": "Pasta Puttanesca",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "italian"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "pasta",
+      "amount": 0.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "olive oil",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "medium garlic cloves, thinly sliced or finely chopped",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "anchovy fillets, finely chopped",
+      "amount": 10,
+      "unit": null,
+      "notes": "original quantity: 8-12"
+    },
+    {
+      "id": "i5",
+      "name": "large pinches red pepper flakes",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "capers, drained and chopped",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "pitted black olives, chopped",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "28 oz can whole tomatoes, preferably San Marzano, roughly broken up by hand",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "Handful parsley, minced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "grated Pecorino Romano or Parmesan, plus more for serving",
+      "amount": 2,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "Salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "5 oz good quality oil-packed tuna cans (optional)",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Place pasta in a large skillet, sauté pan, or saucepan and cover with water. Add a small pinch of salt. Bring to a boil over high heat, stirring occasionally to prevent pasta from sticking."
+    },
+    {
+      "id": "s2",
+      "text": "Meanwhile, in a medium skillet, combine oil, garlic, anchovies, and red pepper flakes. Cook over medium heat until garlic is very lightly golden, about 5 minutes. (Adjust heat as necessary to keep it gently sizzling.) Add capers and olives and stir to combine."
+    },
+    {
+      "id": "s3",
+      "text": "Add tomatoes, stir to combine, and bring to a bare simmer. Continue to simmer until pasta is cooked to just under al dente (about 1 minute less than the package recommends)."
+    },
+    {
+      "id": "s4",
+      "text": "Using tongs, transfer pasta to sauce. Alternatively, drain pasta through a colander and add to sauce."
+    },
+    {
+      "id": "s5",
+      "text": "Cook until pasta is perfectly al dente, 1 to 2 minutes longer. (The pasta will cook more slowly in the sauce than it did in the water.) Stir in parsley and cheese."
+    },
+    {
+      "id": "s6",
+      "text": "Season with salt and pepper. (Be generous with the pepper and scant with the salt as the dish will be plenty salty from the other ingredients.) If using, stir in canned tuna and break it up with a fork. Serve immediately with more grated cheese at the table."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

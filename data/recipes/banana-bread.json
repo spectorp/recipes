@@ -1,0 +1,122 @@
+{
+  "id": "banana-bread",
+  "title": "Banana Bread",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "breakfast"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "flour (part wheat germ)",
+      "amount": 1.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "baking soda",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "baking powder",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "salt",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "nutmeg",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "butter (3/4 stick)",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "sugar",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "lemon juice",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "ripe banana, mashed",
+      "amount": 1.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "large eggs",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Grease 1 loaf pan pan, then flour lightly and set aside. Mash bananas into a measuring cup to measure quantity."
+    },
+    {
+      "id": "s2",
+      "text": "Sift dry ingredients by measuring into the Cuisinart bowl and pulsing briefly. Remove to a mixing bowl."
+    },
+    {
+      "id": "s3",
+      "text": "If including nuts, chop at this time in Cuisinart; set aside."
+    },
+    {
+      "id": "s4",
+      "text": "Cut butter into pieces and put into empty, Cuisinart bowl along with sugar and lemon juice. Process well and scrape down sides."
+    },
+    {
+      "id": "s5",
+      "text": "Measure banana and add to butter. Blend."
+    },
+    {
+      "id": "s6",
+      "text": "Add eggs and blend. Scrape sides. Heat oven to 350 and set rack in lower third."
+    },
+    {
+      "id": "s7",
+      "text": "Pour butter into flour and stir only until well mixed. (Add nuts and/or chocolate chips if desired.) Pour into loaf pan and bake for 1 - 1.25 hr. Test with a knife in the center to see if done. Let sit 10 minutes in the pan, then remove to a cooking rack."
+    }
+  ],
+  "notes": "Add 1 cup walnuts, add nuts after banana and pulse briefly. CHOCOLATE CHIPS: For a dessert version, increase sugar to 3/4 cup and change nuts to pecans, and stir in 1 cup chocolate chips at the end. BANANA COCONUT: Add 1/2 tsp almond extract and 1 cup toasted, flaked coconut. If banana is ripe before you are ready to cook, freeze the pulp, then defrost to use.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

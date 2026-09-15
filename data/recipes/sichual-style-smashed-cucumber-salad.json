@@ -1,0 +1,71 @@
+{
+  "id": "sichual-style-smashed-cucumber-salad",
+  "title": "Sichual-Style Smashed Cucumber Salad",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 3,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "whole English or Japanese cucumber, washed",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Kosher salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "medium cloves garlic, minced (about 2 tsp)",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "black vinegar or rice vinegar",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "sesame oil (optional)",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Place the washed cucumber on a firm, flat, clean surface. Whack it firmly but gently with the flat side of a heavy cleaver or the bottom of an 8-inch skillet. Repeat all down its length until it is completely smashed. Chop the cucumber crosswise into 1-inch pieces and transfer to a colender set in a bowl. Toss with salt and refrigerate for 10 minutes. Discard the extracted liquid and transfer the cucmbers to the bowl."
+    },
+    {
+      "id": "s2",
+      "text": "Add the garlic, vinegar, and the sesame oil (if using) to the bowl and toss to combine. This salad is best served absolutely fresh; it will get wet and slimy as it rests in the fridge."
+    }
+  ],
+  "attribution": {
+    "name": "seriouseats.com"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

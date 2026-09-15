@@ -1,0 +1,132 @@
+{
+  "id": "hot-honey-shrimp",
+  "title": "Hot Honey Shrimp",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "shrimp"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "honey",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "cayenne",
+      "amount": 0.125,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "grated lime zest",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "freshly grated ginger",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "garlic clove, grated on a microplane or finely minced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "kosher salt",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "ground black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "cleaned extra-large shrim, patted very dry with paper towels",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "very cold butter, cubed",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "Lime wedges for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "jalapeno, halved, seeded and very thinly sliced, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "chives or scallion greens, finely chopped, for serving",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "Mayo for serving (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Heat oven to 500 degrees."
+    },
+    {
+      "id": "s2",
+      "text": "In a medium bowl, combine honey, cayenne, lime zest, ginger, garlic, salt and pepper. Toss in shrimp to coat."
+    },
+    {
+      "id": "s3",
+      "text": "Spread shrimp on a large rimmed baking sheet and dot with butter. Roast until shrimp is pink and opaque, but before the edges have started to curl, about 5 minutes. Sprinkle generously with fresh lime juice and toss with jalapeños and chives or scallions. Serve with mayonnaise if you like."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark - NY Times"
+  },
+  "notes": "Notes: Very quick",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

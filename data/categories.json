@@ -1,34 +1,162 @@
 {
   "method": [
-    { "id": "me1", "name": "sheet pan" },
-    { "id": "me2", "name": "wok" },
-    { "id": "me3", "name": "grill" },
-    { "id": "me4", "name": "baking" },
-    { "id": "me5", "name": "instant pot" },
-    { "id": "me6", "name": "stovetop" },
-    { "id": "me7", "name": "sous vide" }
+    {
+      "id": "me1",
+      "name": "sheet pan"
+    },
+    {
+      "id": "me2",
+      "name": "wok"
+    },
+    {
+      "id": "me3",
+      "name": "grill"
+    },
+    {
+      "id": "me4",
+      "name": "baking"
+    },
+    {
+      "id": "me5",
+      "name": "instant pot"
+    },
+    {
+      "id": "me6",
+      "name": "stovetop"
+    },
+    {
+      "id": "me7",
+      "name": "sous vide"
+    }
   ],
   "diet": [
-    { "id": "d1", "name": "vegetarian" },
-    { "id": "d2", "name": "vegan" },
-    { "id": "d3", "name": "gluten free" },
-    { "id": "d4", "name": "dairy free" }
+    {
+      "id": "d1",
+      "name": "vegetarian"
+    },
+    {
+      "id": "d2",
+      "name": "vegan"
+    },
+    {
+      "id": "d3",
+      "name": "gluten free"
+    },
+    {
+      "id": "d4",
+      "name": "dairy free"
+    }
   ],
   "meal": [
-    { "id": "ml1", "name": "dinner" },
-    { "id": "ml2", "name": "breakfast" },
-    { "id": "ml3", "name": "lunch" },
-    { "id": "ml4", "name": "dessert" },
-    { "id": "ml5", "name": "appetizer" },
-    { "id": "ml6", "name": "side dish" },
-    { "id": "ml7", "name": "drinks" }
+    {
+      "id": "ml1",
+      "name": "dinner"
+    },
+    {
+      "id": "ml2",
+      "name": "breakfast"
+    },
+    {
+      "id": "ml3",
+      "name": "lunch"
+    },
+    {
+      "id": "ml4",
+      "name": "dessert"
+    },
+    {
+      "id": "ml5",
+      "name": "appetizer"
+    },
+    {
+      "id": "ml6",
+      "name": "side dish"
+    },
+    {
+      "id": "ml7",
+      "name": "drinks"
+    }
   ],
   "season": [
-    { "id": "s1", "name": "winter" },
-    { "id": "s2", "name": "spring" },
-    { "id": "s3", "name": "summer" },
-    { "id": "s4", "name": "fall" }
+    {
+      "id": "s1",
+      "name": "winter"
+    },
+    {
+      "id": "s2",
+      "name": "spring"
+    },
+    {
+      "id": "s3",
+      "name": "summer"
+    },
+    {
+      "id": "s4",
+      "name": "fall"
+    }
   ],
-  "cuisine": [],
-  "main_ingredient": []
+  "cuisine": [
+    {
+      "id": "c1",
+      "name": "italian"
+    },
+    {
+      "id": "c2",
+      "name": "mexican"
+    },
+    {
+      "id": "c3",
+      "name": "japanese"
+    },
+    {
+      "id": "c4",
+      "name": "chinese"
+    },
+    {
+      "id": "c5",
+      "name": "indian"
+    },
+    {
+      "id": "c6",
+      "name": "french"
+    },
+    {
+      "id": "c7",
+      "name": "mediterranean"
+    },
+    {
+      "id": "c8",
+      "name": "spanish"
+    },
+    {
+      "id": "c9",
+      "name": "korean"
+    }
+  ],
+  "main_ingredient": [
+    {
+      "id": "mi1",
+      "name": "fish"
+    },
+    {
+      "id": "mi2",
+      "name": "shrimp"
+    },
+    {
+      "id": "mi3",
+      "name": "chicken"
+    },
+    {
+      "id": "mi4",
+      "name": "pork"
+    },
+    {
+      "id": "mi5",
+      "name": "beef"
+    },
+    {
+      "id": "mi6",
+      "name": "tofu"
+    }
+  ]
 }

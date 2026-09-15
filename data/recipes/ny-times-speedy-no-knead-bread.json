@@ -1,0 +1,70 @@
+{
+  "id": "ny-times-speedy-no-knead-bread",
+  "title": "NY Times speedy no-knead bread",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "bread"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "bread flour",
+      "amount": 3,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "packet (1/4 ounce; 2.25 tsp) instant yeast",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "salt",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "Oil as needed",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine flour, yeast and salt in a large bowl. Add 1 1/2 cups water and stir until blended; dough will be shaggy. Cover bowl with plastic wrap. Let dough rest about 4 hours at warm room temperature, about 70 degrees."
+    },
+    {
+      "id": "s2",
+      "text": "Lightly oil a work surface and place dough on it; fold it over on itself once or twice. Cover loosely with plastic wrap and let rest 30 minutes more."
+    },
+    {
+      "id": "s3",
+      "text": "At least a half-hour before dough is ready, heat oven to 450 degrees. Put a 6-to-8-quart heavy covered pot (cast iron, enamel, Pyrex or ceramic) in oven as it heats. When dough is ready, carefully remove pot from oven. Slide your hand under dough and put it into pot, seam side up. Shake pan once or twice if dough is unevenly distributed; it will straighten out as it bakes."
+    },
+    {
+      "id": "s4",
+      "text": "Cover with lid and bake 30 minutes, then remove lid and bake another 15 to 30 minutes, until loaf is beautifully browned. Cool on a rack."
+    }
+  ],
+  "notes": "NOTE: Consider putting parchment paper at the bottom of the pot to prevent the bread from sticking. The dough should not stick if the pot is sufficiently hot.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,230 @@
+{
+  "id": "minestrone",
+  "title": "Minestrone",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "italian"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "(225 g) dried cannellini, borlotti, or kidney beans",
+      "amount": 8,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Kosher salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "medium onion, split in half",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "medium carrot",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "celery stalks",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "medium garlic cloves",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "large sprig rosemary",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "sprigs parsley",
+      "amount": 2.5,
+      "unit": null,
+      "notes": "original quantity: 2-3"
+    },
+    {
+      "id": "i9",
+      "name": "bay leaf",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "salt pork or pancetta, 0.25\" dice (optional)",
+      "amount": 4,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "EVOO, plus more as needed",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "medium onion, finely chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "medium carrot, finely diced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "celery stalks, finely diced",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "rosemary",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "medium garlic cloves, minced",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "ripe Roma tomatoes, peeled, seeded, and chopped (use canned unless tomates are in season; see note)",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "Parmesan rind (optional, see note)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "dried small pasta (e.g. ditili, macaroni, orecchiette)",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i20",
+      "name": "medium zucchini, cut into bite-size pieces",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i21",
+      "name": "medium summer squash, cut into bite-size pieces",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i22",
+      "name": "green beans, cut into 1/2-inch lengths",
+      "amount": 4,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i23",
+      "name": "spinach, roughly chopped (about 4 cups loosely packed leaves; 115g)",
+      "amount": 4,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i24",
+      "name": "Chopped fresh herbs, such as basil, parsley, or rosemary, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i25",
+      "name": "Freshly ground black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine beans, onion halves, carrot, celery, garlic cloves, rosemary, parsley, and bay leaf in a large pot and cover with water by several inches. Add a pinch of salt. Bring to a boil, reduce to a simmer, and cook, topping up with water as necessary, until beans are fully tender, about 45 minutes. Using tongs, discard vegetables and aromatics. Drain beans, reserving cooking liquid. Transfer bean-cooking liquid to a 2-quart measuring cup and add enough cold water to equal 2 full quarts (8 cups; 2L)."
+    },
+    {
+      "id": "s2",
+      "text": "For the soup base: Heat pancetta (if using) and olive oil in a large Dutch oven or stockpot over medium-high heat. Cook, stirring, until pancetta has rendered fat and softened, but has not yet browned. (If omitting pancetta, heat oil just until shimmering.) Add onion, carrot, celery, and minced rosemary. Season with a big pinch of salt and cook, stirring, until vegetables are softened but not browned, 10 to 15 minutes, adding more oil if pot appears dry or if vegetables are starting to stick to the bottom."
+    },
+    {
+      "id": "s3",
+      "text": "Add garlic and cook, stirring, until fragrant, about 30 seconds. Add tomatoes and cook, stirring, until most of their moisture has evaporated and the mixture starts to fry. (The sound should change from a sputtering simmering sound to a sharper crackle as vegetables start to fry.)"
+    },
+    {
+      "id": "s4",
+      "text": "Add reserved bean-cooking liquid, beans, and Parmesan rind, if using. Let broth simmer for at least 10 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Add pasta (unless you are planning on simmering for a long time; see step 7), zucchini, squash, and green beans and simmer until pasta and vegetables are tender, about 10 minutes. Add spinach and cook, stirring occasionally, until spinach is wilted, about 5 minutes. Discard Parmesan rind, if used."
+    },
+    {
+      "id": "s6",
+      "text": "Serve soup immediately as is, or continue simmering for up to 2 1/2 hours for a heartier texture and flavor (if simmering for a long time, add the pasta 10 to 15 minutes before serving). Alternatively, reserve half of soup on the side, continue to simmer the other half in the pot for up to 2 1/2 hours, and stir reserved soup back in for a soup that is hearty, but still has plenty of bright vegetable flavor and texture. Stir in chopped herbs and season to taste with salt and pepper before serving."
+    }
+  ],
+  "attribution": {
+    "name": "J. Kenji Lopez-Alt"
+  },
+  "notes": "This recipe is more of a blueprint for soup than a set of rules, allowing you to make a soup based on what you have on hand and your personal preferences. Canned beans can be used in place of fresh. To use canned beans, in step 5, drain and rinse 2 cups of canned beans and add them to the soup, along with 2 quarts of homemade vegetable stock, or store-bought or homemade low-sodium chicken stock. Increase simmering time to 30 minutes before proceeding to step 6. Use fresh tomatoes only if ripe and in season. Otherwise, tomatoes may be omitted or replaced with one (14-ounce) can of whole peeled tomatoes, crushed by hand or chopped with a knife. A Parmesan rind can be added to the soup while simmering for deeper flavor. Soup vegetables Vegetable & Instructions & Minimum cooking time Carrot & Peeled and cut into 1/2-inch chunks, & 20 minutes & sautéed at start until tender & Cauliflower & Florets separated, stems sliced 1/4 inch thick & 20 minutes Celery & Peeled and cut into 1/2-inch chunks, & 20 minutes & sautéed at start until tender & Celery root & Peeled and cut into 1/2-inch chunks & 20 minutes Jicima & Peeled and cut into 1/2-inch chunks & 20 minutes Kohlrabi & Peeled and cut into 1/2-inch chunks & 20 minutes Leeks & Thinly sliced or diced, sautéed at start until tender & 20 minutes Onion & Thinly sliced or diced, sautéed at start until tender & 20 minutes Parsnip & Peeled and cut into 1/2-inch chunks & 20 minutes Potato & Peeled and cut into 1/2-inch chunks& 20 minutes Radish & Cut into 1/2-inch chunks & 20 minutes Rutabaga & Peeled and cut into 1/2-inch chunks & 20 minutes Sweet potato & Peeled and cut into 1/2-inch chunks & 20 minutes Asparagus & Cut into 1-inch lengths & 10 minutes Broccoli & Florets separated, stems sliced 1/4 inch thick & 10 minutes Hearty greens& Tough stems or cores removed, & 10 minutes (cabbage, kale, & leaves sliced or roughly chopped & collards) & & Green beans & Trimmed and cut into 1-inch pieces & 10 minutes Summer squash & Cut into 1/2-inch chunks or disks & 10 minutes Zucchini & Cut into 1/2-inch chunks or disks & 10 minutes Tender greens & Leaves roughly chopped or torn & 5 minutes (spinach, arugula,&& watercress, chard)&& Brussels sprouts & Leaves separated & 5 minutes Frozen peas & Added straight from freezer & 5 minutes Frozen lima beans & Added straight from freezer & 5 minutes Corn kernels & Cut off cob and separated into individual kernels & 5 minutes",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,159 @@
+{
+  "id": "roasted-red-pepper-soup-with-corn-and-cilantro",
+  "title": "Roasted Red Pepper Soup with Corn and Cilantro",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "large red peppers, washed, cut in half and de-seeded",
+      "amount": 5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "large heirloom tomatoes, washed, cored and quartered",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "large garlic cloves, still in skins",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "large shallots, peeled and halved",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "low sodium chicken stock, plus more if needed",
+      "amount": 2.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "pimenton (smoked paprika)",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "small bunch fresh cilantro, well washed and spun dry",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "splash sherry vinegar",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "small ears sweet corn, cut from the cob",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "fresh thyme leaves, finely minced",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "shallot, finely minced",
+      "amount": 0.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "butter",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "crumbled feta cheese",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "EVOO",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "Kosher salt and black pepper to taste",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Preheat oven to 425°. Toss the pepper halves, tomato quarters, halved shallots and garlic cloves in a large bowl, drizzle with olive oil, season with salt and pepper and toss with your hands to coat. Place them all in a single layer, skin side up in a large roasting pan."
+    },
+    {
+      "id": "s2",
+      "text": "Place the pan in the oven and roast for 45 to 60 minutes, until everything has started to take on a nice charred appearance. Check the shallots and garlic at this point, if they are nice and soft, remove from the pan and reserve, if not, you can keep them in the pan for the final 15 minutes of cooking."
+    },
+    {
+      "id": "s3",
+      "text": "At the one hour mark, remove the pan, peel the charred skin from the tomatoes and peppers, and squeeze the garlic cloves from their skins. Place the skinned tomatoes, peppers, garlic and shallots in a medium pot with the pimenton and chicken stock, bring to a boil, then lower the heat to medium and cook, uncovered, for about 15 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Working in batches, puree the soup in a blender and place in a clean pan, check for seasoning and keep warm."
+    },
+    {
+      "id": "s5",
+      "text": "Bring a pot of salted water to a boil, toss in the cilantro and blanch for about 30 seconds. Pull from the pot with a slotted spoon and shock in ice water. When cooled, pour through a strainer to catch the cilantro, and pressing with the palm of your hand, wring as much of the water free as you can. Finely chop the herb, then toss into a bowl with enough EVOO to maker a spoonable cilantro oil, add a splash of sherry vinegar, and salt and pepper to taste. Reserve."
+    },
+    {
+      "id": "s6",
+      "text": "Preheat a skillet over a medium flame, and when hot add a splash of olive oil and the minced shallot. Cook until the shallot starts to take on some color, then add the corn kernels, some salt and pepper, and the fresh thyme. Cook for 2 minutes, toss in the butter, and when it melts, remove from the heat and transfer to a bowl."
+    },
+    {
+      "id": "s7",
+      "text": "To serve, place a small pile of the corn in the center of a warmed soup bowl, pour the soup around, drizzle with some cilantro oil, and finally, sprinkle with a little crumbled feta."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

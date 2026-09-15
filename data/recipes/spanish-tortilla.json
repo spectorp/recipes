@@ -1,0 +1,78 @@
+{
+  "id": "spanish-tortilla",
+  "title": "Spanish Tortilla",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [],
+    "season": [],
+    "cuisine": [
+      "spanish"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "plus 1 tsp EVOO",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Yukon Gold potatoes, peeled, quartered, and cut into 1/8 inch-thick slices (this is a bit too much. Another recipe calls for 1 cup cubed)",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "small onion, halved and sliced thin",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "large eggs",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Toss 4 tbs oil, potatoes, onion, 1/2 tsp salt, and pepper in a bowl. Heat 2 tbs in a 10 in nonstick pan over medium-high until oil shimmers. Reduce heat to medium-low and add the potato mixture. Cover and cook, stirring every few minutes until potatoes are soft (around 25 min)."
+    },
+    {
+      "id": "s2",
+      "text": "Whisk eggs and 1/2 tsp salt in the same bowl until just combined. Fold hot potato mixture into eggs. Return to medium-high, add 1 tsp oil. Add mixture when oil just begins to smoke and cook, shaking pan and folding mixture constantly for 20 secs. Reduce heat to medium. Smooth top with spatula and cover, shaking pan every 30 secs until bottom is golden brown and to is lightly set (around 2 min)."
+    },
+    {
+      "id": "s3",
+      "text": "Flip tortilla using plate, tuck edges of tortilla into skillet, and cook, shaking every 30 secs, until bottom is golden brown (about 2 min). Remove and let cool at least 15 minutes."
+    }
+  ],
+  "notes": "Serve with garlic mayo (look up recipe) Add 1/2 cup jarred roasted red peppers (rinsed, patted dry, and cut in 1/2 inch pieces) and 1/2 cup frozen peas (thawed) to egg mixture before returning to pan. Add scallions and chorizo.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

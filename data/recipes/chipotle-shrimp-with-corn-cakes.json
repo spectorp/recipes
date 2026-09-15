@@ -1,0 +1,167 @@
+{
+  "id": "chipotle-shrimp-with-corn-cakes",
+  "title": "Chipotle Shrimp with Corn Cakes",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [],
+    "season": [],
+    "cuisine": [
+      "mexican"
+    ],
+    "main_ingredient": [
+      "shrimp"
+    ]
+  },
+  "tags": [],
+  "servings": 6,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "Pico de Gallo salsa",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "shrimp, peeled",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "unsalted butter",
+      "amount": 4,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "heaping Tbs canned chipotle in adobo sauce",
+      "amount": 1.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "flour",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "cornmeal (or polenta)",
+      "amount": 0.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "baking powder",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "baking soda",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "salt (and white pepper)",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "sugar",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "buttermilk *",
+      "amount": 1.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "melted butter",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "egg, beaten",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "fresh corn kernels **",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "scallions, chopped",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "For chipotle butter, roughly puree together the softened butter and the chipotles. Set aside at room temperature."
+    },
+    {
+      "id": "s2",
+      "text": "For corn cakes, mix dry ingredients in a bowl. In a large bowl, whisk together buttermilk and butter, then whisk in egg."
+    },
+    {
+      "id": "s3",
+      "text": "Gradually add dry to wet ingredients, and whisk until thoroughly incorporated."
+    },
+    {
+      "id": "s4",
+      "text": "Puree 1/2 cup of corn and fold it into the batter. Add remaining 1/2 cup of whole corn kernels and scallions. Add a little buttermilk if necessary to thin mixture."
+    },
+    {
+      "id": "s5",
+      "text": "Cook corn cakes in a nonstick pan over medium heat. Form 3\" cakes. Cook until golden brown (about 2.5 minutes on each side). Batter makes about 18-20 corn cakes. Can place cooked cakes on a baking sheet in a warmed oven to keep them warm."
+    },
+    {
+      "id": "s6",
+      "text": "For shrimp, cook on a griddle or frying pan on low-medium heat. Use 2 Tbs butter and/or oil. Cook about 1 minute per side."
+    },
+    {
+      "id": "s7",
+      "text": "To serve, Place 3 corn cakes on each plate. Place 5 shrimp on top of cakes and spread chipotle butter liberally over shrimp. Sprinkle chopped scallions over shrimp. Serve the Pico de Gallo salsa at side of corn cakes."
+    }
+  ],
+  "notes": "Servings: 6 * if using powdered buttermilk, start with only 1 cup water ** Can use canned or frozen corn. Drain well. If making corn cakes ahead of time, do not refrigerate. Slightly undercook them, place on a cookie sheet, and warm in a 250 degree oven.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "asparagus-soup",
+  "title": "Asparagus Soup",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "unsalted butter",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "large yellow onions, coarsely chopped",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "large cloves, garlic",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "quarts rich chicken stock",
+      "amount": 1.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "asparagus",
+      "amount": 3,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "bunch parsley, (stems removed), chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "medium carrots, peeled and cut in 1 in pieces",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "fresh basil leaves",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "dried tarragon",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "pepper",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "cayenne",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "sour cream",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "large ripe tomato, seeded and cut in small dice",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Melt butter in a heavy large saucepan over low heat. Add onions and garlic and cook uncovered until wilted, about 25 minutes."
+    },
+    {
+      "id": "s2",
+      "text": "Add stock and heat to boiling."
+    },
+    {
+      "id": "s3",
+      "text": "Cut asparagus into 1 in pieces. Reserve tips. Add asparagus pieces, parsley, carrots, basil, tarragon, salt, pepper, and cayenne to stock. Reduce heat to medium-low and simmer, covered, until veggies are tender, about 50 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Remove soup from heat and let cool. Process in batches in a blender or food processor until smooth. (Can strain soup through a medium-size sieve to remove woody fibers.)"
+    },
+    {
+      "id": "s5",
+      "text": "When ready to serve, return strained soup to saucepan, add asparagus tips, and simmer over medium heat until tips are tender, about 10 minutes."
+    },
+    {
+      "id": "s6",
+      "text": "Ladle soup into soup bowls. Dollop each serving with sour cream and sprinkle with diced tomato."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

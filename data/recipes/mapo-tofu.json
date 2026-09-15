@@ -1,0 +1,139 @@
+{
+  "id": "mapo-tofu",
+  "title": "Mapo Tofu",
+  "categories": {
+    "method": [
+      "wok"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "chinese"
+    ],
+    "main_ingredient": [
+      "tofu",
+      "beef"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "plain white tofu",
+      "amount": 1.125,
+      "unit": "lb",
+      "notes": "1 lb 2 oz (500g)"
+    },
+    {
+      "id": "i2",
+      "name": "scallions or Chinese green garlic stalks",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "cooking oil",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "ground beef",
+      "amount": 3.5,
+      "unit": "oz",
+      "notes": "100g"
+    },
+    {
+      "id": "i5",
+      "name": "Sichuan chile bean paste",
+      "amount": 2.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "fermented black beans",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "ground chiles",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "finely chopped garlic",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "finely chopped ginger",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "stock or water",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": "175ml"
+    },
+    {
+      "id": "i11",
+      "name": "ground white pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "potato starch",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": "mixed with 2.5 tbsp cold water"
+    },
+    {
+      "id": "i13",
+      "name": "ground roasted Sichuan pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": "¼–1 tsp to taste"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Cut the tofu into ¾-inch (2cm) cubes and let steep in very hot, lightly salted water while you prepare the other ingredients. Cut the scallions or green garlic into ¼-inch lengths."
+    },
+    {
+      "id": "s2",
+      "text": "Heat a seasoned wok over high heat. Pour in 1 tbsp cooking oil and heat until the sides of the wok have begun to smoke. Add the beef and stir-fry until it is fully cooked and fragrant, breaking the clumps of meat into tiny pieces as you go. Remove from the wok with a slotted spoon and set aside."
+    },
+    {
+      "id": "s3",
+      "text": "Rinse and dry the wok if necessary, then re-season it and return to medium heat. Pour in 5 tbsp cooking oil and swirl it around. Add the chile bean paste and stir-fry until the oil is a rich red color and smells delicious. Next add the black beans and ground chiles and stir-fry for a few seconds more until you can smell them too, then do the same with the garlic and ginger. Take care not to overheat the aromatics—you want to end up with a thick, fragrant sauce, and the secret is to let them sizzle gently, allowing the oil to coax out their flavors."
+    },
+    {
+      "id": "s4",
+      "text": "Remove the tofu from the hot water with a perforated ladle, shaking off any excess liquid, and place it gently into the wok. Sprinkle over the beef, then add the stock or water and white pepper. Nudge the tofu tenderly into the sauce with the back of your ladle or wok scoop to avoid breaking up the cubes."
+    },
+    {
+      "id": "s5",
+      "text": "Bring to a boil, then simmer for a couple of minutes to allow the tofu to absorb the flavors of the seasonings. If you're using green garlic (or baby leeks or garlic sprouts), stir them in now."
+    }
+  ],
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

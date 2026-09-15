@@ -1,0 +1,70 @@
+{
+  "id": "energy-bars",
+  "title": "Energy Bars",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "pitted dates",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "walnut pieces",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "dried cranberries",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "unsweetened shredded coconut",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Preheat oven to 325 degrees. Place the walnuts in a small baking pan and toast 10 minutes, or until fragrant and lightly browned. Remove from oven and set aside to cool."
+    },
+    {
+      "id": "s2",
+      "text": "Line an 8\" square baking pan with plastic wrap. Coat the inside with cooking spray."
+    },
+    {
+      "id": "s3",
+      "text": "In a food processor, combine the dates, cranberries, walnuts, and coconut. Process until fruit and nuts are ground into fine pieces. Add one tablespoon of water if needed. Continue to process until mixture begins to hold together when pressed with your fingers."
+    },
+    {
+      "id": "s4",
+      "text": "Pour mixture into prepared pan. With your hands or the back of a spoon or measuring cup, spread the mixture out and press to compact."
+    },
+    {
+      "id": "s5",
+      "text": "Refrigerate 1 hour, then cut into bars. You can store the bars in an airtight container in the fridge for several days."
+    }
+  ],
+  "notes": "Use dates as a binder, but try... Cherry-Almond Apricot-Almond Cranberry-Pecan Apple-Cinnamon-Walnut Add-ins Chia seeds, chocolate chips, lemon/lime zest, sunflower seeds, peanuts, oats (probably toast with nuts)",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

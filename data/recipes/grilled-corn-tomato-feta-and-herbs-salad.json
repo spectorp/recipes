@@ -1,0 +1,86 @@
+{
+  "id": "grilled-corn-tomato-feta-and-herbs-salad",
+  "title": "Grilled corn, tomato, feta, and herbs salad",
+  "categories": {
+    "method": [
+      "grill"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "salad"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "Fresh corn",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Cherry tomatoes",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Feta chunks (ideally good quality, i.e. in liquid)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "Scallions and/or red onion",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "Herbs or small salad greens",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "EVOO",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Sherry vinegar",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "Salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Grill or saute corn. Mix all ingredients."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

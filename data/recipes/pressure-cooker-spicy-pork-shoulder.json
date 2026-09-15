@@ -1,0 +1,245 @@
+{
+  "id": "pressure-cooker-spicy-pork-shoulder",
+  "title": "Pressure Cooker Spicy Pork Shoulder",
+  "categories": {
+    "method": [
+      "instant pot"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "korean"
+    ],
+    "main_ingredient": [
+      "pork"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "garlic cloves, grated on a Microplane or minced",
+      "amount": 5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "brown sugar or honey",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Korean chile flakes (gochugaru) or other chile flakes (Maras, Aleppo or crushed red pepper)",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "kosher salt, more to taste",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "ground black pepper",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "boneless pork shoulder, cut into two or three pieces",
+      "amount": 5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "peanut oil",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "garlic cloves, grated on a Microplane",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "grated fresh ginger root",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "gochujang (Korean chile paste) or other chile paste or sauce such as Sriracha",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "soy sauce",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "ketchup",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "mirin",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "honey",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "rice wine vinegar",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "Asian fish sauce",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "sesame oil",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "Persian cucumbers, thinly sliced (or about 4 cups sliced cucumbers)",
+      "amount": 6,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "rice vinegar",
+      "amount": 1.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i20",
+      "name": "sesame oil",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i21",
+      "name": "brown sugar",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i22",
+      "name": "fine sea salt",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i23",
+      "name": "thinly sliced red onion",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i24",
+      "name": "sesame seeds",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i25",
+      "name": "Cooked rice or toasted slider rolls",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i26",
+      "name": "Kimchi (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "To prepare pork, combine garlic, brown sugar, chile flakes, salt and pepper. Rub marinade all over pork. If you have time, cover and refrigerate for 1 hour to up to 24 hours. Otherwise, proceed with recipe."
+    },
+    {
+      "id": "s2",
+      "text": "Set electric pressure cooker to sauté (or use a large skillet). Add pork in batches and sear until browned all over, about 2 minutes per side. Add 3/4 cup water to pot (or to skillet to deglaze, then move to pot), cover, and set to cook for 60 minutes on high pressure. Or cook in a slow cooker for 5 to 7 hours until tender."
+    },
+    {
+      "id": "s3",
+      "text": "While pork cooks, prepare sauce: In a small pot, warm peanut oil over medium heat. Add garlic and ginger, and sauté until fragrant, 1 to 2 minutes. Add remaining ingredients and bring to a simmer. Cook until thickened, 1 to 2 minutes. Set sauce aside. (It can be made up to 1 week ahead and stored in the refrigerator.)"
+    },
+    {
+      "id": "s4",
+      "text": "Manually release steam. Let pork cool until you can handle it, then shred it into bite-size pieces. Pork can be made to this point up to 3 days ahead."
+    },
+    {
+      "id": "s5",
+      "text": "While pork cools, strain liquid from bottom of pot. Pour off fat (or chill liquid, then scoop off solidified fat with a spoon). Reserve."
+    },
+    {
+      "id": "s6",
+      "text": "Prepare cucumbers: In a small bowl, combine all ingredients except sesame seeds, and let sit, tossing one or twice, for at least 20 minutes. Stir in sesame seeds."
+    },
+    {
+      "id": "s7",
+      "text": "When ready to serve, heat broiler. Toss pork with sauce and 1 to 2 tablespoons cooking liquid — just enough so pork is evenly coated but not wet or runny. Spread mixture on a rimmed baking sheet, and broil until crisped on top, 2 to 3 minutes; it will char in places, and that's fine."
+    },
+    {
+      "id": "s8",
+      "text": "Serve pork over rice or on slider rolls, with cucumbers and kimchi, if desired."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

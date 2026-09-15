@@ -1,0 +1,113 @@
+{
+  "id": "water-chestnuts-sugar-snap-peas-and-shiitakes",
+  "title": "Water Chestnuts, Sugar Snap Peas, & Shiitakes",
+  "categories": {
+    "method": [
+      "wok"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [
+      "chinese"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "small shiitake mushrooms",
+      "amount": 6,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "wood ear mushrooms, rehydrated 1/2 hour and chopped",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "ginger, minced",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "water chestnuts, sliced",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "sugar snap peas, trimmed and strings removed",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "oil (divided 1:1:1)",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "water (divided 1:1:1)",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "soy sauce",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Heat 1 tbsp oil in a wok on medium-high. Add mushrooms, ginger, and 1 tbsp water. Stir-fry until browned and softened, about 2 minutes."
+    },
+    {
+      "id": "s2",
+      "text": "Add another 1 tbsp oil, water chestnuts, and 1 tbsp water. Fry for another minute."
+    },
+    {
+      "id": "s3",
+      "text": "Add the remaining oil, sugar snap peas, and water. Fry for another 2 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Season with soy sauce and salt to taste."
+    },
+    {
+      "id": "s5",
+      "text": "Serve."
+    }
+  ],
+  "attribution": {
+    "name": "Jean-Georges Vongerichten"
+  },
+  "notes": "Crunchy, salty, and sweet, this quick stir-fry takes advantage of fresh vegetables by treating them simply. A hint of ginger and a splash of soy sauce are all you need. Blanched sugar snap peas: boil for 1 minute, then plunge in ice water immediately.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

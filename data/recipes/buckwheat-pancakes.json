@@ -1,0 +1,102 @@
+{
+  "id": "buckwheat-pancakes",
+  "title": "Buckwheat Pancakes",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "breakfast"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "buckwheat flour",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "all-purpose flour",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "sugar",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "baking soda",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "buttermilk",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "(1/2 stick) butter, melted",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "egg yolks",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "egg whites",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Whisk dry ingredients together in large bowl."
+    },
+    {
+      "id": "s2",
+      "text": "Mix wet ingredients in a separate bowl. Pour wet ingredients over dry ingredients and combine with a few quick strokes of the whisk, leaving the batter slightly lumpy."
+    },
+    {
+      "id": "s3",
+      "text": "Whish the egg whites until stiff but not dry. This works well with an electric mixer. Fold into batter until just blended. Buttermilk substitute: for 1 cup buttermilk, add 1 tbs lemon juice or white vinegar to a cup measure and fill the rest with milk."
+    }
+  ],
+  "attribution": {
+    "name": "Joy of Cooking"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

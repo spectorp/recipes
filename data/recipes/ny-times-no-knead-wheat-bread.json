@@ -1,0 +1,73 @@
+{
+  "id": "ny-times-no-knead-wheat-bread",
+  "title": "NY Times no-knead wheat bread",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "bread"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "bread flour",
+      "amount": 2.6666666666666665,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "wheat flour",
+      "amount": 1.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "salt",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "yeast",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "water",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Mix ingredients well in a large bowl. Cover with plastic wrap (tip: wetting the outside rim of the bowl will help the plastic wrap stick). Let rise for about 12 hours."
+    },
+    {
+      "id": "s2",
+      "text": "Gently remove dough onto relatively heavily-floured surface, and fold dough 3 times. Try to minimize the amount you manipulate the dough. Place on a floured cloth and cover loosely with plastic wrap. Let rise for about 2 hours."
+    },
+    {
+      "id": "s3",
+      "text": "Preheat oven to 500-550 °F, and place a dutch oven (with lid off but in oven) in the oven to also preheat. Once pre-heated, gently place dough in hot dutch oven, cover with lid, and bake for 30 minutes. Remove lid, and bake an additional 15 minutes. Unless eating immediately, allow sufficient time to cool before cutting."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -51,5 +51,10 @@ browse page shows a warning if any were skipped.
 - **Phase 1** — app shell, routing, Tailwind dark-mode setup, schema, empty data dirs
 - **Phase 2** — LaTeX archived under `archive/latex/`
 - **Phase 3** — catalog loader + Zod validation (vocab + recipes)
+- **Phase 4** — 69 recipes migrated from LaTeX → `data/recipes/*.json`
 
-Next: migrate LaTeX recipes into `data/recipes/*.json`.
+Next: browse UI (search, filters, responsive grid).
+
+Ingredient amounts/units from the automated migration are best-effort; tidy
+individual JSON files in git when you notice issues (do not re-run
+`scripts/migrate-tex.mjs` blindly — it overwrites hand edits).

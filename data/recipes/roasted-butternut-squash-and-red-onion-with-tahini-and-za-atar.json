@@ -1,0 +1,124 @@
+{
+  "id": "roasted-butternut-squash-and-red-onion-with-tahini-and-za-atar",
+  "title": "Roasted butternut squash and red onion with tahini and za'atar",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "large butternut squash (2.5 lb total), cut into 2 by 6 cm wedges",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "red onions, cut into 3 cm wedges",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "olive oil",
+      "amount": 3.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "light tahini paste",
+      "amount": 3.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "lemon juice",
+      "amount": 1.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "water",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "small clove garlic, crushed",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "pine nuts",
+      "amount": 3.5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "za'atar",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "coarsely chopped flat-leaf parsley",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Preheat oven to 475 F."
+    },
+    {
+      "id": "s2",
+      "text": "Put squash and onion in a large mixing bowl, add 3 tbs of oil, 1 tsp salt, and some black pepper and toss well. Spread on baking sheet with skin facing down and roast in oven for 30-40 minutes, until the vegetables have taken on some color and are cooked through. Keep an eye on the onions as they might cook faster than the squash and need to be removed earlier. Remove from oven and let cool."
+    },
+    {
+      "id": "s3",
+      "text": "To make the sauce, place tahini in small bowl with lemon juice, water, garlic, and 0.25 tsp salt. Whisk until the sauce is the consistency of honey, adding more water or tahini if necessary."
+    },
+    {
+      "id": "s4",
+      "text": "Pour remaining 1.5 tsp oil into a small frying pan and place over medium-low heat. Add pine nuts along with 0.5 tsp salt and cook for 2 minutes, stirring often, until the nuts are golden brown. Remove from the heat and transfer the nuts and oil to a small bowl to stop the cooking."
+    },
+    {
+      "id": "s5",
+      "text": "To serve, spread the vegetables out on a large serving platter and drizzle over the tahini. Sprinkle the pine nuts and their oil on top, followed by the za'atar and parsley."
+    }
+  ],
+  "attribution": {
+    "name": "Jerusalem (Ottolenghi)"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

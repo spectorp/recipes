@@ -1,0 +1,136 @@
+{
+  "id": "okonomiyaki",
+  "title": "Okonomiyaki",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "japanese"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "mayo",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "soy sauce",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Siracha, more or less to taste",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "large eggs",
+      "amount": 5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "soy sauce",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "sesame oil",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "sea salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "AP flour",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "cabbage, shredded with a mandoline or finely chopped",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "bunch scallions, trimmed and chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "(roughly) baby or chopped shrimp",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "canola oil for frying",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "toasted sesame seeds",
+      "amount": 1.5,
+      "unit": "tbsp",
+      "notes": "original quantity: 1-2"
+    },
+    {
+      "id": "i14",
+      "name": "bonito flakes (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Whisk the first set of ingredients together."
+    },
+    {
+      "id": "s2",
+      "text": "In a large mixing bowl, whisk eggs with the soy sauce, sesame oil, and salt. Gradually add the flour until incorporated. Fold in cabbage, scallions, and shrimp."
+    },
+    {
+      "id": "s3",
+      "text": "Warm a couple glugs of canola oil in a skillet over medium-high heat until glistening. Ladle the batter into the skillet as you would for regular old pancakes. I usually make them about the size of saucer. Cook on each side for about 3 minutes or until golden brown. Keep pancakes covered in a warm oven as you make the rest. Scatter sesame seeds and/or bonito flakes on top of pancakes and serve with dipping sauce and a cold pilsner."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

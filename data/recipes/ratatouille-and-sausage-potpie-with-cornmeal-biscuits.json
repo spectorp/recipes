@@ -1,0 +1,198 @@
+{
+  "id": "ratatouille-and-sausage-potpie-with-cornmeal-biscuits",
+  "title": "Ratatouille and Sausage Potpie With Cornmeal Biscuits",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "pork"
+    ]
+  },
+  "tags": [],
+  "servings": 6,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "all-purpose flour",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "fine cornmeal",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "sugar",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "baking powder",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "baking soda",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "kosher salt",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "cold, unsalted butter, cut into 1/2-inch cubes",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "sour cream or plain whole milk yogurt",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "Milk",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "large eggplant (1 1/2 pounds) cut into 1-inch chunks",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "small zucchini ( 3/4 pound), cut into 1-inch chunks",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "extra virgin olive oil",
+      "amount": 7,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "kosher salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "freshly ground black pepper",
+      "amount": 0.75,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "Italian sausage, casings removed",
+      "amount": 0.75,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "large onion, cut into 1-inch chunks",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "red pepper, cored and cut into 1-inch chunks",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "large garlic cloves, finely chopped",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "plum tomatoes (1 28 oz can of tomatoes works well)",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i20",
+      "name": "sprigs fresh thyme",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i21",
+      "name": "chopped fresh parsley or basil",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "For the biscuits: In a bowl, whisk together the flour, cornmeal, sugar, baking powder, baking soda and salt. Using a pastry cutter or fork, cut in the butter until mixture resembles coarse crumbs. Fold in the sour cream. Gently knead mixture until it comes together in a ball, adding a drop or two of milk if necessary. Cover with plastic wrap and refrigerate until ready to use. Preheat oven to 450 degrees."
+    },
+    {
+      "id": "s2",
+      "text": "For the ratatouille: In a bowl, toss eggplant and zucchini with 5 tablespoons oil; season with 3/4 teaspoon salt and 3/4 teaspoon pepper. Spread vegetables in a single layer on one or two large baking sheets (do not crowd vegetables). Transfer to oven and roast, tossing occasionally, until golden, about 20 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Meanwhile, in a large, deep, preferably oven-proof sauté pan, heat 1 tablespoon oil. Crumble sausage into pan and cook over medium heat, stirring occasionally, until golden, about 7 minutes. Use a slotted spoon to transfer sausage to a paper towel-lined plate."
+    },
+    {
+      "id": "s4",
+      "text": "Return pan to medium heat and add remaining 1 tablespoon oil. Stir in the onion, pepper, garlic and remaining 1/4 teaspoon salt. Cook until softened, 5 to 7 minutes. Stir in the tomatoes and thyme sprigs; simmer gently until tomatoes are cooked and mixture is stew-like, about 10 minutes. Stir in the sausage, roasted vegetables and parsley. If you are not using an oven-safe pan, transfer mixture to a 2-quart gratin dish or baking pan."
+    },
+    {
+      "id": "s5",
+      "text": "Divide biscuit dough into six equal balls. Use your palm to flatten each ball into a 1/2 -inch-thick disk. Arrange on top of ratatouille mixture. Brush biscuits lightly with milk."
+    },
+    {
+      "id": "s6",
+      "text": "Transfer skillet or pan to oven and cook until biscuits are golden, 25 to 30 minutes. Let cool 10 minutes before serving. Vegetarian variation: Replace sausage with sauteed or roasted mushrooms. Cook until they've lost around half of their moisture."
+    }
+  ],
+  "notes": "Cornmeal biscuits",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

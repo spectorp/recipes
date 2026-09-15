@@ -1,0 +1,169 @@
+{
+  "id": "fish-tacos",
+  "title": "Fish tacos",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "mexican"
+    ],
+    "main_ingredient": [
+      "fish"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "garlic cloves, peeled",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Salt to taste",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Mexican oregano",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "fresh black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "yellow mustard (like French's)",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "concentrated chicken base or chicken-flavor powdered bouillon",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "beer, sparkling water or water",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "baking powder",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "all-purpose flour",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "Vegetable oil to a depth of 1.5 inches for frying",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "boneless, skinless fish filets (practically anything will work, but I like larger-flake, lighter-flavor fish best for this preparation—think catfish, halibut, sea bass, grouper and the like)",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "mayonnaise",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "sour cream or heavy (whipping) cream",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "milk",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "warm corn tortillas",
+      "amount": 12,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "(or more) thinly sliced cabbage",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "About 1 cup salsa (toasted arbol chile salsa, roasted green chile salsa, roasted tomatillo salsa or even one of the Mexican hot sauces like Tamazula or Valentina)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "or 3 limes, cut into wedges",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Finely chop the garlic, sprinkle generously with salt, then mash back and forth with the side of your knife across your cutting board until crushed to a puree. Scrape into a medium bowl and add the oregano, black pepper, mustard, base or bouillon, beer or water, and 1/2 teaspoon salt. Add the flour and baking powder to the wet ingredients and whisk just until combined."
+    },
+    {
+      "id": "s2",
+      "text": "Heat the oil in a heavy skillet to 370 degrees. While the oil is heating, cut the fish into pieces about 3 inches long by 1/2 inch square. Use a pair of tongs to pick up a piece of fish, dip it completely into the batter, and lay it into the oil. Continue with a few more pieces of fish, filling the hot oil with an uncrowded layer. Fry, turning the pieces regularly, until deep golden and crisp, about 4 minutes. Drain on paper towels and keep warm in a low oven on a wire rack set over a sheet pan while you fry the rest of the fish."
+    },
+    {
+      "id": "s3",
+      "text": "Mix together the mayonnaise, sour cream and milk. Set out with the cabbage, salsa, warm corn tortillas, limes and the crispy fish for everyone to make tacos."
+    }
+  ],
+  "attribution": {
+    "name": "Rick Bayless"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

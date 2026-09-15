@@ -1,0 +1,78 @@
+{
+  "id": "crepes",
+  "title": "Crepes",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "breakfast"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "large eggs",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "whole milk*",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "water",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "flour",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "salt",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "canola (or part melted butter)",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Throw all the above ingredients in a blender (or food processor, or mix well by hand). Transfer batter to a covered container and store in the refrigerator at least 1/2 hour and up to 48 hours."
+    },
+    {
+      "id": "s2",
+      "text": "Gently stir up batter, it should be slightly thicker than heavy cream. Heat a 7-8 in crepe pan or small heavy skillet over medium-high heat. Brush the bottom with melted butter or vegetable oil. When pan is hot, pour in 2 1/2 tablespoons batter, swirl pan to coat evenly. Cook 30 seconds to 1 minute until mottled brown on the bottom, loosen the crepe and flip. Cook another 30 seconds on the other side. For a 9 - 10in skillet use 1/4 cup batter."
+    },
+    {
+      "id": "s3",
+      "text": "If not eaten right away, crepes can be double-wrapped in plastic and refrigerated up to 3 days or frozen up to 2 months. To freeze, stack up 8 crepes, wrap in plastic wrap, then in foil, for several weeks. To thaw, switch them from the freezer, directly to the refrigerator. This will take about 3 hours."
+    }
+  ],
+  "notes": "*If using low-fat milk, replace both whole milk and water with low-fat milk.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

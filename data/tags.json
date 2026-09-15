@@ -1,3 +1,24 @@
 {
-  "tags": []
+  "tags": [
+    {
+      "id": "t1",
+      "name": "bread"
+    },
+    {
+      "id": "t2",
+      "name": "soup"
+    },
+    {
+      "id": "t3",
+      "name": "salad"
+    },
+    {
+      "id": "t4",
+      "name": "condiment"
+    },
+    {
+      "id": "t5",
+      "name": "frozen dessert"
+    }
+  ]
 }

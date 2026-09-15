@@ -1,0 +1,92 @@
+{
+  "id": "pita-bread",
+  "title": "Pita Bread",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "bread"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "flour",
+      "amount": 3,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "salt",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "sugar or honey",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "packet yeast (or, if from bulk, 2 teaspoons yeast)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "to 1.5 cups water, roughly at room temperature",
+      "amount": 1.25,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "olive oil, vegetable oil, butter, or shortening",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Mix yeast with flour, salt, and sugar. Add olive oil and 1 1/4 cup water and stir. All of the ingredients should form a ball. If some of the flour will not stick to the ball, add more water (I had to add an extra 1/4 cup)."
+    },
+    {
+      "id": "s2",
+      "text": "Knead dough approximately 10 minutes (or until your hands get tired). If you are using an electric mixer, mix it at low speed for 10 minutes. Form dough into a ball and place it in lightly oiled bowl. Cover bowl with plastic and let rise until doubled ( 90 min)."
+    },
+    {
+      "id": "s3",
+      "text": "When doubled, punch down divide it into 8 pieces. Roll each piece into a ball, cover with a damp kitchen towel, and let rest for 20 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "While the dough is resting, preheat the oven to 400 degrees and insert pizza stone. If you do not have a baking stone, turn a cookie sheet upside down and place it on the middle rack of the oven while you are preheating the oven."
+    },
+    {
+      "id": "s5",
+      "text": "Roll, stretch, and generally flatten dough on lightly floured surface. Should be between 1/8 and 1/4 inch thick. If the dough does not stretch sufficiently you can cover it with the damp towel and let it rest 5 to 10 minutes before trying again."
+    },
+    {
+      "id": "s6",
+      "text": "They should be baked through and puffy after 3 minutes. If you want your pitas to be crispy and brown you can bake them for an additional 3 to 5 minutes, but it isn't necessary (in the batch pictured here I removed them at 3 minutes)."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

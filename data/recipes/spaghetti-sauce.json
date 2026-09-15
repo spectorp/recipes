@@ -1,0 +1,172 @@
+{
+  "id": "spaghetti-sauce",
+  "title": "Spaghetti Sauce",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "condiment"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "large onion, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "large green pepper, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "cloves garlic, mashed",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "olive oil",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "ground beef",
+      "amount": 0.75,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "salsiccia (or ground pork)",
+      "amount": 0.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "6 oz. can tomato paste",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "28 oz. can crushed tomatoes (not tomato sauce)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "salt",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "bay leaf",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "dried rosemary, crumbled",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "dried basil",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "dried oregano",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "beef stock (red wine)",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "fresh mushrooms, chopped",
+      "amount": 8,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "fresh parsley or basil, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "Parmesan cheese",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "In a large deep skillet over medium-high heat, put olive oil and heat."
+    },
+    {
+      "id": "s2",
+      "text": "Add onion and green pepper and saute over medium-high heat for 5 minutes, add garlic and saute 2 minutes more. Remove."
+    },
+    {
+      "id": "s3",
+      "text": "Add more olive oil if necessary, saute meats. Return veggies. Add tomato paste and mix well."
+    },
+    {
+      "id": "s4",
+      "text": "Add crushed tomatoes, all seasonings, and stock or wine. Bring nearly to a boil, cover, turn heat to low and simmer, partially covered, for 45 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Taste for seasoning. Add mushrooms and more liquid if necessary, simmer 10 more minutes. Allow to cool, then refrigerate."
+    }
+  ],
+  "notes": "TO SERVE: Reheat, adjust seasonings if necessary. Add parsley or basil, if available. Serve with Parmesan cheese. ReServe with Parmesan.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

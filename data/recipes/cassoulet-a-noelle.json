@@ -1,0 +1,154 @@
+{
+  "id": "cassoulet-a-noelle",
+  "title": "Cassoulet a Noelle",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "italian"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "12 oz smoked turkey/beef/vegetarian Kielbasa",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "celery, roughly chopped",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "onion or leeks, roughly chopped",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "olive oil (or bacon fat)",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "fresh thyme",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "fresh rosemary",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "cans assorted beans (Northern, kidney, back, garbanzo, navy, sm white), drained",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "can tomatoes, diced, not drained",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "brown sugar",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "fresh bread crumbs",
+      "amount": 4,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "olive oil",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "garlic, chopped",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "each of salt and pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "parsley, chopped",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "Could serve with: black rice, potatoes, green veggies, green salad, citrus salad",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Cut sausage into bite-size chunks. In a large, heavy pot, brown sausage in a little oil; remove and set aside."
+    },
+    {
+      "id": "s2",
+      "text": "Add celery and onion (leeks). Saute a couple minutes, then add spices and brown sugar. Saute several minutes more."
+    },
+    {
+      "id": "s3",
+      "text": "Return sausage and add beans (drained), and tomatoes."
+    },
+    {
+      "id": "s4",
+      "text": "Bring to a boil, then reduce heat, cover and simmer for 1 hour over low heat."
+    }
+  ],
+  "notes": "Note: Can put into a 2 quart casserole and freeze. To reheat, bake at 400 for 1.25 hours. Optional additions: 4 oz lardons, 4 garlic cloves, 1/2 tsp allspice, bay leaf, 1/2 C white vermouth VARIATIONS: Omit sausage, replace with 3 medium carrots. Replace rosemary with 1/8 tsp cloves and 1 bay leaf. Use only 3 cans beans. Top with Garlic Crumbs. GARLIC CRUMBS: Heat oven to 350 and set rack in center of oven. In a medium bowl, combine crumbs, olive oil, garlic, salt, and pepper. Spread on a large baking sheet and cook for 12-15 minutes. When cooled, return to bowl and toss with parsley.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

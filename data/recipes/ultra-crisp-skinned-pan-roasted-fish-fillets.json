@@ -1,0 +1,63 @@
+{
+  "id": "ultra-crisp-skinned-pan-roasted-fish-fillets",
+  "title": "Ultra-crisp-skinned pan-roasted fish fillets",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "fish"
+    ]
+  },
+  "tags": [],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "skin-on fish fillets (about 6 ounces each)",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "Salt and freshly grounded black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "vegetable or canola oil",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Remove any bones with tweezers. Rinse fillets and press between paper towels to dry all surfaces thoroughly. Season on both sides with salt and pepper. If you have the time, seasoning it at least 45 minutes in advance and letting it rest in the fridge up to several hours can help the fish retain more moisture as it cooks. (If you don't have at least 45 minutes, it's best to season right before cooking, to prevent moisture drawn out by the salt from interfering with a crisp skin.)"
+    },
+    {
+      "id": "s2",
+      "text": "Heat the oil in a large heavy-bottomed stainless steel skillet over medium-high heat until shimmering. Add the fish fillets skin side down, immediately reduce the heat to medium-low, and cook, pressing gently on the back of the fillets with a flexible metal fish spatula to ensure good contact between skin and pan for the first minute. Then continue cooking until the skin has rendered its fa and is crisp, about 5 minutes longer. If the skin shows resistance when you attempt to lift the fish with a spatula, allow it to continue to cook until it lifts easily."
+    },
+    {
+      "id": "s3",
+      "text": "Flip the fish and cook on the second side until an instant-read thermometer inserted into the thickest part registers 120 degrees F for medium-rare (about 15 seconds), or 130 degrees F for medium (about 1 minute). Transfer the fish to a paper-towel-lined plate and allow to rest for 5 minutes before serving."
+    }
+  ],
+  "attribution": {
+    "name": "The Food Lab"
+  },
+  "notes": "Note: This recipe will work with any skin-on firm-fleshed fish fillets, such as salmon, snapper, grouper, or bass. I prefer salmon rare to medium-rare; white-fleshed fish should be cooked at least to medium.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

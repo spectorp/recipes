@@ -1,0 +1,138 @@
+{
+  "id": "lemony-carrot-and-cauliflower-soup",
+  "title": "Lemony Carrot and Cauliflower Soup",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "japanese"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "coriander seeds",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "extra-virgin olive oil, more for serving",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "large white onion, peeled and diced (2 cups)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "large garlic cloves, finely chopped",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "medium carrots (1 pound), peeled and cut into 1/2-inch pieces (2 cups)",
+      "amount": 5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "kosher salt, more as needed",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "white miso",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "small (or half of a large) head cauliflower, trimmed and cut into florets",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "lemon zest",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "lemon juice, more to taste",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "Smoky chile powder, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "Coarse sea salt, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "Cilantro leaves, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "In a large, dry pot over medium heat, toast coriander seeds until fragrant and dark golden-brown, 2 to 3 minutes. Transfer to a mortar and pestle and coarsely crush."
+    },
+    {
+      "id": "s2",
+      "text": "Return the pot to medium heat. Add the oil and heat until warm. Stir in onion; cook, stirring occasionally, until soft and lightly colored, 7 to 10 minutes. Stir in garlic and cook 1 minute."
+    },
+    {
+      "id": "s3",
+      "text": "Add carrots, crushed coriander, salt and 6 cups water to the pot. Stir in the miso until it dissolves. Bring mixture to a simmer and cook, uncovered, 5 minutes. Stir in cauliflower and cook, covered, over medium-low heat until the vegetables are very tender, about 10 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Remove the soup from the heat. Using an immersion blender, purée the soup until smooth. (Alternatively, you can let soup cool slightly then purée it in batches in a food processor or blender.) If necessary, return the puréed soup to the heat to warm through. Stir in the lemon zest and juice just before serving. Drizzle with oil and sprinkle with chile, sea salt and cilantro leaves."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark, NYT Cooking"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

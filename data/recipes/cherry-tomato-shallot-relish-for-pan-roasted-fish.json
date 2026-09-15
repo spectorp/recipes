@@ -1,0 +1,74 @@
+{
+  "id": "cherry-tomato-shallot-relish-for-pan-roasted-fish",
+  "title": "Cherry tomato-shallot relish for pan-roasted fish",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "fish"
+    ]
+  },
+  "tags": [
+    "condiment"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "cherry tomatoes, quartered",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "shallot, finely sliced (about 1/4 cup)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "chopped fresh parsley",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "red wine vinegar or balsalmic vinegar",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "evoo",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "Kosher salt and freshly ground black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine. Season to tast with salt and pepper. Serve spooned over pan-roasted fish."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

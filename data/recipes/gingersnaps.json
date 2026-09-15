@@ -1,0 +1,128 @@
+{
+  "id": "gingersnaps",
+  "title": "Gingersnaps",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dessert"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "butter, softened",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "sugar",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "egg",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "molasses",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "flour",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "salt",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "baking soda",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "ground cinnamon",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "ground ginger OR 2 tsp freshly grated ginger",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "ground nutmeg",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "ground cloves",
+      "amount": 0.75,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "sugar to coat cookies (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Beat butter and sugar with an electric mixer until light and fluffy."
+    },
+    {
+      "id": "s2",
+      "text": "Add egg and molasses; beat until thoroughly mixed."
+    },
+    {
+      "id": "s3",
+      "text": "Sift together flour, salt, soda, cinammon, ginger, nutmeg, and cloves. Add to molasses mixture a little at a time, mixing well. If dough is soft, chill before next step."
+    },
+    {
+      "id": "s4",
+      "text": "Roll generous teaspoons of dough between palms to form balls. Roll balls in sugar (optional) and place on greased baking sheets, leaving 1.5\" between them."
+    },
+    {
+      "id": "s5",
+      "text": "Bake at 350° for about 12-15 minutes. Remove to a rack and let cool. Store in a loosely covered container."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

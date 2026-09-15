@@ -1,0 +1,140 @@
+{
+  "id": "roasted-tomato-and-white-bean-stew",
+  "title": "Roasted Tomato and White Bean Stew",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "roughly chopped Italian parsley leaves and tender stems",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "lemon zest (from 1 large lemon) Stew was good with 1 tsp",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "cherry or grape tomatoes",
+      "amount": 20,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "olive oil, plus 2 tbs, and more for drizzling (optional)",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "fresh thyme leaves",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "Kosher salt and black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "med. yellow onion, thinly sliced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "large garlic cloves, thinly sliced",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "red-pepper flakes",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "15 oz cans white beans (such as butter or cannellini), rinsed",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "vegetable or chicken broth, or water",
+      "amount": 1.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "Flaky salt, for serving (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "Toasted bread, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Heat oven to 425 F. In small bowl, toss parsley and lemon zest until combined. Set aside."
+    },
+    {
+      "id": "s2",
+      "text": "In large baking dish or sheet pan (consider silpat), toss tomatoes with 1/4 olive oil and thyme; season with salt and pepper. Roast tomatoes until they have collapsed and begin to turn golden around the edges, 20-25 min."
+    },
+    {
+      "id": "s3",
+      "text": "While tomatoes roast, heat 2 tbs oil in large (12-inch), deep skillet or Dutch oven or medium. Add onion, garlic, and red-pepper flakes and cook until onion is softened and garlic is fragrant, 4-5 min. Stir in rinsed beans and broth and bring to simmer. With back of spoon or spatula, gently smash about 1/2 cup of the beans so they slightly thicken the broth. If you want a thicker stew, crush some more of the beans. Season with salt and pepper."
+    },
+    {
+      "id": "s4",
+      "text": "When tomatoes finish roasting, add them directly to the stew along with any juices. Simmer for 5-10 min more so the flavors become friendly; season to taste with salt."
+    },
+    {
+      "id": "s5",
+      "text": "Ladle into shallow bowls. Top each with lemon-parsley mix and drizzle with olive oil, and season with flaky salt, if you like. Serve with toasted bread."
+    }
+  ],
+  "attribution": {
+    "name": "Colu Henry, NYT Cooking"
+  },
+  "notes": "Add wilt-able greens such as kale, escarole, or Swiss Chard at the end. Add toasted bread crumbs on top. Top bowls with grated pecorino or Parmesan.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

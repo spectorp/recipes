@@ -1,0 +1,71 @@
+{
+  "id": "granola",
+  "title": "Granola",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "breakfast"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "oats",
+      "amount": 2,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "nuts, seeds, etc. (e.g. shredded coconut, sunflower seeds, pumpkin seeds, chia seeds, flax seeds, almonds, walnuts, pecans, cashews)",
+      "amount": 2,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "vegetable oil",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "honey",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "Dried fruit",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine ingredients. Spread on two baking sheets (silpats help if you have them)."
+    },
+    {
+      "id": "s2",
+      "text": "Bake at 275 F for 40-45 minutes stirring once mid-way."
+    },
+    {
+      "id": "s3",
+      "text": "Add dried fruit. NB: storing granola with dried fruit can make it less crisp. May want to add dried fruit only when serving."
+    }
+  ],
+  "notes": "NOTES: Freezes well.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "chocolate-chunky-oatmeal-cookies",
+  "title": "Chocolate Chunky Oatmeal Cookies",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dessert"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "butter, unsalted, room temp",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "light brown sugar",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "sugar",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "eggs",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "vanilla",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "flour",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "baking powder",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "baking soda",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "salt",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "rolled oats, uncooked",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "semisweek chocolate, medium chop (can substitute chips)",
+      "amount": 14,
+      "unit": "oz",
+      "notes": "original quantity: 12-16"
+    },
+    {
+      "id": "i12",
+      "name": "walnuts, chopped",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "With electric mixer on medium speed, cream butter and sugars. Add eggs and vanilla."
+    },
+    {
+      "id": "s2",
+      "text": "In another bowl, combine flour, baking soda, baking powder, salt, and rolled oats."
+    },
+    {
+      "id": "s3",
+      "text": "With mixer on low speed, blend ingredients into creamed mixture."
+    },
+    {
+      "id": "s4",
+      "text": "Fold in chocolate and walnuts by hand. Drop dougn by rounded teaspoons onto ungreased sheet pan."
+    },
+    {
+      "id": "s5",
+      "text": "Bake in preheated 325 degree oven for 12-14 minutes. Transfer to wire rack to cool."
+    }
+  ],
+  "notes": "Very good. Yield: Few dozen cookies.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

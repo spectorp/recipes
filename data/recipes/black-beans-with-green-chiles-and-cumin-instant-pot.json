@@ -1,0 +1,161 @@
+{
+  "id": "black-beans-with-green-chiles-and-cumin-instant-pot",
+  "title": "Black beans with green chiles and cumin (instant pot)",
+  "categories": {
+    "method": [
+      "instant pot"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [
+      "mexican"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "poblano chiles",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "jalapeno or serrano chiles",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "EVOO",
+      "amount": 5,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "large onion, diced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "finely chopped fresh sage (or marjorem or oregano)",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "garlic cloves, minced",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "chili powder",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "ground cumin",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "dried black beans",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "kosher salt, plus more as needed",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "medium-size ripe tomato, quartered",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "bunch fresh cilantro, stems and leaves separated",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "small bunch scallions, white and green parts separated, thinly sliced",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "Black pepper, to taste",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "Grated Monterey Jack cheese, for serving (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "Lime wedges, for serving",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Roast poblano and jalabenos over an open flame on stove, or under broiler, until their skins are blistered and charred all over, about 10 minutes. Transer to a bowl, cover with plate, and let them sit until they are cool enough to handle. Then rub the skins off with a paper towel, and seed and dice the chiles."
+    },
+    {
+      "id": "s2",
+      "text": "Using the saute function, heat 2 tbs of the oil in the pressure cooker. Stir in the onion and cook until golden, about 15 minutes. Stir in the sage, two-thirds of the minced garlic, and the chili powder and cumin; cook for 1 minute. Stir in the chopped poblanos, hal of the jalapenos and the beans, salt, and 5 cups of water. Cover and cook on high pressure for 40 minutes. Allow the pressure to release naturally. If the beans aren't cooked through, cook on high pressure for 5 minutes, then manually release pressure."
+    },
+    {
+      "id": "s3",
+      "text": "While beans are cooking, in a blender combine the tomato, cilantro stems, half the cilantro leaves, scallion whites, the remaining garlic, the remaining 3 tbs oil, the remaining jalapenos, and a large pinch of salt. Blend, then taste and add more salt and pepper if necessary."
+    },
+    {
+      "id": "s4",
+      "text": "When beans are cooked, stir in the tomato puree and let sit for 5 minutes. Then, if the mix seems thin, simmer using the saute function for a few minutes to thicken it up."
+    },
+    {
+      "id": "s5",
+      "text": "Transer beans to individual serving bowls and top with cheese, cilantro leaves, and thinly-sliced scallion greens. Serve with lime wedges."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

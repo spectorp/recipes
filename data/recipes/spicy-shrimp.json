@@ -1,0 +1,94 @@
+{
+  "id": "spicy-shrimp",
+  "title": "Spicy Shrimp",
+  "categories": {
+    "method": [
+      "grill"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "shrimp"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "Sriracha",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "olive oil",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Worcestershire Sauce",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "cloves garlic, crushed",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "handful cilantro, rough chopped, plus more for garnish",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "sugar",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "large shrimp (16-20 count), peeled and deveined",
+      "amount": 2,
+      "unit": "lb",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Mix together the Sriracha, olive oil, Worcestershire sauce, garlic, cilantro, and sugar. Season aggressively with salt and pepper. Put in a 1-gallon plastic bag, add the shrimp, and mix together in the bag. Marinate in the fridge for 2 to 4 hours. Or longer."
+    },
+    {
+      "id": "s2",
+      "text": "Heat a grill. Skewer the shrimp (4 to 6 shrimp per skewer) and grill until pink and delicious, 2 to 3 minutes per side."
+    },
+    {
+      "id": "s3",
+      "text": "Remove the shrimp from the grill, slide the shrimp from the skewer using a fork, and pile on a serving platter. Sprinkle with finely chopped cilantro, and throw a few toothpicks in a few shrimp. Watch them disappear. If sauteing, heat a pan til it is ripping hot and cook very briefly. Also, drain off much of the marinade."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

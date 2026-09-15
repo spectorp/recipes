@@ -33,7 +33,8 @@ two conflict, **this document wins**.
 | 1 Scaffold | Done |
 | 2 Archive LaTeX | Done |
 | 3 Data pipeline | Done |
-| 4–11 | Not started |
+| 4 Migrate recipes | Done |
+| 5–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -44,6 +45,7 @@ Keep this section updated when implementation diverges from the original text.
 - **`archive/latex/compile_recipes.sh`** — `cd`s to its own directory so it works when invoked from elsewhere; small README in that folder. (Phase 2)
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
 - **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
+- **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
 
 ---
 
@@ -305,32 +307,22 @@ historical source, not the live cookbook.
 
 ### 6.2 Convert ~70 recipes
 
-Source sections in TeX map roughly to `meal` / organization hints
-(Breakfast, Soups, Pasta, …). Convert every `\subsection{...}` recipe into
-`data/recipes/<id>.json`.
+**Done (Phase 4).** 69 recipes in `data/recipes/*.json`. Skipped: *Sous Vide
+notes* (reference page, not a cookable recipe).
 
-**Conversion rules:**
+Conversion used `scripts/migrate-tex.mjs` (reproducible, but **re-running
+overwrites** hand edits). Rules applied:
 
-- Parse title → `id` slug; unique across the set
-- Map freeform ingredient lines into `{ id, name, amount, unit, notes }`
-  under the **strict** schema. Fractions (`1/4`) → numbers (`0.25`).
-  Units normalized to the enum; countable → `unit: null`
-- Steps → `{ id, text }` ordered list
-- Attribution from lines like “Joy of Cooking” / “NY Times …” when present
-- Seed `categories` / `tags` as best-effort during conversion (at least
-  `meal` from the TeX section where obvious); leave arrays empty rather
-  than inventing bad tags
-- `servings` / times: set when the TeX states them; otherwise omit
-- `rating`: omit unless you choose to set some
-- `created_at` / `updated_at`: use migration date ISO timestamps if unknown
-- Non-recipe content (e.g. “Sous Vide notes”) — either skip, or encode as a
-  recipe-like note page only if it fits the schema cleanly; prefer skip or
-  a dedicated `notes` recipe with empty ingredients only if useful
+- Title → `id` slug; filename matches `id`
+- Freeform ingredients → `{ id, name, amount, unit, notes }` (best-effort;
+  some dual-unit lines still need manual cleanup)
+- Steps from enumerate / prose instructions
+- Attribution when a source line was present
+- Categories/tags seeded from TeX section + light heuristics
+- `created_at` / `updated_at` set to migration timestamp
+- Vocab updated in `data/categories.json` / `data/tags.json`
 
-Update `categories.json` / `tags.json` as values are introduced.
-
-Validate every file against `schema.json` / Zod before considering migration
-done.
+All 69 files pass Zod (`recipeSchema`). `npm run build` succeeds.
 
 ### 6.3 Quality bar
 
@@ -371,7 +363,7 @@ a small intentional type + color system over default “AI purple” tropes.
    `base: '/recipes/'`, README stub, empty `data/` layout, `schema.json`
 2. **Archive LaTeX** — ✅ move TeX/PDF/assets/script under `archive/latex/`
 3. **Data pipeline** — ✅ `import.meta.glob` + Zod validation; load categories/tags
-4. **Migrate recipes** — convert all TeX subsections → JSON + seed vocab
+4. **Migrate recipes** — ✅ convert TeX subsections → JSON + seed vocab
 5. **Browse UI** — grid/list, search, facets, tags AND/OR, rating/attribution
    filters, sort; responsive shell
 6. **Detail + deep links** — `/recipe/:id`, optional-field handling, SPA
@@ -403,4 +395,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 4.
+No further product decisions are required to continue with Phase 5.

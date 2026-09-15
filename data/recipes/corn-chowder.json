@@ -1,0 +1,145 @@
+{
+  "id": "corn-chowder",
+  "title": "Corn Chowder",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "bacon, sliced and cut in 1/2 inch pieces",
+      "amount": 4,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "unsalted butter",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "onions, chopped (or leeks and scallions)",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "flour",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "chicken stock",
+      "amount": 4,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "large potatoes, (peeled) and 1/4 inch dice",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "light cream",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "cooked corn kernels",
+      "amount": 4,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "pepper",
+      "amount": 0.75,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "large red bell pepper, 1/4 in dice",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "scallions, white + 3 in green, 1/4in slices",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "cilantro, chopped (or parsley)",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "In a large soup kettle, wilt bacon over low heat until fat is rendered, about 5 minutes. Add butter and allow it to melt."
+    },
+    {
+      "id": "s2",
+      "text": "Add onions and wilt over low heat for 10 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Add flour and cook, stirring, another 5 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Add stock and potatoes. Continue cooking over medium low heat until potatoes are nearly tender."
+    },
+    {
+      "id": "s5",
+      "text": "Add corn, red pepper, and return the bacon; season. Cook 5 minutes."
+    },
+    {
+      "id": "s6",
+      "text": "Add cream, cook 5 minutes more, stirring occasionally."
+    },
+    {
+      "id": "s7",
+      "text": "Add scallions, adjust seasonings, serve immediately, garnished with cilantro or parsley."
+    }
+  ],
+  "notes": "For spice: can add 1 small jalapeno, seeded and minced, 1 minute before serving or dash chili powder. Carrots instead of red peppers Turn it into a fish chowder by adding fresh or frozen cod or similar (if going this route, try substituting a small amount of clam juice for some of the chicken stock).",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

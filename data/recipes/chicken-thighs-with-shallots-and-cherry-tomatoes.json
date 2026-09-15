@@ -1,0 +1,116 @@
+{
+  "id": "chicken-thighs-with-shallots-and-cherry-tomatoes",
+  "title": "Chicken thighs with shallots and cherry tomatoes",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "chicken"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "bone-in chicken thighs",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "flour",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "salt",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "ground black pepper",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "unsalted butter",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "whole medium shallots, peeled and halved",
+      "amount": 13.5,
+      "unit": null,
+      "notes": "original quantity: 12-15"
+    },
+    {
+      "id": "i7",
+      "name": "white wine",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "Dijon mustard",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "sprigs tarragon or thyme",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "cherry tomatoes, halved",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Rinse thighs and pat very dry with paper towels. Sprinkle over them with flour, salt, and pepper."
+    },
+    {
+      "id": "s2",
+      "text": "Melt butter in large, heavy-bottomed pot or skillet and set over medium-high heat. When butter foams, cook chicken, in batches if necessary, until well browned and crisp on all sides. Set aside."
+    },
+    {
+      "id": "s3",
+      "text": "Add shallots to pot and saute them in butter and chicken fat until they begin to soften and caramelize (about 10-12 minutes). Add wine to deglaze the pan, add mustard and taragon, then chicken thighs. Cover, turn heat to low, and simmer for 30 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Remove lid, allow sauce to reduce and thicken, 15-20 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Add cherry tomatoes, stir to combine, and serve immediately."
+    }
+  ],
+  "notes": "Goes well just with crusty bread and a simple salad. Can replace some/all shallots with onions Instead of 2 cups wine, can use some combination of wine and stock, plus a bit of brandy, sherry, or cognac if you have it.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

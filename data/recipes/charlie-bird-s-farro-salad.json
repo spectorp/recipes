@@ -1,0 +1,132 @@
+{
+  "id": "charlie-bird-s-farro-salad",
+  "title": "Charlie Bird's Farro Salad",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "salad"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "farro",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "apple cider (not cider vinegar)",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "kosher salt, more as needed",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "bay leaves",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "EVOO",
+      "amount": 0.625,
+      "unit": "cup",
+      "notes": "original quantity: 0.5-0.75"
+    },
+    {
+      "id": "i6",
+      "name": "fresh lemon juice",
+      "amount": 4,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Parmesan cheese, shaved with a vegetable peeler (1 cup)",
+      "amount": 140,
+      "unit": "g",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "chopped pistachio nuts (1 cup)",
+      "amount": 140,
+      "unit": "g",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "arugula leaves",
+      "amount": 4,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "parsley or basil leaves, torn",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "mint leaves",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "cherry tomatoes",
+      "amount": 1.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "thinly sliced radish",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "Maldon, or other flaky sea salt, as finishing",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "In a medium saucepan, bring farro, apple cider, salt, bay leaves and 4 cups water to a simmer. Simmer until farro is tender and liquid evaporates, about 30 minutes. If all the liquid evaporates before the farro is done, add a little more water. Let farro cool, then discard bay leaves."
+    },
+    {
+      "id": "s2",
+      "text": "In a salad bowl, whisk together olive oil, lemon juice and a pinch of salt. Add farro, cheese and pistachio nuts and mix well. This salad base will keep for up to 4 hours at room temperature or overnight in the refrigerator (bring to room temperature before serving). Just before serving, fold in arugula, herbs, tomatoes, radish and flaky salt to taste."
+    }
+  ],
+  "notes": "The lemon vinaigrette works really well, but could alternatively use a different acid. Can substitute almonds for pistachios. Obviously some vegetables and herbs can be substituted or added. Some possibilities include: celery, asparagus, good peas, currants, red and/or golden beets, etc. Apparently there is a difference between pearled (bran removed; most common in the U.S.) and un-pearled or semi-pearled. If using the latter, the cooking time will probably need to be increased.",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

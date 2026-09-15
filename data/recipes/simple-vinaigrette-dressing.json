@@ -1,0 +1,79 @@
+{
+  "id": "simple-vinaigrette-dressing",
+  "title": "Simple vinaigrette dressing",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "condiment"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "small shallot, minced (about 2 tbs)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "small garlic clove, minced (about 0.5 tsp)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "Dijon mustard",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "white wine vinegar",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "water",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "EVOO",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "Kosher salt and freshly ground pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine shallot, garlic, mustard, vinegar, and water in a large bowl and whisk to combine. Whisking constantly, slowly drizzle in olive oil. Alternatively, place all ingredients in a tightly sealing jar, seal, and shake vigorously until emulsified. Season to taste with salt and pepper. Vinaigrette will keep in the refrigerator for up to 2 weeks."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

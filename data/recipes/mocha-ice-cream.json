@@ -1,0 +1,110 @@
+{
+  "id": "mocha-ice-cream",
+  "title": "Mocha Ice Cream",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dessert"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "frozen dessert"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "egg yolks, whisked",
+      "amount": 6,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "heavy cream",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "milk",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "sugar",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "salt",
+      "amount": 0.125,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "vanilla",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "chocolate chips",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "coffee grounds",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "If using a manual ice-cream maker, chill interior vessel roughly a day in advance."
+    },
+    {
+      "id": "s2",
+      "text": "Warm milk, cream, sugar, salt in saucepan over low-medium heat. Once warm, add chocolate, coffee, and vanilla."
+    },
+    {
+      "id": "s3",
+      "text": "Take roughly one third of the mixture and slowly add to egg yolks while whisking. The goal here is to prevent cooking the egg. Then, slowly incorporate back into saucepan while mixing."
+    },
+    {
+      "id": "s4",
+      "text": "Heat gradually to 170 deg F, or until mixture coats the back of a spoon. Stir often to avoid curdling the egg. Then, take off heat and let sit for 20-30 minutes to let the coffee grounds fully steep."
+    },
+    {
+      "id": "s5",
+      "text": "Use fine sieve to strain out coffee grounds and any egg chunks."
+    },
+    {
+      "id": "s6",
+      "text": "Chill in fridge until it reaches ambient fridge temperature (typically at least several hours)."
+    },
+    {
+      "id": "s7",
+      "text": "Add to ice-cream maker and churn for about 20 minutes until it reaches something like a soft-serve consistency. Freeze to allow ice-cream to fully set up."
+    }
+  ],
+  "notes": "For variations, refer to Melissa Clark recipe on NYT cooking. Consider adding 1/2 cup sliced and caramelized almonds at end of churning (med-saucepan, med-heat, cook almonds with 2 tbs sugar and pinch salt until deeply golden, about 10 min).",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,138 @@
+{
+  "id": "poisson-piperade",
+  "title": "Poisson Piperade",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "french"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "pieces firm white fish (rock fish, orange roughy, grouper, snapper)",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "tomatoes",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "green pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "onion",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "cloves garlic",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "olive oil",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "capers",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "olives",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "bay leaves",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "thyme",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "paprika",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "parsley",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Dry and season fish. Set aside."
+    },
+    {
+      "id": "s2",
+      "text": "Dice or sliver tomatoes and drain into a saucepan. Cook down liquid, then add tomatoes and reduce somewhat."
+    },
+    {
+      "id": "s3",
+      "text": "Green pepper and onions: slice thinly into 1\" lengths."
+    },
+    {
+      "id": "s4",
+      "text": "Heat skillet, add oil, then peppers and onions. Saute over medium-low head, add bay leaves and salt/pepper."
+    },
+    {
+      "id": "s5",
+      "text": "Mince garlic, add to peppers, and saute 1 minute. Then add tomatoes, thyme, olives, and capers and cook about 1/2 hour over low heat. Set aside."
+    },
+    {
+      "id": "s6",
+      "text": "When ready to serve, reheat piperade, add paprika and most of parsley. Push half of the piperade to the side, add fish fillets, and cover with remaining piperade. Cover with lid and cook about 5 minutes, until just cooked through."
+    },
+    {
+      "id": "s7",
+      "text": "Garnish with remaining parsley and serve."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

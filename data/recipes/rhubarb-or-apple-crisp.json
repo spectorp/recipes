@@ -1,0 +1,114 @@
+{
+  "id": "rhubarb-or-apple-crisp",
+  "title": "Rhubarb (or Apple) Crisp",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "dessert"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 6,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "cold butter, cut into small pieces, plus more for greasing pan",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "to 3 pounds rhubarb, trimmed, tough strings removed, and cut into 1 1/2-inch pieces (about 5 to 6 cups) (or apples!)",
+      "amount": 2.5,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "white sugar",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "orange or lemon juice",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "orange or lemon zest",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "brown sugar",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "all-purpose flour",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "cinnamon, or to taste",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "salt",
+      "amount": 1,
+      "unit": "pinch",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "rolled oats",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "pecans",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Heat oven to 375 degrees. Grease an 8- or 9-inch square baking or gratin dish with a little butter. Toss rhubarb with white sugar, orange or lemon juice and zest, and spread in baking dish."
+    },
+    {
+      "id": "s2",
+      "text": "Put the 6 tablespoons butter in a food processor along with brown sugar, flour, cinnamon and salt, and pulse for about 20 or 30 seconds, until it looks like small peas and just begins to clump together. Add oats and pecans and pulse just a few times to combine."
+    },
+    {
+      "id": "s3",
+      "text": "Crumble the topping over rhubarb and bake until golden and beginning to brown, 45 to 50 minutes."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

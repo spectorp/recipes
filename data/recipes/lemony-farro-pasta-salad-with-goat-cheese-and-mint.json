@@ -1,0 +1,184 @@
+{
+  "id": "lemony-farro-pasta-salad-with-goat-cheese-and-mint",
+  "title": "Lemony Farro Pasta Salad With Goat Cheese and Mint",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "Kosher salt",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "farro",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "bay leaves",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "orzo",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "diced dried apricots",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "thinly sliced red onion",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "thinly sliced celery",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "fresh lemon juice",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "sliced almonds",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "baby spinach leaves (2 ounces)",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": ". crumbled fresh goat cheese",
+      "amount": 3.5,
+      "unit": "oz",
+      "notes": "original quantity: 3-4"
+    },
+    {
+      "id": "i12",
+      "name": "torn mint leaves",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "coarsely chopped parsley leaves",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "Freshly ground black pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "large lemons",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "fine sea salt, plus more as needed",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "black pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "red-pepper flakes, plus more to taste",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "extra-virgin olive oil, plus more for drizzling",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Bring a large pot of heavily salted water to a boil. Add farro and bay leaves and let simmer for 15 minutes. Add orzo to the pot and continue to simmer until farro and pasta are cooked through but still al dente, about 8 to 10 minutes longer."
+    },
+    {
+      "id": "s2",
+      "text": "While farro is cooking, prepare the dressing: Finely grate zest from the lemons, and place zest in a large bowl. Squeeze juice from 1 1/2 lemons and add to zest along with salt, pepper and red-pepper flakes, whisking to combine. Gradually whisk in oil. Taste and add more salt or lemon juice from the other lemon half, or both, if needed."
+    },
+    {
+      "id": "s3",
+      "text": "Drain farro-pasta mixture, discarding bay leaves. Add to bowl with dressing and toss well. Stir in apricots. Let farro and pasta cool, soaking up the dressing. This can be done up to 1 day in advance. Store in the refrigerator and bring to room temperature before proceeding."
+    },
+    {
+      "id": "s4",
+      "text": "In a small bowl, combine onions, celery, 3 tablespoons lemon juice and a large pinch of salt. Let sit while the pasta cools, at least 20 minutes."
+    },
+    {
+      "id": "s5",
+      "text": "Just before serving, add onion mixture and almonds to the bowl with the farro and pasta and toss well. Gently fold in spinach, goat cheese, mint and parsley. Taste and add more lemon, red-pepper flakes or salt if needed."
+    },
+    {
+      "id": "s6",
+      "text": "Drizzle with olive oil and freshly ground black pepper before serving."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,183 @@
+{
+  "id": "pressure-cooker-coconut-curry-chicken",
+  "title": "Pressure Cooker Coconut Curry Chicken",
+  "categories": {
+    "method": [
+      "instant pot"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "indian"
+    ],
+    "main_ingredient": [
+      "chicken"
+    ]
+  },
+  "tags": [],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "ripe tomatoes, halved through their equators",
+      "amount": 3.5,
+      "unit": null,
+      "notes": "original quantity: 3 to 4"
+    },
+    {
+      "id": "i2",
+      "name": "ghee, unsalted butter or safflower oil",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "virgin coconut oil",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "finely chopped onions",
+      "amount": 2,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "garlic cloves, grated on a Microplane or minced",
+      "amount": 6,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "grated peeled fresh ginger",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "cumin seeds",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "3-inch cinnamon stick or 1/2 teaspoon ground cinnamon",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "cardamom pods, lightly crushed with the flat side of a knife, or 1 teaspoon ground cardamom",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "ground coriander",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "kosher salt",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "ground turmeric",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "crushed red pepper flakes",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "black pepper",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "boneless, skinless chicken thighs, cut into 1-inch chunks",
+      "amount": 2.5,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "garam masala, to taste",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": "original quantity: 1 to 2"
+    },
+    {
+      "id": "i17",
+      "name": "canned unsweetened coconut milk",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i18",
+      "name": "Cooked basmati rice, for serving (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "Plain yogurt, for serving (optional)",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i20",
+      "name": "finely chopped fresh cilantro, for garnish",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Set a box grater over a bowl. Starting with their cut sides, grate the tomatoes through the large holes of the box grater so the tomato pulp falls into the bowl. Discard the skins. Measure out 2 cups of tomato purée."
+    },
+    {
+      "id": "s2",
+      "text": "Using the sauté function, heat the ghee and the coconut oil in the pressure cooker. Stir in the onions and cook, stirring often to encourage even browning, until they are caramelized, 12 to 18 minutes. Stir in the garlic, ginger and cumin seeds; cook until fragrant, about 2 minutes. Stir in the cinnamon and cardamom and cook for another minute. Then stir in the coriander, salt, turmeric, red pepper flakes, black pepper and finally the tomato purée."
+    },
+    {
+      "id": "s3",
+      "text": "Add the chicken to the sauce, cover and cook on low pressure for 4 minutes. Let the pressure release naturally. If the sauce seems too thin, use a slotted spoon to transfer the chicken to a bowl and then simmer the sauce on the sauté setting until it has thickened to taste. (Note that the coconut milk will thin the sauce down further.) Stir in the garam masala and the coconut milk, and let the curry sit for 20 minutes for the flavors to meld. Serve with the rice and yogurt, if desired. Garnish with cilantro."
+    }
+  ],
+  "attribution": {
+    "name": "Melissa Clark"
+  },
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

@@ -1,0 +1,146 @@
+{
+  "id": "pasta-con-sarde",
+  "title": "Pasta con Sarde",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "italian"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "medium onion",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "bulb fennel",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "olive oil",
+      "amount": 0.3333333333333333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "Salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "cloves garlic",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "white wine",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "flat anchovies",
+      "amount": 6,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "cans sardines",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "tablespoons currants (or more to taste)",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i10",
+      "name": "tablespoons pine nuts",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "fennel seeds, crushed",
+      "amount": 1.25,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "dash red pepper flakes or hot sauce",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "Bucatini pasta - or linguini, ziti",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Warm up a skillet large enough to hold the pasta. Toast pine nuts, then remove."
+    },
+    {
+      "id": "s2",
+      "text": "Thinly slice onion and fennel (reserving the fronds) and garlic."
+    },
+    {
+      "id": "s3",
+      "text": "Heat olive oil, add onion and fennel and cook around 5 minutes; add garlic, salt, and pepper. Continue cooking until nearly soft, then garlic for 1 minute."
+    },
+    {
+      "id": "s4",
+      "text": "Add wine, after a minute add anchovies and sardines, breaking them up with a wooden spatula."
+    },
+    {
+      "id": "s5",
+      "text": "Cook pasta until al dente. Roughly chop fennel fronds."
+    },
+    {
+      "id": "s6",
+      "text": "To skillet, add currants, pine nuts, fennel seeds and pepper flakes. Continue over very low heat."
+    },
+    {
+      "id": "s7",
+      "text": "Add some pasta water to skillet until there's a bit of a sauce. Add pasta, mix, add fennel fronds."
+    }
+  ],
+  "notes": "Currants shouldn't be omitted and are better than raisins, they're not as pronounced nor as sweet. Can replace anchovies with anchovy paste – if so, add when cooking up onions and fennel. White wine could be replaced with chicken stock or white vermouth",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

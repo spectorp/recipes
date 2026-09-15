@@ -1,0 +1,75 @@
+{
+  "id": "pickled-red-onions",
+  "title": "Pickled Red Onions",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "condiment"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "jalapeno pepper, cut into 1/4-inch rings",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "large red onions, finely sliced (about 1 quart)",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "distilled white vinegar",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "kosher salt",
+      "amount": 2,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "water",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "sugar",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Place jalepeno and onions in a medium mixing bowl. Heat vinegar, water, sugar, and salt in a small skillet over high heat, whisking until sugar is dissolved. Bring to a boil, then pour over onions. Press onions down with a spoon until submerged. Place a double layer of paper towels on top of onions and press down until completely saturated in liquid to keep onions submerged. Allow to sit until onions are softened and liquid has cooled, about 25 minutes. Onions will keep indefinitely in a sealed container in the refrigerator."
+    }
+  ],
+  "attribution": {
+    "name": "J. KENJI LOPEZ-ALT"
+  },
+  "notes": "J. KENJI LOPEZ-ALT",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}

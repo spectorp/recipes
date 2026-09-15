@@ -1,0 +1,103 @@
+{
+  "id": "flying-biscuits",
+  "title": "Flying Biscuits",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [],
+    "meal": [
+      "side dish"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "bread"
+  ],
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "all-purpose flour",
+      "amount": 3,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "plus 1.5 tsp baking powder",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "salt",
+      "amount": 0.75,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "plus 1.5 tsp sugar",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "unsalted butter",
+      "amount": 6,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "heavy cream",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "half and half (plus 1 tbs for brushing the top of the biscuits)",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Preheat oven to 350°F. Line a sheet pan with parchment paper."
+    },
+    {
+      "id": "s2",
+      "text": "Place flour, baking powder, salt, and sugar in a large mixing bowl. Cut butter into 1/2 tablespoon-sized-bits and add to the flour. Using your fingertips or a pastry cutter, work the butter into the flour mixture until it resembles coarse meal. Make a well in the center of the flour and pour in all the heavy cream and the half and half."
+    },
+    {
+      "id": "s3",
+      "text": "Stir the dry ingredients into the cream and mix with a wooden spoon until dough just begins to come together into a ball. Turn dough onto a lightly floured surface and knead 2 or 3 times to form a cohesive mass. Do not overwork the dough."
+    },
+    {
+      "id": "s4",
+      "text": "Using a rolling pin, roll the dough to a.5 inch thickness. Cut out biscuits using a 2 inch circular thing."
+    },
+    {
+      "id": "s5",
+      "text": "Place the biscuits on the prepared sheet pan, leaving about 1/4 inch between them."
+    },
+    {
+      "id": "s6",
+      "text": "Brush the tops of the biscuits with 1 tablespoon of half and half."
+    },
+    {
+      "id": "s7",
+      "text": "Bake for 20 minutes. Biscuits will be barely browned on top and flaky in the center when done. (Don't overcook them – otherwise they get hard)."
+    }
+  ],
+  "notes": "",
+  "created_at": "2026-09-15T00:00:00Z",
+  "updated_at": "2026-09-15T00:00:00Z"
+}
