@@ -74,6 +74,7 @@ via Vite `import.meta.glob`).
 | Path | Role |
 | --- | --- |
 | `src/pages/HomePage.tsx` | Browse: search, facets (AND/OR across groups), sort |
+| `src/lib/BrowseState.tsx` | Persists browse filters + Filters panel open across recipe navigation |
 | `src/pages/RecipePage.tsx` | Detail: scale servings, checkboxes, print |
 | `src/lib/catalog.ts` | Eager-load + Zod-validate all recipe JSON |
 | `src/lib/filterRecipes.ts` | Client-side filter/sort |

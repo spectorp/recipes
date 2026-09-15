@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import type { CategoryKey } from '../lib/schema'
 import { CATEGORY_KEYS } from '../lib/schema'
 import { categories, recipes, tags } from '../lib/catalog'
@@ -18,6 +18,8 @@ type Props = {
   onClear: () => void
   /** Active filters inside this panel (excludes search). */
   activeCount: number
+  open: boolean
+  onOpenChange: (open: boolean) => void
 }
 
 function toggleValue(list: string[], value: string): string[] {
@@ -73,9 +75,14 @@ function FacetColumn({
   )
 }
 
-export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) {
-  const [open, setOpen] = useState(false)
-
+export function FilterPanel({
+  filters,
+  onChange,
+  onClear,
+  activeCount,
+  open,
+  onOpenChange,
+}: Props) {
   const available = useMemo(
     () => computeAvailableFacetValues(recipes, filters),
     [filters],
@@ -100,7 +107,7 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
         <div className="flex w-full items-stretch border-b border-stone-200 dark:border-stone-700">
           <button
             type="button"
-            onClick={() => setOpen(false)}
+            onClick={() => onOpenChange(false)}
             aria-expanded
             className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
           >
@@ -131,7 +138,7 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
         <div className="flex w-full items-stretch">
           <button
             type="button"
-            onClick={() => setOpen(true)}
+            onClick={() => onOpenChange(true)}
             aria-expanded={false}
             className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
           >

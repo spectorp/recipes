@@ -2,25 +2,12 @@
   "id": "mapo-tofu",
   "title": "Mapo Tofu",
   "categories": {
-    "method": [
-      "wok"
-    ],
-    "diet": [
-      "gluten free",
-      "dairy free",
-      "nut free"
-    ],
-    "meal": [
-      "dinner"
-    ],
+    "method": ["wok"],
+    "diet": ["gluten free", "dairy free", "nut free"],
+    "meal": ["dinner"],
     "season": [],
-    "cuisine": [
-      "chinese"
-    ],
-    "main_ingredient": [
-      "tofu",
-      "beef"
-    ]
+    "cuisine": ["chinese"],
+    "main_ingredient": ["tofu", "beef"]
   },
   "tags": [],
   "ingredients": [
@@ -57,7 +44,7 @@
       "name": "Sichuan chile bean paste",
       "amount": 2.5,
       "unit": "tbsp",
-      "notes": ""
+      "notes": "preferably mature Pixian chile bean paste"
     },
     {
       "id": "i6",
@@ -106,7 +93,7 @@
       "name": "potato starch",
       "amount": 1,
       "unit": "tbsp",
-      "notes": "mixed with 2.5 tbsp cold water"
+      "notes": "mixed with 2½ tbsp cold water"
     },
     {
       "id": "i13",
@@ -119,7 +106,7 @@
   "steps": [
     {
       "id": "s1",
-      "text": "Cut the tofu into ¾-inch (2cm) cubes and let steep in very hot, lightly salted water while you prepare the other ingredients. Cut the scallions or green garlic into ¼-inch lengths."
+      "text": "Cut the tofu into ¾-inch (2cm) cubes and let steep in very hot, lightly salted water while you prepare the other ingredients. Cut the scallions or green garlic into ¾-inch (2cm) lengths."
     },
     {
       "id": "s2",
@@ -127,7 +114,7 @@
     },
     {
       "id": "s3",
-      "text": "Rinse and dry the wok if necessary, then re-season it and return to medium heat. Pour in 5 tbsp cooking oil and swirl it around. Add the chile bean paste and stir-fry until the oil is a rich red color and smells delicious. Next add the black beans and ground chiles and stir-fry for a few seconds more until you can smell them too, then do the same with the garlic and ginger. Take care not to overheat the aromatics—you want to end up with a thick, fragrant sauce, and the secret is to let them sizzle gently, allowing the oil to coax out their flavors."
+      "text": "Rinse and dry the wok if necessary, then re-season it and return to medium heat. Pour in 5 tbsp cooking oil and swirl it around. Add the chile bean paste and stir-fry until the oil is a rich red color and smells delicious. Next add the black beans and ground chiles and stir-fry for a few seconds more until you can smell them too, then do the same with the garlic and ginger. Take care not to overheat these aromatics—you want to end up with a thick, fragrant sauce, and the secret is to let them sizzle gently, allowing the oil to coax out their flavors."
     },
     {
       "id": "s4",
@@ -136,8 +123,20 @@
     {
       "id": "s5",
       "text": "Bring to a boil, then simmer for a couple of minutes to allow the tofu to absorb the flavors of the seasonings. If you're using green garlic (or baby leeks or garlic sprouts), stir them in now."
+    },
+    {
+      "id": "s6",
+      "text": "When they are just cooked, add a little of the potato starch mixture and stir gently as the liquid thickens. Repeat this twice more until the sauce clings to the seasonings and tofu (add a little more water or stock if it gets too thick). If you're using scallions, stir them in now."
+    },
+    {
+      "id": "s7",
+      "text": "Pour everything into a deep serving bowl. Sprinkle with the ground roasted Sichuan pepper and serve."
     }
   ],
+  "attribution": {
+    "name": "Fuchsia Dunlop, The Food of Sichuan"
+  },
+  "notes": "mapo doufu · 麻婆豆腐\n\nThe name means \"pock-marked old woman's tofu,\" after a smallpox-scarred Mrs. Chen who ran a restaurant in nineteenth-century Chengdu; her tofu became legendary. Traditionally made with beef, though some Chengdu restaurants use pork. For a vegetarian version, simply leave out the meat and use vegetable stock.\n\nIf you can find Chinese green garlic (or baby leeks or garlic sprouts), use them instead of scallions. For chile bean paste, the more richly flavored mature Pixian chile bean paste is particularly delicious.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-15T21:25:00Z"
 }

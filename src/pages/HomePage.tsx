@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { FilterPanel } from '../components/FilterPanel'
 import { RecipeCard } from '../components/RecipeCard'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { catalogLoadErrors, recipes } from '../lib/catalog'
+import { useBrowseState } from '../lib/BrowseState'
 import {
   countActiveFilters,
   defaultBrowseFilters,
@@ -17,7 +18,7 @@ function countPanelFilters(filters: BrowseFilters): number {
 }
 
 export function HomePage() {
-  const [filters, setFilters] = useState<BrowseFilters>(defaultBrowseFilters)
+  const { filters, setFilters, filtersOpen, setFiltersOpen } = useBrowseState()
 
   const visible = useMemo(
     () => filterAndSortRecipes(recipes, filters),
@@ -93,6 +94,8 @@ export function HomePage() {
           onChange={setFilters}
           onClear={clearPanelFilters}
           activeCount={panelActiveCount}
+          open={filtersOpen}
+          onOpenChange={setFiltersOpen}
         />
       </div>
 
