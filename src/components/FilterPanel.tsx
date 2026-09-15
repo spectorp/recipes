@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { CategoryKey } from '../lib/schema'
 import { CATEGORY_KEYS } from '../lib/schema'
 import { categories, tags } from '../lib/catalog'
@@ -13,6 +14,7 @@ type Props = {
   filters: BrowseFilters
   onChange: (next: BrowseFilters) => void
   onClear: () => void
+  /** Active filters inside this panel (excludes search). */
   activeCount: number
 }
 
@@ -70,6 +72,8 @@ function FacetColumn({
 }
 
 export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) {
+  const [open, setOpen] = useState(false)
+
   const setCategory = (key: CategoryKey, value: string) => {
     onChange({
       ...filters,
@@ -84,147 +88,158 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
     'w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100'
 
   return (
-    <div className="rounded-lg border border-stone-200/80 bg-white/50 p-4 dark:border-stone-700 dark:bg-stone-900/30">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div className="grid min-w-0 flex-1 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <label className="block text-sm sm:col-span-2 lg:col-span-1">
-            <span className="mb-1 block text-ink-muted dark:text-stone-400">
-              Search
+    <div className="rounded-lg border border-stone-200/80 bg-white/50 dark:border-stone-700 dark:bg-stone-900/30">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent dark:text-stone-100 dark:hover:text-orange-300"
+        >
+          <span
+            className={`inline-block text-ink-muted transition-transform dark:text-stone-400 ${open ? 'rotate-90' : ''}`}
+            aria-hidden
+          >
+            ▸
+          </span>
+          Filters
+          {activeCount > 0 && (
+            <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
+              {activeCount}
             </span>
-            <input
-              type="search"
-              placeholder="Search recipes…"
-              value={filters.query}
-              onChange={(e) => onChange({ ...filters, query: e.target.value })}
-              className={fieldClass}
-            />
-          </label>
-
-          <label className="block text-sm">
-            <span className="mb-1 block text-ink-muted dark:text-stone-400">
-              Sort
-            </span>
-            <select
-              value={filters.sort}
-              onChange={(e) =>
-                onChange({ ...filters, sort: e.target.value as SortOption })
-              }
-              className={fieldClass}
-            >
-              <option value="title-asc">Title A–Z</option>
-              <option value="title-desc">Title Z–A</option>
-              <option value="rating-desc">Rating high → low</option>
-              <option value="rating-asc">Rating low → high</option>
-            </select>
-          </label>
-
-          <label className="block text-sm">
-            <span className="mb-1 block text-ink-muted dark:text-stone-400">
-              Min rating
-            </span>
-            <select
-              value={filters.minRating}
-              onChange={(e) =>
-                onChange({ ...filters, minRating: Number(e.target.value) })
-              }
-              className={fieldClass}
-            >
-              <option value={0}>Any</option>
-              <option value={1}>1+</option>
-              <option value={2}>2+</option>
-              <option value={3}>3+</option>
-              <option value={4}>4+</option>
-              <option value={5}>5</option>
-            </select>
-          </label>
-
-          <label className="block text-sm">
-            <span className="mb-1 block text-ink-muted dark:text-stone-400">
-              Source
-            </span>
-            <select
-              value={filters.attribution}
-              onChange={(e) =>
-                onChange({
-                  ...filters,
-                  attribution: e.target.value as AttributionFilter,
-                })
-              }
-              className={fieldClass}
-            >
-              <option value="any">Any</option>
-              <option value="has_link">Has source link</option>
-              <option value="none">No attribution</option>
-            </select>
-          </label>
-        </div>
+          )}
+        </button>
 
         {activeCount > 0 && (
           <button
             type="button"
             onClick={onClear}
-            className="shrink-0 text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
+            className="text-xs text-accent underline-offset-2 hover:underline dark:text-orange-300"
           >
-            Clear all ({activeCount})
+            Clear filters
           </button>
         )}
       </div>
 
-      <div className="mt-4 border-t border-stone-200 pt-4 dark:border-stone-700">
-        <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-ink-muted dark:text-stone-400">
-          <span>Match facet groups</span>
-          <div className="inline-flex rounded-md border border-stone-300 dark:border-stone-600">
-            {(['and', 'or'] as FacetMatchMode[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                title={
-                  mode === 'and'
-                    ? 'Recipe must match every selected column (Diet, Method, Tags, …)'
-                    : 'Recipe must match at least one selected column'
+      {open && (
+        <div className="border-t border-stone-200 px-4 pb-4 pt-3 dark:border-stone-700">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <label className="block text-sm">
+              <span className="mb-1 block text-ink-muted dark:text-stone-400">
+                Sort
+              </span>
+              <select
+                value={filters.sort}
+                onChange={(e) =>
+                  onChange({ ...filters, sort: e.target.value as SortOption })
                 }
-                onClick={() => onChange({ ...filters, facetMode: mode })}
-                className={`px-1.5 py-0.5 uppercase ${
-                  filters.facetMode === mode
-                    ? 'bg-accent text-white dark:bg-orange-700'
-                    : 'bg-white text-ink-muted dark:bg-stone-900 dark:text-stone-400'
-                }`}
+                className={fieldClass}
               >
-                {mode}
-              </button>
-            ))}
+                <option value="title-asc">Title A–Z</option>
+                <option value="title-desc">Title Z–A</option>
+                <option value="rating-desc">Rating high → low</option>
+                <option value="rating-asc">Rating low → high</option>
+              </select>
+            </label>
+
+            <label className="block text-sm">
+              <span className="mb-1 block text-ink-muted dark:text-stone-400">
+                Min rating
+              </span>
+              <select
+                value={filters.minRating}
+                onChange={(e) =>
+                  onChange({ ...filters, minRating: Number(e.target.value) })
+                }
+                className={fieldClass}
+              >
+                <option value={0}>Any</option>
+                <option value={1}>1+</option>
+                <option value={2}>2+</option>
+                <option value={3}>3+</option>
+                <option value={4}>4+</option>
+                <option value={5}>5</option>
+              </select>
+            </label>
+
+            <label className="block text-sm">
+              <span className="mb-1 block text-ink-muted dark:text-stone-400">
+                Source
+              </span>
+              <select
+                value={filters.attribution}
+                onChange={(e) =>
+                  onChange({
+                    ...filters,
+                    attribution: e.target.value as AttributionFilter,
+                  })
+                }
+                className={fieldClass}
+              >
+                <option value="any">Any</option>
+                <option value="has_link">Has source link</option>
+                <option value="none">No attribution</option>
+              </select>
+            </label>
           </div>
-          <span className="text-ink-muted/80 dark:text-stone-500">
-            (within a column stays any-of)
-          </span>
-        </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
-          {CATEGORY_KEYS.map((key) => (
-            <FacetColumn
-              key={key}
-              label={CATEGORY_LABELS[key]}
-              options={categories[key]}
-              selected={filters.categories[key]}
-              onToggle={(name) => setCategory(key, name)}
-            />
-          ))}
+          <div className="mt-4 border-t border-stone-200 pt-4 dark:border-stone-700">
+            <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-ink-muted dark:text-stone-400">
+              <span>Match facet groups</span>
+              <div className="inline-flex rounded-md border border-stone-300 dark:border-stone-600">
+                {(['and', 'or'] as FacetMatchMode[]).map((mode) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    title={
+                      mode === 'and'
+                        ? 'Recipe must match every selected column (Diet, Method, Tags, …)'
+                        : 'Recipe must match at least one selected column'
+                    }
+                    onClick={() => onChange({ ...filters, facetMode: mode })}
+                    className={`px-1.5 py-0.5 uppercase ${
+                      filters.facetMode === mode
+                        ? 'bg-accent text-white dark:bg-orange-700'
+                        : 'bg-white text-ink-muted dark:bg-stone-900 dark:text-stone-400'
+                    }`}
+                  >
+                    {mode}
+                  </button>
+                ))}
+              </div>
+              <span className="text-ink-muted/80 dark:text-stone-500">
+                (within a column stays any-of)
+              </span>
+            </div>
 
-          {tags.tags.length > 0 && (
-            <FacetColumn
-              label="Tags"
-              options={tags.tags}
-              selected={filters.tags}
-              onToggle={(name) =>
-                onChange({
-                  ...filters,
-                  tags: toggleValue(filters.tags, name),
-                })
-              }
-            />
-          )}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+              {CATEGORY_KEYS.map((key) => (
+                <FacetColumn
+                  key={key}
+                  label={CATEGORY_LABELS[key]}
+                  options={categories[key]}
+                  selected={filters.categories[key]}
+                  onToggle={(name) => setCategory(key, name)}
+                />
+              ))}
+
+              {tags.tags.length > 0 && (
+                <FacetColumn
+                  label="Tags"
+                  options={tags.tags}
+                  selected={filters.tags}
+                  onToggle={(name) =>
+                    onChange({
+                      ...filters,
+                      tags: toggleValue(filters.tags, name),
+                    })
+                  }
+                />
+              )}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

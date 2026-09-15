@@ -47,14 +47,14 @@ Keep this section updated when implementation diverges from the original text.
 
 - **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
-- **Theme toggle UI** — Light / Dark / System control on browse and detail pages; preference in `localStorage` (`recipes-theme`). Hidden when printing. (Phase 9)
+- **Theme toggle UI** — compact sun/moon icons on browse and detail pages; default preference is **system** (not shown as a control; click the active forced mode again to return to system). Preference in `localStorage` (`recipes-theme`). Hidden when printing. (Phase 9)
 - **`archive/latex/compile_recipes.sh`** — `cd`s to its own directory so it works when invoked from elsewhere; small README in that folder. (Phase 2)
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
 - **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
 - **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
 - **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged. Attribution “Lorraine Spector” → “Lorraine”.
 - **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
-- **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Filters sit in a **top horizontal column grid** (not a tall sidebar). Facet **AND/OR** toggle applies **across** category columns + tags (within a column stays any-of); search / min rating / source stay hard ANDs. Default `facetMode: 'and'`. (Phase 5+)
+- **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. **Search** sits beside the page title; sort/rating/source/facets live in a **collapsed-by-default** Filters panel. Facet **AND/OR** toggle applies **across** category columns + tags (within a column stays any-of); search / min rating / source stay hard ANDs. Default `facetMode: 'and'`. (Phase 5+)
 - **Detail header** — category/tag chips sit to the right of servings/times on the recipe page to save vertical space.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.

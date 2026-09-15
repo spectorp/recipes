@@ -10,6 +10,12 @@ import {
   type BrowseFilters,
 } from '../lib/filterRecipes'
 
+function countPanelFilters(filters: BrowseFilters): number {
+  // Search lives in the header; badge only non-search filters.
+  const withoutQuery = { ...filters, query: '' }
+  return countActiveFilters(withoutQuery)
+}
+
 export function HomePage() {
   const [filters, setFilters] = useState<BrowseFilters>(defaultBrowseFilters)
 
@@ -18,15 +24,32 @@ export function HomePage() {
     [filters],
   )
   const activeCount = countActiveFilters(filters)
+  const panelActiveCount = countPanelFilters(filters)
 
   const clearFilters = () => setFilters(defaultBrowseFilters())
+  const clearPanelFilters = () =>
+    setFilters({ ...defaultBrowseFilters(), query: filters.query })
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:py-10">
-      <header className="mb-6 flex flex-wrap items-start justify-between gap-4">
-        <h1 className="font-display text-4xl tracking-tight text-ink dark:text-stone-50">
-          Recipes
-        </h1>
+      <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-3 sm:gap-4">
+          <h1 className="font-display shrink-0 text-4xl tracking-tight text-ink dark:text-stone-50">
+            Recipes
+          </h1>
+          <label className="relative min-w-0 flex-1 basis-48 sm:max-w-sm">
+            <span className="sr-only">Search</span>
+            <input
+              type="search"
+              placeholder="Search recipes…"
+              value={filters.query}
+              onChange={(e) =>
+                setFilters({ ...filters, query: e.target.value })
+              }
+              className="w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+            />
+          </label>
+        </div>
         <ThemeToggle className="no-print shrink-0" />
       </header>
 
@@ -55,8 +78,8 @@ export function HomePage() {
         <FilterPanel
           filters={filters}
           onChange={setFilters}
-          onClear={clearFilters}
-          activeCount={activeCount}
+          onClear={clearPanelFilters}
+          activeCount={panelActiveCount}
         />
       </div>
 
