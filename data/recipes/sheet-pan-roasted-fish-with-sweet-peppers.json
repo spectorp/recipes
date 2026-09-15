@@ -1,0 +1,39 @@
+{
+  "id": "sheet-pan-roasted-fish-with-sweet-peppers",
+  "title": "Sheet-Pan Roasted Fish With Sweet Peppers",
+  "categories": {
+    "method": ["sheet pan"],
+    "diet": ["gluten free", "dairy free"],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": ["fish"]
+  },
+  "tags": [],
+  "servings": 4,
+  "cook_time_minutes": 40,
+  "ingredients": [
+    {"id": "i1", "name": "lemon thyme or regular thyme", "amount": 1, "unit": null, "notes": "small bunch"},
+    {"id": "i2", "name": "hake fillets", "amount": 1.5, "unit": "lb", "notes": "cod or flounder may be substituted"},
+    {"id": "i3", "name": "fine sea salt and black pepper", "amount": 1, "unit": "pinch", "notes": "to taste"},
+    {"id": "i4", "name": "large bell peppers", "amount": 3, "unit": null, "notes": "preferably red, orange and yellow; thinly sliced"},
+    {"id": "i5", "name": "extra-virgin olive oil", "amount": 4.5, "unit": "tbsp", "notes": "plus more for drizzling"},
+    {"id": "i6", "name": "pitted sliced olives", "amount": 0.25, "unit": "cup", "notes": "black, green or a combination"},
+    {"id": "i7", "name": "sherry vinegar", "amount": 1, "unit": "tsp", "notes": "plus more to taste"},
+    {"id": "i8", "name": "garlic clove", "amount": 1, "unit": null, "notes": "grated"},
+    {"id": "i9", "name": "Italian parsley leaves", "amount": 1, "unit": "cup", "notes": "loosely packed and chopped"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Heat oven to 400 degrees F. Pull 1 tablespoon leaves from the thyme bunch and finely chop."},
+    {"id": "s2", "text": "Season fish with salt and pepper and rub with chopped thyme. Rest at room temperature while preparing peppers."},
+    {"id": "s3", "text": "Toss peppers on a rimmed sheet pan with 1 1/2 tablespoons oil, 1/2 teaspoon salt and pepper. Top with remaining thyme sprigs and roast, tossing occasionally, until softened and golden at the edges, 15 to 20 minutes."},
+    {"id": "s4", "text": "Increase oven to 500 degrees F. Push peppers to the edges, place fish in the center and drizzle with oil. Scatter olives over fish and peppers. Roast until fish is opaque and just cooked through, 6 to 10 minutes."},
+    {"id": "s5", "text": "Combine vinegar, garlic and a pinch of salt. Whisk in remaining 3 tablespoons oil, then parsley. Adjust salt and vinegar and serve fish and peppers drizzled with vinaigrette."}
+  ],
+  "attribution": {
+    "name": "Melissa Clark",
+    "url": "https://cooking.nytimes.com/recipes/1017725-sheet-pan-roasted-fish-with-sweet-peppers"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T18:00:00Z"
+}

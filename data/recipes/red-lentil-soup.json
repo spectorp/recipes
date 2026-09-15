@@ -1,0 +1,42 @@
+{
+  "id": "red-lentil-soup",
+  "title": "Red Lentil Soup",
+  "categories": {
+    "method": ["stovetop"],
+    "diet": ["vegetarian", "vegan", "gluten free"],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": ["soup"],
+  "servings": 4,
+  "cook_time_minutes": 45,
+  "ingredients": [
+    {"id": "i1", "name": "olive oil", "amount": 3, "unit": "tbsp", "notes": "plus more for drizzling"},
+    {"id": "i2", "name": "large onion", "amount": 1, "unit": null, "notes": "chopped"},
+    {"id": "i3", "name": "garlic cloves", "amount": 2, "unit": null, "notes": "minced"},
+    {"id": "i4", "name": "tomato paste", "amount": 1, "unit": "tbsp"},
+    {"id": "i5", "name": "ground cumin", "amount": 1, "unit": "tsp"},
+    {"id": "i6", "name": "salt and black pepper", "amount": 0.25, "unit": "tsp", "notes": "each, plus more salt to taste"},
+    {"id": "i7", "name": "chili powder or ground cayenne", "amount": 1, "unit": "pinch", "notes": "plus more to taste"},
+    {"id": "i8", "name": "vegetable broth", "amount": 1, "unit": "l", "notes": "original quantity: 1 quart"},
+    {"id": "i9", "name": "red lentils", "amount": 1, "unit": "cup"},
+    {"id": "i10", "name": "large carrot", "amount": 1, "unit": null, "notes": "peeled and diced"},
+    {"id": "i11", "name": "lemon juice", "amount": 0.5, "unit": null, "notes": "juice of 1/2 lemon, plus more to taste"},
+    {"id": "i12", "name": "fresh cilantro", "amount": 3, "unit": "tbsp", "notes": "chopped"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Heat 3 tablespoons oil in a large pot over high heat until shimmering. Add onion and garlic and saute until golden, about 4 minutes."},
+    {"id": "s2", "text": "Stir in tomato paste, cumin, 1/4 teaspoon each salt and pepper, and chili powder; saute for 2 minutes."},
+    {"id": "s3", "text": "Add broth, 2 cups water, lentils and carrot. Bring to a simmer, partly cover, reduce heat to medium-low and simmer until lentils are soft, about 30 minutes. Adjust salt."},
+    {"id": "s4", "text": "Puree half the soup and return it to the pot, leaving the soup somewhat chunky."},
+    {"id": "s5", "text": "Reheat if needed, then stir in lemon juice and cilantro. Serve drizzled with olive oil and dusted with chili powder if desired."}
+  ],
+  "attribution": {
+    "name": "Melissa Clark",
+    "url": "https://cooking.nytimes.com/recipes/1016062-red-lentil-soup"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T18:00:00Z"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "chicken-marbella",
+  "title": "Chicken Marbella",
+  "categories": {
+    "method": ["baking"],
+    "diet": ["gluten free"],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": ["chicken"]
+  },
+  "tags": [],
+  "servings": 10,
+  "ingredients": [
+    {"id": "i1", "name": "chicken thighs", "amount": 8, "unit": null},
+    {"id": "i2", "name": "chicken legs", "amount": 8, "unit": null},
+    {"id": "i3", "name": "garlic", "amount": 1, "unit": null, "notes": "head, peeled and pureed to make about 1/4 cup"},
+    {"id": "i4", "name": "dried oregano", "amount": 0.25, "unit": "cup"},
+    {"id": "i5", "name": "coarse salt", "amount": 2, "unit": "tsp"},
+    {"id": "i6", "name": "black pepper", "amount": 1, "unit": "tsp"},
+    {"id": "i7", "name": "red wine vinegar", "amount": 0.25, "unit": "cup"},
+    {"id": "i8", "name": "olive oil", "amount": 0.3333333333, "unit": "cup"},
+    {"id": "i9", "name": "pitted prunes", "amount": 1, "unit": "cup"},
+    {"id": "i10", "name": "pitted Spanish green olives", "amount": 0.5, "unit": "cup"},
+    {"id": "i11", "name": "capers with a bit of juice", "amount": 0.5, "unit": "cup"},
+    {"id": "i12", "name": "bay leaves", "amount": 6, "unit": null},
+    {"id": "i13", "name": "brown sugar", "amount": 0.6666666667, "unit": "cup"},
+    {"id": "i14", "name": "white wine", "amount": 1, "unit": "cup"},
+    {"id": "i15", "name": "parsley or cilantro", "amount": 0.25, "unit": "cup", "notes": "finely chopped"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Wash and dry chicken, trimming excess fat if time permits. Peel and puree garlic to make about 1/4 cup."},
+    {"id": "s2", "text": "Combine chicken, garlic, oregano, salt, pepper, vinegar, olive oil, prunes, olives, capers and their juice, and bay leaves in a large bowl. Cover and marinate overnight."},
+    {"id": "s3", "text": "Heat oven to 350 degrees F. Arrange chicken in a single layer in two shallow baking pans, skin-side up, and spoon marinade evenly over it. Sprinkle with brown sugar and pour wine around the chicken."},
+    {"id": "s4", "text": "Bake for 50 to 60 minutes, basting frequently with pan juices, until juices from the thigh pieces run clear rather than pink."},
+    {"id": "s5", "text": "Transfer chicken, prunes, olives and capers to a platter with a slotted spoon. Moisten with pan juices, sprinkle generously with parsley or cilantro, and pass remaining juices separately."}
+  ],
+  "notes": "Chicken keeps and improves over several refrigerated days. To cook ahead, bake 35 minutes, then finish while reheating. To serve at room temperature, cool in the cooking juices before transferring; after refrigeration, return to room temperature and spoon reserved juice over it. Serving ideas: rice or couscous, braised carrots, cauliflower, or salad with fruit. Source note: Great party dish, but not for buffet because a knife is needed.",
+  "attribution": {
+    "name": "Silver Palate"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T19:30:00Z"
+}

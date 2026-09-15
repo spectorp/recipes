@@ -1,0 +1,44 @@
+{
+  "id": "bolognese-sauce",
+  "title": "Marcella Hazan's Bolognese Sauce",
+  "categories": {
+    "method": ["stovetop"],
+    "diet": [],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": ["italian"],
+    "main_ingredient": ["beef"]
+  },
+  "tags": [],
+  "servings": 6,
+  "cook_time_minutes": 240,
+  "ingredients": [
+    {"id": "i1", "name": "vegetable oil", "amount": 1, "unit": "tbsp"},
+    {"id": "i2", "name": "butter", "amount": 4, "unit": "tbsp", "notes": "divided; 1 tablespoon is for tossing with pasta"},
+    {"id": "i3", "name": "onion", "amount": 0.5, "unit": "cup", "notes": "chopped"},
+    {"id": "i4", "name": "celery", "amount": 0.6666666667, "unit": "cup", "notes": "chopped"},
+    {"id": "i5", "name": "carrot", "amount": 0.6666666667, "unit": "cup", "notes": "chopped"},
+    {"id": "i6", "name": "ground beef chuck", "amount": 0.75, "unit": "lb", "notes": "or 1 part pork to 2 parts beef"},
+    {"id": "i7", "name": "salt", "amount": 1, "unit": "pinch", "notes": "plus more to taste"},
+    {"id": "i8", "name": "freshly ground black pepper", "amount": 1, "unit": "pinch"},
+    {"id": "i9", "name": "whole milk", "amount": 1, "unit": "cup"},
+    {"id": "i10", "name": "whole nutmeg", "amount": 0.125, "unit": "tsp", "notes": "freshly grated"},
+    {"id": "i11", "name": "dry white wine", "amount": 1, "unit": "cup"},
+    {"id": "i12", "name": "canned imported Italian plum tomatoes with juice", "amount": 1.5, "unit": "cup", "notes": "cut up"},
+    {"id": "i13", "name": "pasta", "amount": 1.375, "unit": "lb", "notes": "1 1/4 to 1 1/2 pounds"},
+    {"id": "i14", "name": "Parmigiano-Reggiano", "amount": 1, "unit": null, "notes": "freshly grated, for serving"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Put the oil, 3 tablespoons butter and onion in a pot over medium heat. Cook, stirring, until the onion is translucent. Add celery and carrot and cook for about 2 minutes, stirring to coat."},
+    {"id": "s2", "text": "Add the beef, a large pinch of salt and a few grindings of pepper. Crumble with a fork and cook until the beef has lost its raw red color."},
+    {"id": "s3", "text": "Add milk and simmer gently, stirring frequently, until it has bubbled away completely. Stir in about 1/8 teaspoon freshly grated nutmeg."},
+    {"id": "s4", "text": "Add wine and simmer until evaporated. Add tomatoes and stir thoroughly. Once bubbling, reduce heat to the laziest simmer and cook uncovered for 3 hours or more, stirring occasionally. Add 1/2 cup water whenever needed to prevent sticking; at the end no water should remain and the fat should separate. Stir, taste and correct the salt."},
+    {"id": "s5", "text": "Toss the sauce with cooked, drained pasta and the remaining tablespoon butter. Serve with freshly grated Parmigiano-Reggiano."}
+  ],
+  "attribution": {
+    "name": "Marcella Hazan",
+    "url": "https://cooking.nytimes.com/recipes/1015181-marcella-hazans-bolognese-sauce"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T18:00:00Z"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "marinated-chickpeas",
+  "title": "Marinated Chickpeas",
+  "categories": {
+    "method": [],
+    "diet": ["vegan", "vegetarian", "gluten free", "dairy free"],
+    "meal": ["side dish", "appetizer"],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": ["condiment"],
+  "servings": 4,
+  "prep_time_minutes": 5,
+  "ingredients": [
+    {"id": "i1", "name": "cooked chickpeas", "amount": 3.5, "unit": "cup", "notes": "3 to 4 cups; from about 10 ounces dried chickpeas cooked and drained, or two 15-ounce cans drained"},
+    {"id": "i2", "name": "extra-virgin olive oil", "amount": 0.5, "unit": "cup"},
+    {"id": "i3", "name": "sherry vinegar or white wine vinegar", "amount": 6, "unit": "tbsp"},
+    {"id": "i4", "name": "small shallot", "amount": 1, "unit": null, "notes": "finely minced"},
+    {"id": "i5", "name": "medium garlic clove", "amount": 1, "unit": null, "notes": "finely minced or pressed"},
+    {"id": "i6", "name": "kosher salt and freshly ground black pepper", "amount": 1, "unit": "pinch", "notes": "to taste"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Combine all ingredients in a medium bowl and season to taste with salt and pepper. Refrigerate for at least a few hours and up to 1 week; the flavor improves with time."}
+  ],
+  "notes": "Dried chickpeas absorb the marinade better than canned. To cook from dry, soak overnight in lightly salted water, drain, then simmer in fresh lightly salted water with a bay leaf and a few peppercorns until tender, about 30 minutes. Drain and dress while warm.",
+  "attribution": {
+    "name": "J. Kenji López-Alt",
+    "url": "https://cooking.nytimes.com/recipes/1021464-marinated-chickpeas"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T18:00:00Z"
+}

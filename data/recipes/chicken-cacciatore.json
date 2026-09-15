@@ -1,0 +1,175 @@
+{
+  "id": "chicken-cacciatore",
+  "title": "Cacciatore Chicken",
+  "categories": {
+    "method": ["stovetop", "instant pot"],
+    "diet": [],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": ["italian"],
+    "main_ingredient": ["chicken"]
+  },
+  "tags": [],
+  "servings": 8,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "chicken pieces, with bone and skin",
+      "amount": 4,
+      "unit": "lb",
+      "notes": "or all thighs"
+    },
+    {
+      "id": "i2",
+      "name": "flour",
+      "amount": 0.333,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "salt",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "pepper",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "olive oil",
+      "amount": 3,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "large onion, chopped large",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "large red or green pepper, chopped large",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "bay leaf",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "fresh rosemary",
+      "amount": 1.5,
+      "unit": "tsp",
+      "notes": "or 1/2 tsp dried"
+    },
+    {
+      "id": "i10",
+      "name": "fresh sage",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": "or 1/2 tsp dried"
+    },
+    {
+      "id": "i11",
+      "name": "large garlic cloves, minced",
+      "amount": 3,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i12",
+      "name": "red or white wine",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i13",
+      "name": "diced tomatoes with juice",
+      "amount": 24,
+      "unit": "oz",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "chicken stock",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "lemon juice",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": "plus 1/2 tsp red pepper flakes"
+    },
+    {
+      "id": "i16",
+      "name": "fresh mushrooms, sliced",
+      "amount": 1,
+      "unit": "lb",
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "chopped parsley for garnish",
+      "amount": 1,
+      "unit": null,
+      "notes": "to taste"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Rinse and pat dry the chicken (if large, cut across bone). Put the flour, salt and pepper (ample) in a plastic bag, add a few chicken pieces at a time and shake well."
+    },
+    {
+      "id": "s2",
+      "text": "Heat a large heavy skillet over medium-high heat, add the olive oil. When the oil is hot, brown the chicken pieces on all sides (in a couple batches). Remove the chicken and all but 2 tablespoons oil."
+    },
+    {
+      "id": "s3",
+      "text": "Reduce the heat to medium, add the onions, peppers, bay leaf, rosemary and sage, and saute for 5 minutes."
+    },
+    {
+      "id": "s4",
+      "text": "Add the garlic, and stir it around. Return the reserved chicken."
+    },
+    {
+      "id": "s5",
+      "text": "Add the wine and cook over medium-high heat, stirring briefly, until all is evaporated."
+    },
+    {
+      "id": "s6",
+      "text": "Add the tomatoes, chicken stock and lemon juice, then taste the liquid for seasoning, add more if desired. Cover, reduce the heat to very low, and cook for 25 minutes."
+    },
+    {
+      "id": "s7",
+      "text": "Add the mushrooms, cover and cook 10 more minutes, until the chicken is tender. If serving later, turn off heat, then add sliced mushrooms and refrigerate. Mushrooms will cook through when reheating."
+    },
+    {
+      "id": "s8",
+      "text": "If serving this for a buffet, cut the chicken pieces into large bite size."
+    }
+  ],
+  "notes": "Cacciatore is Italian for \"hunter's style\". Best cooked a day in advance. Traditionally serve with polenta. Serving ideas: with polenta, small pasta, or rice, eggplant, cauliflower.\n\nINSTANT POT:\n1. Select SAUTE and heat 1T olive oil. Add 1/2 of thighs skin-side down; sear for 4 minutes. Remove thighs, add 1T oil and sear remaining thighs; remove.\n2. Add onions, peppers and garlic + S & P; saute 3 minutes. Add wine and scrape browned pieces off bottom of pot. Add remaining ingredients plus 3 T tomato paste.\n3. Return chicken pieces and stir together.\n4. Secure the lid, set to SEALING. Press CANCEL. Select POULTRY setting and cooking time for 12 minutes at high pressure. When cooked, QUICK RELEASE pressure with VENTING.\n5. With a slotted spoon, transfer chicken and veggies to a serving dish. Taste stock and can reduce stock by cooking on SAUTE for up to 10 minutes.\n\nBONELESS THIGHS: Season with salt and pepper; after adding the wine and tomato paste, then add chicken pieces and stir well. Then pressure cook but only 10 minutes.",
+  "attribution": {
+    "name": "Joy & Gourmet"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T19:00:00Z"
+}

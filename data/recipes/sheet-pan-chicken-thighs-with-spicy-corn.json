@@ -1,0 +1,42 @@
+{
+  "id": "sheet-pan-chicken-thighs-with-spicy-corn",
+  "title": "Sheet-Pan Chicken Thighs With Spicy Corn",
+  "categories": {
+    "method": ["sheet pan"],
+    "diet": ["gluten free"],
+    "meal": ["dinner"],
+    "season": ["summer"],
+    "cuisine": [],
+    "main_ingredient": ["chicken"]
+  },
+  "tags": [],
+  "servings": 5,
+  "prep_time_minutes": 15,
+  "cook_time_minutes": 40,
+  "ingredients": [
+    {"id": "i1", "name": "boneless skinless chicken thighs", "amount": 2, "unit": "lb"},
+    {"id": "i2", "name": "fine sea or table salt", "amount": 1.75, "unit": "tsp", "notes": "divided"},
+    {"id": "i3", "name": "mayonnaise", "amount": 2, "unit": "tbsp"},
+    {"id": "i4", "name": "basil", "amount": 0.25, "unit": "cup", "notes": "finely chopped, plus more for garnish"},
+    {"id": "i5", "name": "garlic cloves", "amount": 2, "unit": null, "notes": "finely grated or minced"},
+    {"id": "i6", "name": "pickled jalapeños", "amount": 0.3333333333, "unit": "cup", "notes": "chopped, plus 2 tablespoons brine and more brine for serving"},
+    {"id": "i7", "name": "corn kernels", "amount": 4, "unit": "cup", "notes": "fresh or frozen, from about 4 ears"},
+    {"id": "i8", "name": "olive oil", "amount": 3, "unit": "tbsp", "notes": "plus more for drizzling"},
+    {"id": "i9", "name": "scallions", "amount": 5, "unit": null, "notes": "thinly sliced"},
+    {"id": "i10", "name": "fresh jalapeño", "amount": 1, "unit": null, "notes": "sliced into rings"},
+    {"id": "i11", "name": "lime", "amount": 1, "unit": null, "notes": "halved"}
+  ],
+  "steps": [
+    {"id": "s1", "text": "Season chicken with 3/4 teaspoon salt. Stir mayonnaise, basil, garlic and 2 tablespoons jalapeño brine in a large bowl. Add chicken, cover and refrigerate for 30 minutes to 6 hours."},
+    {"id": "s2", "text": "Heat oven to 425 degrees F. Toss corn, pickled jalapeños, olive oil, remaining salt and half the scallions."},
+    {"id": "s3", "text": "Arrange chicken on a sheet pan and roast for 12 minutes. Spoon corn mixture into the empty spaces and drizzle chicken and corn with oil. Roast 10 to 15 minutes more, stirring corn once, until chicken is cooked through."},
+    {"id": "s4", "text": "Broil on high for 2 to 4 minutes, watching carefully, until chicken and corn are browned in spots."},
+    {"id": "s5", "text": "Garnish with basil, remaining scallions and fresh jalapeño. Add more pickled jalapeño brine and lime juice; serve hot or at room temperature."}
+  ],
+  "attribution": {
+    "name": "Melissa Clark",
+    "url": "https://cooking.nytimes.com/recipes/1024458-sheet-pan-chicken-thighs-with-spicy-corn"
+  },
+  "created_at": "2026-09-15T18:00:00Z",
+  "updated_at": "2026-09-15T18:00:00Z"
+}
