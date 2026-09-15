@@ -36,7 +36,8 @@ two conflict, **this document wins**.
 | 4 Migrate recipes | Done |
 | 5 Browse UI | Done |
 | 6 Detail + deep links | Done |
-| 7–11 | Not started |
+| 7 Servings scaling | Done |
+| 8–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -53,6 +54,8 @@ Keep this section updated when implementation diverges from the original text.
 - **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Mobile filters use a right-hand sheet. (Phase 5)
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
+- **Servings scaling** — display-only stepper + decimal presets `0.5× / 1× / 1.5× / 2× / 3×`; “Reset” restores base servings; hidden when recipe has no `servings` (most migrated recipes omit it until filled in). Scaled amounts do not write JSON. (Phase 7)
+- **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
 
 ---
 
@@ -250,10 +253,11 @@ GitHub Pages deep-link refreshes load the SPA.
 
 ### 4.3 Servings scaling (display-only)
 
-- Stepper or multipliers next to servings
-- Scale ingredient `amount` by `newServings / baseServings` for display only
-- Round sensibly (e.g. 1 decimal); do not write JSON
-- If `servings` is missing, hide the scaler (or disable with explanation)
+**Done (Phase 7).** Stepper + decimal presets (`0.5×`, `1×`, `1.5×`, `2×`,
+`3×`) next to servings on the detail page. Scales ingredient amounts by
+`new / base` for display only. Hidden when `servings` is absent. “Reset”
+returns to the recipe base. Ingredients and steps also have checkboxes for
+cooking progress (session-only).
 
 ### 4.4 Print / export PDF
 
@@ -374,7 +378,7 @@ a small intentional type + color system over default “AI purple” tropes.
    filters, sort; responsive shell
 6. **Detail + deep links** — ✅ `/recipe/:id` full view, optional-field handling,
    SPA `404.html` fallback for refresh
-7. **Servings scaling** — display-only
+7. **Servings scaling** — ✅ display-only
 8. **Print stylesheet** — light print layout, scaled amounts
 9. **Theme** — light/dark/system + `localStorage` UI (helpers already exist)
 10. **Deploy** — GitHub Actions → Pages; verify live URL and deep links
@@ -401,4 +405,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 7.
+No further product decisions are required to continue with Phase 8.

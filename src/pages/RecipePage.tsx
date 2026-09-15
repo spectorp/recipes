@@ -1,12 +1,108 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { getRecipeById } from '../lib/catalog'
 import { formatIngredientLine, recipeChipList } from '../lib/format'
 
+const PRESET_MULTIPLIERS = [0.5, 1, 1.5, 2, 3] as const
+
+function ServingsScaler({
+  baseServings,
+  servings,
+  onChange,
+}: {
+  baseServings: number
+  servings: number
+  onChange: (next: number) => void
+}) {
+  const setFromMultiplier = (mult: number) => {
+    const next = Math.max(1, Math.round(baseServings * mult))
+    onChange(next)
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-3">
+      <span className="text-sm text-ink-muted dark:text-stone-400">Servings</span>
+      <div className="inline-flex items-center rounded-md border border-stone-300 dark:border-stone-600">
+        <button
+          type="button"
+          aria-label="Decrease servings"
+          className="px-3 py-1.5 text-lg leading-none text-ink hover:bg-stone-100 disabled:opacity-40 dark:text-stone-100 dark:hover:bg-stone-800"
+          disabled={servings <= 1}
+          onClick={() => onChange(Math.max(1, servings - 1))}
+        >
+          −
+        </button>
+        <input
+          type="number"
+          min={1}
+          inputMode="numeric"
+          aria-label="Number of servings"
+          className="w-14 border-x border-stone-300 bg-transparent py-1.5 text-center text-sm text-ink focus:outline-none dark:border-stone-600 dark:text-stone-100"
+          value={servings}
+          onChange={(e) => {
+            const n = Number(e.target.value)
+            if (Number.isFinite(n) && n >= 1) onChange(Math.floor(n))
+          }}
+        />
+        <button
+          type="button"
+          aria-label="Increase servings"
+          className="px-3 py-1.5 text-lg leading-none text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800"
+          onClick={() => onChange(servings + 1)}
+        >
+          +
+        </button>
+      </div>
+      <div className="inline-flex gap-1">
+        {PRESET_MULTIPLIERS.map((mult) => {
+          const active = servings === Math.max(1, Math.round(baseServings * mult))
+          return (
+            <button
+              key={mult}
+              type="button"
+              onClick={() => setFromMultiplier(mult)}
+              className={`rounded-md px-2 py-1 text-xs font-medium ${
+                active
+                  ? 'bg-accent text-white dark:bg-orange-700'
+                  : 'border border-stone-300 text-ink-muted hover:border-accent/50 dark:border-stone-600 dark:text-stone-400'
+              }`}
+            >
+              {`${mult}×`}
+            </button>
+          )
+        })}
+      </div>
+      {servings !== baseServings && (
+        <button
+          type="button"
+          onClick={() => onChange(baseServings)}
+          className="text-xs text-accent underline-offset-2 hover:underline dark:text-orange-300"
+        >
+          Reset
+        </button>
+      )}
+    </div>
+  )
+}
+
 export function RecipePage() {
   const { id } = useParams<{ id: string }>()
   const recipe = id ? getRecipeById(id) : undefined
+  const baseServings = recipe?.servings
+  const [servings, setServings] = useState<number | null>(null)
+  const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(
+    () => new Set(),
+  )
+  const [checkedSteps, setCheckedSteps] = useState<Set<string>>(
+    () => new Set(),
+  )
+
+  useEffect(() => {
+    setServings(baseServings ?? null)
+    setCheckedIngredients(new Set())
+    setCheckedSteps(new Set())
+  }, [recipe?.id, baseServings])
 
   useEffect(() => {
     const previous = document.title
@@ -46,6 +142,19 @@ export function RecipePage() {
     attribution?.name?.trim() || attribution?.url?.trim(),
   )
 
+  const scale =
+    baseServings != null && servings != null && baseServings > 0
+      ? servings / baseServings
+      : 1
+  const showScaler = baseServings != null && servings != null
+
+  const toggleId = (set: Set<string>, id: string): Set<string> => {
+    const next = new Set(set)
+    if (next.has(id)) next.delete(id)
+    else next.add(id)
+    return next
+  }
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
       <Link
@@ -64,7 +173,7 @@ export function RecipePage() {
         </div>
 
         <dl className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-muted dark:text-stone-400">
-          {recipe.servings != null && (
+          {!showScaler && recipe.servings != null && (
             <div>
               <dt className="sr-only">Servings</dt>
               <dd>{recipe.servings} servings</dd>
@@ -90,6 +199,16 @@ export function RecipePage() {
           )}
         </dl>
 
+        {showScaler && (
+          <div className="mt-4">
+            <ServingsScaler
+              baseServings={baseServings}
+              servings={servings}
+              onChange={setServings}
+            />
+          </div>
+        )}
+
         {chips.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-1.5">
             {chips.map((chip, i) => (
@@ -104,15 +223,43 @@ export function RecipePage() {
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Ingredients
           </h2>
+          {scale !== 1 && (
+            <p className="mt-1 text-xs text-ink-muted dark:text-stone-500">
+              Scaled for {servings} servings (recipe base {baseServings})
+            </p>
+          )}
           <ul className="mt-4 space-y-2">
-            {recipe.ingredients.map((ingredient) => (
-              <li
-                key={ingredient.id}
-                className="text-ink dark:text-stone-200"
-              >
-                {formatIngredientLine(ingredient)}
-              </li>
-            ))}
+            {recipe.ingredients.map((ingredient) => {
+              const checked = checkedIngredients.has(ingredient.id)
+              return (
+                <li key={ingredient.id}>
+                  <label className="flex cursor-pointer items-start gap-2.5 text-ink dark:text-stone-200">
+                    <input
+                      type="checkbox"
+                      className="mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                      checked={checked}
+                      onChange={() =>
+                        setCheckedIngredients((prev) =>
+                          toggleId(prev, ingredient.id),
+                        )
+                      }
+                    />
+                    <span
+                      className={
+                        checked
+                          ? 'text-ink-muted opacity-60 dark:text-stone-500'
+                          : ''
+                      }
+                    >
+                      {formatIngredientLine({
+                        ...ingredient,
+                        amount: ingredient.amount * scale,
+                      })}
+                    </span>
+                  </label>
+                </li>
+              )
+            })}
           </ul>
         </section>
 
@@ -120,15 +267,38 @@ export function RecipePage() {
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Instructions
           </h2>
-          <ol className="mt-4 list-decimal space-y-4 pl-5">
-            {recipe.steps.map((step) => (
-              <li
-                key={step.id}
-                className="pl-1 text-ink leading-relaxed dark:text-stone-200"
-              >
-                {step.text}
-              </li>
-            ))}
+          <ol className="mt-4 list-none space-y-4">
+            {recipe.steps.map((step, index) => {
+              const checked = checkedSteps.has(step.id)
+              return (
+                <li key={step.id}>
+                  <label className="flex cursor-pointer items-start gap-2.5 text-ink leading-relaxed dark:text-stone-200">
+                    <input
+                      type="checkbox"
+                      className="mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                      checked={checked}
+                      onChange={() =>
+                        setCheckedSteps((prev) => toggleId(prev, step.id))
+                      }
+                    />
+                    <span>
+                      <span className="mr-1.5 font-medium text-ink-muted dark:text-stone-400">
+                        {index + 1}.
+                      </span>
+                      <span
+                        className={
+                          checked
+                            ? 'text-ink-muted opacity-60 dark:text-stone-500'
+                            : ''
+                        }
+                      >
+                        {step.text}
+                      </span>
+                    </span>
+                  </label>
+                </li>
+              )
+            })}
           </ol>
         </section>
       </div>

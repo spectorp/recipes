@@ -54,5 +54,6 @@ browse page shows a warning if any were skipped.
 - **Phase 4** — 69 recipes migrated from LaTeX → `data/recipes/*.json`
 - **Phase 5** — browse UI (search, facets, tags, sort, responsive filters)
 - **Phase 6** — recipe detail pages + SPA deep-link fallback (`404.html`)
+- **Phase 7** — display-only servings scaling on detail view
 
-Next: servings scaling (display-only) on the detail view.
+Next: print stylesheet.
