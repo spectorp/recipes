@@ -199,6 +199,79 @@ export function filterAndSortRecipes(
     })
 }
 
+/**
+ * Recipes matching search / rating / source and all facet groups except one.
+ * Used so each facet column only offers values that can still yield hits
+ * (disjunctive faceting). Selected values are always kept visible by the UI.
+ */
+function recipesMatchingExceptFacet(
+  recipes: Recipe[],
+  filters: BrowseFilters,
+  except: CategoryKey | 'tags',
+): Recipe[] {
+  const tokens = queryTokens(filters.query)
+  const categories =
+    except === 'tags'
+      ? filters.categories
+      : { ...filters.categories, [except]: [] as string[] }
+  const tags = except === 'tags' ? [] : filters.tags
+
+  return recipes.filter(
+    (recipe) =>
+      matchesQuery(recipe, tokens) &&
+      matchesFacetGroups(recipe, categories, tags, filters.facetMode) &&
+      matchesRating(recipe, filters.minRating) &&
+      matchesAttribution(recipe, filters.attribution),
+  )
+}
+
+export type AvailableFacetValues = {
+  categories: Record<CategoryKey, Set<string>>
+  tags: Set<string>
+}
+
+/** Normalized value names still reachable given the other active filters. */
+export function computeAvailableFacetValues(
+  recipes: Recipe[],
+  filters: BrowseFilters,
+): AvailableFacetValues {
+  const categorySets = {} as Record<CategoryKey, Set<string>>
+
+  for (const key of CATEGORY_KEYS) {
+    const available = new Set<string>()
+    for (const recipe of recipesMatchingExceptFacet(recipes, filters, key)) {
+      for (const value of recipe.categories?.[key] ?? []) {
+        available.add(norm(value))
+      }
+    }
+    // Keep selected values so they can be unchecked even if now empty.
+    for (const value of filters.categories[key]) {
+      available.add(norm(value))
+    }
+    categorySets[key] = available
+  }
+
+  const tagSet = new Set<string>()
+  for (const recipe of recipesMatchingExceptFacet(recipes, filters, 'tags')) {
+    for (const tag of recipe.tags ?? []) {
+      tagSet.add(norm(tag))
+    }
+  }
+  for (const tag of filters.tags) {
+    tagSet.add(norm(tag))
+  }
+
+  return { categories: categorySets, tags: tagSet }
+}
+
+/** Keep vocab options that are available (or currently selected). */
+export function filterFacetOptions<T extends { name: string }>(
+  options: T[],
+  available: Set<string>,
+): T[] {
+  return options.filter((opt) => available.has(norm(opt.name)))
+}
+
 export function countActiveFilters(filters: BrowseFilters): number {
   let n = 0
   if (filters.query.trim()) n += 1

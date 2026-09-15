@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import type { CategoryKey } from '../lib/schema'
 import { CATEGORY_KEYS } from '../lib/schema'
-import { categories, tags } from '../lib/catalog'
+import { categories, recipes, tags } from '../lib/catalog'
 import {
   CATEGORY_LABELS,
+  computeAvailableFacetValues,
+  filterFacetOptions,
   type AttributionFilter,
   type BrowseFilters,
   type FacetMatchMode,
@@ -74,6 +76,11 @@ function FacetColumn({
 export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) {
   const [open, setOpen] = useState(false)
 
+  const available = useMemo(
+    () => computeAvailableFacetValues(recipes, filters),
+    [filters],
+  )
+
   const setCategory = (key: CategoryKey, value: string) => {
     onChange({
       ...filters,
@@ -89,40 +96,69 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
 
   return (
     <div className="rounded-lg border border-stone-200/80 bg-white/50 dark:border-stone-700 dark:bg-stone-900/30">
-      <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2">
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-ink hover:text-accent dark:text-stone-100 dark:hover:text-orange-300"
-        >
-          <span
-            className={`inline-block text-ink-muted transition-transform dark:text-stone-400 ${open ? 'rotate-90' : ''}`}
-            aria-hidden
-          >
-            ▸
-          </span>
-          Filters
-          {activeCount > 0 && (
-            <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
-              {activeCount}
-            </span>
-          )}
-        </button>
-
-        {activeCount > 0 && (
+      {open ? (
+        <div className="flex w-full items-stretch border-b border-stone-200 dark:border-stone-700">
           <button
             type="button"
-            onClick={onClear}
-            className="text-xs text-accent underline-offset-2 hover:underline dark:text-orange-300"
+            onClick={() => setOpen(false)}
+            aria-expanded
+            className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
           >
-            Clear filters
+            <span
+              className="inline-block rotate-90 text-ink-muted dark:text-stone-400"
+              aria-hidden
+            >
+              ▸
+            </span>
+            Filters
+            {activeCount > 0 && (
+              <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
+                {activeCount}
+              </span>
+            )}
           </button>
-        )}
-      </div>
+          {activeCount > 0 && (
+            <button
+              type="button"
+              onClick={onClear}
+              className="shrink-0 px-3 py-2 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+      ) : (
+        <div className="flex w-full items-stretch">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-expanded={false}
+            className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
+          >
+            <span className="inline-block text-ink-muted dark:text-stone-400" aria-hidden>
+              ▸
+            </span>
+            Filters
+            {activeCount > 0 && (
+              <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
+                {activeCount}
+              </span>
+            )}
+          </button>
+          {activeCount > 0 && (
+            <button
+              type="button"
+              onClick={onClear}
+              className="shrink-0 px-3 py-2 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+      )}
 
       {open && (
-        <div className="border-t border-stone-200 px-4 pb-4 pt-3 dark:border-stone-700">
+        <div className="px-4 pb-4 pt-3">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
             <label className="block text-sm">
               <span className="mb-1 block text-ink-muted dark:text-stone-400">
@@ -217,7 +253,10 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
                 <FacetColumn
                   key={key}
                   label={CATEGORY_LABELS[key]}
-                  options={categories[key]}
+                  options={filterFacetOptions(
+                    categories[key],
+                    available.categories[key],
+                  )}
                   selected={filters.categories[key]}
                   onToggle={(name) => setCategory(key, name)}
                 />
@@ -226,7 +265,7 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
               {tags.tags.length > 0 && (
                 <FacetColumn
                   label="Tags"
-                  options={tags.tags}
+                  options={filterFacetOptions(tags.tags, available.tags)}
                   selected={filters.tags}
                   onToggle={(name) =>
                     onChange({
