@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
+import { ThemeToggle } from '../components/ThemeToggle'
 import { getRecipeById } from '../lib/catalog'
 import { formatIngredientLine, recipeChipList } from '../lib/format'
 
@@ -164,13 +165,16 @@ export function RecipePage() {
         >
           ← All recipes
         </Link>
-        <button
-          type="button"
-          onClick={() => window.print()}
-          className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
-        >
-          Print
-        </button>
+        <div className="flex flex-wrap items-center gap-2">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+          >
+            Print
+          </button>
+        </div>
       </div>
 
       <header className="mt-4 border-b border-stone-200 pb-6 dark:border-stone-700">

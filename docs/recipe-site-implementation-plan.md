@@ -38,7 +38,8 @@ two conflict, **this document wins**.
 | 6 Detail + deep links | Done |
 | 7 Servings scaling | Done |
 | 8 Print stylesheet | Done |
-| 9–11 | Not started |
+| 9 Theme | Done |
+| 10–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -46,6 +47,7 @@ Keep this section updated when implementation diverges from the original text.
 
 - **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
+- **Theme toggle UI** — Light / Dark / System control on browse and detail pages; preference in `localStorage` (`recipes-theme`). Hidden when printing. (Phase 9)
 - **`archive/latex/compile_recipes.sh`** — `cd`s to its own directory so it works when invoked from elsewhere; small README in that folder. (Phase 2)
 - **Auxiliary LaTeX build products** (`.aux`, `.log`, `.toc`) — not retained in the archive; only `.tex`, `.pdf`, `.out`, `.synctex.gz`, plot image, and compile script.
 - **Catalog loading via `import.meta.glob`** — no separate `scripts/build-data.mjs` / generated `src/generated/` file. Vite eagerly imports `data/recipes/*.json` plus `categories.json` / `tags.json` into the JS bundle; Zod validates in `src/lib/catalog.ts`. (Phase 3)
@@ -271,9 +273,10 @@ dialog. No multi-recipe export.
 
 ### 4.5 Theme
 
-- Light / dark / system; Tailwind `class` strategy on `<html>`
-- Persist preference in `localStorage` (no `settings.local.json` — that was
-  for the desktop app)
+**Done (Phase 9).** Light / Dark / System toggle on browse and detail pages.
+Tailwind `class` strategy on `<html>`; preference stored in `localStorage`
+(`recipes-theme`). FOUC-prevention script in `index.html`. Toggle is
+`no-print`.
 
 ### 4.6 Explicitly out of scope (v1)
 
@@ -382,7 +385,7 @@ a small intentional type + color system over default “AI purple” tropes.
    SPA `404.html` fallback for refresh
 7. **Servings scaling** — ✅ display-only
 8. **Print stylesheet** — ✅ light print layout, scaled amounts
-9. **Theme** — light/dark/system + `localStorage` UI (helpers already exist)
+9. **Theme** — ✅ light/dark/system + `localStorage` UI
 10. **Deploy** — GitHub Actions → Pages; verify live URL and deep links
 11. **Polish** — empty states, mobile pass, README (edit recipes via JSON,
     vocab files, local dev, deploy)
@@ -407,4 +410,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 9.
+No further product decisions are required to continue with Phase 10.

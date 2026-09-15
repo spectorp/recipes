@@ -56,5 +56,6 @@ browse page shows a warning if any were skipped.
 - **Phase 6** — recipe detail pages + SPA deep-link fallback (`404.html`)
 - **Phase 7** — display-only servings scaling on detail view
 - **Phase 8** — print / Save as PDF from recipe detail
+- **Phase 9** — light / dark / system theme toggle
 
-Next: theme toggle UI (light / dark / system).
+Next: GitHub Actions deploy to Pages.
