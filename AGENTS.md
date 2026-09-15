@@ -71,7 +71,7 @@ via Vite `import.meta.glob`).
 
 | Path | Role |
 | --- | --- |
-| `src/pages/HomePage.tsx` | Browse: search, facets, tags AND/OR, sort |
+| `src/pages/HomePage.tsx` | Browse: search, facets (AND/OR across groups), sort |
 | `src/pages/RecipePage.tsx` | Detail: scale servings, checkboxes, print |
 | `src/lib/catalog.ts` | Eager-load + Zod-validate all recipe JSON |
 | `src/lib/filterRecipes.ts` | Client-side filter/sort |

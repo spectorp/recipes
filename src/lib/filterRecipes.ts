@@ -1,7 +1,9 @@
 import type { CategoryKey, Recipe } from './schema'
 import { CATEGORY_KEYS } from './schema'
 
-export type TagMatchMode = 'and' | 'or'
+/** AND/OR across facet groups (categories + tags). Within a group stays OR. */
+export type FacetMatchMode = 'and' | 'or'
+
 export type AttributionFilter = 'any' | 'has_link' | 'none'
 export type SortOption = 'title-asc' | 'title-desc' | 'rating-desc' | 'rating-asc'
 
@@ -11,7 +13,8 @@ export type BrowseFilters = {
   query: string
   categories: CategoryFilters
   tags: string[]
-  tagMode: TagMatchMode
+  /** Match mode across category columns and tags (not search/rating/source). */
+  facetMode: FacetMatchMode
   minRating: number
   attribution: AttributionFilter
   sort: SortOption
@@ -33,7 +36,7 @@ export function defaultBrowseFilters(): BrowseFilters {
     query: '',
     categories: emptyCategoryFilters(),
     tags: [],
-    tagMode: 'or',
+    facetMode: 'and',
     minRating: 0,
     attribution: 'any',
     sort: 'title-asc',
@@ -72,33 +75,34 @@ function matchesQuery(recipe: Recipe, query: string): boolean {
   return haystack.some((part) => norm(part).includes(q))
 }
 
-function matchesCategoryFacets(
+/**
+ * Facet groups = each category key with selections + tags (if any).
+ * Within a group: OR. Across groups: `mode` (AND or OR).
+ * Search / rating / attribution are separate hard ANDs.
+ */
+function matchesFacetGroups(
   recipe: Recipe,
   filters: CategoryFilters,
+  tags: string[],
+  mode: FacetMatchMode,
 ): boolean {
+  const groupHits: boolean[] = []
+
   for (const key of CATEGORY_KEYS) {
     const selected = filters[key]
     if (selected.length === 0) continue
-    // OR within category
-    const any = selected.some((value) =>
-      recipeHasCategoryValue(recipe, key, value),
+    groupHits.push(
+      selected.some((value) => recipeHasCategoryValue(recipe, key, value)),
     )
-    if (!any) return false
   }
-  return true
-}
 
-function matchesTags(
-  recipe: Recipe,
-  tags: string[],
-  mode: TagMatchMode,
-): boolean {
-  if (tags.length === 0) return true
-  const recipeTags = (recipe.tags ?? []).map(norm)
-  if (mode === 'and') {
-    return tags.every((t) => recipeTags.includes(norm(t)))
+  if (tags.length > 0) {
+    const recipeTags = (recipe.tags ?? []).map(norm)
+    groupHits.push(tags.some((t) => recipeTags.includes(norm(t))))
   }
-  return tags.some((t) => recipeTags.includes(norm(t)))
+
+  if (groupHits.length === 0) return true
+  return mode === 'and' ? groupHits.every(Boolean) : groupHits.some(Boolean)
 }
 
 function matchesRating(recipe: Recipe, minRating: number): boolean {
@@ -150,8 +154,12 @@ export function filterAndSortRecipes(
     .filter(
       (recipe) =>
         matchesQuery(recipe, filters.query) &&
-        matchesCategoryFacets(recipe, filters.categories) &&
-        matchesTags(recipe, filters.tags, filters.tagMode) &&
+        matchesFacetGroups(
+          recipe,
+          filters.categories,
+          filters.tags,
+          filters.facetMode,
+        ) &&
         matchesRating(recipe, filters.minRating) &&
         matchesAttribution(recipe, filters.attribution),
     )

@@ -54,7 +54,7 @@ Keep this section updated when implementation diverges from the original text.
 - **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
 - **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged. Attribution “Lorraine Spector” → “Lorraine”.
 - **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
-- **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Filters sit in a **top horizontal column grid** (not a tall sidebar). (Phase 5+)
+- **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Filters sit in a **top horizontal column grid** (not a tall sidebar). Facet **AND/OR** toggle applies **across** category columns + tags (within a column stays any-of); search / min rating / source stay hard ANDs. Default `facetMode: 'and'`. (Phase 5+)
 - **Detail header** — category/tag chips sit to the right of servings/times on the recipe page to save vertical space.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
@@ -380,7 +380,7 @@ a small intentional type + color system over default “AI purple” tropes.
 2. **Archive LaTeX** — ✅ move TeX/PDF/assets/script under `archive/latex/`
 3. **Data pipeline** — ✅ `import.meta.glob` + Zod validation; load categories/tags
 4. **Migrate recipes** — ✅ convert TeX subsections → JSON + seed vocab
-5. **Browse UI** — ✅ grid/list, search, facets, tags AND/OR, rating/attribution
+5. **Browse UI** — ✅ grid/list, search, facets (AND/OR across groups), rating/attribution
    filters, sort; responsive shell
 6. **Detail + deep links** — ✅ `/recipe/:id` full view, optional-field handling,
    SPA `404.html` fallback for refresh

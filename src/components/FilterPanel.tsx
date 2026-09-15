@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import type { CategoryKey } from '../lib/schema'
 import { CATEGORY_KEYS } from '../lib/schema'
 import { categories, tags } from '../lib/catalog'
@@ -6,8 +5,8 @@ import {
   CATEGORY_LABELS,
   type AttributionFilter,
   type BrowseFilters,
+  type FacetMatchMode,
   type SortOption,
-  type TagMatchMode,
 } from '../lib/filterRecipes'
 
 type Props = {
@@ -28,15 +27,13 @@ function FacetColumn({
   options,
   selected,
   onToggle,
-  footer,
 }: {
   label: string
   options: { id: string; name: string }[]
   selected: string[]
   onToggle: (name: string) => void
-  footer?: ReactNode
 }) {
-  if (options.length === 0 && !footer) return null
+  if (options.length === 0) return null
 
   return (
     <div className="min-w-0">
@@ -50,7 +47,6 @@ function FacetColumn({
           </span>
         )}
       </div>
-      {footer}
       <ul className="max-h-48 space-y-1 overflow-y-auto pr-1">
         {options.map((opt) => {
           const checked = selected.includes(opt.name)
@@ -174,51 +170,60 @@ export function FilterPanel({ filters, onChange, onClear, activeCount }: Props) 
         )}
       </div>
 
-      <div className="mt-4 grid grid-cols-2 gap-4 border-t border-stone-200 pt-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 dark:border-stone-700">
-        {CATEGORY_KEYS.map((key) => (
-          <FacetColumn
-            key={key}
-            label={CATEGORY_LABELS[key]}
-            options={categories[key]}
-            selected={filters.categories[key]}
-            onToggle={(name) => setCategory(key, name)}
-          />
-        ))}
+      <div className="mt-4 border-t border-stone-200 pt-4 dark:border-stone-700">
+        <div className="mb-3 flex flex-wrap items-center gap-2 text-xs text-ink-muted dark:text-stone-400">
+          <span>Match facet groups</span>
+          <div className="inline-flex rounded-md border border-stone-300 dark:border-stone-600">
+            {(['and', 'or'] as FacetMatchMode[]).map((mode) => (
+              <button
+                key={mode}
+                type="button"
+                title={
+                  mode === 'and'
+                    ? 'Recipe must match every selected column (Diet, Method, Tags, …)'
+                    : 'Recipe must match at least one selected column'
+                }
+                onClick={() => onChange({ ...filters, facetMode: mode })}
+                className={`px-1.5 py-0.5 uppercase ${
+                  filters.facetMode === mode
+                    ? 'bg-accent text-white dark:bg-orange-700'
+                    : 'bg-white text-ink-muted dark:bg-stone-900 dark:text-stone-400'
+                }`}
+              >
+                {mode}
+              </button>
+            ))}
+          </div>
+          <span className="text-ink-muted/80 dark:text-stone-500">
+            (within a column stays any-of)
+          </span>
+        </div>
 
-        {tags.tags.length > 0 && (
-          <FacetColumn
-            label="Tags"
-            options={tags.tags}
-            selected={filters.tags}
-            onToggle={(name) =>
-              onChange({
-                ...filters,
-                tags: toggleValue(filters.tags, name),
-              })
-            }
-            footer={
-              <div className="mb-1.5 flex items-center gap-1.5 text-xs text-ink-muted dark:text-stone-400">
-                <span>Match</span>
-                <div className="inline-flex rounded-md border border-stone-300 dark:border-stone-600">
-                  {(['or', 'and'] as TagMatchMode[]).map((mode) => (
-                    <button
-                      key={mode}
-                      type="button"
-                      onClick={() => onChange({ ...filters, tagMode: mode })}
-                      className={`px-1.5 py-0.5 uppercase ${
-                        filters.tagMode === mode
-                          ? 'bg-accent text-white dark:bg-orange-700'
-                          : 'bg-white text-ink-muted dark:bg-stone-900 dark:text-stone-400'
-                      }`}
-                    >
-                      {mode}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            }
-          />
-        )}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
+          {CATEGORY_KEYS.map((key) => (
+            <FacetColumn
+              key={key}
+              label={CATEGORY_LABELS[key]}
+              options={categories[key]}
+              selected={filters.categories[key]}
+              onToggle={(name) => setCategory(key, name)}
+            />
+          ))}
+
+          {tags.tags.length > 0 && (
+            <FacetColumn
+              label="Tags"
+              options={tags.tags}
+              selected={filters.tags}
+              onToggle={(name) =>
+                onChange({
+                  ...filters,
+                  tags: toggleValue(filters.tags, name),
+                })
+              }
+            />
+          )}
+        </div>
       </div>
     </div>
   )
