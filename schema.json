@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recipe",
+  "type": "object",
+  "required": ["id", "title", "ingredients", "steps"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "categories": {
+      "type": "object",
+      "properties": {
+        "method": { "type": "array", "items": { "type": "string" } },
+        "diet": { "type": "array", "items": { "type": "string" } },
+        "meal": { "type": "array", "items": { "type": "string" } },
+        "season": { "type": "array", "items": { "type": "string" } },
+        "cuisine": { "type": "array", "items": { "type": "string" } },
+        "main_ingredient": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "servings": { "type": "integer", "minimum": 1 },
+    "prep_time_minutes": { "type": "integer", "minimum": 0 },
+    "cook_time_minutes": { "type": "integer", "minimum": 0 },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "amount"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "amount": { "type": "number" },
+          "unit": {
+            "type": ["string", "null"],
+            "enum": [
+              "g",
+              "kg",
+              "ml",
+              "l",
+              "tsp",
+              "tbsp",
+              "cup",
+              "fl_oz",
+              "oz",
+              "lb",
+              "pinch",
+              null
+            ]
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": { "type": "string" },
+          "text": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rating": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 5
+    },
+    "attribution": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "notes": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

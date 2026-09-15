@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --color-surface: #f7f4ef;
+  --color-surface-dark: #1a1814;
+  --color-ink: #1c1917;
+  --color-ink-muted: #57534e;
+  --color-accent: #9a3412;
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply min-h-dvh bg-surface text-ink font-sans;
+  }
+
+  .dark body {
+    @apply bg-surface-dark text-stone-100;
+  }
+}
