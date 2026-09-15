@@ -35,7 +35,8 @@ two conflict, **this document wins**.
 | 3 Data pipeline | Done |
 | 4 Migrate recipes | Done |
 | 5 Browse UI | Done |
-| 6–11 | Not started |
+| 6 Detail + deep links | Done |
+| 7–11 | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -50,6 +51,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged. Attribution “Lorraine Spector” → “Lorraine”.
 - **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
 - **Browse filters** — client-side only; filter state is React state (not URL query params) for v1. Mobile filters use a right-hand sheet. (Phase 5)
+- **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 
 ---
 
@@ -242,9 +244,8 @@ v4 is configured in CSS + the Vite plugin (no separate `tailwind.config` file).
   restored if practical (URL query params for search/filters is nice-to-have
   for v1; in-memory restore via router state is acceptable)
 
-**SPA hosting note:** configure Pages / Actions so deep links don’t 404 on
-refresh (e.g. `404.html` → `index.html` copy trick, or the Actions Pages
-SPA fallback pattern documented for Vite).
+**SPA hosting note:** ✅ Vite copies `index.html` → `404.html` on build so
+GitHub Pages deep-link refreshes load the SPA.
 
 ### 4.3 Servings scaling (display-only)
 
@@ -370,8 +371,8 @@ a small intentional type + color system over default “AI purple” tropes.
 4. **Migrate recipes** — ✅ convert TeX subsections → JSON + seed vocab
 5. **Browse UI** — ✅ grid/list, search, facets, tags AND/OR, rating/attribution
    filters, sort; responsive shell
-6. **Detail + deep links** — `/recipe/:id`, optional-field handling, SPA
-   fallback for refresh
+6. **Detail + deep links** — ✅ `/recipe/:id` full view, optional-field handling,
+   SPA `404.html` fallback for refresh
 7. **Servings scaling** — display-only
 8. **Print stylesheet** — light print layout, scaled amounts
 9. **Theme** — light/dark/system + `localStorage` UI (helpers already exist)
@@ -399,4 +400,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 6.
+No further product decisions are required to continue with Phase 7.

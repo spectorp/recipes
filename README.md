@@ -53,9 +53,6 @@ browse page shows a warning if any were skipped.
 - **Phase 3** — catalog loader + Zod validation (vocab + recipes)
 - **Phase 4** — 69 recipes migrated from LaTeX → `data/recipes/*.json`
 - **Phase 5** — browse UI (search, facets, tags, sort, responsive filters)
+- **Phase 6** — recipe detail pages + SPA deep-link fallback (`404.html`)
 
-Next: full recipe detail view (ingredients, steps, chips, deep links polish).
-
-Ingredient amounts/units from the automated migration are best-effort; tidy
-individual JSON files in git when you notice issues (do not re-run
-`scripts/migrate-tex.mjs` blindly — it overwrites hand edits).
+Next: servings scaling (display-only) on the detail view.
