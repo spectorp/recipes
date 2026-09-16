@@ -39,7 +39,8 @@ two conflict, **this document wins**.
 | 7 Servings scaling | Done |
 | 8 Print stylesheet | Done |
 | 9 Theme | Done |
-| 10–11 | Not started |
+| 10 Deploy | Done |
+| 11 Polish | Not started |
 
 ### Plan changelog (deviations & clarifications)
 
@@ -54,6 +55,7 @@ Keep this section updated when implementation diverges from the original text.
 - **LaTeX migration via `scripts/migrate-tex.mjs`** — automated parse of `archive/latex/perry_recipes.tex` into 69 recipe JSON files. Best-effort ingredient structuring (parentheticals/dual units often land in `name`/`notes`). Skipped **Sous Vide notes** (not a recipe). Hand-fixed Mapo Tofu + several mis-tagged `method` values after first pass. Re-running the script will overwrite manual fixes unless those edits are ported into the script. (Phase 4)
 - **Anonymous site branding** — UI title/copy is “Recipes” (no personal name). Archive TeX filenames (`perry_recipes.*`) unchanged. Attribution “Lorraine Spector” → “Lorraine”.
 - **Hosting URL** — stick with default GitHub Pages (`https://spectorp.github.io/recipes/`); no custom domain for now.
+- **Deploy workflow** — `.github/workflows/deploy.yml` builds with Node 22 + `npm ci` and deploys `dist/` via `actions/deploy-pages`. Pages source must be GitHub Actions. (Phase 10)
 - **Browse filters** — client-side only; filter/search state and Filters panel open/closed live in a React context so they **persist** when opening a recipe and navigating back (not URL query params yet). **Search** sits beside the page title; sort/rating/source/facets live in a **collapsed-by-default** Filters panel. Search is **token AND** (whitespace-split; each token must match somewhere in title/id/tags/ingredients/categories); with a query, **title/id hits rank above** other-field hits, then the chosen sort. Facet checkboxes are **contextual**: only values that can still match given the other filters (plus currently selected). Facet **AND/OR** toggle applies **across** category columns + tags (within a column stays any-of); search / min rating / source stay hard ANDs. Default `facetMode: 'and'`. Fine at ~2k recipes (one catalog pass per facet group). (Phase 5+)
 - **Detail header** — category/tag chips sit to the right of servings/times on the recipe page to save vertical space. Attribution (when present) sits in the same meta row as servings/times.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
@@ -292,16 +294,18 @@ Tailwind `class` strategy on `<html>`; preference stored in `localStorage`
 
 ## 5. GitHub Pages Deploy
 
-1. `vite.config.ts`: `base: '/recipes/'` (repo name is `spectorp/recipes`)
-2. Workflow on push to default branch:
-   - `npm ci` / `npm install`
-   - `npm run build`
-   - Upload `dist/` as Pages artifact and deploy
-3. Repo Settings → Pages → Source: GitHub Actions
+**Done (Phase 10).**
+
+1. `vite.config.ts`: `base: '/recipes/'` (repo name is `spectorp/recipes`) ✅
+2. Workflow [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) on push to `master`:
+   - `npm ci` → `npm run build` → upload `dist/` → `actions/deploy-pages`
+3. Repo Settings → Pages → Source: **GitHub Actions**
 4. Site URL: `https://spectorp.github.io/recipes/`
 
-Document local preview: `npm run dev` and `npm run build && npm run preview`
+Local preview: `npm run dev` and `npm run build && npm run preview`
 (with base path awareness).
+
+**Note:** GitHub Pages for a **private** personal repo requires a paid plan; keep the repo public for free hosting, or upgrade.
 
 ---
 
@@ -386,7 +390,7 @@ a small intentional type + color system over default “AI purple” tropes.
 7. **Servings scaling** — ✅ display-only
 8. **Print stylesheet** — ✅ light print layout, scaled amounts
 9. **Theme** — ✅ light/dark/system + `localStorage` UI
-10. **Deploy** — GitHub Actions → Pages; verify live URL and deep links
+10. **Deploy** — ✅ GitHub Actions → Pages (`deploy.yml`)
 11. **Polish** — empty states, mobile pass, README (edit recipes via JSON,
     vocab files, local dev, deploy)
 
@@ -410,4 +414,4 @@ a small intentional type + color system over default “AI purple” tropes.
 - Private hosting if requirements change
 - Multi-recipe print
 
-No further product decisions are required to continue with Phase 10.
+No further product decisions are required for polish (Phase 11).

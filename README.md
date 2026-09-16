@@ -1,7 +1,7 @@
 # Recipes
 
-Read-only recipe site (Vite + React + TypeScript + Tailwind), eventually hosted
-on GitHub Pages at `https://spectorp.github.io/recipes/`.
+Read-only recipe site (Vite + React + TypeScript + Tailwind), hosted on GitHub
+Pages at **https://spectorp.github.io/recipes/**.
 
 Recipes are stored as individual JSON files under `data/recipes/`. Editing
 happens in git, not in the web UI.
@@ -23,6 +23,12 @@ that path (often `http://localhost:5173/recipes/`).
 npm run build
 npm run preview
 ```
+
+## Deploy
+
+Pushes to `master` run [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the site and publishes `dist/` to GitHub Pages. In the repo:
+**Settings → Pages → Source: GitHub Actions**.
 
 ## Data layout
 
@@ -48,14 +54,5 @@ browse page shows a warning if any were skipped.
 
 ## Current status
 
-- **Phase 1** — app shell, routing, Tailwind dark-mode setup, schema, empty data dirs
-- **Phase 2** — LaTeX archived under `archive/latex/`
-- **Phase 3** — catalog loader + Zod validation (vocab + recipes)
-- **Phase 4** — 69 recipes migrated from LaTeX → `data/recipes/*.json`
-- **Phase 5** — browse UI (search, facets, tags, sort, responsive filters)
-- **Phase 6** — recipe detail pages + SPA deep-link fallback (`404.html`)
-- **Phase 7** — display-only servings scaling on detail view
-- **Phase 8** — print / Save as PDF from recipe detail
-- **Phase 9** — light / dark / system theme toggle
-
-Next: GitHub Actions deploy to Pages.
+Phases 1–10 are done (app, data, browse/detail UI, print, theme, Pages deploy).
+Phase 11 (polish) remains optional.
