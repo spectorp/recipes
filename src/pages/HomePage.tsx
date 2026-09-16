@@ -60,8 +60,30 @@ export function HomePage() {
               onChange={(e) =>
                 setFilters({ ...filters, query: e.target.value })
               }
-              className="w-full rounded-md border border-stone-300 bg-white py-2 pr-3 pl-9 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+              className={`w-full rounded-md border border-stone-300 bg-white py-2 pl-9 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 [&::-webkit-search-cancel-button]:hidden ${
+                filters.query.trim() ? 'pr-9' : 'pr-3'
+              }`}
             />
+            {filters.query.length > 0 && (
+              <button
+                type="button"
+                onClick={() => setFilters({ ...filters, query: '' })}
+                aria-label="Clear search"
+                className="absolute top-1/2 right-1.5 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded text-ink-muted hover:bg-stone-100 hover:text-ink dark:text-stone-400 dark:hover:bg-stone-800 dark:hover:text-stone-100"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  className="size-3.5"
+                  aria-hidden
+                >
+                  <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
+              </button>
+            )}
           </label>
         </div>
         <ThemeToggle className="no-print shrink-0" />
