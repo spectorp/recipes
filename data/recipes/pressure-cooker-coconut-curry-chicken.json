@@ -144,14 +144,14 @@
     {
       "id": "i18",
       "name": "Cooked basmati rice, for serving (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i19",
       "name": "Plain yogurt, for serving (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -166,15 +166,15 @@
   "steps": [
     {
       "id": "s1",
-      "text": "Set a box grater over a bowl. Starting with their cut sides, grate the tomatoes through the large holes of the box grater so the tomato pulp falls into the bowl. Discard the skins. Measure out 2 cups of tomato purée."
+      "text": "Set a box grater over a bowl. Starting with their cut sides, grate the tomatoes through the large holes of the box grater so the tomato pulp falls into the bowl. Discard the skins. Measure out 2 cups of tomato pur\u00e9e."
     },
     {
       "id": "s2",
-      "text": "Using the sauté function, heat the ghee and the coconut oil in the pressure cooker. Stir in the onions and cook, stirring often to encourage even browning, until they are caramelized, 12 to 18 minutes. Stir in the garlic, ginger and cumin seeds; cook until fragrant, about 2 minutes. Stir in the cinnamon and cardamom and cook for another minute. Then stir in the coriander, salt, turmeric, red pepper flakes, black pepper and finally the tomato purée."
+      "text": "Using the saut\u00e9 function, heat the ghee and the coconut oil in the pressure cooker. Stir in the onions and cook, stirring often to encourage even browning, until they are caramelized, 12 to 18 minutes. Stir in the garlic, ginger and cumin seeds; cook until fragrant, about 2 minutes. Stir in the cinnamon and cardamom and cook for another minute. Then stir in the coriander, salt, turmeric, red pepper flakes, black pepper and finally the tomato pur\u00e9e."
     },
     {
       "id": "s3",
-      "text": "Add the chicken to the sauce, cover and cook on low pressure for 4 minutes. Let the pressure release naturally. If the sauce seems too thin, use a slotted spoon to transfer the chicken to a bowl and then simmer the sauce on the sauté setting until it has thickened to taste. (Note that the coconut milk will thin the sauce down further.) Stir in the garam masala and the coconut milk, and let the curry sit for 20 minutes for the flavors to meld. Serve with the rice and yogurt, if desired. Garnish with cilantro."
+      "text": "Add the chicken to the sauce, cover and cook on low pressure for 4 minutes. Let the pressure release naturally. If the sauce seems too thin, use a slotted spoon to transfer the chicken to a bowl and then simmer the sauce on the saut\u00e9 setting until it has thickened to taste. (Note that the coconut milk will thin the sauce down further.) Stir in the garam masala and the coconut milk, and let the curry sit for 20 minutes for the flavors to meld. Serve with the rice and yogurt, if desired. Garnish with cilantro."
     }
   ],
   "attribution": {
@@ -182,5 +182,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

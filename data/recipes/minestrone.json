@@ -31,7 +31,7 @@
     {
       "id": "i2",
       "name": "Kosher salt",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -185,14 +185,14 @@
     {
       "id": "i24",
       "name": "Chopped fresh herbs, such as basil, parsley, or rosemary, for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i25",
       "name": "Freshly ground black pepper",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -226,7 +226,7 @@
   "attribution": {
     "name": "J. Kenji Lopez-Alt"
   },
-  "notes": "This recipe is more of a blueprint for soup than a set of rules, allowing you to make a soup based on what you have on hand and your personal preferences. Canned beans can be used in place of fresh. To use canned beans, in step 5, drain and rinse 2 cups of canned beans and add them to the soup, along with 2 quarts of homemade vegetable stock, or store-bought or homemade low-sodium chicken stock. Increase simmering time to 30 minutes before proceeding to step 6. Use fresh tomatoes only if ripe and in season. Otherwise, tomatoes may be omitted or replaced with one (14-ounce) can of whole peeled tomatoes, crushed by hand or chopped with a knife. A Parmesan rind can be added to the soup while simmering for deeper flavor. Soup vegetables Vegetable & Instructions & Minimum cooking time Carrot & Peeled and cut into 1/2-inch chunks, & 20 minutes & sautéed at start until tender & Cauliflower & Florets separated, stems sliced 1/4 inch thick & 20 minutes Celery & Peeled and cut into 1/2-inch chunks, & 20 minutes & sautéed at start until tender & Celery root & Peeled and cut into 1/2-inch chunks & 20 minutes Jicima & Peeled and cut into 1/2-inch chunks & 20 minutes Kohlrabi & Peeled and cut into 1/2-inch chunks & 20 minutes Leeks & Thinly sliced or diced, sautéed at start until tender & 20 minutes Onion & Thinly sliced or diced, sautéed at start until tender & 20 minutes Parsnip & Peeled and cut into 1/2-inch chunks & 20 minutes Potato & Peeled and cut into 1/2-inch chunks& 20 minutes Radish & Cut into 1/2-inch chunks & 20 minutes Rutabaga & Peeled and cut into 1/2-inch chunks & 20 minutes Sweet potato & Peeled and cut into 1/2-inch chunks & 20 minutes Asparagus & Cut into 1-inch lengths & 10 minutes Broccoli & Florets separated, stems sliced 1/4 inch thick & 10 minutes Hearty greens& Tough stems or cores removed, & 10 minutes (cabbage, kale, & leaves sliced or roughly chopped & collards) & & Green beans & Trimmed and cut into 1-inch pieces & 10 minutes Summer squash & Cut into 1/2-inch chunks or disks & 10 minutes Zucchini & Cut into 1/2-inch chunks or disks & 10 minutes Tender greens & Leaves roughly chopped or torn & 5 minutes (spinach, arugula,&& watercress, chard)&& Brussels sprouts & Leaves separated & 5 minutes Frozen peas & Added straight from freezer & 5 minutes Frozen lima beans & Added straight from freezer & 5 minutes Corn kernels & Cut off cob and separated into individual kernels & 5 minutes",
+  "notes": "This recipe is more of a blueprint for soup than a set of rules, allowing you to make a soup based on what you have on hand and your personal preferences. Canned beans can be used in place of fresh. To use canned beans, in step 5, drain and rinse 2 cups of canned beans and add them to the soup, along with 2 quarts of homemade vegetable stock, or store-bought or homemade low-sodium chicken stock. Increase simmering time to 30 minutes before proceeding to step 6. Use fresh tomatoes only if ripe and in season. Otherwise, tomatoes may be omitted or replaced with one (14-ounce) can of whole peeled tomatoes, crushed by hand or chopped with a knife. A Parmesan rind can be added to the soup while simmering for deeper flavor. Soup vegetables Vegetable & Instructions & Minimum cooking time Carrot & Peeled and cut into 1/2-inch chunks, & 20 minutes & saut\u00e9ed at start until tender & Cauliflower & Florets separated, stems sliced 1/4 inch thick & 20 minutes Celery & Peeled and cut into 1/2-inch chunks, & 20 minutes & saut\u00e9ed at start until tender & Celery root & Peeled and cut into 1/2-inch chunks & 20 minutes Jicima & Peeled and cut into 1/2-inch chunks & 20 minutes Kohlrabi & Peeled and cut into 1/2-inch chunks & 20 minutes Leeks & Thinly sliced or diced, saut\u00e9ed at start until tender & 20 minutes Onion & Thinly sliced or diced, saut\u00e9ed at start until tender & 20 minutes Parsnip & Peeled and cut into 1/2-inch chunks & 20 minutes Potato & Peeled and cut into 1/2-inch chunks& 20 minutes Radish & Cut into 1/2-inch chunks & 20 minutes Rutabaga & Peeled and cut into 1/2-inch chunks & 20 minutes Sweet potato & Peeled and cut into 1/2-inch chunks & 20 minutes Asparagus & Cut into 1-inch lengths & 10 minutes Broccoli & Florets separated, stems sliced 1/4 inch thick & 10 minutes Hearty greens& Tough stems or cores removed, & 10 minutes (cabbage, kale, & leaves sliced or roughly chopped & collards) & & Green beans & Trimmed and cut into 1-inch pieces & 10 minutes Summer squash & Cut into 1/2-inch chunks or disks & 10 minutes Zucchini & Cut into 1/2-inch chunks or disks & 10 minutes Tender greens & Leaves roughly chopped or torn & 5 minutes (spinach, arugula,&& watercress, chard)&& Brussels sprouts & Leaves separated & 5 minutes Frozen peas & Added straight from freezer & 5 minutes Frozen lima beans & Added straight from freezer & 5 minutes Corn kernels & Cut off cob and separated into individual kernels & 5 minutes",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

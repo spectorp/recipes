@@ -31,7 +31,7 @@
     {
       "id": "i2",
       "name": "Salt to taste",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -87,13 +87,13 @@
     {
       "id": "i10",
       "name": "Vegetable oil to a depth of 1.5 inches for frying",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i11",
-      "name": "boneless, skinless fish filets (practically anything will work, but I like larger-flake, lighter-flavor fish best for this preparation—think catfish, halibut, sea bass, grouper and the like)",
+      "name": "boneless, skinless fish filets (practically anything will work, but I like larger-flake, lighter-flavor fish best for this preparation\u2014think catfish, halibut, sea bass, grouper and the like)",
       "amount": 1,
       "unit": "lb",
       "notes": ""
@@ -135,10 +135,10 @@
     },
     {
       "id": "i17",
-      "name": "About 1 cup salsa (toasted arbol chile salsa, roasted green chile salsa, roasted tomatillo salsa or even one of the Mexican hot sauces like Tamazula or Valentina)",
+      "name": "salsa (toasted arbol chile salsa, roasted green chile salsa, roasted tomatillo salsa or even one of the Mexican hot sauces like Tamazula or Valentina)",
       "amount": 1,
-      "unit": null,
-      "notes": ""
+      "unit": "cup",
+      "notes": "about"
     },
     {
       "id": "i18",
@@ -167,5 +167,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:29:16Z"
 }

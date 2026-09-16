@@ -144,7 +144,8 @@ function parseNumber(text) {
   }
   const number = text.match(/^\d+(?:\.\d+)?/)
   if (number) return { amount: Number(number[0]), length: number[0].length }
-  return { amount: 1, length: 0 }
+  // No quantity in source — do not invent 1
+  return { amount: null, length: 0 }
 }
 
 const unitPatterns = [

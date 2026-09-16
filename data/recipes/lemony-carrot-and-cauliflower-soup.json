@@ -99,21 +99,21 @@
     {
       "id": "i11",
       "name": "Smoky chile powder, for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i12",
       "name": "Coarse sea salt, for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i13",
       "name": "Cilantro leaves, for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -133,7 +133,7 @@
     },
     {
       "id": "s4",
-      "text": "Remove the soup from the heat. Using an immersion blender, purée the soup until smooth. (Alternatively, you can let soup cool slightly then purée it in batches in a food processor or blender.) If necessary, return the puréed soup to the heat to warm through. Stir in the lemon zest and juice just before serving. Drizzle with oil and sprinkle with chile, sea salt and cilantro leaves."
+      "text": "Remove the soup from the heat. Using an immersion blender, pur\u00e9e the soup until smooth. (Alternatively, you can let soup cool slightly then pur\u00e9e it in batches in a food processor or blender.) If necessary, return the pur\u00e9ed soup to the heat to warm through. Stir in the lemon zest and juice just before serving. Drizzle with oil and sprinkle with chile, sea salt and cilantro leaves."
     }
   ],
   "attribution": {
@@ -141,5 +141,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

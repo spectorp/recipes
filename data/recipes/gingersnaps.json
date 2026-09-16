@@ -99,7 +99,7 @@
     {
       "id": "i12",
       "name": "sugar to coat cookies (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -123,10 +123,10 @@
     },
     {
       "id": "s5",
-      "text": "Bake at 350° for about 12-15 minutes. Remove to a rack and let cool. Store in a loosely covered container."
+      "text": "Bake at 350\u00b0 for about 12-15 minutes. Remove to a rack and let cool. Store in a loosely covered container."
     }
   ],
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

@@ -22,7 +22,7 @@ export const ingredientSchema = z
   .object({
     id: z.string().min(1),
     name: z.string().min(1),
-    amount: z.number(),
+    amount: z.number().nullable(),
     unit: recipeUnitSchema.optional(),
     notes: z.string().optional(),
   })

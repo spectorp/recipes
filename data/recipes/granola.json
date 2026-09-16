@@ -51,7 +51,7 @@
     {
       "id": "i5",
       "name": "Dried fruit",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -72,5 +72,5 @@
   ],
   "notes": "NOTES: Freezes well.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

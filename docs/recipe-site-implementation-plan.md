@@ -46,6 +46,7 @@ two conflict, **this document wins**.
 
 Keep this section updated when implementation diverges from the original text.
 
+- **Nullable ingredient `amount`** — schema/Zod allow `amount: null` when the source gives no quantity (e.g. to taste / for serving). UI omits quantity and does not scale those lines. Do not invent `1` for missing amounts. Migration script no longer defaults missing quantities to `1`.
 - **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
 - **Theme toggle UI** — compact sun/moon icons on browse and detail pages; default preference is **system** (not shown as a control; click the active forced mode again to return to system). Preference in `localStorage` (`recipes-theme`). Hidden when printing. (Phase 9)
@@ -145,6 +146,8 @@ One file per recipe: `data/recipes/<id>.json`.
 - `unit` — enum only: `g`, `kg`, `ml`, `l`, `tsp`, `tbsp`, `cup`, `fl_oz`,
   `oz`, `lb`, `pinch`, or `null`. Countable items use `unit: null` and put
   the noun in `name` (e.g. `"garlic cloves"`).
+- `amount` — number, or `null` when the source has no quantity. Do not invent
+  amounts. UI hides quantity when null; scaling skips null amounts.
 - Amounts/units displayed as authored — **no unit conversion**.
 - `categories` — fixed keys: `method`, `diet`, `meal`, `season`, `cuisine`,
   `main_ingredient`. Each is a string array (may be empty). Values must

@@ -53,15 +53,17 @@ Live site: https://spectorp.github.io/recipes/
 6. Run `npm run build` to validate via Zod.
 7. Commit and push to `master` — Actions deploys the site.
 
-Do not invent ingredients or steps when importing from a source; map amounts
-into the unit enum and put dual units / asides in `notes`.
+Do not invent ingredients, steps, or amounts when importing from a source.
+If the source has no quantity, use `amount: null`. Map known quantities into
+the unit enum and put dual units / asides in `notes`.
 
 ### Ingredient units
 
 Allowed `unit` values only:
 
 `g`, `kg`, `ml`, `l`, `tsp`, `tbsp`, `cup`, `fl_oz`, `oz`, `lb`, `pinch`,
-or `null` (countable items like “2 eggs”).
+or `null` (countable items like “2 eggs”). Use `amount: null` when the source
+gives no quantity (UI omits it).
 
 ### Category keys
 

@@ -72,43 +72,36 @@
     },
     {
       "id": "i8",
-      "name": "small jalapeno, seeded and minced*",
+      "name": "small jalapeno (seeded and minced)",
       "amount": 1,
       "unit": null,
-      "notes": ""
+      "notes": "or ground ancho chile peppers or ground cumin"
     },
     {
       "id": "i9",
-      "name": "seeded and minced",
-      "amount": 1,
-      "unit": null,
-      "notes": ""
-    },
-    {
-      "id": "i10",
       "name": "dried bread crumbs",
       "amount": 1,
       "unit": "tbsp",
       "notes": ""
     },
     {
-      "id": "i11",
+      "id": "i10",
       "name": "salt",
       "amount": 0.5,
       "unit": "tsp",
       "notes": ""
     },
     {
-      "id": "i12",
+      "id": "i11",
       "name": "pepper",
       "amount": 0.25,
       "unit": "tsp",
       "notes": ""
     },
     {
-      "id": "i13",
+      "id": "i12",
       "name": "(sour cream or creme fraiche)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -135,7 +128,7 @@
       "text": "Serve immediately, topped with a dollop of sour cream."
     }
   ],
-  "notes": "*or ground ancho chile peppers or ground cumin",
+  "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:29:16Z"
 }

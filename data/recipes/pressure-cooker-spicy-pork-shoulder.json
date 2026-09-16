@@ -192,14 +192,14 @@
     {
       "id": "i25",
       "name": "Cooked rice or toasted slider rolls",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i26",
       "name": "Kimchi (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -211,11 +211,11 @@
     },
     {
       "id": "s2",
-      "text": "Set electric pressure cooker to sauté (or use a large skillet). Add pork in batches and sear until browned all over, about 2 minutes per side. Add 3/4 cup water to pot (or to skillet to deglaze, then move to pot), cover, and set to cook for 60 minutes on high pressure. Or cook in a slow cooker for 5 to 7 hours until tender."
+      "text": "Set electric pressure cooker to saut\u00e9 (or use a large skillet). Add pork in batches and sear until browned all over, about 2 minutes per side. Add 3/4 cup water to pot (or to skillet to deglaze, then move to pot), cover, and set to cook for 60 minutes on high pressure. Or cook in a slow cooker for 5 to 7 hours until tender."
     },
     {
       "id": "s3",
-      "text": "While pork cooks, prepare sauce: In a small pot, warm peanut oil over medium heat. Add garlic and ginger, and sauté until fragrant, 1 to 2 minutes. Add remaining ingredients and bring to a simmer. Cook until thickened, 1 to 2 minutes. Set sauce aside. (It can be made up to 1 week ahead and stored in the refrigerator.)"
+      "text": "While pork cooks, prepare sauce: In a small pot, warm peanut oil over medium heat. Add garlic and ginger, and saut\u00e9 until fragrant, 1 to 2 minutes. Add remaining ingredients and bring to a simmer. Cook until thickened, 1 to 2 minutes. Set sauce aside. (It can be made up to 1 week ahead and stored in the refrigerator.)"
     },
     {
       "id": "s4",
@@ -231,7 +231,7 @@
     },
     {
       "id": "s7",
-      "text": "When ready to serve, heat broiler. Toss pork with sauce and 1 to 2 tablespoons cooking liquid — just enough so pork is evenly coated but not wet or runny. Spread mixture on a rimmed baking sheet, and broil until crisped on top, 2 to 3 minutes; it will char in places, and that's fine."
+      "text": "When ready to serve, heat broiler. Toss pork with sauce and 1 to 2 tablespoons cooking liquid \u2014 just enough so pork is evenly coated but not wet or runny. Spread mixture on a rimmed baking sheet, and broil until crisped on top, 2 to 3 minutes; it will char in places, and that's fine."
     },
     {
       "id": "s8",
@@ -243,5 +243,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T19:13:10Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

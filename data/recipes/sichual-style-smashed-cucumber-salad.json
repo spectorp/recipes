@@ -35,7 +35,7 @@
     {
       "id": "i2",
       "name": "Kosher salt",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -76,5 +76,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-16T04:24:24Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

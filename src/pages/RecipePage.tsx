@@ -418,9 +418,13 @@ export function RecipePage() {
             {recipe.ingredients.map((ingredient) => {
               const checked = checkedIngredients.has(ingredient.id)
               const scaled = Math.abs(scale - 1) > 0.001
+              const scaledAmount =
+                ingredient.amount == null
+                  ? null
+                  : ingredient.amount * scale
               const { quantity, name, notes } = formatIngredientParts({
                 ...ingredient,
-                amount: ingredient.amount * scale,
+                amount: scaledAmount,
               })
               return (
                 <li key={ingredient.id}>
@@ -442,13 +446,17 @@ export function RecipePage() {
                           : ''
                       }`}
                     >
-                      {scaled ? (
-                        <span className="font-bold text-accent dark:text-orange-300">
-                          {quantity}
-                        </span>
-                      ) : (
-                        quantity
-                      )}{' '}
+                      {quantity ? (
+                        <>
+                          {scaled && ingredient.amount != null ? (
+                            <span className="font-bold text-accent dark:text-orange-300">
+                              {quantity}
+                            </span>
+                          ) : (
+                            quantity
+                          )}{' '}
+                        </>
+                      ) : null}
                       {name}
                       {notes}
                     </span>

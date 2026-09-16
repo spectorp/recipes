@@ -35,13 +35,19 @@ export function formatAmount(amount: number): string {
 
 export function formatIngredientParts(ingredient: {
   name: string
-  amount: number
+  amount: number | null
   unit?: string | null
   notes?: string
 }): { quantity: string; name: string; notes: string } {
-  const amount = formatAmount(ingredient.amount)
   const unit = ingredient.unit
-  const quantity = unit ? `${amount} ${unit}` : amount
+  let quantity = ''
+  if (ingredient.amount != null) {
+    const amount = formatAmount(ingredient.amount)
+    quantity = unit ? `${amount} ${unit}` : amount
+  } else if (unit) {
+    // Rare: unit without amount (e.g. historical pinch-only); show unit alone
+    quantity = unit
+  }
   const notes =
     ingredient.notes && ingredient.notes.trim()
       ? ` (${ingredient.notes.trim()})`
@@ -51,12 +57,12 @@ export function formatIngredientParts(ingredient: {
 
 export function formatIngredientLine(ingredient: {
   name: string
-  amount: number
+  amount: number | null
   unit?: string | null
   notes?: string
 }): string {
   const { quantity, name, notes } = formatIngredientParts(ingredient)
-  return `${quantity} ${name}${notes}`
+  return quantity ? `${quantity} ${name}${notes}` : `${name}${notes}`
 }
 
 export function recipeChipList(recipe: Recipe): string[] {

@@ -67,17 +67,17 @@
     },
     {
       "id": "i7",
-      "name": "Generous 1/4 teaspoon ground cinnamon",
-      "amount": 1,
-      "unit": null,
-      "notes": ""
+      "name": "ground cinnamon",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": "generous"
     },
     {
       "id": "i8",
-      "name": "Generous 1/4 teaspoon ground allspice",
-      "amount": 1,
-      "unit": null,
-      "notes": ""
+      "name": "ground allspice",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": "generous"
     },
     {
       "id": "i9",
@@ -96,7 +96,7 @@
     {
       "id": "i11",
       "name": "Salt and freshly ground black pepper",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -124,5 +124,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:29:16Z"
 }

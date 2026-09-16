@@ -93,7 +93,7 @@
     {
       "id": "i11",
       "name": "Salt and pepper",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -108,7 +108,7 @@
   "steps": [
     {
       "id": "s1",
-      "text": "Place pasta in a large skillet, sauté pan, or saucepan and cover with water. Add a small pinch of salt. Bring to a boil over high heat, stirring occasionally to prevent pasta from sticking."
+      "text": "Place pasta in a large skillet, saut\u00e9 pan, or saucepan and cover with water. Add a small pinch of salt. Bring to a boil over high heat, stirring occasionally to prevent pasta from sticking."
     },
     {
       "id": "s2",
@@ -133,5 +133,5 @@
   ],
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

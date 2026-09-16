@@ -47,7 +47,7 @@
     {
       "id": "i4",
       "name": "Oil as needed",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -72,5 +72,5 @@
   ],
   "notes": "NOTE: Consider putting parchment paper at the bottom of the pot to prevent the bread from sticking. The dough should not stick if the pot is sufficiently hot.",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

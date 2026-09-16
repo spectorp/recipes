@@ -114,14 +114,14 @@
     {
       "id": "i14",
       "name": "EVOO",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i15",
       "name": "Kosher salt and black pepper to taste",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -129,7 +129,7 @@
   "steps": [
     {
       "id": "s1",
-      "text": "Preheat oven to 425°. Toss the pepper halves, tomato quarters, halved shallots and garlic cloves in a large bowl, drizzle with olive oil, season with salt and pepper and toss with your hands to coat. Place them all in a single layer, skin side up in a large roasting pan."
+      "text": "Preheat oven to 425\u00b0. Toss the pepper halves, tomato quarters, halved shallots and garlic cloves in a large bowl, drizzle with olive oil, season with salt and pepper and toss with your hands to coat. Place them all in a single layer, skin side up in a large roasting pan."
     },
     {
       "id": "s2",
@@ -158,5 +158,5 @@
   ],
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

@@ -87,7 +87,7 @@
     {
       "id": "i10",
       "name": "Lime wedges for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
@@ -108,7 +108,7 @@
     {
       "id": "i13",
       "name": "Mayo for serving (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -124,7 +124,7 @@
     },
     {
       "id": "s3",
-      "text": "Spread shrimp on a large rimmed baking sheet and dot with butter. Roast until shrimp is pink and opaque, but before the edges have started to curl, about 5 minutes. Sprinkle generously with fresh lime juice and toss with jalapeños and chives or scallions. Serve with mayonnaise if you like."
+      "text": "Spread shrimp on a large rimmed baking sheet and dot with butter. Roast until shrimp is pink and opaque, but before the edges have started to curl, about 5 minutes. Sprinkle generously with fresh lime juice and toss with jalape\u00f1os and chives or scallions. Serve with mayonnaise if you like."
     }
   ],
   "attribution": {
@@ -132,5 +132,5 @@
   },
   "notes": "Notes: Very quick",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

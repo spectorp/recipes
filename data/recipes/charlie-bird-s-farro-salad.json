@@ -110,8 +110,8 @@
     {
       "id": "i14",
       "name": "Maldon or other flaky sea salt",
-      "amount": 1,
-      "unit": "pinch",
+      "amount": null,
+      "unit": null,
       "notes": "for finishing"
     }
   ],
@@ -131,5 +131,5 @@
     "url": "https://cooking.nytimes.com/recipes/1015843-charlie-birds-farro-salad"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }

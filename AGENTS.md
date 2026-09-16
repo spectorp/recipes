@@ -34,11 +34,17 @@ NYT printout, etc.):
 - Preserve the author’s amounts, units, ingredient names, and step text as
   closely as the schema allows.
 - Allowed interpretation:
-  - Mapping freeform quantities into the strict schema (`amount` number +
-    `unit` enum or `null`)
+  - Mapping freeform quantities into the strict schema (`amount` number or
+    `null` + `unit` enum or `null`)
   - Putting parentheticals / dual units into `notes`
   - Choosing `categories` / `tags` / `attribution` metadata
   - Normalizing obvious typos in titles only when asked
+- **Do not invent amounts.** If the source has no quantity (e.g. “to taste”,
+  “for serving”, bare “salt”, “Whole-grain bread, for serving”), set
+  `amount: null`. Never default missing amounts to `1`.
+- `pinch` only when the source says pinch (or equivalent); then
+  `amount: 1`, `unit: "pinch"` is fine. “Salt to taste” → `amount: null`,
+  not a fake pinch.
 - If the source is **incomplete** (e.g. ingredients but no steps):
   - Still import what exists
   - Put a clear note in `notes` that steps were missing
@@ -60,6 +66,8 @@ NYT printout, etc.):
   [`data/tags.json`](data/tags.json) — recipes store **names**, not vocab ids
 - Units enum only: `g`, `kg`, `ml`, `l`, `tsp`, `tbsp`, `cup`, `fl_oz`, `oz`,
   `lb`, `pinch`, or `null` (countables)
+- `amount` — number, or `null` when the source gives no quantity; UI omits
+  the quantity and does not scale null amounts
 - Optional fields (`servings`, times, `rating`, `attribution`, `notes`, empty
   category arrays) may be omitted; UI must degrade gracefully
 - Photos: out of scope for current site

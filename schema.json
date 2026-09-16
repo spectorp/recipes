@@ -30,7 +30,10 @@
         "properties": {
           "id": { "type": "string" },
           "name": { "type": "string" },
-          "amount": { "type": "number" },
+          "amount": {
+            "type": ["number", "null"],
+            "description": "Numeric quantity, or null when the source gives no amount (e.g. 'to taste', 'for serving'). Do not invent amounts."
+          },
           "unit": {
             "type": ["string", "null"],
             "enum": [

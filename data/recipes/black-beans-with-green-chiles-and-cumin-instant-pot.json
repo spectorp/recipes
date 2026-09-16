@@ -116,21 +116,21 @@
     {
       "id": "i14",
       "name": "Black pepper, to taste",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i15",
       "name": "Grated Monterey Jack cheese, for serving (optional)",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     },
     {
       "id": "i16",
       "name": "Lime wedges, for serving",
-      "amount": 1,
+      "amount": null,
       "unit": null,
       "notes": ""
     }
@@ -162,5 +162,5 @@
   },
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T19:20:44Z"
 }
