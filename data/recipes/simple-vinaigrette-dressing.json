@@ -13,9 +13,7 @@
       "dairy free",
       "nut free"
     ],
-    "meal": [
-      "side dish"
-    ],
+    "meal": [],
     "season": [],
     "cuisine": [],
     "main_ingredient": []
@@ -82,5 +80,5 @@
   ],
   "notes": "",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-15T20:22:34Z"
+  "updated_at": "2026-09-16T04:24:24Z"
 }
