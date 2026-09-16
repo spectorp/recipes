@@ -161,6 +161,40 @@ export function RecipePage() {
                   <dd>{time}</dd>
                 </div>
               )}
+              {hasAttribution && (
+                <div>
+                  <dt className="sr-only">Source</dt>
+                  <dd>
+                    {attribution?.name?.trim() && attribution?.url?.trim() ? (
+                      <>
+                        From{' '}
+                        <a
+                          href={attribution.url}
+                          className="text-accent underline-offset-2 hover:underline dark:text-orange-300"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {attribution.name}
+                        </a>
+                      </>
+                    ) : attribution?.url?.trim() ? (
+                      <>
+                        Source:{' '}
+                        <a
+                          href={attribution.url}
+                          className="text-accent underline-offset-2 hover:underline dark:text-orange-300"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {attribution.url}
+                        </a>
+                      </>
+                    ) : (
+                      <>From {attribution?.name}</>
+                    )}
+                  </dd>
+                </div>
+              )}
             </dl>
 
             <div className="no-print">
@@ -277,38 +311,6 @@ export function RecipePage() {
             {notes}
           </p>
         </section>
-      )}
-
-      {hasAttribution && (
-        <footer className="mt-12 border-t border-stone-200 pt-6 text-sm text-ink-muted dark:border-stone-700 dark:text-stone-400">
-          {attribution?.name?.trim() && attribution?.url?.trim() ? (
-            <p>
-              From{' '}
-              <a
-                href={attribution.url}
-                className="text-accent underline-offset-2 hover:underline dark:text-orange-300"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {attribution.name}
-              </a>
-            </p>
-          ) : attribution?.url?.trim() ? (
-            <p>
-              Source:{' '}
-              <a
-                href={attribution.url}
-                className="text-accent underline-offset-2 hover:underline dark:text-orange-300"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {attribution.url}
-              </a>
-            </p>
-          ) : (
-            <p>From {attribution?.name}</p>
-          )}
-        </footer>
       )}
     </main>
   )
