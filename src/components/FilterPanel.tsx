@@ -46,15 +46,15 @@ function FacetColumn({
       <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-muted dark:text-stone-400">
         {label}
       </h3>
-      <ul className="max-h-48 space-y-1 overflow-y-auto pr-1">
+      <ul className="max-h-48 space-y-0.5 overflow-y-auto pr-1 sm:max-h-56">
         {options.map((opt) => {
           const checked = selected.includes(opt.name)
           return (
             <li key={opt.id}>
-              <label className="flex cursor-pointer items-center gap-1.5 text-sm text-ink-muted hover:text-ink dark:text-stone-400 dark:hover:text-stone-100">
+              <label className="flex min-h-10 cursor-pointer items-center gap-2 py-1 text-sm text-ink-muted hover:text-ink dark:text-stone-400 dark:hover:text-stone-100">
                 <input
                   type="checkbox"
-                  className="size-3.5 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                  className="size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
                   checked={checked}
                   onChange={() => onToggle(opt.name)}
                 />
@@ -92,7 +92,7 @@ export function FilterPanel({
   }
 
   const fieldClass =
-    'w-full rounded-md border border-stone-300 bg-white px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100'
+    'min-h-11 w-full rounded-md border border-stone-300 bg-white px-3 py-2.5 text-base text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent sm:min-h-0 sm:py-2 sm:text-sm dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100'
 
   return (
     <div className="rounded-lg border border-stone-200/80 bg-white/50 dark:border-stone-700 dark:bg-stone-900/30">
@@ -102,7 +102,7 @@ export function FilterPanel({
             type="button"
             onClick={() => onOpenChange(false)}
             aria-expanded
-            className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
+            className="flex min-h-11 min-w-0 flex-1 items-center gap-1.5 px-3 py-2.5 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
           >
             <span
               className="inline-block rotate-90 text-ink-muted dark:text-stone-400"
@@ -116,7 +116,7 @@ export function FilterPanel({
             <button
               type="button"
               onClick={onClear}
-              className="shrink-0 px-3 py-2 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
+              className="min-h-11 shrink-0 px-3 py-2.5 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
             >
               Clear filters
             </button>
@@ -128,7 +128,7 @@ export function FilterPanel({
             type="button"
             onClick={() => onOpenChange(true)}
             aria-expanded={false}
-            className="flex min-w-0 flex-1 items-center gap-1.5 px-3 py-2 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
+            className="flex min-h-11 min-w-0 flex-1 items-center gap-1.5 px-3 py-2.5 text-left text-sm font-medium text-ink hover:bg-stone-100/60 dark:text-stone-100 dark:hover:bg-stone-800/50"
           >
             <span className="inline-block text-ink-muted dark:text-stone-400" aria-hidden>
               ▸
@@ -139,7 +139,7 @@ export function FilterPanel({
             <button
               type="button"
               onClick={onClear}
-              className="shrink-0 px-3 py-2 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
+              className="min-h-11 shrink-0 px-3 py-2.5 text-xs text-accent underline-offset-2 hover:bg-stone-100/60 hover:underline dark:text-orange-300 dark:hover:bg-stone-800/50"
             >
               Clear filters
             </button>

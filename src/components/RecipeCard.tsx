@@ -22,7 +22,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
     <Link
       to={`/recipe/${recipe.id}`}
-      className="group block rounded-lg border border-stone-200/80 bg-white/60 p-4 transition hover:border-accent/40 hover:bg-white dark:border-stone-700 dark:bg-stone-900/40 dark:hover:border-orange-300/40 dark:hover:bg-stone-900"
+      className="group block rounded-lg border border-stone-200/80 bg-white/60 p-4 transition hover:border-accent/40 hover:bg-white active:bg-stone-50 dark:border-stone-700 dark:bg-stone-900/40 dark:hover:border-orange-300/40 dark:hover:bg-stone-900 dark:active:bg-stone-900"
     >
       <div className="flex items-start justify-between gap-3">
         <h2 className="font-display text-xl leading-snug text-ink group-hover:text-accent dark:text-stone-50 dark:group-hover:text-orange-300">

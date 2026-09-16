@@ -94,7 +94,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
             ? 'Light (click again for system)'
             : 'Light theme'
         }
-        className={`inline-flex size-7 items-center justify-center rounded-md transition-colors ${buttonClass('light')}`}
+        className={`inline-flex size-9 items-center justify-center rounded-md transition-colors ${buttonClass('light')}`}
       >
         <SunIcon />
       </button>
@@ -108,7 +108,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
             ? 'Dark (click again for system)'
             : 'Dark theme'
         }
-        className={`inline-flex size-7 items-center justify-center rounded-md transition-colors ${buttonClass('dark')}`}
+        className={`inline-flex size-9 items-center justify-center rounded-md transition-colors ${buttonClass('dark')}`}
       >
         <MoonIcon />
       </button>

@@ -25,7 +25,7 @@ function ScalePresets({
               key={mult}
               type="button"
               onClick={() => onChange(mult)}
-              className={`rounded-md px-2 py-1 text-xs font-medium ${
+              className={`min-h-9 rounded-md px-2.5 py-1.5 text-xs font-medium ${
                 active
                   ? 'bg-accent text-white dark:bg-orange-700'
                   : 'border border-stone-300 text-ink-muted hover:border-accent/50 dark:border-stone-600 dark:text-stone-400'
