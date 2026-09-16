@@ -16,8 +16,8 @@ type Props = {
   filters: BrowseFilters
   onChange: (next: BrowseFilters) => void
   onClear: () => void
-  /** Active filters inside this panel (excludes search). */
-  activeCount: number
+  /** True when any panel filter (not search) is active. */
+  hasActiveFilters: boolean
   open: boolean
   onOpenChange: (open: boolean) => void
 }
@@ -43,16 +43,9 @@ function FacetColumn({
 
   return (
     <div className="min-w-0">
-      <div className="mb-1.5 flex items-baseline justify-between gap-2">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted dark:text-stone-400">
-          {label}
-        </h3>
-        {selected.length > 0 && (
-          <span className="text-xs text-accent dark:text-orange-300">
-            {selected.length}
-          </span>
-        )}
-      </div>
+      <h3 className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-muted dark:text-stone-400">
+        {label}
+      </h3>
       <ul className="max-h-48 space-y-1 overflow-y-auto pr-1">
         {options.map((opt) => {
           const checked = selected.includes(opt.name)
@@ -79,7 +72,7 @@ export function FilterPanel({
   filters,
   onChange,
   onClear,
-  activeCount,
+  hasActiveFilters,
   open,
   onOpenChange,
 }: Props) {
@@ -118,13 +111,8 @@ export function FilterPanel({
               ▸
             </span>
             Filters
-            {activeCount > 0 && (
-              <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
-                {activeCount}
-              </span>
-            )}
           </button>
-          {activeCount > 0 && (
+          {hasActiveFilters && (
             <button
               type="button"
               onClick={onClear}
@@ -146,13 +134,8 @@ export function FilterPanel({
               ▸
             </span>
             Filters
-            {activeCount > 0 && (
-              <span className="rounded-full bg-accent/15 px-1.5 py-0.5 text-xs font-medium text-accent dark:bg-orange-400/20 dark:text-orange-300">
-                {activeCount}
-              </span>
-            )}
           </button>
-          {activeCount > 0 && (
+          {hasActiveFilters && (
             <button
               type="button"
               onClick={onClear}

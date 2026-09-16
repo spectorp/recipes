@@ -25,7 +25,7 @@ export function HomePage() {
     [filters],
   )
   const activeCount = countActiveFilters(filters)
-  const panelActiveCount = countPanelFilters(filters)
+  const hasPanelFilters = countPanelFilters(filters) > 0
 
   const clearFilters = () => setFilters(defaultBrowseFilters())
   const clearPanelFilters = () =>
@@ -115,7 +115,7 @@ export function HomePage() {
           filters={filters}
           onChange={setFilters}
           onClear={clearPanelFilters}
-          activeCount={panelActiveCount}
+          hasActiveFilters={hasPanelFilters}
           open={filtersOpen}
           onOpenChange={setFiltersOpen}
         />
