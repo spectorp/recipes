@@ -1,23 +1,29 @@
 import type { CategoryKey, Recipe } from './schema'
 import { CATEGORY_KEYS } from './schema'
 
-/** AND/OR across facet groups (categories + tags). Within a group stays OR. */
+/** AND/OR across facet groups (categories + tags + rating). Within a group stays OR. */
 export type FacetMatchMode = 'and' | 'or'
 
-export type AttributionFilter = 'any' | 'has_link' | 'none'
-export type SortOption = 'title-asc' | 'title-desc' | 'rating-desc' | 'rating-asc'
-
 export type CategoryFilters = Record<CategoryKey, string[]>
+
+/** Min-rating thresholds shown as checkboxes (e.g. 3 means “3+”). */
+export const RATING_FACET_OPTIONS: { id: string; name: string; value: number }[] =
+  [
+    { id: 'r1', name: '1+', value: 1 },
+    { id: 'r2', name: '2+', value: 2 },
+    { id: 'r3', name: '3+', value: 3 },
+    { id: 'r4', name: '4+', value: 4 },
+    { id: 'r5', name: '5', value: 5 },
+  ]
 
 export type BrowseFilters = {
   query: string
   categories: CategoryFilters
   tags: string[]
-  /** Match mode across category columns and tags (not search/rating/source). */
+  /** Match mode across category columns, tags, and rating (not search). */
   facetMode: FacetMatchMode
-  minRating: number
-  attribution: AttributionFilter
-  sort: SortOption
+  /** Selected min-rating thresholds (OR within column → effective min is the lowest). */
+  minRatings: number[]
 }
 
 export function emptyCategoryFilters(): CategoryFilters {
@@ -37,9 +43,7 @@ export function defaultBrowseFilters(): BrowseFilters {
     categories: emptyCategoryFilters(),
     tags: [],
     facetMode: 'and',
-    minRating: 0,
-    attribution: 'any',
-    sort: 'title-asc',
+    minRatings: [],
   }
 }
 
@@ -100,14 +104,15 @@ function titleMatchesQuery(recipe: Recipe, tokens: string[]): boolean {
 }
 
 /**
- * Facet groups = each category key with selections + tags (if any).
+ * Facet groups = each category key with selections + tags + rating (if any).
  * Within a group: OR. Across groups: `mode` (AND or OR).
- * Search / rating / attribution are separate hard ANDs.
+ * Search is a separate hard AND.
  */
 function matchesFacetGroups(
   recipe: Recipe,
   filters: CategoryFilters,
   tags: string[],
+  minRatings: number[],
   mode: FacetMatchMode,
 ): boolean {
   const groupHits: boolean[] = []
@@ -125,49 +130,21 @@ function matchesFacetGroups(
     groupHits.push(tags.some((t) => recipeTags.includes(norm(t))))
   }
 
+  if (minRatings.length > 0) {
+    const rating = recipe.rating
+    groupHits.push(
+      rating != null &&
+        rating > 0 &&
+        minRatings.some((min) => rating >= min),
+    )
+  }
+
   if (groupHits.length === 0) return true
   return mode === 'and' ? groupHits.every(Boolean) : groupHits.some(Boolean)
 }
 
-function matchesRating(recipe: Recipe, minRating: number): boolean {
-  if (minRating <= 0) return true
-  const rating = recipe.rating
-  if (rating == null || rating === 0) return false
-  return rating >= minRating
-}
-
-function matchesAttribution(
-  recipe: Recipe,
-  filter: AttributionFilter,
-): boolean {
-  if (filter === 'any') return true
-  const url = recipe.attribution?.url?.trim()
-  const name = recipe.attribution?.name?.trim()
-  const hasLink = Boolean(url)
-  const hasAny = Boolean(url || name)
-  if (filter === 'has_link') return hasLink
-  // none = no attribution at all
-  return !hasAny
-}
-
-function compareRecipes(a: Recipe, b: Recipe, sort: SortOption): number {
-  const titleCmp = a.title.localeCompare(b.title, undefined, {
-    sensitivity: 'base',
-  })
-  const ratingA = a.rating ?? -1
-  const ratingB = b.rating ?? -1
-
-  switch (sort) {
-    case 'title-desc':
-      return -titleCmp
-    case 'rating-desc':
-      return ratingB - ratingA || titleCmp
-    case 'rating-asc':
-      return ratingA - ratingB || titleCmp
-    case 'title-asc':
-    default:
-      return titleCmp
-  }
+function compareByTitle(a: Recipe, b: Recipe): number {
+  return a.title.localeCompare(b.title, undefined, { sensitivity: 'base' })
 }
 
 export function filterAndSortRecipes(
@@ -184,10 +161,9 @@ export function filterAndSortRecipes(
           recipe,
           filters.categories,
           filters.tags,
+          filters.minRatings,
           filters.facetMode,
-        ) &&
-        matchesRating(recipe, filters.minRating) &&
-        matchesAttribution(recipe, filters.attribution),
+        ),
     )
     .sort((a, b) => {
       if (tokens.length > 0) {
@@ -195,39 +171,44 @@ export function filterAndSortRecipes(
         const bTitle = titleMatchesQuery(b, tokens) ? 0 : 1
         if (aTitle !== bTitle) return aTitle - bTitle
       }
-      return compareRecipes(a, b, filters.sort)
+      return compareByTitle(a, b)
     })
 }
 
 /**
- * Recipes matching search / rating / source and all facet groups except one.
- * Used so each facet column only offers values that can still yield hits
- * (disjunctive faceting). Selected values are always kept visible by the UI.
+ * Recipes matching search and all facet groups except one.
+ * Used so each facet column only offers values that can still yield hits.
  */
 function recipesMatchingExceptFacet(
   recipes: Recipe[],
   filters: BrowseFilters,
-  except: CategoryKey | 'tags',
+  except: CategoryKey | 'tags' | 'rating',
 ): Recipe[] {
   const tokens = queryTokens(filters.query)
   const categories =
-    except === 'tags'
+    except === 'tags' || except === 'rating'
       ? filters.categories
       : { ...filters.categories, [except]: [] as string[] }
   const tags = except === 'tags' ? [] : filters.tags
+  const minRatings = except === 'rating' ? [] : filters.minRatings
 
   return recipes.filter(
     (recipe) =>
       matchesQuery(recipe, tokens) &&
-      matchesFacetGroups(recipe, categories, tags, filters.facetMode) &&
-      matchesRating(recipe, filters.minRating) &&
-      matchesAttribution(recipe, filters.attribution),
+      matchesFacetGroups(
+        recipe,
+        categories,
+        tags,
+        minRatings,
+        filters.facetMode,
+      ),
   )
 }
 
 export type AvailableFacetValues = {
   categories: Record<CategoryKey, Set<string>>
   tags: Set<string>
+  ratings: Set<string>
 }
 
 /** Normalized value names still reachable given the other active filters. */
@@ -244,7 +225,6 @@ export function computeAvailableFacetValues(
         available.add(norm(value))
       }
     }
-    // Keep selected values so they can be unchecked even if now empty.
     for (const value of filters.categories[key]) {
       available.add(norm(value))
     }
@@ -261,7 +241,23 @@ export function computeAvailableFacetValues(
     tagSet.add(norm(tag))
   }
 
-  return { categories: categorySets, tags: tagSet }
+  const ratingSet = new Set<string>()
+  const pool = recipesMatchingExceptFacet(recipes, filters, 'rating')
+  for (const opt of RATING_FACET_OPTIONS) {
+    const any = pool.some(
+      (recipe) =>
+        recipe.rating != null &&
+        recipe.rating > 0 &&
+        recipe.rating >= opt.value,
+    )
+    if (any) ratingSet.add(norm(opt.name))
+  }
+  for (const value of filters.minRatings) {
+    const opt = RATING_FACET_OPTIONS.find((o) => o.value === value)
+    if (opt) ratingSet.add(norm(opt.name))
+  }
+
+  return { categories: categorySets, tags: tagSet, ratings: ratingSet }
 }
 
 /** Keep vocab options that are available (or currently selected). */
@@ -279,8 +275,7 @@ export function countActiveFilters(filters: BrowseFilters): number {
     n += filters.categories[key].length
   }
   n += filters.tags.length
-  if (filters.minRating > 0) n += 1
-  if (filters.attribution !== 'any') n += 1
+  n += filters.minRatings.length
   return n
 }
 
