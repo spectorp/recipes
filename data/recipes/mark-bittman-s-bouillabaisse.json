@@ -1,0 +1,182 @@
+{
+  "id": "mark-bittman-s-bouillabaisse",
+  "title": "Mark Bittman's Bouillabaisse",
+  "categories": {
+    "method": ["baking", "stovetop"],
+    "diet": ["pescatarian", "dairy free", "nut free"],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": ["french"],
+    "main_ingredient": ["fish"]
+  },
+  "tags": ["soup"],
+  "servings": 4,
+  "cook_time_minutes": 60,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "good olive oil",
+      "amount": 1,
+      "unit": null,
+      "notes": "as needed"
+    },
+    {
+      "id": "i2",
+      "name": "thick slices good bread",
+      "amount": 4,
+      "unit": null,
+      "notes": "4 to 8"
+    },
+    {
+      "id": "i3",
+      "name": "onion, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "cloves garlic, chopped",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "celery stalks, trimmed and chopped",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "carrot, trimmed and chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "medium new potato, peeled and chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "small bulb fennel, trimmed and chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "saffron",
+      "amount": 0.25,
+      "unit": "tsp",
+      "notes": "optional"
+    },
+    {
+      "id": "i10",
+      "name": "lobster or fish stock",
+      "amount": 3,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i11",
+      "name": "chopped tomatoes, with their juice",
+      "amount": 2,
+      "unit": "cup",
+      "notes": "canned are O.K."
+    },
+    {
+      "id": "i12",
+      "name": "Salt and pepper",
+      "amount": 1,
+      "unit": null,
+      "notes": "to taste"
+    },
+    {
+      "id": "i13",
+      "name": "chopped boneless fish and shellfish, preferably a variety",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "1 to 1½ pounds"
+    },
+    {
+      "id": "i14",
+      "name": "littleneck clams",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i15",
+      "name": "mussels",
+      "amount": 8,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i16",
+      "name": "sea scallops",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i17",
+      "name": "Pernod or other pastis",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "id": "i18",
+      "name": "Chopped fennel fronds, for garnish",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i19",
+      "name": "Chopped basil or parsley, for garnish",
+      "amount": 1,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i20",
+      "name": "Rouille",
+      "amount": 1,
+      "unit": null,
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Heat oven to 400 degrees; brush bread liberally with olive oil, and bake on a sheet, turning once, until golden and crisp, about 5 minutes. Set aside."
+    },
+    {
+      "id": "s2",
+      "text": "Add enough olive oil to a Dutch oven, deep skillet or shallow pot to make a thick layer (don't skimp) on the bottom. In it, cook onion, garlic, celery, carrot, potato, fennel and saffron until glossy. Add stock and tomato and bring to a moderate boil; cook until thick and stewy rather than soupy. Season to taste; it should be so delicious that you don't even care whether you add fish."
+    },
+    {
+      "id": "s3",
+      "text": "Lower heat to a simmer, and, as you add fish, adjust heat so that the liquid continues to bubble gently. Add fish in order of how long they will take to cook. Monkfish, striped bass and squid are fish that might require more than a few minutes, so add them first. About five minutes later add clams and mussels, holding back any fish that has been cooked or will cook in a flash. When mollusks open, add remaining fish. Cut scallops into quarters and place in the bottom of 4 bowls."
+    },
+    {
+      "id": "s4",
+      "text": "Add pastis if you're using it; taste and adjust seasoning. Ladle hot soup and fish over the scallops, distributing clams and mussels evenly. Garnish and serve with croutons and rouille, if you're using."
+    }
+  ],
+  "attribution": {
+    "name": "Mark Bittman",
+    "url": "https://cooking.nytimes.com/recipes/12637-mark-bittmans-bouillabaisse"
+  },
+  "notes": "Yield: 4 to 6 servings. Total time: 1 hour, with prepared lobster stock.\n\nYou can make any soup with water instead of stock, but the soups that drive you wild usually have a beautiful stock as their base. This is doubly true of bouillabaisse, which should start with a stock so delicious that you can barely imagine improving on it. There are a few ways to do this: Grab fish bones when you see them, and make the stock incrementally. Another is to use shrimp shells. A third is to accumulate lobster bodies, which make fantastic stock. In any case, you combine whatever you have with some aromatics (thyme branches, onion, celery, carrot, garlic, peppercorns) add water and simmer for 15 to 30 minutes. Cool, strain and freeze if you like. When you're ready to make the soup, procure your seafood – pretty much any combination of fish and shellfish will do, but avoid dark-fleshed fish – and go forth. From there, it's no more difficult than making a pot of vegetable soup.\n\nTip: To make rouille, add ½ cup finely minced roasted, peeled and seeded red bell pepper, 2 cloves finely minced garlic and cayenne to taste to either homemade or store-bought mayonnaise.",
+  "created_at": "2026-09-16T03:15:00Z",
+  "updated_at": "2026-09-16T03:15:00Z"
+}
