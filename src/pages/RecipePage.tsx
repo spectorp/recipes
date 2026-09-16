@@ -7,75 +7,24 @@ import { formatIngredientLine, recipeChipList } from '../lib/format'
 
 const PRESET_MULTIPLIERS = [0.5, 1, 1.5, 2, 3] as const
 
-function ServingsScaler({
-  baseServings,
-  servings,
+function ScalePresets({
+  scale,
   onChange,
-  hasExplicitServings,
 }: {
-  baseServings: number
-  servings: number
+  scale: number
   onChange: (next: number) => void
-  /** When false, recipe has no servings field — scale relative to the written batch. */
-  hasExplicitServings: boolean
 }) {
-  const setFromMultiplier = (mult: number) => {
-    if (hasExplicitServings) {
-      onChange(Math.max(1, Math.round(baseServings * mult)))
-    } else {
-      // Preserve half-batch (0.5) and other fractional presets when no serving count.
-      onChange(Math.max(0.25, Math.round(baseServings * mult * 100) / 100))
-    }
-  }
-
-  const activeMult = servings / baseServings
-
   return (
-    <div className="flex flex-wrap items-center gap-3">
-      <span className="text-sm text-ink-muted dark:text-stone-400">
-        {hasExplicitServings ? 'Servings' : 'Scale'}
-      </span>
-      {hasExplicitServings ? (
-        <div className="inline-flex items-center rounded-md border border-stone-300 dark:border-stone-600">
-          <button
-            type="button"
-            aria-label="Decrease servings"
-            className="px-3 py-1.5 text-lg leading-none text-ink hover:bg-stone-100 disabled:opacity-40 dark:text-stone-100 dark:hover:bg-stone-800"
-            disabled={servings <= 1}
-            onClick={() => onChange(Math.max(1, servings - 1))}
-          >
-            −
-          </button>
-          <input
-            type="number"
-            min={1}
-            inputMode="numeric"
-            aria-label="Number of servings"
-            className="w-14 border-x border-stone-300 bg-transparent py-1.5 text-center text-sm text-ink focus:outline-none dark:border-stone-600 dark:text-stone-100"
-            value={servings}
-            onChange={(e) => {
-              const n = Number(e.target.value)
-              if (Number.isFinite(n) && n >= 1) onChange(Math.floor(n))
-            }}
-          />
-          <button
-            type="button"
-            aria-label="Increase servings"
-            className="px-3 py-1.5 text-lg leading-none text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800"
-            onClick={() => onChange(servings + 1)}
-          >
-            +
-          </button>
-        </div>
-      ) : null}
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="text-sm text-ink-muted dark:text-stone-400">Scale</span>
       <div className="inline-flex gap-1">
         {PRESET_MULTIPLIERS.map((mult) => {
-          const active = Math.abs(activeMult - mult) < 0.001
+          const active = Math.abs(scale - mult) < 0.001
           return (
             <button
               key={mult}
               type="button"
-              onClick={() => setFromMultiplier(mult)}
+              onClick={() => onChange(mult)}
               className={`rounded-md px-2 py-1 text-xs font-medium ${
                 active
                   ? 'bg-accent text-white dark:bg-orange-700'
@@ -87,15 +36,6 @@ function ServingsScaler({
           )
         })}
       </div>
-      {servings !== baseServings && (
-        <button
-          type="button"
-          onClick={() => onChange(baseServings)}
-          className="text-xs text-accent underline-offset-2 hover:underline dark:text-orange-300"
-        >
-          Reset
-        </button>
-      )}
     </div>
   )
 }
@@ -103,10 +43,7 @@ function ServingsScaler({
 export function RecipePage() {
   const { id } = useParams<{ id: string }>()
   const recipe = id ? getRecipeById(id) : undefined
-  const hasExplicitServings = recipe?.servings != null
-  // Missing servings → treat the written recipe as 1× so scale presets still work.
-  const baseServings = recipe?.servings ?? 1
-  const [servings, setServings] = useState(1)
+  const [scale, setScale] = useState(1)
   const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(
     () => new Set(),
   )
@@ -115,10 +52,10 @@ export function RecipePage() {
   )
 
   useEffect(() => {
-    setServings(baseServings)
+    setScale(1)
     setCheckedIngredients(new Set())
     setCheckedSteps(new Set())
-  }, [recipe?.id, baseServings])
+  }, [recipe?.id])
 
   useEffect(() => {
     const previous = document.title
@@ -157,8 +94,6 @@ export function RecipePage() {
   const hasAttribution = Boolean(
     attribution?.name?.trim() || attribution?.url?.trim(),
   )
-
-  const scale = baseServings > 0 ? servings / baseServings : 1
 
   const toggleId = (set: Set<string>, id: string): Set<string> => {
     const next = new Set(set)
@@ -199,6 +134,15 @@ export function RecipePage() {
         <div className="mt-4 flex flex-wrap items-start justify-between gap-x-6 gap-y-3">
           <div className="min-w-0 flex-1 space-y-3">
             <dl className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-muted dark:text-stone-400">
+              {recipe.servings != null && (
+                <div>
+                  <dt className="sr-only">Servings</dt>
+                  <dd>
+                    {recipe.servings} serving
+                    {recipe.servings === 1 ? '' : 's'}
+                  </dd>
+                </div>
+              )}
               {prep != null && (
                 <div>
                   <dt className="sr-only">Prep time</dt>
@@ -220,20 +164,13 @@ export function RecipePage() {
             </dl>
 
             <div className="no-print">
-              <ServingsScaler
-                baseServings={baseServings}
-                servings={servings}
-                onChange={setServings}
-                hasExplicitServings={hasExplicitServings}
-              />
+              <ScalePresets scale={scale} onChange={setScale} />
             </div>
-            <p className="print-only hidden text-sm text-ink">
-              {hasExplicitServings
-                ? `${servings} servings${scale !== 1 ? ` (scaled from ${baseServings})` : ''}`
-                : scale !== 1
-                  ? `Scaled ${scale}×`
-                  : null}
-            </p>
+            {scale !== 1 && (
+              <p className="print-only hidden text-sm text-ink">
+                Scaled {scale}×
+              </p>
+            )}
           </div>
 
           {chips.length > 0 && (
@@ -253,9 +190,7 @@ export function RecipePage() {
           </h2>
           {scale !== 1 && (
             <p className="no-print mt-1 text-xs text-ink-muted dark:text-stone-500">
-              {hasExplicitServings
-                ? `Scaled for ${servings} servings (recipe base ${baseServings})`
-                : `Scaled ${scale}× from written amounts`}
+              Scaled {scale}× from written amounts
             </p>
           )}
           <ul className="mt-4 space-y-2">

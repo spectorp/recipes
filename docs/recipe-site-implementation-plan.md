@@ -58,7 +58,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Detail header** — category/tag chips sit to the right of servings/times on the recipe page to save vertical space.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
-- **Servings scaling** — always shown on the detail page. When `servings` is set: stepper + presets `0.5× / 1× / 1.5× / 2× / 3×` and “Reset”. When omitted: preset multipliers only (written recipe = `1×`). Scaled amounts do not write JSON. (Phase 7+)
+- **Servings scaling** — detail page shows fixed servings text (when known) next to times; that figure is always the written `1×` yield. Presets `0.5× / 1× / 1.5× / 2× / 3×` scale ingredient amounts only (no stepper). Scaled amounts do not write JSON. (Phase 7+)
 - **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
 - **Print** — detail-page Print button → `window.print()`; `@media print` forces light theme, hides nav/scaler/checkboxes/chips, keeps currently scaled amounts; **stacks** ingredients then steps (CSS grid does not fragment well and orphaned long titles on page 1). (Phase 8)
 
@@ -258,11 +258,10 @@ GitHub Pages deep-link refreshes load the SPA.
 
 ### 4.3 Servings scaling (display-only)
 
-**Done (Phase 7).** Stepper + decimal presets (`0.5×`, `1×`, `1.5×`, `2×`,
-`3×`) next to servings on the detail page. Scales ingredient amounts by
-`new / base` for display only. Hidden when `servings` is absent. “Reset”
-returns to the recipe base. Ingredients and steps also have checkboxes for
-cooking progress (session-only).
+**Done (Phase 7).** Written servings (when present) show as static text next to
+times and always mean the `1×` yield. Decimal presets (`0.5×`, `1×`, `1.5×`,
+`2×`, `3×`) scale ingredient amounts for display only. Ingredients and steps
+also have checkboxes for cooking progress (session-only).
 
 ### 4.4 Print / export PDF
 
