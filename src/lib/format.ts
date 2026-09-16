@@ -33,20 +33,30 @@ export function formatAmount(amount: number): string {
   return Number(amount.toFixed(2)).toString()
 }
 
+export function formatIngredientParts(ingredient: {
+  name: string
+  amount: number
+  unit?: string | null
+  notes?: string
+}): { quantity: string; name: string; notes: string } {
+  const amount = formatAmount(ingredient.amount)
+  const unit = ingredient.unit
+  const quantity = unit ? `${amount} ${unit}` : amount
+  const notes =
+    ingredient.notes && ingredient.notes.trim()
+      ? ` (${ingredient.notes.trim()})`
+      : ''
+  return { quantity, name: ingredient.name, notes }
+}
+
 export function formatIngredientLine(ingredient: {
   name: string
   amount: number
   unit?: string | null
   notes?: string
 }): string {
-  const amount = formatAmount(ingredient.amount)
-  const unit = ingredient.unit
-  const qty = unit ? `${amount} ${unit}` : amount
-  const notes =
-    ingredient.notes && ingredient.notes.trim()
-      ? ` (${ingredient.notes.trim()})`
-      : ''
-  return `${qty} ${ingredient.name}${notes}`
+  const { quantity, name, notes } = formatIngredientParts(ingredient)
+  return `${quantity} ${name}${notes}`
 }
 
 export function recipeChipList(recipe: Recipe): string[] {

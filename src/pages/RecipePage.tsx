@@ -1,41 +1,219 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { getRecipeById } from '../lib/catalog'
-import { formatIngredientLine, recipeChipList } from '../lib/format'
+import { formatIngredientParts, recipeChipList } from '../lib/format'
 
 const PRESET_MULTIPLIERS = [0.5, 1, 1.5, 2, 3] as const
 
-function ScalePresets({
-  scale,
+const TEXT_SIZE_OPTIONS = [
+  { id: 'lg', className: 'text-lg', ariaLabel: 'Small text size' },
+  { id: 'xl', className: 'text-xl', ariaLabel: 'Medium text size' },
+  { id: '2xl', className: 'text-2xl', ariaLabel: 'Large text size' },
+] as const
+
+type TextSizeId = (typeof TEXT_SIZE_OPTIONS)[number]['id']
+
+const TEXT_SIZE_STORAGE_KEY = 'recipes-text-size'
+
+function getStoredTextSize(): TextSizeId {
+  try {
+    const value = localStorage.getItem(TEXT_SIZE_STORAGE_KEY)
+    if (TEXT_SIZE_OPTIONS.some((o) => o.id === value)) {
+      return value as TextSizeId
+    }
+  } catch {
+    /* ignore */
+  }
+  // Legacy sm/md (and unknown) map to the new smallest size.
+  return 'lg'
+}
+
+function setStoredTextSize(id: TextSizeId): void {
+  try {
+    localStorage.setItem(TEXT_SIZE_STORAGE_KEY, id)
+  } catch {
+    /* ignore */
+  }
+}
+
+function HomeIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-4"
+      aria-hidden
+    >
+      <path d="M3 10.5 12 3l9 7.5" />
+      <path d="M5 9.5V21h14V9.5" />
+      <path d="M10 21v-6h4v6" />
+    </svg>
+  )
+}
+
+function PrinterIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="size-4"
+      aria-hidden
+    >
+      <path d="M6 9V2h12v7" />
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+      <path d="M6 14h12v8H6z" />
+    </svg>
+  )
+}
+
+function useMenuDismiss(
+  open: boolean,
+  setOpen: (open: boolean) => void,
+) {
+  const rootRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('mousedown', onPointerDown)
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', onPointerDown)
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [open, setOpen])
+
+  return rootRef
+}
+
+function ScaleControl({
+  value,
   onChange,
 }: {
-  scale: number
+  value: number
   onChange: (next: number) => void
 }) {
+  const [open, setOpen] = useState(false)
+  const rootRef = useMenuDismiss(open, setOpen)
+  const menuId = useId()
+
   return (
-    <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm text-ink-muted dark:text-stone-400">Scale</span>
-      <div className="inline-flex gap-1">
-        {PRESET_MULTIPLIERS.map((mult) => {
-          const active = Math.abs(scale - mult) < 0.001
-          return (
-            <button
-              key={mult}
-              type="button"
-              onClick={() => onChange(mult)}
-              className={`min-h-9 rounded-md px-2.5 py-1.5 text-xs font-medium ${
-                active
-                  ? 'bg-accent text-white dark:bg-orange-700'
-                  : 'border border-stone-300 text-ink-muted hover:border-accent/50 dark:border-stone-600 dark:text-stone-400'
-              }`}
-            >
-              {`${mult}×`}
-            </button>
-          )
-        })}
-      </div>
+    <div className="relative" ref={rootRef}>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        aria-controls={menuId}
+        onClick={() => setOpen((v) => !v)}
+        className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+      >
+        Scale
+      </button>
+      {open && (
+        <ul
+          id={menuId}
+          role="listbox"
+          aria-label="Recipe scale"
+          className="absolute right-0 z-20 mt-1 min-w-28 rounded-md border border-stone-300 bg-white py-1 shadow-md dark:border-stone-600 dark:bg-stone-900"
+        >
+          {PRESET_MULTIPLIERS.map((mult) => {
+            const active = Math.abs(value - mult) < 0.001
+            return (
+              <li key={mult} role="option" aria-selected={active}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onChange(mult)
+                    setOpen(false)
+                  }}
+                  className={`block w-full px-3 py-1.5 text-left text-sm ${
+                    active
+                      ? 'bg-accent/10 font-medium text-accent dark:bg-orange-400/15 dark:text-orange-300'
+                      : 'text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800'
+                  }`}
+                >
+                  {`${mult}×`}
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      )}
+    </div>
+  )
+}
+
+function TextSizeControl({
+  value,
+  onChange,
+}: {
+  value: TextSizeId
+  onChange: (next: TextSizeId) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const rootRef = useMenuDismiss(open, setOpen)
+  const menuId = useId()
+
+  return (
+    <div className="relative" ref={rootRef}>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        aria-controls={menuId}
+        onClick={() => setOpen((v) => !v)}
+        className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+      >
+        Text Size
+      </button>
+      {open && (
+        <ul
+          id={menuId}
+          role="listbox"
+          aria-label="Recipe text size"
+          className="absolute right-0 z-20 mt-1 min-w-44 rounded-md border border-stone-300 bg-white py-1 shadow-md dark:border-stone-600 dark:bg-stone-900"
+        >
+          {TEXT_SIZE_OPTIONS.map((opt) => {
+            const active = value === opt.id
+            return (
+              <li key={opt.id} role="option" aria-selected={active}>
+                <button
+                  type="button"
+                  aria-label={opt.ariaLabel}
+                  onClick={() => {
+                    onChange(opt.id)
+                    setOpen(false)
+                  }}
+                  className={`block w-full px-3 py-2 text-left leading-snug ${opt.className} ${
+                    active
+                      ? 'bg-accent/10 font-medium text-accent dark:bg-orange-400/15 dark:text-orange-300'
+                      : 'text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800'
+                  }`}
+                >
+                  Text Size
+                </button>
+              </li>
+            )
+          })}
+        </ul>
+      )}
     </div>
   )
 }
@@ -44,6 +222,7 @@ export function RecipePage() {
   const { id } = useParams<{ id: string }>()
   const recipe = id ? getRecipeById(id) : undefined
   const [scale, setScale] = useState(1)
+  const [textSize, setTextSize] = useState<TextSizeId>(() => getStoredTextSize())
   const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(
     () => new Set(),
   )
@@ -65,14 +244,24 @@ export function RecipePage() {
     }
   }, [recipe])
 
+  const selectTextSize = (next: TextSizeId) => {
+    setTextSize(next)
+    setStoredTextSize(next)
+  }
+
+  const bodyTextClass =
+    TEXT_SIZE_OPTIONS.find((o) => o.id === textSize)?.className ?? 'text-lg'
+
   if (!recipe) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <Link
-          className="text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
           to="/"
+          aria-label="All recipes"
+          title="All recipes"
+          className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
         >
-          ← All recipes
+          <HomeIcon />
         </Link>
         <h1 className="font-display mt-4 text-3xl tracking-tight text-ink dark:text-stone-50">
           Recipe not found
@@ -106,19 +295,25 @@ export function RecipePage() {
     <main className="recipe-page mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
       <div className="no-print flex flex-wrap items-center justify-between gap-3">
         <Link
-          className="text-sm text-accent underline-offset-2 hover:underline dark:text-orange-300"
           to="/"
+          aria-label="All recipes"
+          title="All recipes"
+          className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
         >
-          ← All recipes
+          <HomeIcon />
         </Link>
         <div className="flex flex-wrap items-center gap-2">
           <ThemeToggle />
+          <ScaleControl value={scale} onChange={setScale} />
+          <TextSizeControl value={textSize} onChange={selectTextSize} />
           <button
             type="button"
             onClick={() => window.print()}
-            className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+            aria-label="Print"
+            title="Print"
+            className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
           >
-            Print
+            <PrinterIcon />
           </button>
         </div>
       </div>
@@ -197,9 +392,6 @@ export function RecipePage() {
               )}
             </dl>
 
-            <div className="no-print">
-              <ScalePresets scale={scale} onChange={setScale} />
-            </div>
             {scale !== 1 && (
               <p className="print-only hidden text-sm text-ink">
                 Scaled {scale}×
@@ -222,14 +414,14 @@ export function RecipePage() {
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Ingredients
           </h2>
-          {scale !== 1 && (
-            <p className="no-print mt-1 text-xs text-ink-muted dark:text-stone-500">
-              Scaled {scale}× from written amounts
-            </p>
-          )}
-          <ul className="mt-4 space-y-2">
+          <ul className={`mt-4 space-y-2 ${bodyTextClass}`}>
             {recipe.ingredients.map((ingredient) => {
               const checked = checkedIngredients.has(ingredient.id)
+              const scaled = Math.abs(scale - 1) > 0.001
+              const { quantity, name, notes } = formatIngredientParts({
+                ...ingredient,
+                amount: ingredient.amount * scale,
+              })
               return (
                 <li key={ingredient.id}>
                   <label className="flex cursor-pointer items-start gap-2.5 text-ink dark:text-stone-200">
@@ -250,10 +442,15 @@ export function RecipePage() {
                           : ''
                       }`}
                     >
-                      {formatIngredientLine({
-                        ...ingredient,
-                        amount: ingredient.amount * scale,
-                      })}
+                      {scaled ? (
+                        <span className="font-bold text-accent dark:text-orange-300">
+                          {quantity}
+                        </span>
+                      ) : (
+                        quantity
+                      )}{' '}
+                      {name}
+                      {notes}
                     </span>
                   </label>
                 </li>
@@ -266,7 +463,7 @@ export function RecipePage() {
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Instructions
           </h2>
-          <ol className="mt-4 list-none space-y-4">
+          <ol className={`mt-4 list-none space-y-4 ${bodyTextClass}`}>
             {recipe.steps.map((step, index) => {
               const checked = checkedSteps.has(step.id)
               return (
