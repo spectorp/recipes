@@ -25,8 +25,11 @@ export const ingredientSchema = z
     amount: z.number().nullable(),
     unit: recipeUnitSchema.optional(),
     notes: z.string().optional(),
+    group: z.string().min(1).optional(),
   })
   .strict()
+
+export type Ingredient = z.infer<typeof ingredientSchema>
 
 export const stepSchema = z
   .object({

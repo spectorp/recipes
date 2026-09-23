@@ -65,6 +65,7 @@ Keep this section updated when implementation diverges from the original text.
 - **Servings scaling** — detail page shows fixed servings text (when known) next to times; that figure is always the written `1×` yield. Presets `0.5× / 1× / 1.5× / 2× / 3×` scale ingredient amounts only (no stepper). Scaled amounts do not write JSON. (Phase 7+)
 - **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
 - **Print** — detail-page Print button → `window.print()`; `@media print` forces light theme, hides nav/scaler/checkboxes/chips, keeps currently scaled amounts; **stacks** ingredients then steps (CSS grid does not fragment well and orphaned long titles on page 1). (Phase 8)
+- **Ingredient groups** — optional per-ingredient `group` string; consecutive lines with the same group (or no group) render under an uppercase subheading on the detail page. Omit `group` for standalone lines (e.g. a serving accompaniment).
 
 ---
 

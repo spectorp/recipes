@@ -25,147 +25,168 @@
       "name": "all-purpose flour",
       "amount": 1,
       "unit": "cup",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i2",
       "name": "fine cornmeal",
       "amount": 0.5,
       "unit": "cup",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i3",
       "name": "sugar",
       "amount": 2,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i4",
       "name": "baking powder",
       "amount": 1.5,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i5",
       "name": "baking soda",
       "amount": 0.25,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i6",
       "name": "kosher salt",
       "amount": 0.25,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i7",
       "name": "cold, unsalted butter, cut into 1/2-inch cubes",
       "amount": 6,
       "unit": "tbsp",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i8",
       "name": "sour cream or plain whole milk yogurt",
       "amount": 0.75,
       "unit": "cup",
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i9",
       "name": "Milk",
       "amount": null,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Cornmeal Biscuits"
     },
     {
       "id": "i10",
       "name": "large eggplant (1 1/2 pounds) cut into 1-inch chunks",
       "amount": 1,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i11",
       "name": "small zucchini ( 3/4 pound), cut into 1-inch chunks",
       "amount": 3,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i12",
       "name": "extra virgin olive oil",
       "amount": 7,
       "unit": "tbsp",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i13",
       "name": "kosher salt",
       "amount": 1,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i14",
       "name": "freshly ground black pepper",
       "amount": 0.75,
       "unit": "tsp",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i15",
       "name": "Italian sausage, casings removed",
       "amount": 0.75,
       "unit": "lb",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i16",
       "name": "large onion, cut into 1-inch chunks",
       "amount": 1,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i17",
       "name": "red pepper, cored and cut into 1-inch chunks",
       "amount": 1,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i18",
       "name": "large garlic cloves, finely chopped",
       "amount": 3,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i19",
       "name": "plum tomatoes (1 28 oz can of tomatoes works well)",
       "amount": 1.5,
       "unit": "lb",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i20",
       "name": "sprigs fresh thyme",
       "amount": 4,
       "unit": null,
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     },
     {
       "id": "i21",
       "name": "chopped fresh parsley or basil",
       "amount": 0.25,
       "unit": "cup",
-      "notes": ""
+      "notes": "",
+      "group": "Ratatouille"
     }
   ],
   "steps": [
@@ -196,5 +217,5 @@
   ],
   "notes": "Cornmeal biscuits",
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-09-16T19:20:44Z"
+  "updated_at": "2026-09-22T00:00:00Z"
 }

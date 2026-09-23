@@ -55,7 +55,10 @@ Live site: https://spectorp.github.io/recipes/
 
 Do not invent ingredients, steps, or amounts when importing from a source.
 If the source has no quantity, use `amount: null`. Map known quantities into
-the unit enum and put dual units / asides in `notes`.
+the unit enum and put dual units / asides in `notes`. For multi-part recipes,
+set the same optional `group` on consecutive ingredients to show a subheading
+(e.g. `"The crust"`); leave `group` off lines that should not sit under a
+heading.
 
 ### Ingredient units
 

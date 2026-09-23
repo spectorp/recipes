@@ -1,4 +1,21 @@
-import type { Recipe } from './schema'
+import type { Ingredient, Recipe } from './schema'
+
+export type IngredientSection = { group: string | null; items: Ingredient[] }
+
+/** Consecutive ingredients with the same `group` (or none) form one section. */
+export function ingredientSections(ingredients: Ingredient[]): IngredientSection[] {
+  const sections: IngredientSection[] = []
+  for (const ingredient of ingredients) {
+    const group = ingredient.group ?? null
+    const last = sections[sections.length - 1]
+    if (last && last.group === group) {
+      last.items.push(ingredient)
+    } else {
+      sections.push({ group, items: [ingredient] })
+    }
+  }
+  return sections
+}
 
 /** Display amount without ugly float noise. */
 export function formatAmount(amount: number): string {

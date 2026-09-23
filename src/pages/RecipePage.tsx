@@ -3,7 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { getRecipeById } from '../lib/catalog'
-import { formatIngredientParts, recipeChipList } from '../lib/format'
+import {
+  formatIngredientParts,
+  ingredientSections,
+  recipeChipList,
+} from '../lib/format'
 
 const PRESET_MULTIPLIERS = [0.5, 1, 1.5, 2, 3] as const
 
@@ -414,57 +418,72 @@ export function RecipePage() {
           <h2 className="font-display text-2xl text-ink dark:text-stone-50">
             Ingredients
           </h2>
-          <ul className={`mt-4 space-y-2 ${bodyTextClass}`}>
-            {recipe.ingredients.map((ingredient) => {
-              const checked = checkedIngredients.has(ingredient.id)
-              const scaled = Math.abs(scale - 1) > 0.001
-              const scaledAmount =
-                ingredient.amount == null
-                  ? null
-                  : ingredient.amount * scale
-              const { quantity, name, notes } = formatIngredientParts({
-                ...ingredient,
-                amount: scaledAmount,
-              })
-              return (
-                <li key={ingredient.id}>
-                  <label className="flex cursor-pointer items-start gap-2.5 text-ink dark:text-stone-200">
-                    <input
-                      type="checkbox"
-                      className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
-                      checked={checked}
-                      onChange={() =>
-                        setCheckedIngredients((prev) =>
-                          toggleId(prev, ingredient.id),
-                        )
-                      }
-                    />
-                    <span
-                      className={`recipe-check-text ${
-                        checked
-                          ? 'text-ink-muted opacity-60 dark:text-stone-500'
-                          : ''
-                      }`}
-                    >
-                      {quantity ? (
-                        <>
-                          {scaled && ingredient.amount != null ? (
-                            <span className="font-bold text-accent dark:text-orange-300">
-                              {quantity}
-                            </span>
-                          ) : (
-                            quantity
-                          )}{' '}
-                        </>
-                      ) : null}
-                      {name}
-                      {notes}
-                    </span>
-                  </label>
-                </li>
-              )
-            })}
-          </ul>
+          <div className={`mt-4 space-y-4 ${bodyTextClass}`}>
+            {ingredientSections(recipe.ingredients).map((section, sectionIndex) => (
+              <div key={sectionIndex}>
+                {section.group ? (
+                  <h3
+                    className={`mb-2 font-semibold uppercase tracking-wide text-ink dark:text-stone-100 ${
+                      sectionIndex > 0 ? 'mt-1' : ''
+                    }`}
+                  >
+                    {section.group}
+                  </h3>
+                ) : null}
+                <ul className="space-y-2">
+                  {section.items.map((ingredient) => {
+                    const checked = checkedIngredients.has(ingredient.id)
+                    const scaled = Math.abs(scale - 1) > 0.001
+                    const scaledAmount =
+                      ingredient.amount == null
+                        ? null
+                        : ingredient.amount * scale
+                    const { quantity, name, notes } = formatIngredientParts({
+                      ...ingredient,
+                      amount: scaledAmount,
+                    })
+                    return (
+                      <li key={ingredient.id}>
+                        <label className="flex cursor-pointer items-start gap-2.5 text-ink dark:text-stone-200">
+                          <input
+                            type="checkbox"
+                            className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
+                            checked={checked}
+                            onChange={() =>
+                              setCheckedIngredients((prev) =>
+                                toggleId(prev, ingredient.id),
+                              )
+                            }
+                          />
+                          <span
+                            className={`recipe-check-text ${
+                              checked
+                                ? 'text-ink-muted opacity-60 dark:text-stone-500'
+                                : ''
+                            }`}
+                          >
+                            {quantity ? (
+                              <>
+                                {scaled && ingredient.amount != null ? (
+                                  <span className="font-bold text-accent dark:text-orange-300">
+                                    {quantity}
+                                  </span>
+                                ) : (
+                                  quantity
+                                )}{' '}
+                              </>
+                            ) : null}
+                            {name}
+                            {notes}
+                          </span>
+                        </label>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section>
