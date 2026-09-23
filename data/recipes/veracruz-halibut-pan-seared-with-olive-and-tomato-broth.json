@@ -1,0 +1,211 @@
+{
+  "id": "veracruz-halibut-pan-seared-with-olive-and-tomato-broth",
+  "title": "Veracruz Halibut, Pan Seared w/ Olive & Tomato Broth",
+  "categories": {
+    "method": [
+      "stovetop",
+      "baking"
+    ],
+    "diet": [
+      "pescatarian",
+      "nut free"
+    ],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [
+      "mexican"
+    ],
+    "main_ingredient": [
+      "fish"
+    ]
+  },
+  "tags": [],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "medium size fish fillets skin on, whole red snapper, Pacific cod, rock cod, halibut, or sea bass",
+      "amount": 4,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "rapeseed oil",
+      "amount": 4,
+      "unit": "tbsp",
+      "notes": "divided 3:1",
+      "group": "Sauce"
+    },
+    {
+      "id": "i3",
+      "name": "white onion, finely diced",
+      "amount": 0.5,
+      "unit": null,
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i4",
+      "name": "garlic, chopped",
+      "amount": 1,
+      "unit": null,
+      "notes": "clove",
+      "group": "Sauce"
+    },
+    {
+      "id": "i5",
+      "name": "white wine",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i6",
+      "name": "tomatoes, medium, finely diced",
+      "amount": 3,
+      "unit": null,
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i7",
+      "name": "red bell peppers, medium, finely diced",
+      "amount": 2,
+      "unit": null,
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i8",
+      "name": "oregano, dried",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i9",
+      "name": "bay leaf",
+      "amount": 1,
+      "unit": null,
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i10",
+      "name": "capers, whole, rinsed",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i11",
+      "name": "green olives, sliced",
+      "amount": 0.5,
+      "unit": "cup",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i12",
+      "name": "chile güero + pickled jalapeños, chopped",
+      "amount": 4,
+      "unit": null,
+      "notes": "slices",
+      "group": "Sauce"
+    },
+    {
+      "id": "i13",
+      "name": "sea salt",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i14",
+      "name": "water",
+      "amount": 1,
+      "unit": "cup",
+      "notes": "",
+      "group": "Sauce"
+    },
+    {
+      "id": "i15",
+      "name": "kosher salt",
+      "amount": 2.5,
+      "unit": "tsp",
+      "notes": "",
+      "group": "Fry"
+    },
+    {
+      "id": "i16",
+      "name": "black pepper, ground",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": "",
+      "group": "Fry"
+    },
+    {
+      "id": "i17",
+      "name": "all purpose white flour to dust the fish before frying",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "",
+      "group": "Fry"
+    },
+    {
+      "id": "i18",
+      "name": "chives, finely sliced",
+      "amount": null,
+      "unit": null,
+      "notes": "",
+      "group": "Fry"
+    },
+    {
+      "id": "i19",
+      "name": "cilantro leaves, chopped",
+      "amount": null,
+      "unit": null,
+      "notes": "",
+      "group": "Fry"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Salt the fish fillets to keep their texture and prevent them from becoming mushy in the sauce. Sprinkle them all over with salt and refrigerate while you make the sauce."
+    },
+    {
+      "id": "s2",
+      "text": "Heat vegetable oil in a large saucepan to medium heat. Add the onions and garlic and sauté for 3 minutes, then add white wine and let the onion and garlic cook in the wine for ~ 2 minutes, which evaporate the alcohol in the wine."
+    },
+    {
+      "id": "s3",
+      "text": "Once the wine has reduced, add the tomatoes and red bell peppers and sauté for 3 minutes, then add the oregano, bay leaf, capers, olives, chiles, salt and water. Simmer gently in low heat for ~ 15 minutes, stiring from time to time. Once the sauce is cooked, set aside."
+    },
+    {
+      "id": "s4",
+      "text": "Mix the rest of the salt, ground black pepper and the white flour. Dry the fillets with paper towels, then dust with the flour and set aside for a minute."
+    },
+    {
+      "id": "s5",
+      "text": "Heat the rest of the oil in a large saucepan to medium. When the oil is hot, place the fillets, skin down, pressing them for a few seconds, very carefully, with spatula or hand to avoid curl up. Fry for 2 minutes on each side. While the fish is frying, preheat the oven to 355° F convection."
+    },
+    {
+      "id": "s6",
+      "text": "Place some sauce on a glass baking dish, then layer the fillets on top, and pour the rest of the sauce over them. Place in the oven for ~ 10 min to 130°F."
+    }
+  ],
+  "attribution": {
+    "name": "Johnny Curiel"
+  },
+  "notes": "Serve with rice.\n\nVeracruz on the Gulf of Mexico is one of the largest and oldest ports in the country. For centuries ingredients, like the olives and capers from Spain and other European countries have made their way to Mexico through this port. Lubina Rayada | Pacific Striped Sea Bass, Corn Chile Atole, Roasted Potatoes, Charred Tomatoes or (Butterflied CO Striped Bass, Habanero Chile Atole, Chimichurri Verde, and Buttered Rice). Traditionally this recipe is cooked with a whole huachinango (red snapper), or any firm white fish, and placed in the oven. Chile Güero + pickled jalapeños: are the traditional peppers used in the dish. The Güero chiles are yellow, medium-spicy peppers, or substitute banana peppers, either fresh or pickled. Also use pickled jalapeños and the pickled jalapeño juice. Bay leaf, parsley, thyme: Herbs are the final finishing touch adding depth and sophistication. Use this combo or swap the thyme for either oregano or marjoram.\n\nPrint title also lists lemon caper butter (chive & serrano butter) and serrano oil.",
+  "created_at": "2026-09-23T00:00:00Z",
+  "updated_at": "2026-09-23T04:40:00Z"
+}

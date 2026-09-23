@@ -1,0 +1,112 @@
+{
+  "id": "blondies",
+  "title": "Blondies",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [
+      "vegetarian",
+      "pescatarian"
+    ],
+    "meal": [
+      "dessert"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 8,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "butter",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i2",
+      "name": "brown sugar",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "eggs",
+      "amount": 2,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "vanilla",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i5",
+      "name": "flour",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "salt",
+      "amount": 0.5,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i7",
+      "name": "baking powder",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": ""
+    },
+    {
+      "id": "i8",
+      "name": "chocolate chips, or chopped pecans",
+      "amount": 0.75,
+      "unit": "cup",
+      "notes": ""
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Grease a 9 X 9\" pan."
+    },
+    {
+      "id": "s2",
+      "text": "Melt butter in a saucepan (can boil for 4 minutes until light brown in color, stirring constantly)."
+    },
+    {
+      "id": "s3",
+      "text": "Add brown sugar, mix in, allow to cool."
+    },
+    {
+      "id": "s4",
+      "text": "Add eggs and vanilla: beat well."
+    },
+    {
+      "id": "s5",
+      "text": "Sift together dry ingredients and add."
+    },
+    {
+      "id": "s6",
+      "text": "Heat oven to 350. Add chocolate chips and/or pecans."
+    },
+    {
+      "id": "s7",
+      "text": "Spread in prepared pan. Bake for 25 minutes."
+    }
+  ],
+  "notes": "Easy & delicious, great for mailing to college. Freezes well if well sealed. Double recipe fits perfectly in an 11 x 15\" pan.",
+  "created_at": "2026-09-23T00:00:00Z",
+  "updated_at": "2026-09-23T00:00:00Z"
+}

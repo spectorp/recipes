@@ -1,0 +1,166 @@
+{
+  "id": "toasted-coconut-rice-salad",
+  "title": "Toasted Coconut Rice Salad",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "vegan",
+      "vegetarian",
+      "pescatarian",
+      "dairy free"
+    ],
+    "meal": [
+      "lunch",
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "tofu"
+    ]
+  },
+  "tags": [
+    "salad"
+  ],
+  "servings": 4,
+  "cook_time_minutes": 45,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "extra-firm tofu, drained",
+      "amount": 1,
+      "unit": null,
+      "notes": "14- to 16-ounce block"
+    },
+    {
+      "id": "i2",
+      "name": "canola or vegetable oil, divided",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i3",
+      "name": "jasmine rice, rinsed and drained",
+      "amount": 1,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i4",
+      "name": "grated fresh ginger, divided",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "from a 2- to 3-inch piece"
+    },
+    {
+      "id": "i5",
+      "name": "Kosher salt, such as Diamond Crystal",
+      "amount": null,
+      "unit": null,
+      "notes": ""
+    },
+    {
+      "id": "i6",
+      "name": "full-fat coconut milk, divided",
+      "amount": null,
+      "unit": null,
+      "notes": "¾ cup plus 2 tablespoons"
+    },
+    {
+      "id": "i7",
+      "name": "ponzu, divided",
+      "amount": null,
+      "unit": null,
+      "notes": "⅓ cup plus 2 tablespoons"
+    },
+    {
+      "id": "i8",
+      "name": "honey",
+      "amount": 1,
+      "unit": "tbsp",
+      "notes": ""
+    },
+    {
+      "id": "i9",
+      "name": "Sriracha",
+      "amount": null,
+      "unit": null,
+      "notes": "2 to 3 teaspoons"
+    },
+    {
+      "id": "i10",
+      "name": "grated garlic",
+      "amount": 1,
+      "unit": "tsp",
+      "notes": "from 1 large clove"
+    },
+    {
+      "id": "i11",
+      "name": "thinly sliced or shredded purple cabbage",
+      "amount": 2.5,
+      "unit": "cup",
+      "notes": "about 7 ½ ounces"
+    },
+    {
+      "id": "i12",
+      "name": "scallions, thinly sliced",
+      "amount": 2,
+      "unit": null,
+      "notes": "about ½ cup"
+    },
+    {
+      "id": "i13",
+      "name": "tightly packed cilantro leaves, chopped",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": ""
+    },
+    {
+      "id": "i14",
+      "name": "roasted cashews",
+      "amount": 0.6666666666666666,
+      "unit": "cup",
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Cut the drained tofu into 1-inch cubes and arrange in an even layer over a clean kitchen towel or paper towel. Set aside."
+    },
+    {
+      "id": "s2",
+      "text": "Heat 1 tablespoon oil in a large nonstick skillet with a lid over medium-high until hot, about 30 seconds. Add the rice and stir to coat in the oil. Toast the rice, stirring occasionally, until dry, fragrant and light golden (some golden brown spots are OK), about 5 minutes. Stir in 1 tablespoon ginger and ½ teaspoon salt."
+    },
+    {
+      "id": "s3",
+      "text": "Carefully pour ¾ cup coconut milk and 1¼ cups water down the side of the skillet and give the pan a shake to submerge the rice. If not already boiling, bring to a boil. Cover the skillet, turn the heat down to low, and cook until the liquid is absorbed and the rice tender, 10 to 15 minutes. Turn off the heat and let steam, covered, 5 minutes more. Transfer the rice to a large bowl."
+    },
+    {
+      "id": "s4",
+      "text": "While the rice cooks, in a medium bowl, toss the tofu with 2 tablespoons ponzu."
+    },
+    {
+      "id": "s5",
+      "text": "In the same skillet, heat the remaining tablespoon oil over medium-high until shimmering, about 1 minute. Add the tofu in an even layer and cook until golden brown on the top and bottom, flipping halfway through, 3 to 4 minutes total. Add to the bowl with the rice."
+    },
+    {
+      "id": "s6",
+      "text": "In the bowl that you used to toss the tofu, stir together the honey, Sriracha, grated garlic and the remaining tablespoon ginger, 2 tablespoons coconut milk and ⅓ cup ponzu."
+    },
+    {
+      "id": "s7",
+      "text": "Add the dressing, cabbage and half of the scallions, cilantro and cashews (if using) to the bowl with the rice and toss until everything is well coated in the dressing. Top with the remaining scallions, cilantro and cashews."
+    }
+  ],
+  "attribution": {
+    "name": "Kayla Hoang, NYT Cooking",
+    "url": "https://cooking.nytimes.com/recipes/769183554-toasted-coconut-rice-salad"
+  },
+  "notes": "Yield: 4 to 6 servings.",
+  "created_at": "2026-09-23T00:00:00Z",
+  "updated_at": "2026-09-23T00:00:00Z"
+}
