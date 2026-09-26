@@ -102,7 +102,7 @@ Local: `npm install && npm run dev` → open the `/recipes/` path Vite prints.
    category/tag values.
 4. Validate with build / Zod; fix schema issues without changing culinary
    content.
-5. Delete or leave `incoming-recipes/` locally — do not commit large PDFs.
+5. Delete or leave `incoming-recipes/` locally. `*.pdf` is gitignored.
 
 LaTeX migration used `scripts/migrate-tex.mjs`. **Do not re-run it blindly** —
 it overwrites hand edits.

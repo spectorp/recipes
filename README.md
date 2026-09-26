@@ -19,6 +19,13 @@ npm run dev
 Open the `/recipes/` path Vite prints (often `http://localhost:5173/recipes/`).
 The app’s `base` is `/recipes/` to match GitHub Pages.
 
+To enable the local gitleaks pre-commit hook (after installing
+[pre-commit](https://pre-commit.com/)):
+
+```bash
+pre-commit install
+```
+
 ```bash
 npm run build
 npm run preview
