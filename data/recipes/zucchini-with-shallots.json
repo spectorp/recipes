@@ -1,0 +1,92 @@
+{
+  "id": "zucchini-with-shallots",
+  "title": "Zucchini With Shallots",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "vegetarian",
+      "pescatarian",
+      "nut free"
+    ],
+    "meal": [
+      "side dish"
+    ],
+    "season": [
+      "summer"
+    ],
+    "cuisine": [
+      "french"
+    ],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 4,
+  "cook_time_minutes": 15,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "small zucchini",
+      "amount": 1.5,
+      "unit": "lb"
+    },
+    {
+      "id": "i2",
+      "name": "olive oil",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i3",
+      "name": "salt and freshly ground pepper",
+      "amount": null,
+      "unit": null,
+      "notes": "to taste"
+    },
+    {
+      "id": "i4",
+      "name": "fresh bread crumbs",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i5",
+      "name": "butter",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i6",
+      "name": "chopped shallots",
+      "amount": 2,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i7",
+      "name": "chopped parsley",
+      "amount": 4,
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Rinse the zucchini and pat dry. Trim off the ends, but do not peel them. Cut into ⅛-inch slices."
+    },
+    {
+      "id": "s2",
+      "text": "Heat the oil in a nonstick skillet and when the oil is hot, add the zucchini. Saute the zucchini over high heat, shaking the pan and tossing gently. Add salt and pepper, and cook a total of 5 minutes."
+    },
+    {
+      "id": "s3",
+      "text": "Add the bread crumbs and butter to the pan. When the crumbs start to brown, add the shallots and cook for another minute, tossing. Serve sprinkled with parsley."
+    }
+  ],
+  "attribution": {
+    "name": "Pierre Franey",
+    "url": "https://cooking.nytimes.com/recipes/9529-zucchini-with-shallots"
+  },
+  "created_at": "2026-09-25T00:00:00Z",
+  "updated_at": "2026-09-25T00:00:00Z"
+}

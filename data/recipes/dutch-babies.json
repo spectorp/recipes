@@ -1,0 +1,99 @@
+{
+  "id": "dutch-babies",
+  "title": "Dutch Babies",
+  "categories": {
+    "method": [
+      "baking"
+    ],
+    "diet": [
+      "vegetarian",
+      "pescatarian",
+      "nut free"
+    ],
+    "meal": [
+      "breakfast"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "eggs",
+      "amount": 4,
+      "unit": null
+    },
+    {
+      "id": "i2",
+      "name": "milk",
+      "amount": 1,
+      "unit": "cup"
+    },
+    {
+      "id": "i3",
+      "name": "flour",
+      "amount": 1,
+      "unit": "cup"
+    },
+    {
+      "id": "i4",
+      "name": "sugar",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i5",
+      "name": "salt",
+      "amount": 0.75,
+      "unit": "tsp"
+    },
+    {
+      "id": "i6",
+      "name": "butter",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i7",
+      "name": "powdered sugar",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i8",
+      "name": "fresh berries",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i9",
+      "name": "lemon wedges",
+      "amount": null,
+      "unit": null
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Whisk eggs, milk, flour, sugar & salt in a large bowl until well blended. Let stand at room temp 30 minutes."
+    },
+    {
+      "id": "s2",
+      "text": "Preheat oven to 475 and set rack to lowest level. Divide butter between pie pans; place pans in oven until butter melts. Remove pans, swirl butter to coat sides. Divide batter between pans."
+    },
+    {
+      "id": "s3",
+      "text": "Bake pancakes about 12-15 minutes. Pancakes should be set in center, rise high above sides of pan, and be golden color."
+    },
+    {
+      "id": "s4",
+      "text": "Cut into wedges; place on plates. Squeeze lemon juice over top of each; sprinkle with sugar and berries."
+    }
+  ],
+  "notes": "Equipment: 2 - 9 or 10\" pie pans. Also called Scandinavian Pancakes.",
+  "created_at": "2026-09-25T00:00:00Z",
+  "updated_at": "2026-09-25T00:00:00Z"
+}
