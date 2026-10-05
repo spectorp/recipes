@@ -1,0 +1,128 @@
+{
+  "id": "lemony-shrimp-and-bean-stew",
+  "title": "Lemony Shrimp and Bean Stew",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "nut free"
+    ],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": [
+      "shrimp"
+    ]
+  },
+  "tags": [
+    "soup",
+    "weeknight"
+  ],
+  "servings": 4,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "fresh lemon zest",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i2",
+      "name": "lemon juice",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "id": "i3",
+      "name": "sweet or smoked paprika",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i4",
+      "name": "garlic cloves, grated",
+      "amount": 2,
+      "unit": null
+    },
+    {
+      "id": "i5",
+      "name": "Kosher salt and black pepper",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i6",
+      "name": "peeled, deveined large shrimp",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "tails removed"
+    },
+    {
+      "id": "i7",
+      "name": "unsalted butter",
+      "amount": 4,
+      "unit": "tbsp",
+      "notes": "½ stick"
+    },
+    {
+      "id": "i8",
+      "name": "large leeks, trimmed, then halved lengthwise, white and light green parts sliced crosswise ½-inch thick",
+      "amount": 2,
+      "unit": null,
+      "notes": "or 1 large onion, minced"
+    },
+    {
+      "id": "i9",
+      "name": "(15-ounce) can cannellini beans or other white beans, rinsed",
+      "amount": 1,
+      "unit": null,
+      "notes": "butter beans, canned or cooked from dried, work well too"
+    },
+    {
+      "id": "i10",
+      "name": "chicken stock or vegetable stock",
+      "amount": 2,
+      "unit": "cup"
+    },
+    {
+      "id": "i11",
+      "name": "finely chopped fresh parsley",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "optional"
+    },
+    {
+      "id": "i12",
+      "name": "toasted bread, for serving",
+      "amount": null,
+      "unit": null,
+      "notes": "optional"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Combine lemon zest, paprika, garlic, ¾ teaspoon salt and ¾ teaspoon pepper in a medium bowl. Add shrimp and toss to coat."
+    },
+    {
+      "id": "s2",
+      "text": "In a large pot, melt butter over medium-high heat. When butter is foaming, add shrimp and cook, stirring occasionally, until pink and starting to curl, 2 to 3 minutes. Using a slotted spoon, transfer shrimp to a plate; set aside."
+    },
+    {
+      "id": "s3",
+      "text": "Add leeks, season with salt and pepper, and cook over medium until leeks are soft and starting to brown on the edges, 4 to 5 minutes, stirring occasionally. Add beans and chicken broth and bring to a boil over high. Lower heat and simmer, 8 to 10 minutes. Stir in reserved shrimp and any juices from the plate, parsley and lemon juice, and season with salt and pepper. Serve with toasted bread."
+    }
+  ],
+  "rating": 5,
+  "attribution": {
+    "name": "Sue Li",
+    "url": "https://cooking.nytimes.com/recipes/1020828-lemony-shrimp-and-bean-stew"
+  },
+  "notes": "Total time: 30 minutes.\n\nWith minimal prep and a quick cook time, this shrimp stew feels elegant for such an easy weeknight meal. You can also take the dish in a number of directions: Substitute the shrimp with an equal amount of flaky white fish or even seared scallops, or stretch the dish into a meal for six by stirring in some butter and serving over cooked spaghetti or rigatoni. A good glug of your best olive oil would also be welcome.",
+  "created_at": "2026-10-04T00:00:00Z",
+  "updated_at": "2026-10-05T04:05:00Z"
+}

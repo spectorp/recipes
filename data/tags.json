@@ -19,6 +19,10 @@
     {
       "id": "t5",
       "name": "frozen dessert"
+    },
+    {
+      "id": "t6",
+      "name": "weeknight"
     }
   ]
 }
