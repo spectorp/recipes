@@ -1,0 +1,124 @@
+{
+  "id": "tomato-soup",
+  "title": "Tomato Soup",
+  "categories": {
+    "method": [
+      "stovetop"
+    ],
+    "diet": [
+      "nut free"
+    ],
+    "meal": [
+      "dinner"
+    ],
+    "season": [],
+    "cuisine": [],
+    "main_ingredient": []
+  },
+  "tags": [
+    "soup"
+  ],
+  "servings": 8,
+  "prep_time_minutes": 10,
+  "cook_time_minutes": 75,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "butter",
+      "amount": 0.25,
+      "unit": "lb",
+      "notes": "one stick"
+    },
+    {
+      "id": "i2",
+      "name": "olive oil",
+      "amount": 0.5,
+      "unit": "cup"
+    },
+    {
+      "id": "i3",
+      "name": "onions, cut into ¼-inch dice",
+      "amount": 1,
+      "unit": "lb",
+      "notes": "about 3 medium"
+    },
+    {
+      "id": "i4",
+      "name": "all-purpose flour",
+      "amount": 0.5,
+      "unit": "cup"
+    },
+    {
+      "id": "i5",
+      "name": "(28-ounce) cans diced tomatoes",
+      "amount": 4,
+      "unit": null
+    },
+    {
+      "id": "i6",
+      "name": "chicken broth",
+      "amount": 1.25,
+      "unit": "cup"
+    },
+    {
+      "id": "i7",
+      "name": "sugar",
+      "amount": 0.25,
+      "unit": "cup"
+    },
+    {
+      "id": "i8",
+      "name": "kosher salt",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i9",
+      "name": "celery salt",
+      "amount": 1,
+      "unit": "tsp"
+    },
+    {
+      "id": "i10",
+      "name": "pepper",
+      "amount": 0.75,
+      "unit": "tsp"
+    },
+    {
+      "id": "i11",
+      "name": "half-and-half",
+      "amount": 0.75,
+      "unit": "cup"
+    },
+    {
+      "id": "i12",
+      "name": "honey",
+      "amount": 2,
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "In a large pot, melt the butter with the olive oil over medium-low heat. Add onions and cook gently, stirring occasionally, until soft and translucent, about 20 minutes."
+    },
+    {
+      "id": "s2",
+      "text": "Add flour and stir until mixture is slightly thickened and pale gold, about 3 minutes; do not allow to brown."
+    },
+    {
+      "id": "s3",
+      "text": "Stir in the tomatoes and their juices, chicken broth, sugar, salt, celery salt and pepper. Raise heat to medium until the liquid bubbles, then reduce heat to low. Simmer for 30 minutes, scraping the bottom of the pot frequently."
+    },
+    {
+      "id": "s4",
+      "text": "Stir in half-and-half and honey. Remove from heat and purée using a hand blender, or allow to cool until no longer steaming and purée in batches in a stand blender. Return to medium heat just until heated through. Serve hot."
+    }
+  ],
+  "attribution": {
+    "name": "Jennifer Steinhauer, adapted from Ted's Bulletin",
+    "url": "https://cooking.nytimes.com/recipes/1013383-tomato-soup"
+  },
+  "notes": "All butter (½ lb) can be used instead of the ¼ lb butter and ½ cup olive oil.\n\nPrep time: 10 minutes. Cook time: 1¼ hours. Total time: about 1½ hours.\n\nThis recipe, adapted from Ted's Bulletin, an upscale comfort food diner in Washington, makes a simple yet satisfying soup. A generous swirl of half and half adds richness, and the unexpected addition of honey lends a subtle, earthy sweetness. Just add grilled cheese. —Jennifer Steinhauer",
+  "created_at": "2026-10-11T23:29:00Z"
+}
