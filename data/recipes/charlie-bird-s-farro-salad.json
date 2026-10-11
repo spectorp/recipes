@@ -19,91 +19,91 @@
   "tags": [
     "salad"
   ],
-  "servings": 6,
+  "servings": 12,
   "cook_time_minutes": 45,
   "ingredients": [
     {
       "id": "i1",
       "name": "farro",
-      "amount": 1,
+      "amount": 2,
       "unit": "cup"
     },
     {
       "id": "i2",
       "name": "apple cider",
-      "amount": 1,
+      "amount": 2,
       "unit": "cup",
       "notes": "not cider vinegar"
     },
     {
       "id": "i3",
       "name": "kosher salt",
-      "amount": 2,
+      "amount": 4,
       "unit": "tsp",
       "notes": "plus more as needed"
     },
     {
       "id": "i4",
       "name": "bay leaves",
-      "amount": 2,
+      "amount": 4,
       "unit": null
     },
     {
       "id": "i5",
       "name": "extra-virgin olive oil",
-      "amount": 8,
+      "amount": 16,
       "unit": "tbsp"
     },
     {
       "id": "i6",
       "name": "fresh lemon juice",
-      "amount": 2,
+      "amount": 4,
       "unit": "tbsp"
     },
     {
       "id": "i7",
       "name": "Parmesan cheese",
-      "amount": 70,
+      "amount": 140,
       "unit": "g",
-      "notes": "1/2 cup, shaved with a vegetable peeler"
+      "notes": "1 cup, shaved with a vegetable peeler"
     },
     {
       "id": "i8",
       "name": "pistachio nuts",
-      "amount": 70,
+      "amount": 140,
       "unit": "g",
-      "notes": "1/2 cup, chopped"
+      "notes": "1 cup, chopped"
     },
     {
       "id": "i9",
       "name": "arugula leaves",
-      "amount": 2,
+      "amount": 4,
       "unit": "cup"
     },
     {
       "id": "i10",
       "name": "parsley or basil leaves",
-      "amount": 1,
+      "amount": 2,
       "unit": "cup",
       "notes": "torn"
     },
     {
       "id": "i11",
       "name": "mint leaves",
-      "amount": 1,
+      "amount": 2,
       "unit": "cup"
     },
     {
       "id": "i12",
       "name": "cherry or grape tomatoes",
-      "amount": 0.75,
+      "amount": 1.5,
       "unit": "cup",
       "notes": "halved"
     },
     {
       "id": "i13",
       "name": "radish",
-      "amount": 0.3333333333,
+      "amount": 0.6666666666,
       "unit": "cup",
       "notes": "thinly sliced"
     },
@@ -118,11 +118,11 @@
   "steps": [
     {
       "id": "s1",
-      "text": "Bring farro, apple cider, kosher salt, bay leaves and 2 cups water to a simmer in a medium saucepan. Simmer until farro is tender and liquid evaporates, about 30 minutes, adding water if needed. Cool and discard bay leaves."
+      "text": "Bring farro, apple cider, kosher salt, bay leaves and 4 cups water to a simmer in a medium saucepan. Simmer until farro is tender and liquid evaporates, about 30 minutes, adding water if needed. Cool and discard bay leaves."
     },
     {
       "id": "s2",
-      "text": "Whisk olive oil, lemon juice and a pinch of salt in a salad bowl. Add farro, Parmesan and pistachios and mix well. Just before serving, fold in arugula, herbs, tomatoes, radish and flaky salt to taste."
+      "text": "Whisk olive oil, lemon juice and 2 pinches of salt in a salad bowl. Add farro, Parmesan and pistachios and mix well. Just before serving, fold in arugula, herbs, tomatoes, radish and flaky salt to taste."
     }
   ],
   "notes": "The dressed farro base keeps for up to 4 hours at room temperature or overnight refrigerated; bring it to room temperature before serving. Almonds may replace pistachios, and seasonal vegetables or herbs may be substituted.",
@@ -131,5 +131,5 @@
     "url": "https://cooking.nytimes.com/recipes/1015843-charlie-birds-farro-salad"
   },
   "created_at": "2026-09-15T18:00:00Z",
-  "updated_at": "2026-09-16T19:20:44Z"
+  "updated_at": "2026-10-11T23:22:00Z"
 }
