@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { FilterPanel } from '../components/FilterPanel'
 import { RecipeCard } from '../components/RecipeCard'
 import { ThemeToggle } from '../components/ThemeToggle'
@@ -17,8 +17,40 @@ function countPanelFilters(filters: BrowseFilters): number {
   return countActiveFilters(withoutQuery)
 }
 
+function isTypingTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false
+  const tag = target.tagName
+  return (
+    tag === 'INPUT' ||
+    tag === 'TEXTAREA' ||
+    tag === 'SELECT' ||
+    target.isContentEditable
+  )
+}
+
 export function HomePage() {
   const { filters, setFilters, filtersOpen, setFiltersOpen } = useBrowseState()
+  const searchRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (
+        event.key !== '/' ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey ||
+        event.repeat ||
+        event.isComposing ||
+        isTypingTarget(event.target)
+      ) {
+        return
+      }
+      event.preventDefault()
+      searchRef.current?.focus()
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   const visible = useMemo(
     () => filterAndSortRecipes(recipes, filters),
@@ -38,7 +70,7 @@ export function HomePage() {
           <h1 className="font-display shrink-0 text-3xl tracking-tight text-ink sm:text-4xl dark:text-stone-50">
             Recipes
           </h1>
-          <label className="relative min-w-0 flex-1 basis-full sm:basis-48 sm:max-w-sm">
+          <label className="group relative min-w-0 flex-1 basis-full sm:basis-48 sm:max-w-sm">
             <span className="sr-only">Search</span>
             <svg
               viewBox="0 0 24 24"
@@ -54,8 +86,10 @@ export function HomePage() {
               <path d="m20 20-3.5-3.5" />
             </svg>
             <input
+              ref={searchRef}
               type="search"
               placeholder=""
+              aria-keyshortcuts="/"
               value={filters.query}
               onChange={(e) =>
                 setFilters({ ...filters, query: e.target.value })
@@ -64,6 +98,18 @@ export function HomePage() {
                 filters.query.trim() ? 'pr-10' : 'pr-3'
               }`}
             />
+            {filters.query.length === 0 && (
+              <span
+                className="pointer-events-none absolute inset-y-0 left-9 flex items-center gap-1 text-base text-ink-muted group-focus-within:hidden sm:text-sm dark:text-stone-500"
+                aria-hidden
+              >
+                Type
+                <kbd className="inline-flex h-5 min-w-5 items-center justify-center rounded border border-stone-300 bg-stone-100 px-1 font-sans text-xs leading-none text-stone-600 dark:border-stone-600 dark:bg-stone-800 dark:text-stone-300">
+                  /
+                </kbd>
+                to search
+              </span>
+            )}
             {filters.query.length > 0 && (
               <button
                 type="button"
