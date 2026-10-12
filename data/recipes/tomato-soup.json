@@ -10,10 +10,7 @@
     ],
     "meal": [
       "dinner"
-    ],
-    "season": [],
-    "cuisine": [],
-    "main_ingredient": []
+    ]
   },
   "tags": [
     "soup"
@@ -115,10 +112,12 @@
       "text": "Stir in half-and-half and honey. Remove from heat and purée using a hand blender, or allow to cool until no longer steaming and purée in batches in a stand blender. Return to medium heat just until heated through. Serve hot."
     }
   ],
+  "rating": 5,
   "attribution": {
     "name": "Jennifer Steinhauer, adapted from Ted's Bulletin",
     "url": "https://cooking.nytimes.com/recipes/1013383-tomato-soup"
   },
   "notes": "All butter (½ lb) can be used instead of the ¼ lb butter and ½ cup olive oil.\n\nPrep time: 10 minutes. Cook time: 1¼ hours. Total time: about 1½ hours.\n\nThis recipe, adapted from Ted's Bulletin, an upscale comfort food diner in Washington, makes a simple yet satisfying soup. A generous swirl of half and half adds richness, and the unexpected addition of honey lends a subtle, earthy sweetness. Just add grilled cheese. —Jennifer Steinhauer",
-  "created_at": "2026-10-11T23:29:00Z"
+  "created_at": "2026-10-11T23:29:00Z",
+  "updated_at": "2026-10-12T02:27:17.905Z"
 }
