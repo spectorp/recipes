@@ -1,0 +1,74 @@
+{
+  "id": "overnight-oats",
+  "title": "Overnight oats",
+  "categories": {
+    "diet": [
+      "vegetarian"
+    ],
+    "meal": [
+      "breakfast"
+    ]
+  },
+  "servings": 1,
+  "prep_time_minutes": 3,
+  "cook_time_minutes": 0,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "Old-fashioned oats",
+      "amount": 0.5,
+      "unit": "cup"
+    },
+    {
+      "id": "i2",
+      "name": "Chia, flax, poppy or sesame seeds",
+      "amount": 1,
+      "unit": "tbsp"
+    },
+    {
+      "id": "i3",
+      "name": "Milk",
+      "amount": 0.75,
+      "unit": "cup"
+    },
+    {
+      "id": "i4",
+      "name": "Dried fruit",
+      "amount": 0.25,
+      "unit": "cup",
+      "notes": "chopped"
+    },
+    {
+      "id": "i5",
+      "name": "Nuts",
+      "amount": 2,
+      "unit": "tbsp",
+      "notes": "chopped"
+    },
+    {
+      "id": "i6",
+      "name": "Maple syrup, honey, or brown sugar",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i7",
+      "name": "Fresh fruit",
+      "amount": null,
+      "unit": null,
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Mix oats, seeds, and milk in a pint jar. Seal and refrigerate overnight (5 hours to 5 days)."
+    },
+    {
+      "id": "s2",
+      "text": "In the morning, add fruit, nuts, and sweetener."
+    }
+  ],
+  "created_at": "2026-10-12T03:17:25.845Z",
+  "updated_at": "2026-10-12T03:17:25.848Z"
+}
