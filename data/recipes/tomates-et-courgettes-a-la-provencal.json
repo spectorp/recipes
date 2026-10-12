@@ -3,7 +3,8 @@
   "title": "Tomates et Courgettes a la Provencal",
   "categories": {
     "method": [
-      "baking"
+      "baking",
+      "sheet pan"
     ],
     "diet": [
       "vegetarian",
@@ -100,7 +101,7 @@
     },
     {
       "id": "s3",
-      "text": "Combine tomatoes, onion, garlic, and olive oil in a single layer roasting pan; season with salt and pepper. Roast for 10 minutes. Using spatula, turn veggies and roast 10 minutes more or until lightly browned."
+      "text": "Combine tomatoes, onion, garlic, olive oil, salt, and pepper in a mixing bowl, and then spread in a single layer on two sheet pans. Roast for 10 minutes. Using spatula, turn veggies and roast 10 minutes more or until lightly browned."
     },
     {
       "id": "s4",
@@ -113,5 +114,5 @@
   ],
   "rating": 5,
   "created_at": "2026-09-15T00:00:00Z",
-  "updated_at": "2026-10-12T02:35:29.705Z"
+  "updated_at": "2026-10-12T02:53:19.180Z"
 }
