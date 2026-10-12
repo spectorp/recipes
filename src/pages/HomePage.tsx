@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { FilterPanel } from '../components/FilterPanel'
 import { RecipeCard } from '../components/RecipeCard'
 import { ThemeToggle } from '../components/ThemeToggle'
@@ -132,7 +133,17 @@ export function HomePage() {
             )}
           </label>
         </div>
-        <ThemeToggle className="no-print shrink-0" />
+        <div className="no-print flex shrink-0 items-center gap-2">
+          {import.meta.env.DEV && (
+            <Link
+              to="/edit"
+              className="inline-flex min-h-11 items-center rounded-md border border-stone-300 bg-white px-3 text-sm font-medium text-ink hover:border-accent/50 sm:min-h-0 sm:py-2 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+            >
+              New recipe
+            </Link>
+          )}
+          <ThemeToggle className="shrink-0" />
+        </div>
       </header>
 
       {catalogLoadErrors.length > 0 && (
@@ -162,8 +173,17 @@ export function HomePage() {
             No recipes in the catalog yet.
           </p>
           <p className="mt-2 text-sm text-ink-muted dark:text-stone-500">
-            Add a JSON file under{' '}
-            <span className="font-mono text-xs">data/recipes/</span> and rebuild.
+            {import.meta.env.DEV ? (
+              <>
+                Use New recipe, or add a JSON file under{' '}
+                <span className="font-mono text-xs">data/recipes/</span>.
+              </>
+            ) : (
+              <>
+                Add a JSON file under{' '}
+                <span className="font-mono text-xs">data/recipes/</span> and rebuild.
+              </>
+            )}
           </p>
         </div>
       ) : (

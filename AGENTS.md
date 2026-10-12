@@ -1,10 +1,14 @@
 # Agent guide — recipes site
 
-This repo is a **read-only** recipe browser (Vite + React + TypeScript + Tailwind)
+This repo is a recipe browser (Vite + React + TypeScript + Tailwind)
 backed by **one JSON file per recipe**, hosted on public GitHub Pages
 (`https://spectorp.github.io/recipes/`).
 
-Editing/creating recipes happens in git (JSON files), not in the web UI.
+The published site is read-only. Locally, `npm run dev` includes an editor
+(New recipe / Edit) that writes `data/recipes/*.json` and can append names to
+`data/categories.json` and `data/tags.json`. That UI and its write API are
+omitted from `vite build`. Publishing is still a git commit and push. Recipe
+ids are slugs assigned on create and are not renamed later.
 
 Primary build plan: [`docs/recipe-site-implementation-plan.md`](docs/recipe-site-implementation-plan.md)
 (keep its Progress / Plan changelog updated when behavior diverges).

@@ -114,3 +114,10 @@ export const catalogLoadErrors: LoadError[] = loadErrors
 export function getRecipeById(id: string): Recipe | undefined {
   return recipesById.get(id)
 }
+
+// Dev editor writes JSON while this page is open. Accept the update here so
+// Vite does not reload the editor and discard unsaved form state. A full
+// navigation after save still loads the new catalog.
+if (import.meta.hot) {
+  import.meta.hot.accept()
+}

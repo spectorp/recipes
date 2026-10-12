@@ -310,6 +310,14 @@ export function RecipePage() {
           <ThemeToggle />
           <ScaleControl value={scale} onChange={setScale} />
           <TextSizeControl value={textSize} onChange={selectTextSize} />
+          {import.meta.env.DEV && (
+            <Link
+              to={`/edit/${recipe.id}`}
+              className="inline-flex min-h-11 items-center rounded-md border border-stone-300 bg-white px-3 text-sm font-medium text-ink hover:border-accent/50 sm:min-h-0 sm:py-1.5 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
+            >
+              Edit
+            </Link>
+          )}
           <button
             type="button"
             onClick={() => window.print()}

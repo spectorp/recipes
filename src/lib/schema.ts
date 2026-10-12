@@ -1,22 +1,21 @@
 import { z } from 'zod'
 
 /** Allowed ingredient units — keep in sync with schema.json */
-export const recipeUnitSchema = z.union([
-  z.enum([
-    'g',
-    'kg',
-    'ml',
-    'l',
-    'tsp',
-    'tbsp',
-    'cup',
-    'fl_oz',
-    'oz',
-    'lb',
-    'pinch',
-  ]),
-  z.null(),
-])
+export const RECIPE_UNITS = [
+  'g',
+  'kg',
+  'ml',
+  'l',
+  'tsp',
+  'tbsp',
+  'cup',
+  'fl_oz',
+  'oz',
+  'lb',
+  'pinch',
+] as const
+
+export const recipeUnitSchema = z.union([z.enum(RECIPE_UNITS), z.null()])
 
 export const ingredientSchema = z
   .object({

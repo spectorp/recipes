@@ -3,8 +3,9 @@
 Read-only recipe browser (Vite + React + TypeScript + Tailwind), hosted on
 GitHub Pages at **https://spectorp.github.io/recipes/**.
 
-The web UI does **not** create or edit recipes. All content changes happen in
-git (JSON files), then deploy on push to `master`.
+The published site does **not** create or edit recipes. Locally, `npm run dev`
+includes an editor that writes JSON files on this computer. Publishing is
+still a git commit and push to `master`.
 
 See [docs/recipe-site-implementation-plan.md](docs/recipe-site-implementation-plan.md)
 for the full build plan.
@@ -48,6 +49,14 @@ Live site: https://spectorp.github.io/recipes/
 | `schema.json` | JSON Schema for a recipe file |
 
 ## Adding or editing a recipe
+
+With `npm run dev` running, use **New recipe** on the browse page or **Edit**
+on a recipe. Saving writes `data/recipes/<id>.json`. New category or tag names
+are appended to the vocab files. The id is a slug of the title and stays fixed
+after that. Deleting a recipe asks for confirmation, then removes the file.
+Nothing is committed or deployed until you commit and push.
+
+You can also edit the JSON directly:
 
 1. Copy an existing file under `data/recipes/` or create `data/recipes/<id>.json`.
 2. Set `"id"` to match the filename (without `.json`).

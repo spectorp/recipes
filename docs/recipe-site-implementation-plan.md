@@ -1,9 +1,10 @@
 # Recipe Site — Implementation Plan
 
-A **read-only** recipe browser hosted on **GitHub Pages**. Recipes live as
-individual JSON files in the repo; the site is a static SPA (Vite + React +
-TypeScript + Tailwind). Creating, editing, and tagging happen by editing JSON
-(and vocab files) in git and pushing — not via the web UI.
+A recipe browser hosted on **GitHub Pages**. Recipes live as individual JSON
+files in the repo; the site is a static SPA (Vite + React + TypeScript +
+Tailwind). The published site is read-only. Locally, `npm run dev` can create,
+edit, and delete recipes by writing those JSON files. Publishing is still a
+git commit and push.
 
 This document is the build spec for an AI coding agent. It supersedes
 `docs/recipe-app-implementation-plan-old.md` for product direction. The old
@@ -19,7 +20,7 @@ two conflict, **this document wins**.
 | Data | One JSON file per recipe; build-time index |
 | Vocab | Canonical `categories.json` + `tags.json` |
 | Schema | Strict (from old plan); **photos out of scope for v1** |
-| Web mutations | None (no create / edit / tag management UI) |
+| Web mutations | None on the published site. `npm run dev` can create, edit, and delete recipes |
 | Migration | Convert all LaTeX recipes → JSON for v1 |
 | LaTeX | Archive under `archive/latex/` |
 | Deep links | Yes — stable per-recipe URLs |
@@ -41,11 +42,13 @@ two conflict, **this document wins**.
 | 9 Theme | Done |
 | 10 Deploy | Done |
 | 11 Polish | Done |
+| 12 Local editor | Done |
 
 ### Plan changelog (deviations & clarifications)
 
 Keep this section updated when implementation diverges from the original text.
 
+- **Local editor** — `npm run dev` only. Routes `/edit` and `/edit/:id` are compiled in when `import.meta.env.DEV` is true, so `vite build` / GitHub Pages stay read-only. A Vite plugin (`apply: 'serve'`) writes `data/recipes/<id>.json` and appends new category/tag names. Ids are title slugs, fixed after create. Delete asks for confirmation and removes the file. Publishing is still commit and push. Renaming or merging vocab values stays manual. (Phase 12)
 - **Nullable ingredient `amount`** — schema/Zod allow `amount: null` when the source gives no quantity (e.g. to taste / for serving). UI omits quantity and does not scale those lines. Do not invent `1` for missing amounts. Migration script no longer defaults missing quantities to `1`.
 - **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
@@ -189,9 +192,9 @@ Recipes store **names** (not vocab ids) for readability in diffs. Matching
 for filters/dedup is **case-insensitive**; display casing comes from the
 vocab file.
 
-**Management:** edit these JSON files in git only. No rename/merge UI in the
-site. When renaming a vocab value, update the vocab file **and** all recipe
-files that use the old string (agent/human responsibility).
+**Management:** the local dev editor can append new names. Renaming or merging
+a vocab value is still manual: update the vocab file **and** every recipe that
+uses the old string. The published site has no vocab UI.
 
 ### 2.4 Loading recipes on a static host
 
@@ -288,8 +291,8 @@ Tailwind `class` strategy on `<html>`; preference stored in `localStorage`
 
 ### 4.6 Explicitly out of scope (v1)
 
-- Create / edit / delete recipes in the UI
-- Category/tag management UI (add/rename/merge)
+- Create / edit / delete on the published site (local `npm run dev` editor only)
+- Rename / merge of category or tag values (the local editor can append names)
 - Photos / image carousel
 - Accounts, auth, private Pages
 - Unit conversion
@@ -399,14 +402,16 @@ a small intentional type + color system over default “AI purple” tropes.
 10. **Deploy** — ✅ GitHub Actions → Pages (`deploy.yml`)
 11. **Polish** — ✅ empty states, mobile touch targets, README (edit via JSON,
     units, category keys, local/deploy)
+12. **Local editor** — ✅ dev-only create / edit / delete, vocab append, omitted
+    from the production build
 
 ---
 
 ## 10. README Should Cover (end state)
 
 - How to run locally and where the live site is
-- How to add/edit a recipe (new JSON file, schema, vocab updates, push)
-- That the web UI is read-only
+- How to add/edit a recipe (local editor, or a JSON file, schema, vocab updates, push)
+- That the published site is read-only
 - Where archived LaTeX lives
 - Unit enum and category keys
 
