@@ -1,0 +1,169 @@
+{
+  "id": "enchiladas-verdes",
+  "title": "Enchiladas Verdes",
+  "categories": {
+    "method": ["baking", "stovetop"],
+    "diet": ["gluten free", "nut free"],
+    "meal": ["dinner"],
+    "season": [],
+    "cuisine": ["mexican"],
+    "main_ingredient": ["chicken"]
+  },
+  "tags": [],
+  "servings": 6,
+  "prep_time_minutes": 50,
+  "cook_time_minutes": 20,
+  "ingredients": [
+    {
+      "id": "i1",
+      "name": "vegetable oil",
+      "amount": 4,
+      "unit": "tsp"
+    },
+    {
+      "id": "i2",
+      "name": "onion, chopped",
+      "amount": 1,
+      "unit": null
+    },
+    {
+      "id": "i3",
+      "name": "ground cumin",
+      "amount": 0.5,
+      "unit": "tsp"
+    },
+    {
+      "id": "i4",
+      "name": "garlic cloves, minced",
+      "amount": 3,
+      "unit": null
+    },
+    {
+      "id": "i5",
+      "name": "chicken broth",
+      "amount": 1.5,
+      "unit": "cup"
+    },
+    {
+      "id": "i6",
+      "name": "boneless, skinless chicken thighs, trimmed",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": "1⅓ to 1½ lb"
+    },
+    {
+      "id": "i7",
+      "name": "tomatillos, husks and stems removed, rinsed well and dried",
+      "amount": 1.5,
+      "unit": "lb",
+      "notes": "16 to 20 medium"
+    },
+    {
+      "id": "i8",
+      "name": "poblano chiles, stemmed, halved, and seeded",
+      "amount": 3,
+      "unit": null
+    },
+    {
+      "id": "i9",
+      "name": "sugar",
+      "amount": 2.5,
+      "unit": "tsp",
+      "notes": "1–2½ tsp; start with 1 tsp and adjust"
+    },
+    {
+      "id": "i10",
+      "name": "salt",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i11",
+      "name": "pepper",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i12",
+      "name": "chopped fresh cilantro",
+      "amount": 0.5,
+      "unit": "cup"
+    },
+    {
+      "id": "i13",
+      "name": "pepper Jack or Monterey Jack cheese, shredded",
+      "amount": 8,
+      "unit": "oz",
+      "notes": "2 cups; may need a bit more with the extra chicken"
+    },
+    {
+      "id": "i14",
+      "name": "6-inch corn tortillas",
+      "amount": 12,
+      "unit": null
+    },
+    {
+      "id": "i15",
+      "name": "vegetable oil spray",
+      "amount": null,
+      "unit": null
+    },
+    {
+      "id": "i16",
+      "name": "scallions, sliced thin",
+      "amount": 2,
+      "unit": null,
+      "group": "Garnishes"
+    },
+    {
+      "id": "i17",
+      "name": "thinly sliced radishes",
+      "amount": null,
+      "unit": null,
+      "group": "Garnishes"
+    },
+    {
+      "id": "i18",
+      "name": "sour cream",
+      "amount": null,
+      "unit": null,
+      "group": "Garnishes"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "text": "Adjust 1 oven rack to middle position and second rack 6 inches from broiler element; heat broiler. Heat 2 teaspoons oil in medium saucepan over medium heat until shimmering. Add onion and cook, stirring often, until softened and lightly browned, 5 to 7 minutes. Stir in cumin and two-thirds of garlic and cook, stirring often, until fragrant, about 30 seconds. Decrease heat to low and stir in broth. Add chicken, cover, and simmer until it registers 160 degrees, 15 to 20 minutes, flipping chicken halfway through cooking. Transfer chicken to large bowl; place in refrigerator to cool, about 20 minutes. Measure out ¼ cup broth and set aside; discard remaining liquid."
+    },
+    {
+      "id": "s2",
+      "text": "Meanwhile, toss tomatillos and poblanos with remaining 2 teaspoons oil. Arrange tomatillos cut side down and poblanos skin side up on aluminum foil–lined rimmed baking sheet. Broil on upper rack until vegetables blacken and start to soften, 5 to 10 minutes, rotating sheet halfway through broiling."
+    },
+    {
+      "id": "s3",
+      "text": "Remove tomatillos and poblanos from oven, let cool slightly, then remove skins from poblanos (leave tomatillo skins intact). Decrease oven temperature to 350 degrees. Discard foil from sheet and set sheet aside for warming tortillas."
+    },
+    {
+      "id": "s4",
+      "text": "Transfer vegetables, along with any accumulated juices, to food processor. Add 1 teaspoon sugar, 1 teaspoon salt, remaining garlic, and reserved cooking liquid to food processor and pulse until sauce is somewhat chunky, about 8 pulses. Season with salt and pepper to taste, and adjust tartness by stirring in remaining sugar, ½ teaspoon at a time; set aside."
+    },
+    {
+      "id": "s5",
+      "text": "When chicken is cool, use 2 forks to shred into bite-size pieces. Combine chicken with cilantro and 1½ cups pepper Jack; season with salt to taste."
+    },
+    {
+      "id": "s6",
+      "text": "Spread ¾ cup tomatillo sauce evenly over bottom of 13 by 9-inch baking dish. Place tortillas in single layer on 2 baking sheets. Spray both sides of tortillas lightly with vegetable oil spray. Bake until tortillas are soft and pliable, 2 to 4 minutes. Increase oven temperature to 450 degrees. Place warm tortillas on counter and spread ⅓ cup chicken filling down center of each tortilla. Roll each tortilla tightly and place in baking dish, seam side down. Pour remaining tomatillo sauce over top of enchiladas and spread into even layer so that it coats top of each tortilla. Sprinkle with remaining ½ cup pepper Jack and cover tightly with foil."
+    },
+    {
+      "id": "s7",
+      "text": "Bake enchiladas on lower rack until heated through and cheese is melted, 15 to 20 minutes. Uncover, sprinkle with scallions, and serve immediately, passing radishes and sour cream separately."
+    }
+  ],
+  "attribution": {
+    "name": "America's Test Kitchen"
+  },
+  "notes": "Serves 4 to 6. About 1½ hours total: poach the chicken while you broil the vegetables and make the sauce, then shred, assemble, and bake 15–20 minutes.\n\nHalve large tomatillos (more than 2 inches in diameter) and place them skin side up for broiling in step 2 to ensure even cooking and charring. To increase the spiciness of the sauce, reserve some of the chiles' ribs and seeds and add them to the food processor in step 4. Be sure to cool the chicken filling before filling the tortillas; a hot filling will make the enchiladas soggy.\n\nCan substitute tomatoes for some of the tomatillos.",
+  "created_at": "2026-10-18T18:39:31Z",
+  "updated_at": "2026-10-18T18:44:00Z"
+}
