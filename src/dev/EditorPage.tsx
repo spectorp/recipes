@@ -1,4 +1,12 @@
-import { useEffect, useId, useRef, useState, type FormEvent, type ReactNode } from 'react'
+import {
+  Fragment,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type FormEvent,
+  type ReactNode,
+} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { categories, getRecipeById, tags } from '../lib/catalog'
@@ -234,25 +242,29 @@ function EditorForm({ recipe }: { recipe: Recipe | null }) {
         </section>
 
         <section className="space-y-3">
-          <div className="flex items-center justify-between gap-3">
-            <h2 className="font-display text-2xl text-ink dark:text-stone-50">Ingredients</h2>
-            <button
-              type="button"
-              className={quietButtonClass}
-              onClick={() =>
-                setDraft((current) => ({
-                  ...current,
-                  ingredients: [...current.ingredients, blankIngredient(newRowKey())],
-                }))
-              }
-            >
-              Add ingredient
-            </button>
-          </div>
-          <ul className="space-y-3">
-            {draft.ingredients.map((ingredient, index) => (
+          <h2 className="font-display text-2xl text-ink dark:text-stone-50">Ingredients</h2>
+          <EditableList
+            items={draft.ingredients}
+            emptyLabel="Add ingredient"
+            insertLabel={(index) =>
+              index === 0
+                ? 'Insert ingredient at start'
+                : index === draft.ingredients.length
+                  ? 'Add ingredient at end'
+                  : `Insert ingredient after item ${index}`
+            }
+            onInsert={(index) =>
+              setDraft((current) => ({
+                ...current,
+                ingredients: insertItem(
+                  current.ingredients,
+                  index,
+                  blankIngredient(newRowKey()),
+                ),
+              }))
+            }
+            renderItem={(ingredient, index) => (
               <IngredientRow
-                key={ingredient.key}
                 ingredient={ingredient}
                 index={index}
                 count={draft.ingredients.length}
@@ -277,30 +289,30 @@ function EditorForm({ recipe }: { recipe: Recipe | null }) {
                   }))
                 }
               />
-            ))}
-          </ul>
+            )}
+          />
         </section>
 
         <section className="space-y-3">
-          <div className="flex items-center justify-between gap-3">
-            <h2 className="font-display text-2xl text-ink dark:text-stone-50">Instructions</h2>
-            <button
-              type="button"
-              className={quietButtonClass}
-              onClick={() =>
-                setDraft((current) => ({
-                  ...current,
-                  steps: [...current.steps, blankStep(newRowKey())],
-                }))
-              }
-            >
-              Add step
-            </button>
-          </div>
-          <ol className="space-y-3">
-            {draft.steps.map((step, index) => (
+          <h2 className="font-display text-2xl text-ink dark:text-stone-50">Instructions</h2>
+          <EditableList
+            items={draft.steps}
+            emptyLabel="Add step"
+            insertLabel={(index) =>
+              index === 0
+                ? 'Insert step at start'
+                : index === draft.steps.length
+                  ? 'Add step at end'
+                  : `Insert step after step ${index}`
+            }
+            onInsert={(index) =>
+              setDraft((current) => ({
+                ...current,
+                steps: insertItem(current.steps, index, blankStep(newRowKey())),
+              }))
+            }
+            renderItem={(step, index) => (
               <StepRow
-                key={step.key}
                 step={step}
                 index={index}
                 count={draft.steps.length}
@@ -325,8 +337,8 @@ function EditorForm({ recipe }: { recipe: Recipe | null }) {
                   }))
                 }
               />
-            ))}
-          </ol>
+            )}
+          />
         </section>
 
         <Field label="Notes" htmlFor={`${formId}-notes`}>
@@ -594,6 +606,90 @@ function NamePicker({
   )
 }
 
+function EditableList<T extends { key: string }>({
+  items,
+  emptyLabel,
+  insertLabel,
+  onInsert,
+  renderItem,
+}: {
+  items: T[]
+  emptyLabel: string
+  insertLabel: (index: number) => string
+  onInsert: (index: number) => void
+  renderItem: (item: T, index: number) => ReactNode
+}) {
+  if (items.length === 0) {
+    return (
+      <InsertSlot
+        label={emptyLabel}
+        emphasized
+        onInsert={() => onInsert(0)}
+      />
+    )
+  }
+
+  return (
+    <div>
+      <InsertSlot label={insertLabel(0)} onInsert={() => onInsert(0)} />
+      {items.map((item, index) => (
+        <Fragment key={item.key}>
+          {renderItem(item, index)}
+          <InsertSlot
+            label={insertLabel(index + 1)}
+            onInsert={() => onInsert(index + 1)}
+          />
+        </Fragment>
+      ))}
+    </div>
+  )
+}
+
+function InsertSlot({
+  label,
+  onInsert,
+  emphasized = false,
+}: {
+  label: string
+  onInsert: () => void
+  emphasized?: boolean
+}) {
+  if (emphasized) {
+    return (
+      <button
+        type="button"
+        onClick={onInsert}
+        className={`${quietButtonClass} w-full gap-2 border-dashed`}
+      >
+        <span
+          aria-hidden="true"
+          className="inline-flex size-5 items-center justify-center rounded-full border border-current text-sm leading-none"
+        >
+          +
+        </span>
+        {label}
+      </button>
+    )
+  }
+
+  return (
+    <div className="group/insert relative -my-1 flex h-7 items-center justify-center">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-10 top-1/2 h-px -translate-y-1/2 bg-stone-300 opacity-0 transition-opacity group-hover/insert:opacity-100 group-focus-within/insert:opacity-100 dark:bg-stone-600 [@media(hover:none)]:opacity-40"
+      />
+      <button
+        type="button"
+        aria-label={label}
+        onClick={onInsert}
+        className="relative z-10 inline-flex size-6 items-center justify-center rounded-full border border-stone-300 bg-white text-sm leading-none text-ink-muted opacity-0 transition-opacity hover:border-accent hover:text-accent focus-visible:opacity-100 group-hover/insert:opacity-100 group-focus-within/insert:opacity-100 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-300 dark:hover:border-orange-400 dark:hover:text-orange-300 [@media(hover:none)]:opacity-70"
+      >
+        <span aria-hidden="true">+</span>
+      </button>
+    </div>
+  )
+}
+
 function IngredientRow({
   ingredient,
   index,
@@ -611,7 +707,7 @@ function IngredientRow({
 }) {
   const set = (patch: Partial<IngredientDraft>) => onPatch(patch)
   return (
-    <li className="rounded-md border border-stone-200 p-3 dark:border-stone-700">
+    <div className="rounded-md border border-stone-200 p-3 dark:border-stone-700">
       <div className="grid gap-2 sm:grid-cols-[6.5rem_7.5rem_minmax(0,1fr)]">
         <input
           aria-label={`Ingredient ${index + 1} amount`}
@@ -681,7 +777,7 @@ function IngredientRow({
           Remove
         </button>
       </div>
-    </li>
+    </div>
   )
 }
 
@@ -701,7 +797,7 @@ function StepRow({
   onRemove: () => void
 }) {
   return (
-    <li className="rounded-md border border-stone-200 p-3 dark:border-stone-700">
+    <div className="rounded-md border border-stone-200 p-3 dark:border-stone-700">
       <label className="block">
         <span className="mb-1.5 block text-sm font-medium text-ink-muted dark:text-stone-400">
           Step {index + 1}
@@ -736,17 +832,23 @@ function StepRow({
           Remove
         </button>
       </div>
-    </li>
+    </div>
   )
+}
+
+function insertItem<T>(items: T[], index: number, item: T): T[] {
+  const copy = items.slice()
+  copy.splice(index, 0, item)
+  return copy
 }
 
 function moveItem<T>(items: T[], index: number, direction: -1 | 1): T[] {
   const next = index + direction
   if (next < 0 || next >= items.length) return items
   const copy = items.slice()
-  const [item] = copy.splice(index, 1)
-  if (!item) return items
-  copy.splice(next, 0, item)
+  const [moved] = copy.splice(index, 1)
+  if (!moved) return items
+  copy.splice(next, 0, moved)
   return copy
 }
 
