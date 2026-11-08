@@ -36,13 +36,13 @@ export function formatAmount(amount: number): string {
   ]
 
   for (const [value, label] of fractions) {
-    if (Math.abs(amount - value) < 0.02) return label
+    if (Math.abs(amount - value) < 0.01) return label
   }
 
   const whole = Math.floor(amount)
   const frac = amount - whole
   for (const [value, label] of fractions) {
-    if (Math.abs(frac - value) < 0.02) {
+    if (Math.abs(frac - value) < 0.01) {
       return whole > 0 ? `${whole} ${label}` : label
     }
   }

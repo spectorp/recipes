@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { ThemeToggle } from '../components/ThemeToggle'
@@ -10,6 +10,31 @@ import {
 } from '../lib/format'
 
 const PRESET_MULTIPLIERS = [0.5, 1, 1.5, 2, 3] as const
+const CUSTOM_SCALE_MAX = 100
+
+function isPresetMultiplier(value: number): boolean {
+  return PRESET_MULTIPLIERS.some((mult) => Math.abs(value - mult) < 0.001)
+}
+
+/** Trim float noise so 1.300 displays as 1.3. */
+function formatScaleNumber(value: number): string {
+  return String(Number(value.toFixed(3)))
+}
+
+/** Positive multiplier up to 100, or null when the draft is not usable. */
+function parseCustomScale(raw: string): number | null {
+  const cleaned = raw
+    .trim()
+    .replace(/[x×]\s*$/i, '')
+    .replace(',', '.')
+    .trim()
+  if (!/^(?:\d+\.?\d*|\.\d+)$/.test(cleaned)) return null
+  const n = Number(cleaned)
+  if (!Number.isFinite(n)) return null
+  const rounded = Number(n.toFixed(3))
+  if (rounded <= 0 || rounded > CUSTOM_SCALE_MAX) return null
+  return rounded
+}
 
 const TEXT_SIZE_OPTIONS = [
   { id: 'lg', className: 'text-lg', ariaLabel: 'Small text size' },
@@ -115,8 +140,47 @@ function ScaleControl({
   onChange: (next: number) => void
 }) {
   const [open, setOpen] = useState(false)
+  const [draft, setDraft] = useState('')
+  const [customError, setCustomError] = useState(false)
   const rootRef = useMenuDismiss(open, setOpen)
+  const panelRef = useRef<HTMLDivElement>(null)
   const menuId = useId()
+  const customInputId = useId()
+  const customErrorId = useId()
+  const customActive = !isPresetMultiplier(value)
+  const scaled = Math.abs(value - 1) > 0.001
+
+  useEffect(() => {
+    if (!open) return
+    setDraft(customActive ? formatScaleNumber(value) : '')
+    setCustomError(false)
+  }, [open, customActive, value])
+
+  useLayoutEffect(() => {
+    if (!open) return
+    const el = panelRef.current
+    if (!el) return
+    el.style.transform = ''
+    const rect = el.getBoundingClientRect()
+    const margin = 8
+    const overflowLeft = margin - rect.left
+    const overflowRight = rect.right - (window.innerWidth - margin)
+    if (overflowLeft > 0) {
+      el.style.transform = `translateX(${overflowLeft}px)`
+    } else if (overflowRight > 0) {
+      el.style.transform = `translateX(${-overflowRight}px)`
+    }
+  }, [open])
+
+  const applyCustom = () => {
+    const parsed = parseCustomScale(draft)
+    if (parsed == null) {
+      setCustomError(true)
+      return
+    }
+    onChange(parsed)
+    setOpen(false)
+  }
 
   return (
     <div className="relative" ref={rootRef}>
@@ -129,36 +193,98 @@ function ScaleControl({
         className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
       >
         Scale
+        {scaled && (
+          <span className="ml-1.5 text-accent dark:text-orange-300">
+            {formatScaleNumber(value)}×
+          </span>
+        )}
       </button>
       {open && (
-        <ul
+        <div
+          ref={panelRef}
           id={menuId}
-          role="listbox"
-          aria-label="Recipe scale"
-          className="absolute right-0 z-20 mt-1 min-w-28 rounded-md border border-stone-300 bg-white py-1 shadow-md dark:border-stone-600 dark:bg-stone-900"
+          className="absolute right-0 z-20 mt-1 w-44 rounded-md border border-stone-300 bg-white shadow-md dark:border-stone-600 dark:bg-stone-900"
         >
-          {PRESET_MULTIPLIERS.map((mult) => {
-            const active = Math.abs(value - mult) < 0.001
-            return (
-              <li key={mult} role="option" aria-selected={active}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    onChange(mult)
-                    setOpen(false)
-                  }}
-                  className={`block w-full px-3 py-1.5 text-left text-sm ${
-                    active
-                      ? 'bg-accent/10 font-medium text-accent dark:bg-orange-400/15 dark:text-orange-300'
-                      : 'text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800'
-                  }`}
-                >
-                  {`${mult}×`}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
+          <ul role="listbox" aria-label="Recipe scale" className="py-1">
+            {PRESET_MULTIPLIERS.map((mult) => {
+              const active = Math.abs(value - mult) < 0.001
+              return (
+                <li key={mult} role="option" aria-selected={active}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onChange(mult)
+                      setOpen(false)
+                    }}
+                    className={`block w-full px-3 py-1.5 text-left text-sm ${
+                      active
+                        ? 'bg-accent/10 font-medium text-accent dark:bg-orange-400/15 dark:text-orange-300'
+                        : 'text-ink hover:bg-stone-100 dark:text-stone-100 dark:hover:bg-stone-800'
+                    }`}
+                  >
+                    {`${mult}×`}
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+          <form
+            className={`border-t px-2.5 py-2 ${
+              customActive
+                ? 'border-accent/20 bg-accent/10 dark:border-orange-400/20 dark:bg-orange-400/15'
+                : 'border-stone-200 dark:border-stone-700'
+            }`}
+            onSubmit={(event) => {
+              event.preventDefault()
+              applyCustom()
+            }}
+          >
+            <label
+              htmlFor={customInputId}
+              className={`block text-xs font-medium ${
+                customActive
+                  ? 'text-accent dark:text-orange-300'
+                  : 'text-ink-muted dark:text-stone-400'
+              }`}
+            >
+              Custom
+            </label>
+            <div className="mt-1 flex items-center gap-1.5">
+              <input
+                id={customInputId}
+                type="text"
+                inputMode="decimal"
+                autoComplete="off"
+                enterKeyHint="done"
+                spellCheck={false}
+                placeholder="1.3"
+                aria-label="Custom scale"
+                aria-invalid={customError}
+                aria-describedby={customError ? customErrorId : undefined}
+                value={draft}
+                onChange={(event) => {
+                  setDraft(event.target.value)
+                  setCustomError(false)
+                }}
+                className="w-full min-w-0 rounded-md border border-stone-300 bg-white px-2 py-1 text-sm text-ink placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:placeholder:text-stone-500"
+              />
+              <button
+                type="submit"
+                className="shrink-0 rounded-md px-2 py-1 text-sm font-medium text-accent hover:bg-accent/10 dark:text-orange-300 dark:hover:bg-orange-400/15"
+              >
+                Set
+              </button>
+            </div>
+            {customError && (
+              <p
+                id={customErrorId}
+                className="mt-1 text-xs text-red-700 dark:text-red-300"
+              >
+                Enter a positive number up to 100.
+              </p>
+            )}
+          </form>
+        </div>
       )}
     </div>
   )
@@ -406,7 +532,7 @@ export function RecipePage() {
 
             {scale !== 1 && (
               <p className="print-only hidden text-sm text-ink">
-                Scaled {scale}×
+                Scaled {formatScaleNumber(scale)}×
               </p>
             )}
           </div>
