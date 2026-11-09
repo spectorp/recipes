@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { CookingSwitcher } from '../components/CookingBar'
 import { FilterPanel } from '../components/FilterPanel'
 import { RecipeCard } from '../components/RecipeCard'
 import { ThemeToggle } from '../components/ThemeToggle'
@@ -133,7 +134,9 @@ export function HomePage() {
             )}
           </label>
         </div>
-        <div className="no-print flex shrink-0 items-center gap-2">
+        <div className="no-print flex min-w-0 flex-wrap items-center justify-end gap-2 sm:max-w-[60%] sm:flex-1 sm:flex-nowrap">
+          <CookingSwitcher />
+          <div className="flex shrink-0 items-center gap-2">
           {import.meta.env.DEV && (
             <Link
               to="/edit"
@@ -143,6 +146,7 @@ export function HomePage() {
             </Link>
           )}
           <ThemeToggle className="shrink-0" />
+          </div>
         </div>
       </header>
 

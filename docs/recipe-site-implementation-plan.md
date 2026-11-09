@@ -67,7 +67,8 @@ Keep this section updated when implementation diverges from the original text.
 - **SPA deep-link fallback** — Vite plugin copies `dist/index.html` → `dist/404.html` so GitHub Pages refreshes on `/recipe/:id` still load the app. (Phase 6)
 - **Detail layout** — on large screens, ingredients (sticky) sit beside instructions; stacked on smaller screens for cooking usability.
 - **Servings scaling** — detail page shows fixed servings text (when known) next to times; that figure is always the written `1×` yield. Presets `0.5× / 1× / 1.5× / 2× / 3×` and a custom multiplier (any positive number up to 100, e.g. `1.3×`) scale ingredient amounts only (no stepper). The Scale button shows the active factor when it is not `1×`. Scaled amounts do not write JSON. (Phase 7+)
-- **Cooking checkboxes** — ingredients and instruction steps are checkable (local UI state only; clears on recipe change). Checked items gray out (no strikethrough).
+- **Cooking checkboxes** — ingredients and instruction steps are checkable. Checked items gray out (no strikethrough). On a recipe that is not in the now-cooking set, checks and scale clear when you leave it. Pinned recipes keep them for the browser tab.
+- **Now cooking** — the detail page **Cooking** button adds the open recipe to a session set of up to 4 (`sessionStorage` key `recipes-cooking`). Each pinned recipe keeps its scale, checked ingredients, checked steps, and scroll position until the tab closes or you remove it. Recipe chips for the set sit in the toolbar immediately left of the **Cooking** button, and in the browse header left of the theme control. The row scrolls sideways when titles do not fit. The switcher is omitted when the set is empty or is exactly the recipe on screen. Browse cards for pinned recipes show a Cooking label. Removing a recipe drops its saved state. The switcher is hidden when printing. Side-by-side layout is not part of this.
 - **Print** — detail-page Print button → `window.print()`; `@media print` forces light theme, hides nav/scaler/checkboxes/chips, keeps currently scaled amounts; **stacks** ingredients then steps (CSS grid does not fragment well and orphaned long titles on page 1). (Phase 8)
 - **Ingredient groups** — optional per-ingredient `group` string; consecutive lines with the same group (or no group) render under an uppercase subheading on the detail page. Omit `group` for standalone lines (e.g. a serving accompaniment).
 
@@ -273,7 +274,10 @@ GitHub Pages deep-link refreshes load the SPA.
 times and always mean the `1×` yield. Decimal presets (`0.5×`, `1×`, `1.5×`,
 `2×`, `3×`) and a custom multiplier (positive number up to 100, such as
 `1.3×`) scale ingredient amounts for display only. Ingredients and steps
-also have checkboxes for cooking progress (session-only).
+have checkboxes for cooking progress. Checks and scale stay in memory until
+you leave an unpinned recipe. Recipes added to the now-cooking set (up to 4,
+`sessionStorage`) keep checks, scale, and scroll position for the browser tab,
+with toolbar chips to move between them.
 
 ### 4.4 Print / export PDF
 

@@ -87,7 +87,8 @@ via Vite `import.meta.glob`).
 | --- | --- |
 | `src/pages/HomePage.tsx` | Browse: search, facets (AND/OR across groups), sort |
 | `src/lib/BrowseState.tsx` | Persists browse filters + Filters panel open across recipe navigation |
-| `src/pages/RecipePage.tsx` | Detail: scale servings, checkboxes, print |
+| `src/lib/cookingSession.ts` | Now-cooking set in `sessionStorage` (scale, checks, scroll; cap 4) |
+| `src/pages/RecipePage.tsx` | Detail: scale, checkboxes, now cooking, print |
 | `src/lib/catalog.ts` | Eager-load + Zod-validate all recipe JSON |
 | `src/lib/filterRecipes.ts` | Client-side filter/sort |
 | `vite.config.ts` | `base: '/recipes/'`; copies `404.html` for SPA deep links |

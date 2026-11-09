@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useCookingOrder } from '../lib/cookingSession'
 import type { Recipe } from '../lib/schema'
 import { Chip, StarRating, recipeTimeLabel } from './recipeMeta'
 
@@ -18,6 +19,7 @@ function cardChips(recipe: Recipe): string[] {
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
   const time = recipeTimeLabel(recipe)
   const chips = cardChips(recipe)
+  const cooking = useCookingOrder().includes(recipe.id)
 
   return (
     <Link
@@ -32,6 +34,9 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
       </div>
 
       <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-ink-muted dark:text-stone-400">
+        {cooking && (
+          <span className="font-medium text-accent dark:text-orange-300">Cooking</span>
+        )}
         {recipe.servings != null && <span>{recipe.servings} servings</span>}
         {time && <span>{time}</span>}
         {recipe.attribution?.name && (

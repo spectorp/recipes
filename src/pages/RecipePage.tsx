@@ -1,8 +1,18 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { CookingSwitcher } from '../components/CookingBar'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { ThemeToggle } from '../components/ThemeToggle'
 import { getRecipeById } from '../lib/catalog'
+import type { Recipe } from '../lib/schema'
+import {
+  COOKING_CAP,
+  pinRecipe,
+  readCookingState,
+  unpinRecipe,
+  useCookingOrder,
+  writeCookingState,
+} from '../lib/cookingSession'
 import {
   formatIngredientParts,
   ingredientSections,
@@ -65,6 +75,13 @@ function setStoredTextSize(id: TextSizeId): void {
   } catch {
     /* ignore */
   }
+}
+
+function toggleMember(set: Set<string>, id: string): Set<string> {
+  const next = new Set(set)
+  if (next.has(id)) next.delete(id)
+  else next.add(id)
+  return next
 }
 
 function HomeIcon() {
@@ -351,20 +368,6 @@ function TextSizeControl({
 export function RecipePage() {
   const { id } = useParams<{ id: string }>()
   const recipe = id ? getRecipeById(id) : undefined
-  const [scale, setScale] = useState(1)
-  const [textSize, setTextSize] = useState<TextSizeId>(() => getStoredTextSize())
-  const [checkedIngredients, setCheckedIngredients] = useState<Set<string>>(
-    () => new Set(),
-  )
-  const [checkedSteps, setCheckedSteps] = useState<Set<string>>(
-    () => new Set(),
-  )
-
-  useEffect(() => {
-    setScale(1)
-    setCheckedIngredients(new Set())
-    setCheckedSteps(new Set())
-  }, [recipe?.id])
 
   useEffect(() => {
     const previous = document.title
@@ -374,6 +377,126 @@ export function RecipePage() {
     }
   }, [recipe])
 
+  if (!recipe) {
+    return (
+      <>
+        <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+          <div className="no-print flex items-center gap-2">
+            <Link
+              to="/"
+              aria-label="All recipes"
+              title="All recipes"
+              className="inline-flex size-9 shrink-0 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
+            >
+              <HomeIcon />
+            </Link>
+            <CookingSwitcher />
+          </div>
+          <h1 className="font-display mt-4 text-3xl tracking-tight text-ink dark:text-stone-50">
+            Recipe not found
+          </h1>
+          <p className="mt-2 text-ink-muted dark:text-stone-400">
+            No recipe matches{' '}
+            <span className="font-mono text-sm">{id ?? '(missing)'}</span>.
+          </p>
+        </main>
+      </>
+    )
+  }
+
+  return <RecipeDetail key={recipe.id} recipe={recipe} />
+}
+
+function RecipeDetail({ recipe }: { recipe: Recipe }) {
+  const cookingOrder = useCookingOrder()
+  const pinned = cookingOrder.includes(recipe.id)
+  const [capNotice, setCapNotice] = useState(false)
+  const capHit =
+    capNotice && !pinned && cookingOrder.length >= COOKING_CAP
+  const capMessageId = useId()
+  const stored = readCookingState(recipe.id)
+  const [scale, setScale] = useState(stored?.scale ?? 1)
+  const [textSize, setTextSize] = useState<TextSizeId>(() => getStoredTextSize())
+  const [checkedIngredients, setCheckedIngredients] = useState(
+    () => new Set(stored?.checkedIngredients ?? []),
+  )
+  const [checkedSteps, setCheckedSteps] = useState(
+    () => new Set(stored?.checkedSteps ?? []),
+  )
+  const restoringRef = useRef(false)
+
+  useLayoutEffect(() => {
+    restoringRef.current = true
+    window.scrollTo(0, readCookingState(recipe.id)?.scrollY ?? 0)
+    const frame = requestAnimationFrame(() => {
+      restoringRef.current = false
+    })
+    return () => {
+      cancelAnimationFrame(frame)
+      const stillRestoring = restoringRef.current
+      restoringRef.current = true
+      if (!stillRestoring) {
+        writeCookingState(recipe.id, { scrollY: window.scrollY })
+      }
+    }
+  }, [recipe.id])
+
+  useEffect(() => {
+    let timer = 0
+    const id = recipe.id
+    const onScroll = () => {
+      if (restoringRef.current) return
+      window.clearTimeout(timer)
+      timer = window.setTimeout(() => {
+        if (restoringRef.current) return
+        writeCookingState(id, { scrollY: window.scrollY })
+      }, 120)
+    }
+    const onPageHide = () => {
+      if (restoringRef.current) return
+      writeCookingState(id, { scrollY: window.scrollY })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('pagehide', onPageHide)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('pagehide', onPageHide)
+    }
+  }, [recipe.id])
+
+  const changeScale = (next: number) => {
+    setScale(next)
+    writeCookingState(recipe.id, { scale: next })
+  }
+
+  const toggleIngredient = (ingredientId: string) => {
+    const next = toggleMember(checkedIngredients, ingredientId)
+    setCheckedIngredients(next)
+    writeCookingState(recipe.id, { checkedIngredients: [...next] })
+  }
+
+  const toggleStep = (stepId: string) => {
+    const next = toggleMember(checkedSteps, stepId)
+    setCheckedSteps(next)
+    writeCookingState(recipe.id, { checkedSteps: [...next] })
+  }
+
+  const toggleCooking = () => {
+    if (cookingOrder.includes(recipe.id)) {
+      unpinRecipe(recipe.id)
+      setCapNotice(false)
+      return
+    }
+    const result = pinRecipe(recipe.id, {
+      scale,
+      checkedIngredients: [...checkedIngredients],
+      checkedSteps: [...checkedSteps],
+      scrollY: window.scrollY,
+    })
+    setCapNotice(result === 'full')
+  }
+
   const selectTextSize = (next: TextSizeId) => {
     setTextSize(next)
     setStoredTextSize(next)
@@ -381,28 +504,6 @@ export function RecipePage() {
 
   const bodyTextClass =
     TEXT_SIZE_OPTIONS.find((o) => o.id === textSize)?.className ?? 'text-lg'
-
-  if (!recipe) {
-    return (
-      <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-        <Link
-          to="/"
-          aria-label="All recipes"
-          title="All recipes"
-          className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
-        >
-          <HomeIcon />
-        </Link>
-        <h1 className="font-display mt-4 text-3xl tracking-tight text-ink dark:text-stone-50">
-          Recipe not found
-        </h1>
-        <p className="mt-2 text-ink-muted dark:text-stone-400">
-          No recipe matches{' '}
-          <span className="font-mono text-sm">{id ?? '(missing)'}</span>.
-        </p>
-      </main>
-    )
-  }
 
   const chips = recipeChipList(recipe)
   const time = recipeTimeLabel(recipe)
@@ -414,27 +515,36 @@ export function RecipePage() {
     attribution?.name?.trim() || attribution?.url?.trim(),
   )
 
-  const toggleId = (set: Set<string>, id: string): Set<string> => {
-    const next = new Set(set)
-    if (next.has(id)) next.delete(id)
-    else next.add(id)
-    return next
-  }
-
   return (
     <main className="recipe-page mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:max-w-5xl">
-      <div className="no-print flex flex-wrap items-center justify-between gap-3">
+      <div className="no-print flex items-center justify-between gap-2">
         <Link
           to="/"
           aria-label="All recipes"
           title="All recipes"
-          className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
+          className="inline-flex size-9 shrink-0 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-stone-400 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100 dark:hover:border-stone-500"
         >
           <HomeIcon />
         </Link>
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-2 sm:flex-nowrap">
+          <CookingSwitcher currentId={recipe.id} />
+          <div className="flex max-w-full flex-wrap items-center justify-end gap-2 sm:shrink-0 sm:flex-nowrap">
+          <button
+            type="button"
+            aria-pressed={pinned}
+            aria-describedby={capHit ? capMessageId : undefined}
+            onClick={toggleCooking}
+            title={pinned ? 'Remove from cooking' : 'Add to cooking'}
+            className={`inline-flex min-h-11 items-center rounded-md border px-3 text-sm font-medium sm:min-h-0 sm:py-1.5 ${
+              pinned
+                ? 'border-accent bg-accent text-white hover:bg-accent/90 dark:border-orange-400 dark:bg-orange-400 dark:text-stone-950 dark:hover:bg-orange-300'
+                : 'border-stone-300 bg-white text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100'
+            }`}
+          >
+            Cooking
+          </button>
           <ThemeToggle />
-          <ScaleControl value={scale} onChange={setScale} />
+          <ScaleControl value={scale} onChange={changeScale} />
           <TextSizeControl value={textSize} onChange={selectTextSize} />
           {import.meta.env.DEV && (
             <Link
@@ -453,8 +563,19 @@ export function RecipePage() {
           >
             <PrinterIcon />
           </button>
+          </div>
         </div>
       </div>
+
+      {capHit && (
+        <p
+          id={capMessageId}
+          role="status"
+          className="no-print mt-2 text-sm text-ink-muted dark:text-stone-400"
+        >
+          Cooking holds {COOKING_CAP} recipes. Remove one to add this.
+        </p>
+      )}
 
       <header className="mt-4 border-b border-stone-200 pb-6 dark:border-stone-700">
         <div className="flex flex-wrap items-start justify-between gap-3">
@@ -583,11 +704,7 @@ export function RecipePage() {
                             type="checkbox"
                             className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
                             checked={checked}
-                            onChange={() =>
-                              setCheckedIngredients((prev) =>
-                                toggleId(prev, ingredient.id),
-                              )
-                            }
+                            onChange={() => toggleIngredient(ingredient.id)}
                           />
                           <span
                             className={`recipe-check-text ${
@@ -634,9 +751,7 @@ export function RecipePage() {
                       type="checkbox"
                       className="no-print mt-1 size-4 shrink-0 rounded border-stone-300 text-accent focus:ring-accent dark:border-stone-600 dark:bg-stone-800"
                       checked={checked}
-                      onChange={() =>
-                        setCheckedSteps((prev) => toggleId(prev, step.id))
-                      }
+                      onChange={() => toggleStep(step.id)}
                     />
                     <span>
                       <span className="mr-1.5 font-medium text-ink-muted dark:text-stone-400">
