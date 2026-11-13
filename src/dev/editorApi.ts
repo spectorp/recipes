@@ -1,3 +1,4 @@
+import { runningInTauri } from '../lib/runtime'
 import { CATEGORY_KEYS, RECIPE_UNITS, type CategoryKey, type Recipe } from '../lib/schema'
 
 export type IngredientDraft = {
@@ -229,6 +230,10 @@ export async function saveRecipe(
   id: string | null,
   body: RecipeWriteRequest,
 ): Promise<{ id: string }> {
+  if (import.meta.env.TAURI_ENV_PLATFORM && runningInTauri()) {
+    const { saveDesktopRecipe } = await import('../lib/desktopLibrary')
+    return saveDesktopRecipe(id, body)
+  }
   const path = id
     ? `__editor/recipes/${encodeURIComponent(id)}`
     : '__editor/recipes'
@@ -238,6 +243,11 @@ export async function saveRecipe(
 }
 
 export async function deleteRecipe(id: string): Promise<void> {
+  if (import.meta.env.TAURI_ENV_PLATFORM && runningInTauri()) {
+    const { deleteDesktopRecipe } = await import('../lib/desktopLibrary')
+    await deleteDesktopRecipe(id)
+    return
+  }
   await request(`__editor/recipes/${encodeURIComponent(id)}`, 'DELETE')
 }
 

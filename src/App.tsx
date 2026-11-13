@@ -1,14 +1,18 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import {
+  DataFolderScreen,
+  EditorPage,
+  desktopBundle,
+  useDesktopChrome,
+} from './shell/local'
 import { BrowseStateProvider } from './lib/BrowseState'
+import { dataFolderMessage, dataFolderPath } from './lib/catalog'
+import { runningInTauri } from './lib/runtime'
 import { applyTheme, getStoredTheme } from './lib/theme'
 import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { RecipePage } from './pages/RecipePage'
-
-const EditorPage = import.meta.env.DEV
-  ? lazy(() => import('./dev/EditorPage').then((module) => ({ default: module.EditorPage })))
-  : null
 
 function EditorRoute() {
   if (!EditorPage) return null
@@ -26,6 +30,10 @@ function EditorRoute() {
 }
 
 export default function App() {
+  const folderReady = Boolean(dataFolderPath) && !dataFolderMessage
+  const needsFolder = desktopBundle && runningInTauri() && !folderReady
+  useDesktopChrome(folderReady)
+
   useEffect(() => {
     applyTheme(getStoredTheme())
 
@@ -38,6 +46,14 @@ export default function App() {
     media.addEventListener('change', onChange)
     return () => media.removeEventListener('change', onChange)
   }, [])
+
+  if (needsFolder && DataFolderScreen) {
+    return (
+      <Suspense fallback={null}>
+        <DataFolderScreen message={dataFolderMessage} />
+      </Suspense>
+    )
+  }
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>

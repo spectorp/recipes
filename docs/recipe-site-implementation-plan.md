@@ -2,9 +2,9 @@
 
 A recipe browser hosted on **GitHub Pages**. Recipes live as individual JSON
 files in the repo; the site is a static SPA (Vite + React + TypeScript +
-Tailwind). The published site is read-only. Locally, `npm run dev` can create,
-edit, and delete recipes by writing those JSON files. Publishing is still a
-git commit and push.
+Tailwind). The published site is read-only. Locally, `npm run dev` and a Tauri Mac app
+can create, edit, and delete recipes by writing those JSON files. Publishing
+is still a git commit and push.
 
 This document is the build spec for an AI coding agent. It supersedes
 `docs/recipe-app-implementation-plan-old.md` for product direction. The old
@@ -20,7 +20,7 @@ two conflict, **this document wins**.
 | Data | One JSON file per recipe; build-time index |
 | Vocab | Canonical `categories.json` + `tags.json` |
 | Schema | Strict (from old plan); **photos out of scope for v1** |
-| Web mutations | None on the published site. `npm run dev` can create, edit, and delete recipes |
+| Web mutations | None on the published site. `npm run dev` and the Mac app can create, edit, and delete recipes |
 | Migration | Convert all LaTeX recipes → JSON for v1 |
 | LaTeX | Archive under `archive/latex/` |
 | Deep links | Yes — stable per-recipe URLs |
@@ -43,12 +43,14 @@ two conflict, **this document wins**.
 | 10 Deploy | Done |
 | 11 Polish | Done |
 | 12 Local editor | Done |
+| 13 Mac app | Done |
 
 ### Plan changelog (deviations & clarifications)
 
 Keep this section updated when implementation diverges from the original text.
 
-- **Local editor** — `npm run dev` only. Routes `/edit` and `/edit/:id` are compiled in when `import.meta.env.DEV` is true, so `vite build` / GitHub Pages stay read-only. A Vite plugin (`apply: 'serve'`) writes `data/recipes/<id>.json` and appends new category/tag names. Ids are title slugs, fixed after create. Delete asks for confirmation and removes the file. Publishing is still commit and push. Renaming or merging vocab values stays manual. (Phase 12)
+- **Mac app** — Tauri 2 shell (`src-tauri/`, `npm run tauri dev` / `npm run tauri build`) around the same UI. The app includes the editor. It reads and writes a data folder (this repo’s `data/` until File → Open Data Folder). The Pages build does not set `TAURI_ENV_PLATFORM`, keeps `base: '/recipes/'`, and still omits the editor. Shared save checks live in `src/lib/recipeWrite.ts`. (Phase 13)
+- **Local editor** — `npm run dev` and the Mac app. Routes `/edit` and `/edit/:id` are compiled in when `import.meta.env.DEV` or `TAURI_ENV_PLATFORM` is set, so plain `vite build` / GitHub Pages stay read-only. A Vite plugin (`apply: 'serve'`) writes `data/recipes/<id>.json` for the browser dev server and appends new category/tag names. The Mac app writes the same files through Tauri. Ids are title slugs, fixed after create. Delete asks for confirmation and removes the file. Publishing is still commit and push. Renaming or merging vocab values stays manual. (Phase 12)
 - **Nullable ingredient `amount`** — schema/Zod allow `amount: null` when the source gives no quantity (e.g. to taste / for serving). UI omits quantity and does not scale those lines. Do not invent `1` for missing amounts. Migration script no longer defaults missing quantities to `1`.
 - **Tailwind v4 via `@tailwindcss/vite`** — no `tailwind.config.*` file; theme tokens live in `src/index.css` (`@theme`). (Phase 1)
 - **Theme plumbing early** — `src/lib/theme.ts` + FOUC script in `index.html` land in Phase 1; full UI toggle remains Phase 9.
@@ -205,8 +207,9 @@ GitHub Pages cannot list directories. **Implemented approach (Phase 3):**
 2. `src/lib/catalog.ts` uses Vite `import.meta.glob('../../data/recipes/*.json', { eager: true })` so every recipe JSON is bundled at build/dev time.
 3. Each file is validated with Zod (`src/lib/schema.ts`, kept in sync with `schema.json`). Filename must match `id`; duplicates and invalid files are skipped and collected in `catalogLoadErrors` (console + browse banner).
 4. `data/categories.json` and `data/tags.json` are static imports, also Zod-validated.
+5. The Mac app does not use that bundle as its catalog. On launch it reads the chosen data folder (dev default: repo `data/`) through Tauri, then the same Zod checks run in the webview.
 
-No separate prebuild script or committed generated index for v1.
+No separate prebuild script or committed generated index for v1. The GitHub Pages build is unchanged.
 
 ---
 
@@ -225,6 +228,7 @@ No separate prebuild script or committed generated index for v1.
     recipe-site-implementation-plan.md   # this file
     recipe-app-implementation-plan-old.md
   src/                     # React app
+  src-tauri/               # Mac app shell (Tauri). Not part of the Pages build
   public/
   index.html
   package.json
@@ -296,7 +300,7 @@ Tailwind `class` strategy on `<html>`; preference stored in `localStorage`
 
 ### 4.6 Explicitly out of scope (v1)
 
-- Create / edit / delete on the published site (local `npm run dev` editor only)
+- Create / edit / delete on the published site (local `npm run dev` and the Mac app only)
 - Rename / merge of category or tag values (the local editor can append names)
 - Photos / image carousel
 - Accounts, auth, private Pages
@@ -409,6 +413,7 @@ a small intentional type + color system over default “AI purple” tropes.
     units, category keys, local/deploy)
 12. **Local editor** — ✅ dev-only create / edit / delete, vocab append, omitted
     from the production build
+13. **Mac app** — ✅ Tauri window with the same editor; Pages build stays read-only
 
 ---
 

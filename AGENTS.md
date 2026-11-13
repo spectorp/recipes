@@ -4,11 +4,15 @@ This repo is a recipe browser (Vite + React + TypeScript + Tailwind)
 backed by **one JSON file per recipe**, hosted on public GitHub Pages
 (`https://spectorp.github.io/recipes/`).
 
-The published site is read-only. Locally, `npm run dev` includes an editor
-(New recipe / Edit) that writes `data/recipes/*.json` and can append names to
-`data/categories.json` and `data/tags.json`. That UI and its write API are
-omitted from `vite build`. Publishing is still a git commit and push. Recipe
-ids are slugs assigned on create and are not renamed later.
+The published site is read-only. Locally, `npm run dev` and the Mac app
+(`npm run tauri dev`) include an editor (New recipe / Edit) that writes
+`data/recipes/*.json` and can append names to `data/categories.json` and
+`data/tags.json`. The browser dev server writes through a Vite plugin. The
+Mac app writes through Tauri, and reads the `data` folder at launch instead
+of the bundled catalog. That editor UI is omitted from the GitHub Pages
+`vite build` (`TAURI_ENV_PLATFORM` is unset). Publishing is still a git
+commit and push. Recipe ids are slugs assigned on create and are not renamed
+later.
 
 Primary build plan: [`docs/recipe-site-implementation-plan.md`](docs/recipe-site-implementation-plan.md)
 (keep its Progress / Plan changelog updated when behavior diverges).
@@ -91,7 +95,8 @@ via Vite `import.meta.glob`).
 | `src/pages/RecipePage.tsx` | Detail: scale, checkboxes, now cooking, print |
 | `src/lib/catalog.ts` | Eager-load + Zod-validate all recipe JSON |
 | `src/lib/filterRecipes.ts` | Client-side filter/sort |
-| `vite.config.ts` | `base: '/recipes/'`; copies `404.html` for SPA deep links |
+| `vite.config.ts` | Pages `base: '/recipes/'`; Mac app `base: '/'`; copies `404.html` for SPA deep links |
+| `src-tauri/` | Tauri shell for the local Mac app (edit mode; not used by GitHub Pages) |
 | `archive/latex/` | Historical TeX cookbook (not live data) |
 
 Local: `npm install && npm run dev` → open the `/recipes/` path Vite prints.
@@ -116,7 +121,7 @@ it overwrites hand edits.
 
 ## Product constraints (don’t regress)
 
-- Read-only web UI (no create/edit/tag management in the app)
+- Read-only published site (no create/edit/tag management on GitHub Pages). `npm run dev` and the Mac app can edit.
 - Public GitHub Pages (default `*.github.io` URL)
 - Anonymous branding (“Recipes”, not a personal name)
 - Print: black-on-white, scaled amounts, stacked layout (grid orphans titles)

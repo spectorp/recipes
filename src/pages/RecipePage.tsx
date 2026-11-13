@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { CookingSwitcher } from '../components/CookingBar'
 import { Chip, StarRating, recipeTimeLabel } from '../components/recipeMeta'
 import { ThemeToggle } from '../components/ThemeToggle'
+import { printRecipe, showEditor } from '../shell/local'
 import { getRecipeById } from '../lib/catalog'
 import type { Recipe } from '../lib/schema'
 import {
@@ -546,7 +547,7 @@ function RecipeDetail({ recipe }: { recipe: Recipe }) {
           <ThemeToggle />
           <ScaleControl value={scale} onChange={changeScale} />
           <TextSizeControl value={textSize} onChange={selectTextSize} />
-          {import.meta.env.DEV && (
+          {showEditor && (
             <Link
               to={`/edit/${recipe.id}`}
               className="inline-flex min-h-11 items-center rounded-md border border-stone-300 bg-white px-3 text-sm font-medium text-ink hover:border-accent/50 sm:min-h-0 sm:py-1.5 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"
@@ -556,7 +557,7 @@ function RecipeDetail({ recipe }: { recipe: Recipe }) {
           )}
           <button
             type="button"
-            onClick={() => window.print()}
+            onClick={() => printRecipe()}
             aria-label="Print"
             title="Print"
             className="inline-flex size-9 items-center justify-center rounded-md border border-stone-300 bg-white text-ink hover:border-accent/50 dark:border-stone-600 dark:bg-stone-900 dark:text-stone-100"

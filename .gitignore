@@ -26,3 +26,7 @@ dist-ssr
 .venv-pdf/
 incoming-recipes/
 *.pdf
+
+# Tauri / Rust
+src-tauri/target/
+src-tauri/gen/schemas

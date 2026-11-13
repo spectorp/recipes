@@ -4,8 +4,8 @@ Read-only recipe browser (Vite + React + TypeScript + Tailwind), hosted on
 GitHub Pages at **https://spectorp.github.io/recipes/**.
 
 The published site does **not** create or edit recipes. Locally, `npm run dev`
-includes an editor that writes JSON files on this computer. Publishing is
-still a git commit and push to `master`.
+and the Mac app include an editor that writes JSON files on this computer.
+Publishing is still a git commit and push to `master`.
 
 See [docs/recipe-site-implementation-plan.md](docs/recipe-site-implementation-plan.md)
 for the full build plan.
@@ -19,6 +19,38 @@ npm run dev
 
 Open the `/recipes/` path Vite prints (often `http://localhost:5173/recipes/`).
 The app’s `base` is `/recipes/` to match GitHub Pages.
+
+## Mac app
+
+The same UI also runs as a local Mac app, with the editor included. The
+website build is separate and stays read-only.
+
+```bash
+npm run tauri dev
+```
+
+That opens a window. Until you choose a folder, it reads and writes this
+repo’s `data` directory (`recipes/`, `categories.json`, `tags.json`). New
+recipe is in the window, or File → New Recipe.
+
+```bash
+npm run tauri build
+```
+
+The app bundle is:
+
+```text
+src-tauri/target/release/bundle/macos/Recipes.app
+```
+
+The first build needs Rust and the Xcode command-line tools. The machine you
+copy the app to does not. The app is unsigned: the first time, right-click it
+and choose Open. In the app, choose File → Open Data Folder and select the
+copied `data` folder (or this repo’s `data` folder). Edits stay in that
+folder. Replacing the `.app` later does not change the recipes.
+
+To publish those edits on the website, commit and push. GitHub Pages still
+builds with `npm run build`, which does not include the editor.
 
 To enable the local gitleaks pre-commit hook (after installing
 [pre-commit](https://pre-commit.com/)):
@@ -50,11 +82,12 @@ Live site: https://spectorp.github.io/recipes/
 
 ## Adding or editing a recipe
 
-With `npm run dev` running, use **New recipe** on the browse page or **Edit**
-on a recipe. Saving writes `data/recipes/<id>.json`. New category or tag names
-are appended to the vocab files. The id is a slug of the title and stays fixed
-after that. Deleting a recipe asks for confirmation, then removes the file.
-Nothing is committed or deployed until you commit and push.
+With `npm run dev` or the Mac app running, use **New recipe** on the browse
+page or **Edit** on a recipe. Saving writes `data/recipes/<id>.json`. New
+category or tag names are appended to the vocab files. The id is a slug of the
+title and stays fixed after that. Deleting a recipe asks for confirmation,
+then removes the file. Nothing is committed or deployed until you commit and
+push.
 
 You can also edit the JSON directly:
 

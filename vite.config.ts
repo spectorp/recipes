@@ -2,8 +2,12 @@ import { copyFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { defineConfig, type Plugin } from 'vite'
+import { defineConfig, type Plugin, type UserConfig } from 'vite'
 import { recipeEditorPlugin } from './vite/recipeEditorPlugin.ts'
+
+/** Set by the Tauri CLI. The GitHub Pages build leaves this unset. */
+const desktop = Boolean(process.env.TAURI_ENV_PLATFORM)
+const devHost = process.env.TAURI_DEV_HOST
 
 /** GitHub Pages serves 404.html for unknown paths — copy index for SPA deep links. */
 function spaFallback(): Plugin {
@@ -46,17 +50,71 @@ function redirectBareBase(): Plugin {
   }
 }
 
-// https://vite.dev/config/
-export default defineConfig({
-  base: '/recipes/',
-  server: {
-    watch: {
-      // macOS fsevents reports vite.config.ts as changed during git commits.
-      // A second event while Vite is restarting never finishes, so the
-      // terminal sits on "restarting server...". Polling follows mtimes.
-      useFsEvents: false,
-      interval: 200,
+/**
+ * `src/shell/local.ts` is what TypeScript checks (the Mac app).
+ * The Pages build and browser dev server swap in a file that does not
+ * import Tauri. Otherwise Vite still emits those modules as loose chunks.
+ */
+function shellEntry(shellFile: string): Plugin {
+  const target = resolve(shellFile)
+  return {
+    name: 'shell-entry',
+    enforce: 'pre',
+    resolveId(source) {
+      const normalized = source.replaceAll('\\', '/')
+      const isLocal =
+        normalized.endsWith('/shell/local') || normalized.endsWith('/shell/local.ts')
+      if (!isLocal || normalized === target.replaceAll('\\', '/')) return
+      return target
     },
-  },
-  plugins: [react(), tailwindcss(), spaFallback(), redirectBareBase(), recipeEditorPlugin()],
+  }
+}
+
+// https://vite.dev/config/
+export default defineConfig(({ command }): UserConfig => {
+  const shellFile = desktop
+    ? 'src/shell/local.ts'
+    : command === 'serve'
+      ? 'src/shell/dev.ts'
+      : 'src/shell/pages.ts'
+
+  return {
+    // GitHub Pages is served from /recipes/. The Mac app is served from /.
+    base: desktop ? '/' : '/recipes/',
+    // Expose Tauri's platform flag so the Mac app bundle can tell it is desktop.
+    envPrefix: ['VITE_', 'TAURI_ENV_'],
+    clearScreen: !desktop,
+    server: {
+      ...(desktop
+        ? {
+            port: 1420,
+            strictPort: true,
+            host: devHost || false,
+            hmr: devHost
+              ? {
+                  protocol: 'ws' as const,
+                  host: devHost,
+                  port: 1421,
+                }
+              : undefined,
+          }
+        : {}),
+      watch: {
+        // macOS fsevents reports vite.config.ts as changed during git commits.
+        // A second event while Vite is restarting never finishes, so the
+        // terminal sits on "restarting server...". Polling follows mtimes.
+        useFsEvents: false,
+        interval: 200,
+        ignored: ['**/src-tauri/**'],
+      },
+    },
+    plugins: [
+      shellEntry(shellFile),
+      react(),
+      tailwindcss(),
+      spaFallback(),
+      redirectBareBase(),
+      recipeEditorPlugin(),
+    ],
+  }
 })
